@@ -1,11 +1,11 @@
 # IDMT\_EditorTabItem interface
 
-编辑器标签页
+Editor tab
 
 ## Signature
 
 ```typescript
-interface IDMT_EditorTabItem 
+interface IDMT_EditorTabItem
 ```
 
 ## Properties
@@ -14,116 +14,92 @@ interface IDMT_EditorTabItem
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [documentType](./IDMT_EditorTabItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 [EDMT\_EditorDocumentType](../enums/EDMT_EditorDocumentType.md)
 
-
 </td><td>
 
-文档类型
-
+Document type
 
 </td></tr>
 <tr><td>
 
 [draggable](./IDMT_EditorTabItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
-标签页是否可拖动
-
+Whether the tab is draggable
 
 </td></tr>
 <tr><td>
 
 [isAbleDelete](./IDMT_EditorTabItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
-标签页是否可关闭
-
+Whether the tab can be closed
 
 </td></tr>
 <tr><td>
 
 [tabId](./IDMT_EditorTabItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-标签页 ID
-
+Tab ID
 
 </td></tr>
 <tr><td>
 
 [title](./IDMT_EditorTabItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-标签页标题
-
+Tab title
 
 </td></tr>
 </tbody></table>
@@ -136,7 +112,7 @@ string
 
 # IDMT\_EditorTabItem.documentType property
 
-文档类型
+Document type
 
 ## Signature
 
@@ -148,7 +124,7 @@ documentType: EDMT_EditorDocumentType;
 
 # IDMT\_EditorTabItem.draggable property
 
-标签页是否可拖动
+Whether the tab is draggable
 
 ## Signature
 
@@ -160,7 +136,7 @@ draggable: boolean;
 
 # IDMT\_EditorTabItem.isAbleDelete property
 
-标签页是否可关闭
+Whether the tab can be closed
 
 ## Signature
 
@@ -172,7 +148,7 @@ isAbleDelete: boolean;
 
 # IDMT\_EditorTabItem.tabId property
 
-标签页 ID
+Tab ID
 
 ## Signature
 
@@ -184,7 +160,7 @@ tabId: string;
 
 # IDMT\_EditorTabItem.title property
 
-标签页标题
+Tab title
 
 ## Signature
 

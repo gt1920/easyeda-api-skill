@@ -1,11 +1,11 @@
 # LIB\_Footprint class
 
-综合库 / 封装类
+Comprehensive library / footprint class
 
 ## Signature
 
 ```typescript
-declare class LIB_Footprint 
+class LIB_Footprint
 ```
 
 ## Methods
@@ -14,156 +14,123 @@ declare class LIB_Footprint
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copy(footprintUuid, libraryUuid, targetLibraryUuid, targetClassification, newFootprintName)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 复制封装
-
+**_(BETA)_** Copy Footprint
 
 </td></tr>
 <tr><td>
 
-[create(libraryUuid, footprintName, classification, description)](./LIB_Footprint.md)
-
-
-</td><td>
-
+[create(libraryUuid, footprintName, classification, description, otherProperty)](./LIB_Footprint.md)
 
 </td><td>
 
-**_(BETA)_** 创建封装
+</td><td>
 
+**_(BETA)_** Create Footprint
 
 </td></tr>
 <tr><td>
 
 [delete(footprintUuid, libraryUuid)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除封装
-
+**_(BETA)_** Delete Footprint
 
 </td></tr>
 <tr><td>
 
 [get(footprintUuid, libraryUuid)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取封装的所有属性
-
+**_(BETA)_** Get all properties of the footprint
 
 </td></tr>
 <tr><td>
 
 [getRenderImage(source)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取封装渲染图
-
+**_(BETA)_** Get the footprint render image
 
 </td></tr>
 <tr><td>
 
-[modify(footprintUuid, libraryUuid, footprintName, classification, description)](./LIB_Footprint.md)
-
-
-</td><td>
-
+[modify(footprintUuid, libraryUuid, footprintName, classification, description, otherProperty)](./LIB_Footprint.md)
 
 </td><td>
 
-**_(BETA)_** 修改封装
+</td><td>
 
+**_(BETA)_** Modify Footprint
 
 </td></tr>
 <tr><td>
 
 [openInEditor(footprintUuid, libraryUuid, splitScreenId)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 在编辑器打开文档
-
+**_(BETA)_** Open in the editor document
 
 </td></tr>
 <tr><td>
 
 [search(key, libraryUuid, classification, itemsOfPage, page)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 搜索封装
-
+**_(BETA)_** Search footprint
 
 </td></tr>
 <tr><td>
 
 [searchByProperties(properties, libraryUuid)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用属性精确搜索封装
-
+**_(BETA)_** Search footprints precisely by properties
 
 </td></tr>
 <tr><td>
 
 [updateDocumentSource(footprintUuid, libraryUuid, documentSource)](./LIB_Footprint.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 更新封装的文档源码
-
+**_(BETA)_** Update the document source code of the footprint
 
 </td></tr>
 </tbody></table>
@@ -178,12 +145,18 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-复制封装
+Copy Footprint
 
 ## Signature
 
 ```typescript
-copy(footprintUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newFootprintName?: string): Promise<string | undefined>;
+function copy(
+	footprintUuid: string,
+	libraryUuid: string,
+	targetLibraryUuid: string,
+	targetClassification?: ILIB_ClassificationIndex | Array<string>,
+	newFootprintName?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -192,107 +165,87 @@ copy(footprintUuid: string, libraryUuid: string, targetLibraryUuid: string, targ
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 targetLibraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-目标库 UUID
-
+Target library UUID
 
 </td></tr>
 <tr><td>
 
 targetClassification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 目标库内的分类
-
+_(Optional)_ Classification in the target library
 
 </td></tr>
 <tr><td>
 
 newFootprintName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 新封装名称，如若目标库内存在重名封装将导致复制失败
-
+_(Optional)_ New footprint name. If a footprint with the same name exists in the target library, the copy will fail
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-目标库内新封装的 UUID
+UUID of the new footprint in the target library
 
 ### create
 
@@ -300,12 +253,18 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建封装
+Create Footprint
 
 ## Signature
 
 ```typescript
-create(libraryUuid: string, footprintName: string, classification?: ILIB_ClassificationIndex | Array<string>, description?: string): Promise<string | undefined>;
+function create(
+	libraryUuid: string,
+	footprintName: string,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	description?: string,
+	otherProperty?: Record<string, boolean | number | string | undefined>,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -314,91 +273,87 @@ create(libraryUuid: string, footprintName: string, classification?: ILIB_Classif
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 footprintName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装名称
-
+Footprint name
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string
 
+</td><td>
+
+_(Optional)_ Description
+
+</td></tr>
+<tr><td>
+
+otherProperty
 
 </td><td>
 
-_(Optional)_ 描述
+Record&lt;string, boolean \| number \| string \| undefined&gt;
 
+</td><td>
+
+_(Optional)_ 其它属性
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-封装 UUID
+Footprint UUID
 
 ### delete
 
@@ -406,12 +361,12 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除封装
+Delete Footprint
 
 ## Signature
 
 ```typescript
-delete(footprintUuid: string, libraryUuid: string): Promise<boolean>;
+function delete(footprintUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -420,59 +375,48 @@ delete(footprintUuid: string, libraryUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### get
 
@@ -480,12 +424,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取封装的所有属性
+Get all properties of the footprint
 
 ## Signature
 
 ```typescript
-get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | undefined>;
+function get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | undefined>;
 ```
 
 ## Parameters
@@ -494,59 +438,48 @@ get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | u
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| undefined&gt;
 
-封装属性
+Footprint property
 
 ### getrenderimage
 
@@ -554,15 +487,15 @@ Promise&lt;[ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| undefin
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取封装渲染图
+Get the footprint render image
 
 ## Signature
 
 ```typescript
-getRenderImage(source: {
-        footprintUuid: string;
-        libraryUuid: string;
-    }): Promise<Blob | undefined>;
+function getRenderImage(source: {
+	footprintUuid: string;
+	libraryUuid: string;
+}): Promise<Blob | undefined>;
 ```
 
 ## Parameters
@@ -571,41 +504,33 @@ getRenderImage(source: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 source
 
-
 </td><td>
 
-\{ footprintUuid: string; libraryUuid: string; \}
-
+\{ footprintUuid: string; libraryUuid: string \}
 
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Blob \| undefined&gt;
 
-封装渲染图
+Footprint render image
 
 ### modify
 
@@ -613,12 +538,19 @@ Promise&lt;Blob \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改封装
+Modify Footprint
 
 ## Signature
 
 ```typescript
-modify(footprintUuid: string, libraryUuid: string, footprintName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
+function modify(
+	footprintUuid: string,
+	libraryUuid: string,
+	footprintName?: string,
+	classification?: ILIB_ClassificationIndex | Array<string> | null,
+	description?: string | null,
+	otherProperty?: Record<string, boolean | number | string | undefined | null>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -627,111 +559,104 @@ modify(footprintUuid: string, libraryUuid: string, footprintName?: string, class
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 footprintName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 封装名称
-
+_(Optional)_ Footprint name
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt; \| null
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string \| null
 
+</td><td>
+
+_(Optional)_ Description
+
+</td></tr>
+<tr><td>
+
+otherProperty
 
 </td><td>
 
-_(Optional)_ 描述
+Record&lt;string, boolean \| number \| string \| undefined \| null&gt;
 
+</td><td>
+
+_(Optional)_ 其它属性，如希望清除某些属性，则将其的值设置为 `null`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-如希望清除某些属性，则将其的值设置为 `null`
+If you want to clear certain properties, set their values to `null`
 
 ### openineditor
 
@@ -739,12 +664,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-在编辑器打开文档
+Open in the editor document
 
 ## Signature
 
 ```typescript
-openInEditor(footprintUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;
+function openInEditor(
+	footprintUuid: string,
+	libraryUuid: string,
+	splitScreenId?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -753,75 +682,61 @@ openInEditor(footprintUuid: string, libraryUuid: string, splitScreenId?: string)
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 splitScreenId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
-
+_(Optional)_ Split screen ID. If not filled in, it opens in the split screen with the last input focus by default. It can be obtained using the APIs in [DMT\_EditorControl](./DMT_EditorControl.md)
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-标签页 ID，对应 [IDMT\_EditorTabItem.tabId](../interfaces/IDMT_EditorTabItem.md)<!-- -->，可使用 [DMT\_EditorControl.getSplitScreenIdByTabId()](./DMT_EditorControl.md) 获取到分屏 ID
+Tab ID, corresponding to [IDMT\_EditorTabItem.tabId](../interfaces/IDMT_EditorTabItem.md)<!-- -->. You can use [DMT\_EditorControl.getSplitScreenIdByTabId()](./DMT_EditorControl.md) to get the split screen ID
 
 ### search
 
@@ -829,12 +744,18 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-搜索封装
+Search footprint
 
 ## Signature
 
 ```typescript
-search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_FootprintSearchItem>>;
+function search(
+	key: string,
+	libraryUuid?: string,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	itemsOfPage?: number,
+	page?: number,
+): Promise<Array<ILIB_FootprintSearchItem>>;
 ```
 
 ## Parameters
@@ -843,107 +764,87 @@ search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIn
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 key
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-搜索关键字
-
+Search keyword
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类，默认为全部
-
+_(Optional)_ Classification, defaults to all
 
 </td></tr>
 <tr><td>
 
 itemsOfPage
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
-
+_(Optional)_ Number of search results per page
 
 </td></tr>
 <tr><td>
 
 page
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 页数
-
+_(Optional)_ Page count
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的封装属性列表
+List of searched footprint properties
 
 ### searchbyproperties
 
@@ -951,12 +852,15 @@ Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSear
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用属性精确搜索封装
+Search footprints precisely by properties
 
 ## Signature
 
 ```typescript
-searchByProperties(properties: ILIB_FootprintPropertiesForSearch, libraryUuid?: string): Promise<Array<ILIB_FootprintSearchItem>>;
+function searchByProperties(
+	properties: ILIB_FootprintPropertiesForSearch,
+	libraryUuid?: string,
+): Promise<Array<ILIB_FootprintSearchItem>>;
 ```
 
 ## Parameters
@@ -965,59 +869,48 @@ searchByProperties(properties: ILIB_FootprintPropertiesForSearch, libraryUuid?: 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 properties
 
+</td><td>
+
+[ILIB\_FootprintPropertiesForSearch](../interfaces/ILIB_FootprintPropertiesForSearch.md)
 
 </td><td>
 
-ILIB\_FootprintPropertiesForSearch
-
-
-</td><td>
-
-属性
-
+Property
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的封装属性的列表
+List of searched footprint properties
 
 ### updatedocumentsource
 
@@ -1025,12 +918,16 @@ Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSear
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-更新封装的文档源码
+Update the document source code of the footprint
 
 ## Signature
 
 ```typescript
-updateDocumentSource(footprintUuid: string, libraryUuid: string, documentSource: string): Promise<boolean | undefined>;
+function updateDocumentSource(
+	footprintUuid: string,
+	libraryUuid: string,
+	documentSource: string,
+): Promise<boolean | undefined>;
 ```
 
 ## Parameters
@@ -1039,72 +936,58 @@ updateDocumentSource(footprintUuid: string, libraryUuid: string, documentSource:
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-封装 UUID
-
+Footprint UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 documentSource
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文档源码
-
+Document source code
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean \| undefined&gt;
 
-是否更新成功
+Whether the update is successful

@@ -1,16 +1,16 @@
 # SYS\_Math class
 
-系统 / 数学计算类
+System / math class
 
 ## Signature
 
 ```typescript
-declare class SYS_Math 
+class SYS_Math
 ```
 
 ## Remarks
 
-提供多边形几何计算方法，支持离散点坐标和 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) 多边形数据
+Provides polygon geometry calculation methods, supporting discrete point coordinates and [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) polygon data
 
 ## Methods
 
@@ -18,240 +18,189 @@ declare class SYS_Math
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [bboxIntersects(bbox1, bbox2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-快速判断两个 BBox 是否相交
-
+Quickly determine whether two BBoxes intersect
 
 </td></tr>
 <tr><td>
 
 [calculateArea(polygon)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算多边形面积
-
+Calculate the area of a polygon
 
 </td></tr>
 <tr><td>
 
 [calculatePerimeter(polygon)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算多边形周长
-
+Calculate the perimeter of a polygon
 
 </td></tr>
 <tr><td>
 
 [contains(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-判断 polygon1 是否完全包含 polygon2
-
+Determine whether polygon1 completely contains polygon2
 
 </td></tr>
 <tr><td>
 
 [containsPoint(polygon, point)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-判断点是否在多边形内部
-
+Determine whether the point is inside the polygon
 
 </td></tr>
 <tr><td>
 
 [distanceToPoint(polygon, point)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算点到多边形边界的最短距离
-
+Calculate the shortest distance from a point to the polygon boundary
 
 </td></tr>
 <tr><td>
 
 [getBBox(polygon)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取多边形的最小外接矩形（BBox）
-
+Get the minimum bounding rectangle (BBox) of the polygon
 
 </td></tr>
 <tr><td>
 
 [getCentroid(polygon)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算多边形质心
-
+Calculate the centroid of the polygon
 
 </td></tr>
 <tr><td>
 
 [intersection(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算两个多边形的交集
-
+Calculate the intersection of two polygons
 
 </td></tr>
 <tr><td>
 
 [intersects(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-判断两个多边形是否相交
-
+Determine whether two polygons intersect
 
 </td></tr>
 <tr><td>
 
 [rotate(polygon, angle, centerX, centerY)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-旋转多边形
-
+Rotate the polygon
 
 </td></tr>
 <tr><td>
 
 [scale(polygon, scaleX, scaleY, centerX, centerY)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-缩放多边形
-
+Scale the polygon
 
 </td></tr>
 <tr><td>
 
 [subtract(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算两个多边形的差集（polygon1 - polygon2）
-
+Calculate the difference of two polygons (polygon1 - polygon2)
 
 </td></tr>
 <tr><td>
 
 [translate(polygon, dx, dy)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-平移多边形
-
+Translate the polygon
 
 </td></tr>
 <tr><td>
 
 [union(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算两个多边形的并集
-
+Calculate the union of two polygons
 
 </td></tr>
 <tr><td>
 
 [xor(polygon1, polygon2)](./SYS_Math.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-计算两个多边形的对称差集（异或）
-
+Calculate the symmetric difference (XOR) of two polygons
 
 </td></tr>
 </tbody></table>
@@ -264,12 +213,12 @@ Description
 
 # SYS\_Math.bboxIntersects() method
 
-快速判断两个 BBox 是否相交
+Quickly determine whether two BBoxes intersect
 
 ## Signature
 
 ```typescript
-bboxIntersects(bbox1: ISYS_MathBBox, bbox2: ISYS_MathBBox): boolean;
+function bboxIntersects(bbox1: ISYS_MathBBox, bbox2: ISYS_MathBBox): boolean;
 ```
 
 ## Parameters
@@ -278,70 +227,59 @@ bboxIntersects(bbox1: ISYS_MathBBox, bbox2: ISYS_MathBBox): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 bbox1
 
-
 </td><td>
 
 [ISYS\_MathBBox](../interfaces/ISYS_MathBBox.md)
 
-
 </td><td>
 
 BBox 1
-
 
 </td></tr>
 <tr><td>
 
 bbox2
 
-
 </td><td>
 
 [ISYS\_MathBBox](../interfaces/ISYS_MathBBox.md)
-
 
 </td><td>
 
 BBox 2
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-是否相交
+Whether they intersect
 
 ### calculatearea
 
 # SYS\_Math.calculateArea() method
 
-计算多边形面积
+Calculate the area of a polygon
 
 ## Signature
 
 ```typescript
-calculateArea(polygon: TSYS_MathPolygonInput): number;
+function calculateArea(polygon: TSYS_MathPolygonInput): number;
 ```
 
 ## Parameters
@@ -350,58 +288,50 @@ calculateArea(polygon: TSYS_MathPolygonInput): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形或多边形组
-
+Polygon or polygon group
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-面积（单个多边形为绝对面积，多边形组为净面积）
+Area (absolute area for a single polygon, net area for a polygon group)
 
 ## Remarks
 
-使用 Shoelace 公式计算： - 传入单个多边形时，返回该多边形的绝对面积 - 传入多边形组（<!-- -->，如布尔运算的返回值）时， 计算所有外环面积之和减去所有孔洞面积之和，得到净面积
+Calculated using the Shoelace formula: - When a single polygon is passed in, the absolute area of the polygon is returned - When a polygon group ([TSYS\_MathPolygonGroup](../types/TSYS_MathPolygonGroup.md)<!-- -->, such as the return value of Boolean operations) is passed in, the net area is obtained by subtracting the sum of all hole areas from the sum of all outer ring areas
 
 ### calculateperimeter
 
 # SYS\_Math.calculatePerimeter() method
 
-计算多边形周长
+Calculate the perimeter of a polygon
 
 ## Signature
 
 ```typescript
-calculatePerimeter(polygon: TSYS_MathPolygonInput): number;
+function calculatePerimeter(polygon: TSYS_MathPolygonInput): number;
 ```
 
 ## Parameters
@@ -410,54 +340,46 @@ calculatePerimeter(polygon: TSYS_MathPolygonInput): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-周长
+Perimeter
 
 ### contains
 
 # SYS\_Math.contains() method
 
-判断 polygon1 是否完全包含 polygon2
+Determine whether polygon1 completely contains polygon2
 
 ## Signature
 
 ```typescript
-contains(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): boolean;
+function contains(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): boolean;
 ```
 
 ## Parameters
@@ -466,70 +388,59 @@ contains(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): bool
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-外部多边形
-
+Outer polygon
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-内部多边形
-
+Internal polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-polygon1 是否完全包含 polygon2
+Whether polygon1 completely contains polygon2
 
 ### containspoint
 
 # SYS\_Math.containsPoint() method
 
-判断点是否在多边形内部
+Determine whether the point is inside the polygon
 
 ## Signature
 
 ```typescript
-containsPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): boolean;
+function containsPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): boolean;
 ```
 
 ## Parameters
@@ -538,78 +449,67 @@ containsPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 <tr><td>
 
 point
 
-
 </td><td>
 
 [ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)
 
-
 </td><td>
 
-待判断的点
-
+The point to determine
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-是否在多边形内部
+Whether In polygon internal
 
 ## Remarks
 
-使用射线法（Ray Casting）判断点是否在多边形内部
+Use the ray casting method to determine whether the point is inside the polygon
 
-由于射线法的特性，边界上的点行为不一致：部分边界上的点可能返回 `true`<!-- -->，部分可能返回 `false`<!-- -->， 具体取决于射线方向与边界的几何关系
+Due to the characteristics of the ray casting method, points on the boundary behave inconsistently: some boundary points may return `true`<!-- -->, and some may return `false`<!-- -->, depending on the geometric relationship between the ray direction and the boundary
 
-如需严格判断点是否在边界上，请结合 [SYS\_Math.distanceToPoint()](./SYS_Math.md) 判断距离是否为 `0`
+To strictly determine whether the point is on the boundary, combine [SYS\_Math.distanceToPoint()](./SYS_Math.md) to check whether the distance is `0`
 
 ### distancetopoint
 
 # SYS\_Math.distanceToPoint() method
 
-计算点到多边形边界的最短距离
+Calculate the shortest distance from a point to the polygon boundary
 
 ## Signature
 
 ```typescript
-distanceToPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): number;
+function distanceToPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): number;
 ```
 
 ## Parameters
@@ -618,70 +518,59 @@ distanceToPoint(polygon: TSYS_MathPolygonInput, point: ISYS_MathPoint): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 <tr><td>
 
 point
 
-
 </td><td>
 
 [ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)
 
-
 </td><td>
 
-待计算的点
-
+The point to calculate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-最短距离，如点在多边形内部则返回 `0`
+Shortest distance. If the point is inside the polygon, `0` is returned
 
 ### getbbox
 
 # SYS\_Math.getBBox() method
 
-获取多边形的最小外接矩形（BBox）
+Get the minimum bounding rectangle (BBox) of the polygon
 
 ## Signature
 
 ```typescript
-getBBox(polygon: TSYS_MathPolygonInput): ISYS_MathBBox;
+function getBBox(polygon: TSYS_MathPolygonInput): ISYS_MathBBox;
 ```
 
 ## Parameters
@@ -690,37 +579,29 @@ getBBox(polygon: TSYS_MathPolygonInput): ISYS_MathBBox;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -732,12 +613,12 @@ BBox
 
 # SYS\_Math.getCentroid() method
 
-计算多边形质心
+Calculate the centroid of the polygon
 
 ## Signature
 
 ```typescript
-getCentroid(polygon: TSYS_MathPolygonInput): ISYS_MathPoint;
+function getCentroid(polygon: TSYS_MathPolygonInput): ISYS_MathPoint;
 ```
 
 ## Parameters
@@ -746,54 +627,49 @@ getCentroid(polygon: TSYS_MathPolygonInput): ISYS_MathPoint;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)
 
-质心坐标
+Centroid coordinate
 
 ### intersection
 
 # SYS\_Math.intersection() method
 
-计算两个多边形的交集
+Calculate the intersection of two polygons
 
 ## Signature
 
 ```typescript
-intersection(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_MathPolygonGroup;
+function intersection(
+	polygon1: TSYS_MathPolygonInput,
+	polygon2: TSYS_MathPolygonInput,
+): TSYS_MathPolygonGroup;
 ```
 
 ## Parameters
@@ -802,70 +678,59 @@ intersection(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 1
-
+Polygon 1
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 2
-
+Polygon 2
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-TSYS\_MathPolygonGroup
+[TSYS\_MathPolygonGroup](../types/TSYS_MathPolygonGroup.md)
 
-交集结果的多边形组，空数组表示无交集
+Polygon group of the intersection result. An empty array means no intersection
 
 ### intersects
 
 # SYS\_Math.intersects() method
 
-判断两个多边形是否相交
+Determine whether two polygons intersect
 
 ## Signature
 
 ```typescript
-intersects(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): boolean;
+function intersects(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): boolean;
 ```
 
 ## Parameters
@@ -874,74 +739,68 @@ intersects(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): bo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 1
-
+Polygon 1
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 2
-
+Polygon 2
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-是否相交
+Whether they intersect
 
 ## Remarks
 
-判断两个多边形的区域是否有任何重叠（包括包含、部分相交、边界接触）
+Determine whether the regions of two polygons have any overlap (including containment, partial intersection, and boundary contact)
 
 ### rotate
 
 # SYS\_Math.rotate() method
 
-旋转多边形
+Rotate the polygon
 
 ## Signature
 
 ```typescript
-rotate(polygon: TSYS_MathPolygonInput, angle: number, centerX?: number, centerY?: number): Array<ISYS_MathPoint>;
+function rotate(
+	polygon: TSYS_MathPolygonInput,
+	angle: number,
+	centerX?: number,
+	centerY?: number,
+): Array<ISYS_MathPoint>;
 ```
 
 ## Parameters
@@ -950,102 +809,91 @@ rotate(polygon: TSYS_MathPolygonInput, angle: number, centerX?: number, centerY?
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 <tr><td>
 
 angle
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度（角度制，正值为逆时针）
-
+Rotation angle (in degrees, positive values are counterclockwise)
 
 </td></tr>
 <tr><td>
 
 centerX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转中心 X 坐标，默认为质心
-
+_(Optional)_ X coordinate of the rotation center, defaulting to the centroid
 
 </td></tr>
 <tr><td>
 
 centerY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转中心 Y 坐标，默认为质心
-
+_(Optional)_ Y coordinate of the rotation center, defaulting to the centroid
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Array&lt;[ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)<!-- -->&gt;
 
-旋转后的离散点数组
+Array of discrete points after rotation
 
 ### scale
 
 # SYS\_Math.scale() method
 
-缩放多边形
+Scale the polygon
 
 ## Signature
 
 ```typescript
-scale(polygon: TSYS_MathPolygonInput, scaleX: number, scaleY?: number, centerX?: number, centerY?: number): Array<ISYS_MathPoint>;
+function scale(
+	polygon: TSYS_MathPolygonInput,
+	scaleX: number,
+	scaleY?: number,
+	centerX?: number,
+	centerY?: number,
+): Array<ISYS_MathPoint>;
 ```
 
 ## Parameters
@@ -1054,118 +902,101 @@ scale(polygon: TSYS_MathPolygonInput, scaleX: number, scaleY?: number, centerX?:
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 <tr><td>
 
 scaleX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-X 方向缩放比例
-
+X direction scale ratio
 
 </td></tr>
 <tr><td>
 
 scaleY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ Y 方向缩放比例，默认与 scaleX 相同
-
+_(Optional)_ Y direction scale ratio, defaulting to the same as scaleX
 
 </td></tr>
 <tr><td>
 
 centerX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 缩放中心 X 坐标，默认为质心
-
+_(Optional)_ X coordinate of the scaling center, defaulting to the centroid
 
 </td></tr>
 <tr><td>
 
 centerY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 缩放中心 Y 坐标，默认为质心
-
+_(Optional)_ Y coordinate of the scaling center, defaulting to the centroid
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Array&lt;[ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)<!-- -->&gt;
 
-缩放后的离散点数组
+Array of discrete points after scaling
 
 ### subtract
 
 # SYS\_Math.subtract() method
 
-计算两个多边形的差集（polygon1 - polygon2）
+Calculate the difference of two polygons (polygon1 - polygon2)
 
 ## Signature
 
 ```typescript
-subtract(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_MathPolygonGroup;
+function subtract(
+	polygon1: TSYS_MathPolygonInput,
+	polygon2: TSYS_MathPolygonInput,
+): TSYS_MathPolygonGroup;
 ```
 
 ## Parameters
@@ -1174,70 +1005,59 @@ subtract(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-被减多边形
-
+Minuend polygon
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-减去的多边形
-
+Subtrahend polygon
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-TSYS\_MathPolygonGroup
+[TSYS\_MathPolygonGroup](../types/TSYS_MathPolygonGroup.md)
 
-差集结果的多边形组，保留外环与孔洞的归属关系
+Polygon group of the difference result, preserving the association between outer rings and holes
 
 ### translate
 
 # SYS\_Math.translate() method
 
-平移多边形
+Translate the polygon
 
 ## Signature
 
 ```typescript
-translate(polygon: TSYS_MathPolygonInput, dx: number, dy: number): Array<ISYS_MathPoint>;
+function translate(polygon: TSYS_MathPolygonInput, dx: number, dy: number): Array<ISYS_MathPoint>;
 ```
 
 ## Parameters
@@ -1246,86 +1066,75 @@ translate(polygon: TSYS_MathPolygonInput, dx: number, dy: number): Array<ISYS_Ma
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形
-
+Polygon
 
 </td></tr>
 <tr><td>
 
 dx
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-X 方向偏移量
-
+X direction offset
 
 </td></tr>
 <tr><td>
 
 dy
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-Y 方向偏移量
-
+Y direction offset
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Array&lt;[ISYS\_MathPoint](../interfaces/ISYS_MathPoint.md)<!-- -->&gt;
 
-平移后的离散点数组
+Array of discrete points after translation
 
 ### union
 
 # SYS\_Math.union() method
 
-计算两个多边形的并集
+Calculate the union of two polygons
 
 ## Signature
 
 ```typescript
-union(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_MathPolygonGroup;
+function union(
+	polygon1: TSYS_MathPolygonInput,
+	polygon2: TSYS_MathPolygonInput,
+): TSYS_MathPolygonGroup;
 ```
 
 ## Parameters
@@ -1334,70 +1143,62 @@ union(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_Ma
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 1
-
+Polygon 1
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 2
-
+Polygon 2
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-TSYS\_MathPolygonGroup
+[TSYS\_MathPolygonGroup](../types/TSYS_MathPolygonGroup.md)
 
-并集结果的多边形组，保留外环与孔洞的归属关系
+Polygon group of the union result, preserving the association between outer rings and holes
 
 ### xor
 
 # SYS\_Math.xor() method
 
-计算两个多边形的对称差集（异或）
+Calculate the symmetric difference (XOR) of two polygons
 
 ## Signature
 
 ```typescript
-xor(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_MathPolygonGroup;
+function xor(
+	polygon1: TSYS_MathPolygonInput,
+	polygon2: TSYS_MathPolygonInput,
+): TSYS_MathPolygonGroup;
 ```
 
 ## Parameters
@@ -1406,56 +1207,45 @@ xor(polygon1: TSYS_MathPolygonInput, polygon2: TSYS_MathPolygonInput): TSYS_Math
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 polygon1
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 1
-
+Polygon 1
 
 </td></tr>
 <tr><td>
 
 polygon2
 
-
 </td><td>
 
 [TSYS\_MathPolygonInput](../types/TSYS_MathPolygonInput.md)
 
-
 </td><td>
 
-多边形 2
-
+Polygon 2
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-TSYS\_MathPolygonGroup
+[TSYS\_MathPolygonGroup](../types/TSYS_MathPolygonGroup.md)
 
-对称差集结果的多边形组，保留外环与孔洞的归属关系
+Polygon group of the symmetric difference result, preserving the association between outer rings and holes

@@ -1,16 +1,16 @@
 # SYS\_Dialog class
 
-系统 / 对话框类
+System / dialog class
 
 ## Signature
 
 ```typescript
-declare class SYS_Dialog 
+class SYS_Dialog
 ```
 
 ## Remarks
 
-生成对话框窗口
+Generate dialog windows
 
 ## Methods
 
@@ -18,100 +18,79 @@ declare class SYS_Dialog
 
 Method
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Description
 
-
 </th></tr></thead>
 <tbody><tr><td>
 
-[createReactComponentizationDialogInterface(React, Reconciler)](./SYS_Dialog.md)
-
-
-</td><td>
-
+[createDesignPortal()](./SYS_Dialog.md)
 
 </td><td>
 
-**_(BETA)_** 创建 React 组件化弹出窗口接口
+</td><td>
 
+Create a communication entry for a componentized popup window
 
 </td></tr>
 <tr><td>
 
 [showConfirmationMessage(content, title, mainButtonTitle, buttonTitle, callbackFn)](./SYS_Dialog.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-弹出确认窗口
-
+Show a confirmation dialog
 
 </td></tr>
 <tr><td>
 
 [showInformationMessage(content, title, buttonTitle)](./SYS_Dialog.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-弹出消息窗口
-
+Show an information dialog
 
 </td></tr>
 <tr><td>
 
 [showInputDialog(beforeContent, afterContent, title, type, value, otherProperty, callbackFn)](./SYS_Dialog.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 弹出输入窗口
-
+**_(BETA)_** Show an input dialog
 
 </td></tr>
 <tr><td>
 
 [showSelectDialog(options, beforeContent, afterContent, title, defaultOption, multiple, callbackFn)](./SYS_Dialog.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 弹出选择窗口
-
+**_(BETA)_** Show a select dialog
 
 </td></tr>
 <tr><td>
 
 [showSelectDialog(options, beforeContent, afterContent, title, defaultOption, multiple, callbackFn)](./SYS_Dialog.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 弹出多选窗口
-
+**_(BETA)_** Show a multi-select dialog
 
 </td></tr>
 </tbody></table>
@@ -120,90 +99,44 @@ Description
 
 ## 方法详情
 
-### createreactcomponentizationdialoginterface
+### createdesignportal
 
-# SYS\_Dialog.createReactComponentizationDialogInterface() method
+# SYS\_Dialog.createDesignPortal() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-创建 React 组件化弹出窗口接口
+Create a communication entry for a componentized popup window
 
 ## Signature
 
 ```typescript
-createReactComponentizationDialogInterface(React: ISYS_ReactComponentizationDialogReactInstance, Reconciler: ISYS_ReactComponentizationDialogReconcilerInstance): Promise<ISYS_ReactComponentizationDialogInterface>;
+function createDesignPortal(): IDesignPortal;
 ```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-React
-
-
-</td><td>
-
-[ISYS\_ReactComponentizationDialogReactInstance](../interfaces/ISYS_ReactComponentizationDialogReactInstance.md)
-
-
-</td><td>
-
-扩展的 React 实例
-
-
-</td></tr>
-<tr><td>
-
-Reconciler
-
-
-</td><td>
-
-[ISYS\_ReactComponentizationDialogReconcilerInstance](../interfaces/ISYS_ReactComponentizationDialogReconcilerInstance.md)
-
-
-</td><td>
-
-扩展的 react-reconciler 实例
-
-
-</td></tr>
-</tbody></table>
-
-
 
 ## Returns
 
-Promise&lt;[ISYS\_ReactComponentizationDialogInterface](../interfaces/ISYS_ReactComponentizationDialogInterface.md)<!-- -->&gt;
+[IDesignPortal](../interfaces/IDesignPortal.md)
 
-包含 Components、LC\_DESIGN\_COMPONENTS\_NAMES、WorkerPortal 类和 VirtualRender 类的对象
+A communication object implementing IDesignPortal
+
+## Remarks
+
+Returns an IDesignPortal object, used by extensions in conjunction with the VirtualRender / virtual machine component of lc-editor-design-react. All communication (sending messages + receiving events) is encapsulated inside the object.
 
 ### showconfirmationmessage
 
 # SYS\_Dialog.showConfirmationMessage() method
 
-弹出确认窗口
+Show a confirmation dialog
 
 ## Signature
 
 ```typescript
-showConfirmationMessage(content: string, title?: string, mainButtonTitle?: string, buttonTitle?: string, callbackFn?: (mainButtonClicked: boolean) => void): void;
+function showConfirmationMessage(
+	content: string,
+	title?: string,
+	mainButtonTitle?: string,
+	buttonTitle?: string,
+	callbackFn?: (mainButtonClicked: boolean) => void,
+): void;
 ```
 
 ## Parameters
@@ -212,101 +145,81 @@ showConfirmationMessage(content: string, title?: string, mainButtonTitle?: strin
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 content
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-消息文本，支持使用 `\n` 换行
-
+Message text. Line breaks can be used with `\n`
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 弹出窗口标题
-
+_(Optional)_ Popup window title
 
 </td></tr>
 <tr><td>
 
 mainButtonTitle
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 主要按钮标题
-
+_(Optional)_ Primary button title
 
 </td></tr>
 <tr><td>
 
 buttonTitle
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 主要按钮标题
-
+_(Optional)_ Primary button title
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (mainButtonClicked: boolean) =&gt; void
 
-
 </td><td>
 
-_(Optional)_ 回调函数
-
+_(Optional)_ Callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -314,18 +227,18 @@ void
 
 ## Remarks
 
-显示一个拥有确认和取消按钮的窗口
+Show a window with confirmation and cancel buttons
 
 ### showinformationmessage
 
 # SYS\_Dialog.showInformationMessage() method
 
-弹出消息窗口
+Show an information dialog
 
 ## Signature
 
 ```typescript
-showInformationMessage(content: string, title?: string, buttonTitle?: string): void;
+function showInformationMessage(content: string, title?: string, buttonTitle?: string): void;
 ```
 
 ## Parameters
@@ -334,69 +247,55 @@ showInformationMessage(content: string, title?: string, buttonTitle?: string): v
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 content
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-消息文本，支持使用 `\n` 换行
-
+Message text. Line breaks can be used with `\n`
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 弹出窗口标题
-
+_(Optional)_ Popup window title
 
 </td></tr>
 <tr><td>
 
 buttonTitle
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 按钮标题，为空则不显示按钮
-
+_(Optional)_ Button title. If empty, the button is not displayed
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -404,7 +303,7 @@ void
 
 ## Remarks
 
-显示一个文字消息窗口
+Show a text message window
 
 ### showinputdialog
 
@@ -412,22 +311,42 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-弹出输入窗口
+Show an input dialog
 
 ## Signature
 
 ```typescript
-showInputDialog(beforeContent?: string, afterContent?: string, title?: string, type?: 'color' | 'date' | 'datetime-local' | 'email' | 'mouth' | 'number' | 'password' | 'tel' | 'text' | 'time' | 'url' | 'week', value?: string | number, otherProperty?: {
-        max?: number;
-        maxlength?: number;
-        min?: number;
-        minlength?: number;
-        multiple?: boolean;
-        pattern?: RegExp;
-        placeholder?: string;
-        readonly?: boolean;
-        step?: number;
-    }, callbackFn?: (value: any) => void): void;
+function showInputDialog(
+	beforeContent?: string,
+	afterContent?: string,
+	title?: string,
+	type?:
+		| 'color'
+		| 'date'
+		| 'datetime-local'
+		| 'email'
+		| 'mouth'
+		| 'number'
+		| 'password'
+		| 'tel'
+		| 'text'
+		| 'time'
+		| 'url'
+		| 'week',
+	value?: string | number,
+	otherProperty?: {
+		max?: number;
+		maxlength?: number;
+		min?: number;
+		minlength?: number;
+		multiple?: boolean;
+		pattern?: RegExp;
+		placeholder?: string;
+		readonly?: boolean;
+		step?: number;
+	},
+	callbackFn?: (value: any) => void,
+): void;
 ```
 
 ## Parameters
@@ -436,139 +355,113 @@ showInputDialog(beforeContent?: string, afterContent?: string, title?: string, t
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 beforeContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 输入框上方文字
-
+_(Optional)_ Text above the input box
 
 </td></tr>
 <tr><td>
 
 afterContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 输入框下方文字
-
+_(Optional)_ Text below the input box
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 弹出窗口标题
-
+_(Optional)_ Popup window title
 
 </td></tr>
 <tr><td>
 
 type
 
-
 </td><td>
 
 'color' \| 'date' \| 'datetime-local' \| 'email' \| 'mouth' \| 'number' \| 'password' \| 'tel' \| 'text' \| 'time' \| 'url' \| 'week'
 
-
 </td><td>
 
-_(Optional)_ 输入框类型
-
+_(Optional)_ Input box type
 
 </td></tr>
 <tr><td>
 
 value
 
-
 </td><td>
 
 string \| number
 
-
 </td><td>
 
-_(Optional)_ 输入框默认值
-
+_(Optional)_ Default value of the input box
 
 </td></tr>
 <tr><td>
 
 otherProperty
 
+</td><td>
+
+\{ max?: number; maxlength?: number; min?: number; minlength?: number; multiple?: boolean; pattern?: RegExp; placeholder?: string; readonly?: boolean; step?: number \}
 
 </td><td>
 
-\{ max?: number; maxlength?: number; min?: number; minlength?: number; multiple?: boolean; pattern?: RegExp; placeholder?: string; readonly?: boolean; step?: number; \}
-
-
-</td><td>
-
-_(Optional)_ 其它参数，可参考 [The HTML Input element](https://developer.mozilla.org/docs/Web/HTML/Element/input#attributes)
-
+_(Optional)_ Other parameters. Refer to [The HTML Input element](https://developer.mozilla.org/docs/Web/HTML/Element/input#attributes)
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (value: any) =&gt; void
 
-
 </td><td>
 
-_(Optional)_ 回调函数
-
+_(Optional)_ Callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 void
 
-用户输入的值，始终为 `string` 类型，除非用户点击了 \*\*取消\*\* 按钮
+The value entered by the user, always of type `string`<!-- -->, unless the user clicks the \*\*Cancel\*\* button
 
 ### showselectdialog
 
@@ -576,15 +469,20 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-弹出选择窗口
+Show a select dialog
 
 ## Signature
 
 ```typescript
-showSelectDialog(options: Array<string> | Array<{
-        value: string;
-        displayContent: string;
-    }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: string, multiple?: false, callbackFn?: (value: string) => void | Promise<void>): void;
+function showSelectDialog(
+	options: Array<string> | Array<{ value: string; displayContent: string }>,
+	beforeContent?: string,
+	afterContent?: string,
+	title?: string,
+	defaultOption?: string,
+	multiple?: false,
+	callbackFn?: (value: string) => void | Promise<void>,
+): void;
 ```
 
 ## Parameters
@@ -593,143 +491,113 @@ showSelectDialog(options: Array<string> | Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 options
 
+</td><td>
+
+Array&lt;string&gt; \| Array&lt;{ value: string; displayContent: string }&gt;
 
 </td><td>
 
-Array&lt;string&gt; \| Array&lt;{ value: string; displayContent: string; }&gt;
-
-
-</td><td>
-
-选项列表，可以为字符串数组或对象数组，在未指定 `defaultOption` 时，默认值为列表的第一项；
-
-如若为字符串数组，则选项的值和选项的展示内容将保持一致；
-
-如若为对象数组，则 `value` 表示选项的值，`displayContent` 表示选项的展示内容
-
+Option list, which can be an array of strings or an array of objects. When `defaultOption` is not specified, the default value is the first item of the list. If it is an array of strings, the value and display content of the option remain the same. If it is an array of objects, `value` represents the value of the option, and `displayContent` represents the display content of the option
 
 </td></tr>
 <tr><td>
 
 beforeContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 选择框上方文字
-
+_(Optional)_ Text above the select box
 
 </td></tr>
 <tr><td>
 
 afterContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 选择框下方文字
-
+_(Optional)_ Text below the select box
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 选择框标题
-
+_(Optional)_ Select box title
 
 </td></tr>
 <tr><td>
 
 defaultOption
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 默认选项，以选项的值作为匹配参数，如若 `multiple` 参数为 `true`<!-- -->，则此处需要传入字符串数组
-
+_(Optional)_ Default option, using the option value as the matching parameter. If the `multiple` parameter is `true`<!-- -->, an array of strings needs to be passed here
 
 </td></tr>
 <tr><td>
 
 multiple
 
-
 </td><td>
 
 false
 
-
 </td><td>
 
-_(Optional)_ 是否支持多选，默认为单选框
-
+_(Optional)_ Whether multiple selection is supported. By default, it is a single-select box
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (value: string) =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-_(Optional)_ 回调函数
-
+_(Optional)_ Callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 void
 
-用户选择的值，对应传入的 `options` 中的 `value` 字段
+The value selected by the user, corresponding to the `value` field in the passed-in `options`
 
 ### showselectdialog_1
 
@@ -737,15 +605,20 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-弹出多选窗口
+Show a multi-select dialog
 
 ## Signature
 
 ```typescript
-showSelectDialog(options: Array<string> | Array<{
-        value: string;
-        displayContent: string;
-    }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: Array<string>, multiple?: true, callbackFn?: (value: Array<string>) => void | Promise<void>): void;
+function showSelectDialog(
+	options: Array<string> | Array<{ value: string; displayContent: string }>,
+	beforeContent?: string,
+	afterContent?: string,
+	title?: string,
+	defaultOption?: Array<string>,
+	multiple?: true,
+	callbackFn?: (value: Array<string>) => void | Promise<void>,
+): void;
 ```
 
 ## Parameters
@@ -754,140 +627,110 @@ showSelectDialog(options: Array<string> | Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 options
 
+</td><td>
+
+Array&lt;string&gt; \| Array&lt;{ value: string; displayContent: string }&gt;
 
 </td><td>
 
-Array&lt;string&gt; \| Array&lt;{ value: string; displayContent: string; }&gt;
-
-
-</td><td>
-
-选项列表，可以为字符串数组或对象数组，在未指定 `defaultOption` 时，默认值为列表的第一项；
-
-如若为字符串数组，则选项的值和选项的展示内容将保持一致；
-
-如若为对象数组，则 `value` 表示选项的值，`displayContent` 表示选项的展示内容
-
+Option list, which can be an array of strings or an array of objects. When `defaultOption` is not specified, the default value is the first item of the list. If it is an array of strings, the value and display content of the option remain the same. If it is an array of objects, `value` represents the value of the option, and `displayContent` represents the display content of the option
 
 </td></tr>
 <tr><td>
 
 beforeContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 多选框上方文字
-
+_(Optional)_ Text above the multi-select box
 
 </td></tr>
 <tr><td>
 
 afterContent
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 多选框下方文字
-
+_(Optional)_ Text below the multi-select box
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 多选框标题
-
+_(Optional)_ Multi-select box title
 
 </td></tr>
 <tr><td>
 
 defaultOption
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 默认选项数组，以选项的值作为匹配参数
-
+_(Optional)_ Default option array, using the option values as matching parameters
 
 </td></tr>
 <tr><td>
 
 multiple
 
-
 </td><td>
 
 true
 
-
 </td><td>
 
-_(Optional)_ 是否支持多选
-
+_(Optional)_ Whether multiple selection is supported
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (value: Array&lt;string&gt;) =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-_(Optional)_ 回调函数
-
+_(Optional)_ Callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 void
 
-用户选择的值的集合数组，对应传入的 `options` 中的 `value` 字段
+Array of the set of values selected by the user, corresponding to the `value` fields in the passed-in `options`

@@ -1,18 +1,17 @@
 # IPCB\_PrimitiveLine class
 
-直线图元
+Line primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveLine implements IPCB_Primitive 
+class IPCB_PrimitiveLine implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
 
-直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
-
+Both lines and arc lines are wires, corresponding to the line traces and arc traces on the canvas
 
 ## Methods
 
@@ -20,380 +19,299 @@ declare class IPCB_PrimitiveLine implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getAdjacentPrimitives()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取相邻的图元对象
-
+**_(BETA)_** Get Adjacent primitive objects
 
 </td></tr>
 <tr><td>
 
 [getEntireTrack(includeVias)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取整段导线
-
+**_(BETA)_** Get the entire wire
 
 </td></tr>
 <tr><td>
 
 [getEntireTrack(includeVias)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取整段导线
-
+**_(BETA)_** Get the entire wire
 
 </td></tr>
 <tr><td>
 
 [getState\_EndX()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：终止位置 X
-
+Get the property state: end position X
 
 </td></tr>
 <tr><td>
 
 [getState\_EndY()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：终止位置 Y
-
+Get the property state: end position Y
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_Net()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：网络名称
-
+Get the property state: net name
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_StartX()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：起始位置 X
-
+Get the property state: start position X
 
 </td></tr>
 <tr><td>
 
 [getState\_StartY()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：起始位置 Y
-
+Get the property state: start position Y
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_EndX(endX)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：终止位置 X
-
+**_(BETA)_** Set the property state: end position X
 
 </td></tr>
 <tr><td>
 
 [setState\_EndY(endY)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：终止位置 Y
-
+**_(BETA)_** Set the property state: end position Y
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_Net(net)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：网络名称
-
+**_(BETA)_** Set the property state: net name
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_StartX(startX)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：起始位置 X
-
+**_(BETA)_** Set the property state: start position X
 
 </td></tr>
 <tr><td>
 
 [setState\_StartY(startY)](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：起始位置 Y
-
+**_(BETA)_** Set the property state: start position Y
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveLine.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -408,20 +326,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveLine>;
+function done(): Promise<IPCB_PrimitiveLine>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)<!-- -->&gt;
 
-直线图元对象
+Line primitive object
 
 ### getadjacentprimitives
 
@@ -429,24 +346,25 @@ Promise&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取相邻的图元对象
+Get Adjacent primitive objects
 
 ## Signature
 
 ```typescript
-getAdjacentPrimitives(): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveVia | IPCB_PrimitiveArc>>;
+function getAdjacentPrimitives(): Promise<
+	Array<IPCB_PrimitiveLine | IPCB_PrimitiveVia | IPCB_PrimitiveArc>
+>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;&gt;
 
-相邻的直线、过孔、圆弧线图元对象
+Adjacent line, via, and arc-line primitive objects
 
 ## Remarks
 
-将会获取与直线两端直接相连的直线、过孔、圆弧线图元对象
+It will get the line, via, and arc-line primitive objects directly connected to both ends of the line
 
 ### getentiretrack
 
@@ -454,12 +372,12 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取整段导线
+Get the entire wire
 
 ## Signature
 
 ```typescript
-getEntireTrack(includeVias: false): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc>>;
+function getEntireTrack(includeVias: false): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc>>;
 ```
 
 ## Parameters
@@ -468,43 +386,35 @@ getEntireTrack(includeVias: false): Promise<Array<IPCB_PrimitiveLine | IPCB_Prim
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 includeVias
 
-
 </td><td>
 
 false
 
-
 </td><td>
 
-是否包含导线两端的过孔
-
+Whether to include the vias at both ends of the wire
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;&gt;
 
-整段导线内的所有直线和圆弧线
+All lines and arc lines in the entire wire
 
 ### getentiretrack_1
 
@@ -512,12 +422,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取整段导线
+Get the entire wire
 
 ## Signature
 
 ```typescript
-getEntireTrack(includeVias: true): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc | IPCB_PrimitiveVia>>;
+function getEntireTrack(
+	includeVias: true,
+): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc | IPCB_PrimitiveVia>>;
 ```
 
 ## Parameters
@@ -526,252 +438,233 @@ getEntireTrack(includeVias: true): Promise<Array<IPCB_PrimitiveLine | IPCB_Primi
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 includeVias
 
-
 </td><td>
 
 true
 
-
 </td><td>
 
-是否包含导线两端的过孔
-
+Whether to include the vias at both ends of the wire
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;&gt;
 
-整段导线内的所有直线、圆弧线，以及两端连接的过孔（如果有）
+All lines and arc lines in the entire wire, as well as the vias connected at both ends (if any)
 
 ### getstate_endx
 
 # IPCB\_PrimitiveLine.getState\_EndX() method
 
-获取属性状态：终止位置 X
+Get the property state: end position X
 
 ## Signature
 
 ```typescript
-getState_EndX(): number;
+function getState_EndX(): number;
 ```
-
 
 ## Returns
 
 number
 
-终止位置 X
+End position X
 
 ### getstate_endy
 
 # IPCB\_PrimitiveLine.getState\_EndY() method
 
-获取属性状态：终止位置 Y
+Get the property state: end position Y
 
 ## Signature
 
 ```typescript
-getState_EndY(): number;
+function getState_EndY(): number;
 ```
-
 
 ## Returns
 
 number
 
-终止位置 Y
+End position Y
 
 ### getstate_layer
 
 # IPCB\_PrimitiveLine.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfLine;
+function getState_Layer(): TPCB_LayersOfLine;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
-层
+Layer
 
 ### getstate_linewidth
 
 # IPCB\_PrimitiveLine.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number;
+function getState_LineWidth(): number;
 ```
-
 
 ## Returns
 
 number
 
-线宽
+Line width
 
 ### getstate_net
 
 # IPCB\_PrimitiveLine.getState\_Net() method
 
-获取属性状态：网络名称
+Get the property state: net name
 
 ## Signature
 
 ```typescript
-getState_Net(): string;
+function getState_Net(): string;
 ```
-
 
 ## Returns
 
 string
 
-网络名称
+Net name
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveLine.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveLine.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveLine.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_startx
 
 # IPCB\_PrimitiveLine.getState\_StartX() method
 
-获取属性状态：起始位置 X
+Get the property state: start position X
 
 ## Signature
 
 ```typescript
-getState_StartX(): number;
+function getState_StartX(): number;
 ```
-
 
 ## Returns
 
 number
 
-起始位置 X
+Start position X
 
 ### getstate_starty
 
 # IPCB\_PrimitiveLine.getState\_StartY() method
 
-获取属性状态：起始位置 Y
+Get the property state: start position Y
 
 ## Signature
 
 ```typescript
-getState_StartY(): number;
+function getState_StartY(): number;
 ```
-
 
 ## Returns
 
 number
 
-起始位置 Y
+Start position Y
 
 ### isasync
 
 # IPCB\_PrimitiveLine.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -779,20 +672,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveLine>;
+function reset(): Promise<IPCB_PrimitiveLine>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)<!-- -->&gt;
 
-直线图元对象
+Line primitive object
 
 ### setstate_endx
 
@@ -800,12 +692,12 @@ Promise&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：终止位置 X
+Set the property state: end position X
 
 ## Signature
 
 ```typescript
-setState_EndX(endX: number): IPCB_PrimitiveLine;
+function setState_EndX(endX: number): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -814,43 +706,35 @@ setState_EndX(endX: number): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 endX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-终止位置 X
-
+End position X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_endy
 
@@ -858,12 +742,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：终止位置 Y
+Set the property state: end position Y
 
 ## Signature
 
 ```typescript
-setState_EndY(endY: number): IPCB_PrimitiveLine;
+function setState_EndY(endY: number): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -872,43 +756,35 @@ setState_EndY(endY: number): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 endY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-终止位置 Y
-
+End position Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_layer
 
@@ -916,12 +792,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfLine): IPCB_PrimitiveLine;
+function setState_Layer(layer: TPCB_LayersOfLine): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -930,43 +806,35 @@ setState_Layer(layer: TPCB_LayersOfLine): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_linewidth
 
@@ -974,12 +842,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number): IPCB_PrimitiveLine;
+function setState_LineWidth(lineWidth: number): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -988,43 +856,35 @@ setState_LineWidth(lineWidth: number): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_net
 
@@ -1032,12 +892,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：网络名称
+Set the property state: net name
 
 ## Signature
 
 ```typescript
-setState_Net(net: string): IPCB_PrimitiveLine;
+function setState_Net(net: string): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -1046,43 +906,35 @@ setState_Net(net: string): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_primitivelock
 
@@ -1090,12 +942,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveLine;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -1104,43 +956,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_startx
 
@@ -1148,12 +992,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：起始位置 X
+Set the property state: start position X
 
 ## Signature
 
 ```typescript
-setState_StartX(startX: number): IPCB_PrimitiveLine;
+function setState_StartX(startX: number): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -1162,43 +1006,35 @@ setState_StartX(startX: number): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 startX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起始位置 X
-
+Start position X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### setstate_starty
 
@@ -1206,12 +1042,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：起始位置 Y
+Set the property state: start position Y
 
 ## Signature
 
 ```typescript
-setState_StartY(startY: number): IPCB_PrimitiveLine;
+function setState_StartY(startY: number): IPCB_PrimitiveLine;
 ```
 
 ## Parameters
@@ -1220,78 +1056,68 @@ setState_StartY(startY: number): IPCB_PrimitiveLine;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 startY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起始位置 Y
-
+Start position Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveLine.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveLine;
+function toAsync(): IPCB_PrimitiveLine;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveLine.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveLine;
+function toSync(): IPCB_PrimitiveLine;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md)
 
-直线图元对象
+Line primitive object

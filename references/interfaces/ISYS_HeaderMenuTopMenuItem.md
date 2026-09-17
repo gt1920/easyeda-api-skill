@@ -1,11 +1,11 @@
 # ISYS\_HeaderMenuTopMenuItem interface
 
-顶部一级菜单项
+Top-level primary menu item
 
 ## Signature
 
 ```typescript
-interface ISYS_HeaderMenuTopMenuItem 
+interface ISYS_HeaderMenuTopMenuItem
 ```
 
 ## Properties
@@ -14,78 +14,62 @@ interface ISYS_HeaderMenuTopMenuItem
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [id](./ISYS_HeaderMenuTopMenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-菜单项 ID，不可重复
-
+Menu item ID, cannot be repeated
 
 </td></tr>
 <tr><td>
 
 [menuItems?](./ISYS_HeaderMenuTopMenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 Array&lt;[ISYS\_HeaderMenuSub1MenuItem](./ISYS_HeaderMenuSub1MenuItem.md) \| null&gt;
 
-
 </td><td>
 
-_(Optional)_ 子菜单项
-
+_(Optional)_ Sub-menu item
 
 </td></tr>
 <tr><td>
 
 [title](./ISYS_HeaderMenuTopMenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-菜单项标题
-
+Menu item title
 
 </td></tr>
 </tbody></table>
@@ -98,7 +82,7 @@ string
 
 # ISYS\_HeaderMenuTopMenuItem.id property
 
-菜单项 ID，不可重复
+Menu item ID, cannot be repeated
 
 ## Signature
 
@@ -110,7 +94,7 @@ id: string;
 
 # ISYS\_HeaderMenuTopMenuItem.menuItems property
 
-子菜单项
+Sub-menu item
 
 ## Signature
 
@@ -122,7 +106,7 @@ menuItems?: Array<ISYS_HeaderMenuSub1MenuItem | null>;
 
 # ISYS\_HeaderMenuTopMenuItem.title property
 
-菜单项标题
+Menu item title
 
 ## Signature
 

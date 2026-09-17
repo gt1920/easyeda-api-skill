@@ -1,17 +1,16 @@
 # SYS\_WebSocket class
 
-系统 / WebSocket 类
+System / WebSocket class
 
 ## Signature
 
 ```typescript
-declare class SYS_WebSocket 
+class SYS_WebSocket
 ```
 
 ## Remarks
 
-与 WebSocket 服务器交互
-
+Interact with the WebSocket server
 
 ## Methods
 
@@ -19,58 +18,46 @@ declare class SYS_WebSocket
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [close(id, code, reason, extensionUuid)](./SYS_WebSocket.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-关闭 WebSocket 连接
-
+Close the WebSocket connection
 
 </td></tr>
 <tr><td>
 
 [register(id, serviceUri, receiveMessageCallFn, connectedCallFn, protocols)](./SYS_WebSocket.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-注册 WebSocket 连接
-
+Register a WebSocket connection
 
 </td></tr>
 <tr><td>
 
 [send(id, data, extensionUuid)](./SYS_WebSocket.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-向 WebSocket 服务器发送数据
-
+Send data to the WebSocket server
 
 </td></tr>
 </tbody></table>
@@ -83,12 +70,12 @@ Description
 
 # SYS\_WebSocket.close() method
 
-关闭 WebSocket 连接
+Close the WebSocket connection
 
 ## Signature
 
 ```typescript
-close(id: string, code?: number, reason?: string, extensionUuid?: string): void;
+function close(id: string, code?: number, reason?: string, extensionUuid?: string): void;
 ```
 
 ## Parameters
@@ -97,85 +84,68 @@ close(id: string, code?: number, reason?: string, extensionUuid?: string): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-自定义的 WebSocket ID
-
+Custom WebSocket ID
 
 </td></tr>
 <tr><td>
 
 code
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 数字状态码，对应 [WebSocket.CloseEvent](https://developer.mozilla.org/docs/Web/API/CloseEvent/code) 内允许的状态码
-
+_(Optional)_ Numeric status code, corresponding to the codes allowed in [WebSocket.CloseEvent](https://developer.mozilla.org/docs/Web/API/CloseEvent/code)
 
 </td></tr>
 <tr><td>
 
 reason
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 一个人类可读的字符串，解释连接关闭的原因
-
+_(Optional)_ A human-readable string explaining why the connection was closed
 
 </td></tr>
 <tr><td>
 
 extensionUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
-
+_(Optional)_ Extension UUID. Generally it does not need to be specified. It only needs to be specified as another extension's UUID when you need to operate on a WebSocket connection established by another extension
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -183,18 +153,24 @@ void
 
 ## Remarks
 
-注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`
+Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`
 
 ### register
 
 # SYS\_WebSocket.register() method
 
-注册 WebSocket 连接
+Register a WebSocket connection
 
 ## Signature
 
 ```typescript
-register(id: string, serviceUri: string, receiveMessageCallFn?: (event: MessageEvent<any>) => void | Promise<void>, connectedCallFn?: () => void | Promise<void>, protocols?: string | Array<string>): void;
+function register(
+	id: string,
+	serviceUri: string,
+	receiveMessageCallFn?: (event: MessageEvent<any>) => void | Promise<void>,
+	connectedCallFn?: () => void | Promise<void>,
+	protocols?: string | Array<string>,
+): void;
 ```
 
 ## Parameters
@@ -203,101 +179,81 @@ register(id: string, serviceUri: string, receiveMessageCallFn?: (event: MessageE
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-自定义 WebSocket ID
-
+Custom WebSocket ID
 
 </td></tr>
 <tr><td>
 
 serviceUri
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-WebSocket 服务地址
-
+WebSocket service URI
 
 </td></tr>
 <tr><td>
 
 receiveMessageCallFn
 
-
 </td><td>
 
 (event: MessageEvent&lt;any&gt;) =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-_(Optional)_ 接收到消息时的回调函数
-
+_(Optional)_ Callback function when a message is received
 
 </td></tr>
 <tr><td>
 
 connectedCallFn
 
-
 </td><td>
 
 () =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-_(Optional)_ 连接建立时的回调函数
-
+_(Optional)_ Callback function when the connection is established
 
 </td></tr>
 <tr><td>
 
 protocols
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 子协议
-
+_(Optional)_ Sub-protocols
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -305,20 +261,20 @@ void
 
 ## Remarks
 
-可以用来执行前检测 WebSocket 连接是否正常，但需要注意 \*\*不要尝试相同 ID 不同参数的连接\*\*，这会造成混乱： 如果存在指定 ID 且处于活跃状态中的 WebSocket 连接，那么其余参数的变更将不会被应用
+It can be used to detect whether the WebSocket connection is normal before execution, but note that \*\*do not attempt connections with the same ID but different parameters\*\*, as this will cause confusion: if a WebSocket connection with the specified ID is active, changes to other parameters will not be applied
 
-注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`
+Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`
 
 ### send
 
 # SYS\_WebSocket.send() method
 
-向 WebSocket 服务器发送数据
+Send data to the WebSocket server
 
 ## Signature
 
 ```typescript
-send(id: string, data: string | Blob | BufferSource, extensionUuid?: string): void;
+function send(id: string, data: string | Blob | BufferSource, extensionUuid?: string): void;
 ```
 
 ## Parameters
@@ -327,69 +283,55 @@ send(id: string, data: string | Blob | BufferSource, extensionUuid?: string): vo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-自定义的 WebSocket ID
-
+Custom WebSocket ID
 
 </td></tr>
 <tr><td>
 
 data
 
-
 </td><td>
 
 string \| Blob \| BufferSource
 
-
 </td><td>
 
-发送的数据
-
+Data to send
 
 </td></tr>
 <tr><td>
 
 extensionUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
-
+_(Optional)_ Extension UUID. Generally it does not need to be specified. It only needs to be specified as another extension's UUID when you need to operate on a WebSocket connection established by another extension
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -397,4 +339,4 @@ void
 
 ## Remarks
 
-注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`
+Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`

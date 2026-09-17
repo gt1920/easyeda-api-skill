@@ -1,11 +1,11 @@
 # ILIB\_DeviceSearchItem interface
 
-搜索到的器件属性
+Searched device properties
 
 ## Signature
 
 ```typescript
-interface ILIB_DeviceSearchItem 
+interface ILIB_DeviceSearchItem
 ```
 
 ## Properties
@@ -14,344 +14,272 @@ interface ILIB_DeviceSearchItem
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [classification?](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 [ILIB\_ClassificationIndex](./ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 器件分类
-
+_(Optional)_ Device classification
 
 </td></tr>
 <tr><td>
 
 [description?](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 描述
-
+_(Optional)_ Description
 
 </td></tr>
 <tr><td>
 
 [footprint?](./ILIB_DeviceSearchItem.md)
 
+</td><td>
 
 </td><td>
 
+\{ name: string; uuid: string; libraryUuid: string \}
 
 </td><td>
 
-\{ name: string; uuid: string; libraryUuid: string; \}
-
-
-</td><td>
-
-_(Optional)_ 关联封装
-
+_(Optional)_ Associate footprint
 
 </td></tr>
 <tr><td>
 
 [footprintName?](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 _(Optional)_ 关联封装名称
-
 
 </td></tr>
 <tr><td>
 
 [footprintUuid](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 关联封装 UUID
-
 
 </td></tr>
 <tr><td>
 
 [imageUuid?](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string \| string\[\]
 
-
 </td><td>
 
-_(Optional)_ 关联图片 UUID
-
+_(Optional)_ Associate image UUID
 
 </td></tr>
 <tr><td>
 
 [libraryUuid](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-所属库 UUID
-
+UUID of the library it belongs to
 
 </td></tr>
 <tr><td>
 
 [model3D?](./ILIB_DeviceSearchItem.md)
 
+</td><td>
 
 </td><td>
 
+\{ name: string; uuid: string; libraryUuid: string \}
 
 </td><td>
 
-\{ name: string; uuid: string; libraryUuid: string; \}
-
-
-</td><td>
-
-_(Optional)_ 关联 3D 模型
-
+_(Optional)_ Associate 3D model
 
 </td></tr>
 <tr><td>
 
 [model3DName?](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 _(Optional)_ 关联 3D 模型名称
-
 
 </td></tr>
 <tr><td>
 
 [model3DUuid](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 关联 3D 模型 UUID
-
 
 </td></tr>
 <tr><td>
 
 [name](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-器件名称
-
+Device name
 
 </td></tr>
 <tr><td>
 
 [ordinal](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-排序
-
+Sorting
 
 </td></tr>
 <tr><td>
 
 [otherProperty?](./ILIB_DeviceSearchItem.md)
 
+</td><td>
 
 </td><td>
 
+\{ \[key: string\]: boolean \| number \| string \| undefined \}
 
 </td><td>
 
-\{ \[key: string\]: boolean \| number \| string \| undefined; \}
-
-
-</td><td>
-
-_(Optional)_ 其它属性
-
+_(Optional)_ Other property
 
 </td></tr>
 <tr><td>
 
 [symbol](./ILIB_DeviceSearchItem.md)
 
+</td><td>
 
 </td><td>
 
+\{ name: string; uuid: string; libraryUuid: string \}
 
 </td><td>
 
-\{ name: string; uuid: string; libraryUuid: string; \}
-
-
-</td><td>
-
-关联符号
-
+Associated symbol
 
 </td></tr>
 <tr><td>
 
 [symbolName](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 关联符号名称
-
 
 </td></tr>
 <tr><td>
 
 [symbolUuid](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 关联符号 UUID
-
 
 </td></tr>
 <tr><td>
 
 [uuid](./ILIB_DeviceSearchItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-器件 UUID
-
+Device UUID
 
 </td></tr>
 </tbody></table>
@@ -364,7 +292,7 @@ string
 
 # ILIB\_DeviceSearchItem.classification property
 
-器件分类
+Device classification
 
 ## Signature
 
@@ -376,7 +304,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 # ILIB\_DeviceSearchItem.description property
 
-描述
+Description
 
 ## Signature
 
@@ -388,16 +316,12 @@ description?: string;
 
 # ILIB\_DeviceSearchItem.footprint property
 
-关联封装
+Associate footprint
 
 ## Signature
 
 ```typescript
-footprint?: {
-        name: string;
-        uuid: string;
-        libraryUuid: string;
-    };
+footprint?: { name: string; uuid: string; libraryUuid: string };
 ```
 
 ### footprintname
@@ -436,7 +360,7 @@ footprintUuid: string;
 
 # ILIB\_DeviceSearchItem.imageUuid property
 
-关联图片 UUID
+Associate image UUID
 
 ## Signature
 
@@ -448,7 +372,7 @@ imageUuid?: string | string[];
 
 # ILIB\_DeviceSearchItem.libraryUuid property
 
-所属库 UUID
+UUID of the library it belongs to
 
 ## Signature
 
@@ -460,16 +384,12 @@ libraryUuid: string;
 
 # ILIB\_DeviceSearchItem.model3D property
 
-关联 3D 模型
+Associate 3D model
 
 ## Signature
 
 ```typescript
-model3D?: {
-        name: string;
-        uuid: string;
-        libraryUuid: string;
-    };
+model3D?: { name: string; uuid: string; libraryUuid: string };
 ```
 
 ### model3dname
@@ -508,7 +428,7 @@ model3DUuid: string;
 
 # ILIB\_DeviceSearchItem.name property
 
-器件名称
+Device name
 
 ## Signature
 
@@ -520,7 +440,7 @@ name: string;
 
 # ILIB\_DeviceSearchItem.ordinal property
 
-排序
+Sorting
 
 ## Signature
 
@@ -532,30 +452,28 @@ ordinal: number;
 
 # ILIB\_DeviceSearchItem.otherProperty property
 
-其它属性
+Other property
 
 ## Signature
 
 ```typescript
-otherProperty?: {
-        [key: string]: boolean | number | string | undefined;
-    };
+otherProperty?: { [key: string]: boolean | number | string | undefined };
 ```
 
 ### symbol
 
 # ILIB\_DeviceSearchItem.symbol property
 
-关联符号
+Associated symbol
 
 ## Signature
 
 ```typescript
 symbol: {
-        name: string;
-        uuid: string;
-        libraryUuid: string;
-    };
+	name: string;
+	uuid: string;
+	libraryUuid: string;
+}
 ```
 
 ### symbolname
@@ -594,7 +512,7 @@ symbolUuid: string;
 
 # ILIB\_DeviceSearchItem.uuid property
 
-器件 UUID
+Device UUID
 
 ## Signature
 

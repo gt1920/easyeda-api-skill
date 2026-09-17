@@ -1,11 +1,11 @@
 # PCB\_PrimitiveDimension class
 
-PCB &amp; 封装 / 尺寸标注图元类
+PCB &amp; footprint / dimension primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitiveDimension implements IPCB_PrimitiveAPI 
+class PCB_PrimitiveDimension implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class PCB_PrimitiveDimension implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(dimensionType, coordinateSet, layer, unit, lineWidth, precision, primitiveLock)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-创建尺寸标注
-
+Create a dimension
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除尺寸标注
-
+**_(BETA)_** Delete the dimension
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取尺寸标注
-
+**_(BETA)_** Get the dimension
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取尺寸标注
-
+**_(BETA)_** Get the dimension
 
 </td></tr>
 <tr><td>
 
 [getAll(layer, primitiveLock)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有尺寸标注
-
+**_(BETA)_** Get all dimensions
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(layer, primitiveLock)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有尺寸标注的图元 ID
-
+**_(BETA)_** Get the primitive IDs of all dimensions
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改尺寸标注
-
+**_(BETA)_** Modify the dimension
 
 </td></tr>
 </tbody></table>
@@ -135,12 +111,20 @@ Description
 
 # PCB\_PrimitiveDimension.create() method
 
-创建尺寸标注
+Create a dimension
 
 ## Signature
 
 ```typescript
-create(dimensionType: EPCB_PrimitiveDimensionType, coordinateSet: TPCB_PrimitiveDimensionCoordinateSet, layer?: TPCB_LayersOfDimension, unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL, lineWidth?: number, precision?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveDimension | undefined>;
+function create(
+	dimensionType: EPCB_PrimitiveDimensionType,
+	coordinateSet: TPCB_PrimitiveDimensionCoordinateSet,
+	layer?: TPCB_LayersOfDimension,
+	unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL,
+	lineWidth?: number,
+	precision?: number,
+	primitiveLock?: boolean,
+): Promise<IPCB_PrimitiveDimension | undefined>;
 ```
 
 ## Parameters
@@ -149,139 +133,113 @@ create(dimensionType: EPCB_PrimitiveDimensionType, coordinateSet: TPCB_Primitive
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 dimensionType
 
-
 </td><td>
 
 [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)
 
-
 </td><td>
 
-尺寸标注类型
-
+Dimension type
 
 </td></tr>
 <tr><td>
 
 coordinateSet
 
-
 </td><td>
 
 [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)
 
-
 </td><td>
 
-尺寸标注坐标集
-
+Dimension coordinate set
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 unit
 
-
 </td><td>
 
 [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)
 
-
 </td><td>
 
-_(Optional)_ 单位
-
+_(Optional)_ Unit
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 线宽
-
+_(Optional)_ Line width
 
 </td></tr>
 <tr><td>
 
 precision
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 精度，取值范围 `0`<!-- -->-`4`
-
+_(Optional)_ Precision, value range `0`<!-- -->-`4`
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| undefined&gt;
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### delete
 
@@ -289,12 +247,12 @@ Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除尺寸标注
+Delete the dimension
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitiveDimension | Array<string> | Array<IPCB_PrimitiveDimension>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitiveDimension | Array<string> | Array<IPCB_PrimitiveDimension>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -303,43 +261,35 @@ delete(primitiveIds: string | IPCB_PrimitiveDimension | Array<string> | Array<IP
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
-
 </td><td>
 
-尺寸标注的图元 ID 或尺寸标注图元对象
-
+Primitive ID of the dimension or the dimension primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -347,12 +297,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取尺寸标注
+Get the dimension
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitiveDimension | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitiveDimension | undefined>;
 ```
 
 ## Parameters
@@ -361,43 +311,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitiveDimension | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-尺寸标注的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the dimension, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| undefined&gt;
 
-尺寸标注图元对象，`undefined` 表示获取失败
+Dimension primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -405,12 +347,12 @@ Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取尺寸标注
+Get the dimension
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveDimension>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveDimension>>;
 ```
 
 ## Parameters
@@ -419,47 +361,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveDimension>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-尺寸标注的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the dimension, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;&gt;
 
-尺寸标注图元对象，空数组表示获取失败
+Dimension primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -467,12 +401,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有尺寸标注
+Get all dimensions
 
 ## Signature
 
 ```typescript
-getAll(layer?: TPCB_LayersOfDimension, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveDimension>>;
+function getAll(
+	layer?: TPCB_LayersOfDimension,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitiveDimension>>;
 ```
 
 ## Parameters
@@ -481,59 +418,48 @@ getAll(layer?: TPCB_LayersOfDimension, primitiveLock?: boolean): Promise<Array<I
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;&gt;
 
-尺寸标注图元对象数组
+Dimension primitive object array
 
 ### getallprimitiveid
 
@@ -541,12 +467,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有尺寸标注的图元 ID
+Get the primitive IDs of all dimensions
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(layer?: TPCB_LayersOfDimension, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	layer?: TPCB_LayersOfDimension,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -555,59 +484,48 @@ getAllPrimitiveId(layer?: TPCB_LayersOfDimension, primitiveLock?: boolean): Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-尺寸标注的图元 ID 数组
+Array of dimension primitive IDs
 
 ### modify
 
@@ -615,20 +533,23 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改尺寸标注
+Modify the dimension
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitiveDimension, property: {
-        dimensionType?: EPCB_PrimitiveDimensionType;
-        coordinateSet?: TPCB_PrimitiveDimensionCoordinateSet;
-        layer?: TPCB_LayersOfDimension;
-        unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;
-        lineWidth?: number;
-        precision?: number;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitiveDimension | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitiveDimension,
+	property: {
+		dimensionType?: EPCB_PrimitiveDimensionType;
+		coordinateSet?: TPCB_PrimitiveDimensionCoordinateSet;
+		layer?: TPCB_LayersOfDimension;
+		unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;
+		lineWidth?: number;
+		precision?: number;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitiveDimension | undefined>;
 ```
 
 ## Parameters
@@ -637,56 +558,45 @@ modify(primitiveId: string | IPCB_PrimitiveDimension, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ dimensionType?: [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)<!-- -->; coordinateSet?: [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)<!-- -->; layer?: [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)<!-- -->; unit?: [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)<!-- -->; lineWidth?: number; precision?: number; primitiveLock?: boolean }
 
 </td><td>
 
-{ dimensionType?: [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)<!-- -->; coordinateSet?: [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)<!-- -->; layer?: [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)<!-- -->; unit?: [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)<!-- -->; lineWidth?: number; precision?: number; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \| undefined&gt;
 
-尺寸标注图元对象
+Dimension primitive object

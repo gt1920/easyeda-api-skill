@@ -1,17 +1,16 @@
 # PCB\_Event class
 
-PCB &amp; 封装 / 事件类
+PCB &amp; footprint / event class
 
 ## Signature
 
 ```typescript
-declare class PCB_Event 
+class PCB_Event
 ```
 
 ## Remarks
 
-注册事件回调
-
+Register an event callback
 
 ## Methods
 
@@ -19,142 +18,112 @@ declare class PCB_Event
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addCrossProbeSelectEventListener(id, callFn)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增交叉选择事件监听
-
+**_(BETA)_** Add a cross-probe selection event listener
 
 </td></tr>
 <tr><td>
 
 [addMouseEventListener(id, eventType, callFn, onlyOnce)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增鼠标事件监听
-
+**_(BETA)_** Add a mouse event listener
 
 </td></tr>
 <tr><td>
 
 [addNetEventListener(id, eventType, callFn, onlyOnce)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增网络事件监听
-
+**_(BETA)_** Add a net event listener
 
 </td></tr>
 <tr><td>
 
 [addPrimitiveEventListener(id, eventType, callFn, onlyOnce)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增图元事件监听
-
+**_(BETA)_** Add a primitive event listener
 
 </td></tr>
 <tr><td>
 
 [addRayTracerEngine3DViewCameraChangeEventListener(id, callFn, onlyOnce)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增光线追踪引擎 3D 预览相机变动（拖动 3D 模型）事件监听
-
+**_(BETA)_** Add a ray tracer engine 3D preview camera change (dragging the 3D model) event listener
 
 </td></tr>
 <tr><td>
 
 [addRayTracerEngine3DViewClickMaterialEventListener(id, callFn, onlyOnce)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增光线追踪引擎 3D 预览点击材质事件监听
-
+**_(BETA)_** Add a ray tracer engine 3D preview material click event listener
 
 </td></tr>
 <tr><td>
 
 [addRealTimeDrcResultEventListener(id, eventType, callFn)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增实时 DRC 结果事件监听
-
+**_(BETA)_** Add a real-time DRC result event listener
 
 </td></tr>
 <tr><td>
 
 [isEventListenerAlreadyExist(id)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询事件监听是否存在
-
+Query whether the event listener exists
 
 </td></tr>
 <tr><td>
 
 [removeEventListener(id)](./PCB_Event.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-移除事件监听
-
+Remove Event listener
 
 </td></tr>
 </tbody></table>
@@ -169,12 +138,15 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增交叉选择事件监听
+Add a cross-probe selection event listener
 
 ## Signature
 
 ```typescript
-addCrossProbeSelectEventListener(id: string, callFn: (props: any) => void | Promise<void>): void;
+function addCrossProbeSelectEventListener(
+	id: string,
+	callFn: (props: any) => void | Promise<void>,
+): void;
 ```
 
 ## Parameters
@@ -183,53 +155,42 @@ addCrossProbeSelectEventListener(id: string, callFn: (props: any) => void | Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 callFn
 
-
 </td><td>
 
 (props: any) =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -237,7 +198,7 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`
 
 ### addmouseeventlistener
 
@@ -245,21 +206,29 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增鼠标事件监听
+Add a mouse event listener
 
 ## Signature
 
 ```typescript
-addMouseEventListener(id: string, eventType: 'all' | EPCB_MouseEventType, callFn: (eventType: EPCB_MouseEventType, props: [
-        {
-            primitiveId: string;
-            primitiveType: EPCB_PrimitiveType;
-            net?: string;
-            designator?: string;
-            parentComponentPrimitiveId?: string;
-            parentComponentDesignator?: string;
-        }
-    ]) => void | Promise<void>, onlyOnce?: boolean): void;
+function addMouseEventListener(
+	id: string,
+	eventType: 'all' | EPCB_MouseEventType,
+	callFn: (
+		eventType: EPCB_MouseEventType,
+		props: [
+			{
+				primitiveId: string;
+				primitiveType: EPCB_PrimitiveType;
+				net?: string;
+				designator?: string;
+				parentComponentPrimitiveId?: string;
+				parentComponentDesignator?: string;
+			},
+		],
+	) => void | Promise<void>,
+	onlyOnce?: boolean,
+): void;
 ```
 
 ## Parameters
@@ -268,85 +237,68 @@ addMouseEventListener(id: string, eventType: 'all' | EPCB_MouseEventType, callFn
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 eventType
 
+</td><td>
+
+'all' \| [EPCB\_MouseEventType](../enums/EPCB_MouseEventType.md)
 
 </td><td>
 
-'all' \| EPCB\_MouseEventType
-
-
-</td><td>
-
-事件类型
-
+Event type
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(eventType: [EPCB\_MouseEventType](../enums/EPCB_MouseEventType.md)<!-- -->, props: \[{ primitiveId: string; primitiveType: [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)<!-- -->; net?: string; designator?: string; parentComponentPrimitiveId?: string; parentComponentDesignator?: string }\]) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(eventType: EPCB\_MouseEventType, props: \[ { primitiveId: string; primitiveType: [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)<!-- -->; net?: string; designator?: string; parentComponentPrimitiveId?: string; parentComponentDesignator?: string; } \]) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 <tr><td>
 
 onlyOnce
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅监听一次
-
+_(Optional)_ Whether to listen only once
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -354,7 +306,7 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`
 
 ### addneteventlistener
 
@@ -362,14 +314,17 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增网络事件监听
+Add a net event listener
 
 ## Signature
 
 ```typescript
-addNetEventListener(id: string, eventType: 'all' | EPCB_NetEventType, callFn: (eventType: EPCB_NetEventType, props: [{
-        net: string;
-    }]) => void | Promise<void>, onlyOnce?: boolean): void;
+function addNetEventListener(
+	id: string,
+	eventType: 'all' | EPCB_NetEventType,
+	callFn: (eventType: EPCB_NetEventType, props: [{ net: string }]) => void | Promise<void>,
+	onlyOnce?: boolean,
+): void;
 ```
 
 ## Parameters
@@ -378,85 +333,68 @@ addNetEventListener(id: string, eventType: 'all' | EPCB_NetEventType, callFn: (e
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 eventType
 
+</td><td>
+
+'all' \| [EPCB\_NetEventType](../enums/EPCB_NetEventType.md)
 
 </td><td>
 
-'all' \| EPCB\_NetEventType
-
-
-</td><td>
-
-事件类型
-
+Event type
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(eventType: [EPCB\_NetEventType](../enums/EPCB_NetEventType.md)<!-- -->, props: \[{ net: string }\]) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(eventType: EPCB\_NetEventType, props: \[{ net: string; }\]) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 <tr><td>
 
 onlyOnce
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅监听一次
-
+_(Optional)_ Whether to listen only once
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -464,15 +402,15 @@ void
 
 ## Remarks
 
-网络选中事件仅
+Net select event only
 
-①在过滤面板选中网络选项并在画布选中网络时
+1. When the net option is selected in the filter panel and a net is selected on the canvas
 
-②在工程设计 -<!-- -->&gt; 网络内选中网络时
+2. When a net is selected in Engineering Design -<!-- -->&gt; Nets
 
-会被触发
+the event will be triggered
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`
 
 ### addprimitiveeventlistener
 
@@ -480,21 +418,29 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增图元事件监听
+Add a primitive event listener
 
 ## Signature
 
 ```typescript
-addPrimitiveEventListener(id: string, eventType: 'all' | EPCB_PrimitiveEventType, callFn: (eventType: EPCB_PrimitiveEventType, props: [
-        {
-            primitiveId: string;
-            primitiveType: EPCB_PrimitiveType;
-            net?: string;
-            designator?: string;
-            parentComponentPrimitiveId?: string;
-            parentComponentDesignator?: string;
-        }
-    ]) => void | Promise<void>, onlyOnce?: boolean): void;
+function addPrimitiveEventListener(
+	id: string,
+	eventType: 'all' | EPCB_PrimitiveEventType,
+	callFn: (
+		eventType: EPCB_PrimitiveEventType,
+		props: [
+			{
+				primitiveId: string;
+				primitiveType: EPCB_PrimitiveType;
+				net?: string;
+				designator?: string;
+				parentComponentPrimitiveId?: string;
+				parentComponentDesignator?: string;
+			},
+		],
+	) => void | Promise<void>,
+	onlyOnce?: boolean,
+): void;
 ```
 
 ## Parameters
@@ -503,85 +449,68 @@ addPrimitiveEventListener(id: string, eventType: 'all' | EPCB_PrimitiveEventType
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 eventType
 
+</td><td>
+
+'all' \| [EPCB\_PrimitiveEventType](../enums/EPCB_PrimitiveEventType.md)
 
 </td><td>
 
-'all' \| EPCB\_PrimitiveEventType
-
-
-</td><td>
-
-事件类型
-
+Event type
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(eventType: [EPCB\_PrimitiveEventType](../enums/EPCB_PrimitiveEventType.md)<!-- -->, props: \[{ primitiveId: string; primitiveType: [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)<!-- -->; net?: string; designator?: string; parentComponentPrimitiveId?: string; parentComponentDesignator?: string }\]) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(eventType: EPCB\_PrimitiveEventType, props: \[ { primitiveId: string; primitiveType: [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)<!-- -->; net?: string; designator?: string; parentComponentPrimitiveId?: string; parentComponentDesignator?: string; } \]) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 <tr><td>
 
 onlyOnce
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅监听一次
-
+_(Optional)_ Whether to listen only once
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -589,7 +518,7 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`
 
 ### addraytracerengine3dviewcamerachangeeventlistener
 
@@ -597,24 +526,20 @@ void
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增光线追踪引擎 3D 预览相机变动（拖动 3D 模型）事件监听
+Add a ray tracer engine 3D preview camera change (dragging the 3D model) event listener
 
 ## Signature
 
 ```typescript
-addRayTracerEngine3DViewCameraChangeEventListener(id: string, callFn: (props: {
-        position: {
-            x: number;
-            y: number;
-            z: number;
-        };
-        rotation: {
-            x: number;
-            y: number;
-            z: number;
-        };
-        focalLength: number;
-    }) => void | Promise<void>, onlyOnce?: boolean): void;
+function addRayTracerEngine3DViewCameraChangeEventListener(
+	id: string,
+	callFn: (props: {
+		position: { x: number; y: number; z: number };
+		rotation: { x: number; y: number; z: number };
+		focalLength: number;
+	}) => void | Promise<void>,
+	onlyOnce?: boolean,
+): void;
 ```
 
 ## Parameters
@@ -623,69 +548,55 @@ addRayTracerEngine3DViewCameraChangeEventListener(id: string, callFn: (props: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(props: { position: { x: number; y: number; z: number }; rotation: { x: number; y: number; z: number }; focalLength: number }) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(props: { position: { x: number; y: number; z: number; }; rotation: { x: number; y: number; z: number; }; focalLength: number; }) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 <tr><td>
 
 onlyOnce
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅监听一次
-
+_(Optional)_ Whether to listen only once
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -693,9 +604,7 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
-
-ADD since EDA v4
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error` ADD since EDA v4
 
 ### addraytracerengine3dviewclickmaterialeventlistener
 
@@ -703,15 +612,16 @@ ADD since EDA v4
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增光线追踪引擎 3D 预览点击材质事件监听
+Add a ray tracer engine 3D preview material click event listener
 
 ## Signature
 
 ```typescript
-addRayTracerEngine3DViewClickMaterialEventListener(id: string, callFn: (props: {
-        materialId: number;
-        material: any;
-    }) => void | Promise<void>, onlyOnce?: boolean): void;
+function addRayTracerEngine3DViewClickMaterialEventListener(
+	id: string,
+	callFn: (props: { materialId: number; material: any }) => void | Promise<void>,
+	onlyOnce?: boolean,
+): void;
 ```
 
 ## Parameters
@@ -720,69 +630,55 @@ addRayTracerEngine3DViewClickMaterialEventListener(id: string, callFn: (props: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(props: { materialId: number; material: any }) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(props: { materialId: number; material: any; }) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 <tr><td>
 
 onlyOnce
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅监听一次
-
+_(Optional)_ Whether to listen only once
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -790,9 +686,7 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
-
-ADD since EDA v4
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error` ADD since EDA v4
 
 ### addrealtimedrcresulteventlistener
 
@@ -800,14 +694,16 @@ ADD since EDA v4
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增实时 DRC 结果事件监听
+Add a real-time DRC result event listener
 
 ## Signature
 
 ```typescript
-addRealTimeDrcResultEventListener(id: string, eventType: 'all', callFn: (eventType: undefined, props: [{
-        drcResult: any;
-    }]) => void | Promise<void>): void;
+function addRealTimeDrcResultEventListener(
+	id: string,
+	eventType: 'all',
+	callFn: (eventType: undefined, props: [{ drcResult: any }]) => void | Promise<void>,
+): void;
 ```
 
 ## Parameters
@@ -816,69 +712,55 @@ addRealTimeDrcResultEventListener(id: string, eventType: 'all', callFn: (eventTy
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID，用以防止重复注册事件
-
+Event ID, used to prevent duplicate event registration
 
 </td></tr>
 <tr><td>
 
 eventType
 
-
 </td><td>
 
 'all'
 
-
 </td><td>
 
-事件类型
-
+Event type
 
 </td></tr>
 <tr><td>
 
 callFn
 
+</td><td>
+
+(eventType: undefined, props: \[{ drcResult: any }\]) =&gt; void \| Promise&lt;void&gt;
 
 </td><td>
 
-(eventType: undefined, props: \[{ drcResult: any; }\]) =&gt; void \| Promise&lt;void&gt;
-
-
-</td><td>
-
-事件触发时的回调函数
-
+The callback function triggered when the event fires
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -886,18 +768,18 @@ void
 
 ## Remarks
 
-注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
+Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`
 
 ### iseventlisteneralreadyexist
 
 # PCB\_Event.isEventListenerAlreadyExist() method
 
-查询事件监听是否存在
+Query whether the event listener exists
 
 ## Signature
 
 ```typescript
-isEventListenerAlreadyExist(id: string): boolean;
+function isEventListenerAlreadyExist(id: string): boolean;
 ```
 
 ## Parameters
@@ -906,54 +788,46 @@ isEventListenerAlreadyExist(id: string): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID
-
+Event ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-事件监听是否存在
+Whether the event listener exists
 
 ### removeeventlistener
 
 # PCB\_Event.removeEventListener() method
 
-移除事件监听
+Remove Event listener
 
 ## Signature
 
 ```typescript
-removeEventListener(id: string): boolean;
+function removeEventListener(id: string): boolean;
 ```
 
 ## Parameters
@@ -962,40 +836,32 @@ removeEventListener(id: string): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-事件 ID
-
+Event ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-是否移除指定事件监听
+Whether Remove Specify event listener

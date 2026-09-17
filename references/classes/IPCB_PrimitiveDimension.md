@@ -1,16 +1,15 @@
 # IPCB\_PrimitiveDimension class
 
-尺寸标注图元
+Dimension primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveDimension implements IPCB_Primitive 
+class IPCB_PrimitiveDimension implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,324 +17,255 @@ declare class IPCB_PrimitiveDimension implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_CoordinateSet()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标集
-
+Get the property state: coordinate set
 
 </td></tr>
 <tr><td>
 
 [getState\_DimensionType()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：尺寸标注类型
-
+Get the property state: dimension type
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_Precision()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：精度
-
+Get the property state: precision
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_TextFollow()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：文字跟随
-
+Get the property state: text follows
 
 </td></tr>
 <tr><td>
 
 [getState\_Unit()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：单位
-
+Get the property state: unit
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_CoordinateSet(coordinateSet)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标集
-
+**_(BETA)_** Set the property state: coordinate set
 
 </td></tr>
 <tr><td>
 
 [setState\_DimensionType(dimensionType)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：尺寸标注类型
-
+**_(BETA)_** Set the property state: dimension type
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_Precision(precision)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：精度
-
+**_(BETA)_** Set the property state: precision
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_Unit(unit)](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：单位
-
+**_(BETA)_** Set the property state: unit
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveDimension.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -350,229 +280,218 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveDimension>;
+function done(): Promise<IPCB_PrimitiveDimension>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### getstate_coordinateset
 
 # IPCB\_PrimitiveDimension.getState\_CoordinateSet() method
 
-获取属性状态：坐标集
+Get the property state: coordinate set
 
 ## Signature
 
 ```typescript
-getState_CoordinateSet(): TPCB_PrimitiveDimensionCoordinateSet;
+function getState_CoordinateSet(): TPCB_PrimitiveDimensionCoordinateSet;
 ```
-
 
 ## Returns
 
 [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)
 
-坐标集
+Coordinate set
 
 ### getstate_dimensiontype
 
 # IPCB\_PrimitiveDimension.getState\_DimensionType() method
 
-获取属性状态：尺寸标注类型
+Get the property state: dimension type
 
 ## Signature
 
 ```typescript
-getState_DimensionType(): EPCB_PrimitiveDimensionType;
+function getState_DimensionType(): EPCB_PrimitiveDimensionType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)
 
-尺寸标注类型
+Dimension type
 
 ### getstate_layer
 
 # IPCB\_PrimitiveDimension.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfDimension;
+function getState_Layer(): TPCB_LayersOfDimension;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
-层
+Layer
 
 ### getstate_linewidth
 
 # IPCB\_PrimitiveDimension.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number;
+function getState_LineWidth(): number;
 ```
-
 
 ## Returns
 
 number
 
-线宽
+Line width
 
 ### getstate_precision
 
 # IPCB\_PrimitiveDimension.getState\_Precision() method
 
-获取属性状态：精度
+Get the property state: precision
 
 ## Signature
 
 ```typescript
-getState_Precision(): number;
+function getState_Precision(): number;
 ```
-
 
 ## Returns
 
 number
 
-精度
+Precision
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveDimension.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveDimension.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveDimension.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_textfollow
 
 # IPCB\_PrimitiveDimension.getState\_TextFollow() method
 
-获取属性状态：文字跟随
+Get the property state: text follows
 
 ## Signature
 
 ```typescript
-getState_TextFollow(): 0 | 1;
+function getState_TextFollow(): 0 | 1;
 ```
-
 
 ## Returns
 
 0 \| 1
 
-文字跟随
+Text follows
 
 ### getstate_unit
 
 # IPCB\_PrimitiveDimension.getState\_Unit() method
 
-获取属性状态：单位
+Get the property state: unit
 
 ## Signature
 
 ```typescript
-getState_Unit(): ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;
+function getState_Unit():
+	ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;
 ```
-
 
 ## Returns
 
 [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)
 
-单位
+Unit
 
 ### isasync
 
 # IPCB\_PrimitiveDimension.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -580,20 +499,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveDimension>;
+function reset(): Promise<IPCB_PrimitiveDimension>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_coordinateset
 
@@ -601,12 +519,14 @@ Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标集
+Set the property state: coordinate set
 
 ## Signature
 
 ```typescript
-setState_CoordinateSet(coordinateSet: TPCB_PrimitiveDimensionCoordinateSet): IPCB_PrimitiveDimension;
+function setState_CoordinateSet(
+	coordinateSet: TPCB_PrimitiveDimensionCoordinateSet,
+): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -615,43 +535,35 @@ setState_CoordinateSet(coordinateSet: TPCB_PrimitiveDimensionCoordinateSet): IPC
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 coordinateSet
 
-
 </td><td>
 
 [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)
 
-
 </td><td>
 
-坐标集
-
+Coordinate set
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_dimensiontype
 
@@ -659,12 +571,14 @@ coordinateSet
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：尺寸标注类型
+Set the property state: dimension type
 
 ## Signature
 
 ```typescript
-setState_DimensionType(dimensionType: EPCB_PrimitiveDimensionType): IPCB_PrimitiveDimension;
+function setState_DimensionType(
+	dimensionType: EPCB_PrimitiveDimensionType,
+): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -673,43 +587,35 @@ setState_DimensionType(dimensionType: EPCB_PrimitiveDimensionType): IPCB_Primiti
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 dimensionType
 
-
 </td><td>
 
 [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)
 
-
 </td><td>
 
-尺寸标注类型
-
+Dimension type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_layer
 
@@ -717,12 +623,12 @@ dimensionType
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfDimension): IPCB_PrimitiveDimension;
+function setState_Layer(layer: TPCB_LayersOfDimension): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -731,43 +637,35 @@ setState_Layer(layer: TPCB_LayersOfDimension): IPCB_PrimitiveDimension;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_linewidth
 
@@ -775,12 +673,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number): IPCB_PrimitiveDimension;
+function setState_LineWidth(lineWidth: number): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -789,43 +687,35 @@ setState_LineWidth(lineWidth: number): IPCB_PrimitiveDimension;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_precision
 
@@ -833,12 +723,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：精度
+Set the property state: precision
 
 ## Signature
 
 ```typescript
-setState_Precision(precision: number): IPCB_PrimitiveDimension;
+function setState_Precision(precision: number): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -847,43 +737,35 @@ setState_Precision(precision: number): IPCB_PrimitiveDimension;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 precision
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-精度
-
+Precision
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_primitivelock
 
@@ -891,12 +773,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveDimension;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -905,43 +787,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveDimension;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### setstate_unit
 
@@ -949,12 +823,14 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：单位
+Set the property state: unit
 
 ## Signature
 
 ```typescript
-setState_Unit(unit: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL): IPCB_PrimitiveDimension;
+function setState_Unit(
+	unit: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL,
+): IPCB_PrimitiveDimension;
 ```
 
 ## Parameters
@@ -963,78 +839,68 @@ setState_Unit(unit: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 unit
 
-
 </td><td>
 
 [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)
 
-
 </td><td>
 
-单位
-
+Unit
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveDimension.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveDimension;
+function toAsync(): IPCB_PrimitiveDimension;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveDimension.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveDimension;
+function toSync(): IPCB_PrimitiveDimension;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
-尺寸标注图元对象
+Dimension primitive object

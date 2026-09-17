@@ -1,11 +1,11 @@
 # DMT\_Folder class
 
-文档树 / 文件夹类
+Document tree / Folder class
 
 ## Signature
 
 ```typescript
-declare class DMT_Folder 
+class DMT_Folder
 ```
 
 ## Methods
@@ -14,114 +14,90 @@ declare class DMT_Folder
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [createFolder(folderName, teamUuid, parentFolderUuid, description)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建文件夹
-
+**_(BETA)_** Create Folder
 
 </td></tr>
 <tr><td>
 
 [deleteFolder(teamUuid, folderUuid)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-删除文件夹
-
+Delete Folder
 
 </td></tr>
 <tr><td>
 
 [getAllFoldersUuid(teamUuid)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取所有文件夹的 UUID
-
+Get the UUIDs of all folders
 
 </td></tr>
 <tr><td>
 
 [getFolderInfo(teamUuid, folderUuid)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取文件夹详细属性
-
+Get Folder detailed properties
 
 </td></tr>
 <tr><td>
 
 [modifyFolderDescription(teamUuid, folderUuid, description)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改文件夹描述
-
+**_(BETA)_** Modify Folder description
 
 </td></tr>
 <tr><td>
 
 [modifyFolderName(teamUuid, folderUuid, folderName)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-修改文件夹名称
-
+Modify Folder name
 
 </td></tr>
 <tr><td>
 
 [moveFolderToFolder(teamUuid, folderUuid, parentFolderUuid)](./DMT_Folder.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-移动文件夹
-
+Move folder
 
 </td></tr>
 </tbody></table>
@@ -136,12 +112,17 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建文件夹
+Create Folder
 
 ## Signature
 
 ```typescript
-createFolder(folderName: string, teamUuid: string, parentFolderUuid?: string, description?: string): Promise<string | undefined>;
+function createFolder(
+	folderName: string,
+	teamUuid: string,
+	parentFolderUuid?: string,
+	description?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -150,102 +131,85 @@ createFolder(folderName: string, teamUuid: string, parentFolderUuid?: string, de
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 folderName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹名称
-
+Folder name
 
 </td></tr>
 <tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 parentFolderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 父文件夹 UUID，如若不指定，则为根文件夹
-
+_(Optional)_ Parent folder UUID. If not specified, it is the root folder
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件夹描述
-
+_(Optional)_ Folder description
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-文件夹 UUID，如若为 `undefined` 则创建失败
+Folder UUID, if it is `undefined` creation fails
 
 ### deletefolder
 
 # DMT\_Folder.deleteFolder() method
 
-删除文件夹
+Delete Folder
 
 ## Signature
 
 ```typescript
-deleteFolder(teamUuid: string, folderUuid: string): Promise<boolean>;
+function deleteFolder(teamUuid: string, folderUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -254,70 +218,59 @@ deleteFolder(teamUuid: string, folderUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 folderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹 UUID
-
+Folder UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### getallfoldersuuid
 
 # DMT\_Folder.getAllFoldersUuid() method
 
-获取所有文件夹的 UUID
+Get the UUIDs of all folders
 
 ## Signature
 
 ```typescript
-getAllFoldersUuid(teamUuid: string): Promise<Array<string>>;
+function getAllFoldersUuid(teamUuid: string): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -326,58 +279,50 @@ getAllFoldersUuid(teamUuid: string): Promise<Array<string>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-文件夹 UUID 数组
+Folder UUID array
 
 ## Remarks
 
-本接口忽略层级信息，将会返回所有层级的文件夹的 UUID 并放置于一维数组中
+This API ignores hierarchy information. It will return the UUIDs of folders at all levels and place them in a one-dimensional array
 
 ### getfolderinfo
 
 # DMT\_Folder.getFolderInfo() method
 
-获取文件夹详细属性
+Get Folder detailed properties
 
 ## Signature
 
 ```typescript
-getFolderInfo(teamUuid: string, folderUuid: string): Promise<IDMT_FolderItem | undefined>;
+function getFolderInfo(teamUuid: string, folderUuid: string): Promise<IDMT_FolderItem | undefined>;
 ```
 
 ## Parameters
@@ -386,63 +331,52 @@ getFolderInfo(teamUuid: string, folderUuid: string): Promise<IDMT_FolderItem | u
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 folderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹 UUID
-
+Folder UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md) \| undefined&gt;
 
-文件夹属性，如若为 `undefined` 则获取失败
+Folder property; if it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-当 [parentFolderUuid](../interfaces/IDMT_FolderItem.md) 等于 [teamUuid](../interfaces/IDMT_FolderItem.md) 时，代表当前文件夹为指定团队下的一级文件夹
+When [parentFolderUuid](../interfaces/IDMT_FolderItem.md) equals [teamUuid](../interfaces/IDMT_FolderItem.md)<!-- -->, it means the current folder is a first-level folder under the specified team
 
 ### modifyfolderdescription
 
@@ -450,12 +384,16 @@ Promise&lt;[IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改文件夹描述
+Modify Folder description
 
 ## Signature
 
 ```typescript
-modifyFolderDescription(teamUuid: string, folderUuid: string, description?: string): Promise<boolean>;
+function modifyFolderDescription(
+	teamUuid: string,
+	folderUuid: string,
+	description?: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -464,90 +402,80 @@ modifyFolderDescription(teamUuid: string, folderUuid: string, description?: stri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 folderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹 UUID
-
+Folder UUID
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件夹描述，如若为 `undefined` 则清空工程现有描述
-
+_(Optional)_ Folder description. If it is `undefined`<!-- -->, the existing project description is cleared
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful
 
 ## Remarks
 
-修改文件夹描述需要与工作区系统进行交互，修改操作存在延迟，需要短暂等待后才会呈现效果
+Modifying the folder description requires interaction with the workspace system. The modification is delayed and takes effect only after a short wait
 
 ### modifyfoldername
 
 # DMT\_Folder.modifyFolderName() method
 
-修改文件夹名称
+Modify Folder name
 
 ## Signature
 
 ```typescript
-modifyFolderName(teamUuid: string, folderUuid: string, folderName: string): Promise<boolean>;
+function modifyFolderName(
+	teamUuid: string,
+	folderUuid: string,
+	folderName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -556,86 +484,76 @@ modifyFolderName(teamUuid: string, folderUuid: string, folderName: string): Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 folderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹 UUID
-
+Folder UUID
 
 </td></tr>
 <tr><td>
 
 folderName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹名称
-
+Folder name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful
 
 ### movefoldertofolder
 
 # DMT\_Folder.moveFolderToFolder() method
 
-移动文件夹
+Move folder
 
 ## Signature
 
 ```typescript
-moveFolderToFolder(teamUuid: string, folderUuid: string, parentFolderUuid?: string): Promise<boolean>;
+function moveFolderToFolder(
+	teamUuid: string,
+	folderUuid: string,
+	parentFolderUuid?: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -644,72 +562,58 @@ moveFolderToFolder(teamUuid: string, folderUuid: string, parentFolderUuid?: stri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 teamUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-团队 UUID
-
+Team UUID
 
 </td></tr>
 <tr><td>
 
 folderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件夹 UUID
-
+Folder UUID
 
 </td></tr>
 <tr><td>
 
 parentFolderUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 父文件夹 UUID，如若不指定，则默认为根文件夹
-
+_(Optional)_ Parent folder UUID. If not specified, it defaults to the root folder
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否移动成功
+Whether the move is successful

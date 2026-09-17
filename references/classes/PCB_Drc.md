@@ -1,16 +1,16 @@
 # PCB\_Drc class
 
-PCB &amp; 封装 / 设计规则检查（DRC）类
+PCB &amp; footprint / design rule check (DRC) class
 
 ## Signature
 
 ```typescript
-declare class PCB_Drc 
+class PCB_Drc
 ```
 
 ## Remarks
 
-检查、设定 DRC 规则
+Check and set DRC rules
 
 ## Methods
 
@@ -18,618 +18,486 @@ declare class PCB_Drc
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addNetToEqualLengthNetGroup(equalLengthNetGroupName, net)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将网络添加到等长网络组
-
+**_(BETA)_** Add a net to an equal-length net group
 
 </td></tr>
 <tr><td>
 
 [addNetToNetClass(netClassName, net)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将网络添加到网络类
-
+**_(BETA)_** Will net add to net class
 
 </td></tr>
 <tr><td>
 
 [addPadPairToPadPairGroup(padPairGroupName, padPair)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将焊盘对添加到焊盘对组
-
+**_(BETA)_** Add a pad pair to a pad pair group
 
 </td></tr>
 <tr><td>
 
 [check(strict, userInterface, includeVerboseError)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 检查 DRC
-
+**_(BETA)_** Check DRC
 
 </td></tr>
 <tr><td>
 
 [check(strict, userInterface, includeVerboseError)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 检查 DRC
-
+**_(BETA)_** Check DRC
 
 </td></tr>
 <tr><td>
 
 [createDifferentialPair(differentialPairName, positiveNet, negativeNet)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建差分对
-
+**_(BETA)_** Create a differential pair
 
 </td></tr>
 <tr><td>
 
 [createEqualLengthNetGroup(equalLengthNetGroupName, nets, color)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建等长网络组
-
+**_(BETA)_** Create an equal-length net group
 
 </td></tr>
 <tr><td>
 
 [createNetClass(netClassName, nets, color)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建网络类
-
+**_(BETA)_** Create Net class
 
 </td></tr>
 <tr><td>
 
 [createPadPairGroup(padPairGroupName, padPairs)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建焊盘对组
-
+**_(BETA)_** Create a pad pair group
 
 </td></tr>
 <tr><td>
 
 [deleteDifferentialPair(differentialPairName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除差分对
-
+**_(BETA)_** Delete the differential pair
 
 </td></tr>
 <tr><td>
 
 [deleteEqualLengthNetGroup(equalLengthNetGroupName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除等长网络组
-
+**_(BETA)_** Delete the equal-length net group
 
 </td></tr>
 <tr><td>
 
 [deleteNetClass(netClassName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除网络类
-
+**_(BETA)_** Delete Net class
 
 </td></tr>
 <tr><td>
 
 [deletePadPairGroup(padPairGroupName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除焊盘对组
-
+**_(BETA)_** Delete the pad pair group
 
 </td></tr>
 <tr><td>
 
 [deleteRuleConfiguration(configurationName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除设计规则配置
-
+**_(BETA)_** Delete Design rule configuration
 
 </td></tr>
 <tr><td>
 
 [getAllDifferentialPairs()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有差分对的详细属性
-
+**_(BETA)_** Get the detailed properties of all differential pairs
 
 </td></tr>
 <tr><td>
 
 [getAllEqualLengthNetGroups()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有等长网络组的详细属性
-
+**_(BETA)_** Get the detailed properties of all equal-length net groups
 
 </td></tr>
 <tr><td>
 
 [getAllNetClasses()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有网络类的详细属性
-
+**_(BETA)_** Get all Net class detailed properties of
 
 </td></tr>
 <tr><td>
 
 [getAllPadPairGroups()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有焊盘对组的详细属性
-
+**_(BETA)_** Get the detailed properties of all pad pair groups
 
 </td></tr>
 <tr><td>
 
 [getAllRuleConfigurations(includeSystem)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有设计规则配置
-
+**_(BETA)_** Get all Design rule configuration
 
 </td></tr>
 <tr><td>
 
 [getCurrentRuleConfiguration()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前设计规则配置
-
+**_(BETA)_** Get Current design rule configuration
 
 </td></tr>
 <tr><td>
 
 [getCurrentRuleConfigurationName()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前设计规则配置名称
-
+Get Current design rule configuration name
 
 </td></tr>
 <tr><td>
 
 [getDefaultRuleConfigurationName()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取新建 PCB 默认设计规则配置的名称
-
+**_(BETA)_** Get the name of the default design rule configuration for new PCBs
 
 </td></tr>
 <tr><td>
 
 [getNetByNetRules()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取网络-网络规则
-
+**_(BETA)_** Get Net - net rules
 
 </td></tr>
 <tr><td>
 
 [getNetRules()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取网络规则
-
+**_(BETA)_** Get Net rules
 
 </td></tr>
 <tr><td>
 
 [getPadPairGroupMinWireLength(padPairGroupName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取焊盘对组最短导线长度
-
+**_(BETA)_** Get the minimum wire length of a pad pair group
 
 </td></tr>
 <tr><td>
 
 [getRegionRules()](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取区域规则
-
+**_(BETA)_** Get region rules
 
 </td></tr>
 <tr><td>
 
 [getRuleConfiguration(configurationName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取指定设计规则配置
-
+Get Specify design rule configuration
 
 </td></tr>
 <tr><td>
 
 [modifyDifferentialPairName(originalDifferentialPairName, differentialPairName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改差分对的名称
-
+**_(BETA)_** Modify the name of the differential pair
 
 </td></tr>
 <tr><td>
 
 [modifyDifferentialPairNegativeNet(differentialPairName, negativeNet)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改差分对负网络
-
+**_(BETA)_** Modify the negative net of the differential pair
 
 </td></tr>
 <tr><td>
 
 [modifyDifferentialPairPositiveNet(differentialPairName, positiveNet)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改差分对正网络
-
+**_(BETA)_** Modify the positive net of the differential pair
 
 </td></tr>
 <tr><td>
 
 [modifyEqualLengthNetGroupName(originalEqualLengthNetGroupName, equalLengthNetGroupName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改等长网络组的名称
-
+**_(BETA)_** Modify the name of the equal-length net group
 
 </td></tr>
 <tr><td>
 
 [modifyNetClassName(originalNetClassName, netClassName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改网络类的名称
-
+**_(BETA)_** Modify Net class name of
 
 </td></tr>
 <tr><td>
 
 [modifyPadPairGroupName(originalPadPairGroupName, padPairGroupName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改焊盘对组的名称
-
+**_(BETA)_** Modify the name of the pad pair group
 
 </td></tr>
 <tr><td>
 
 [overwriteCurrentRuleConfiguration(ruleConfiguration)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 覆写当前设计规则配置
-
+**_(BETA)_** Overwrite current design rule configuration
 
 </td></tr>
 <tr><td>
 
 [overwriteNetByNetRules(netByNetRules)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 覆写网络-网络规则
-
+**_(BETA)_** Overwrite net - net rules
 
 </td></tr>
 <tr><td>
 
 [overwriteNetRules(netRules)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 覆写网络规则
-
+**_(BETA)_** Overwrite net rules
 
 </td></tr>
 <tr><td>
 
 [overwriteRegionRules(regionRules)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 覆写区域规则
-
+**_(BETA)_** Overwrite region rules
 
 </td></tr>
 <tr><td>
 
 [removeNetFromEqualLengthNetGroup(equalLengthNetGroupName, net)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 从等长网络组中移除网络
-
+**_(BETA)_** Remove a net from an equal-length net group
 
 </td></tr>
 <tr><td>
 
 [removeNetFromNetClass(netClassName, net)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 从网络类中移除网络
-
+**_(BETA)_** From net class in remove net
 
 </td></tr>
 <tr><td>
 
 [removePadPairFromPadPairGroup(padPairGroupName, padPair)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 从焊盘对组中移除焊盘对
-
+**_(BETA)_** Remove a pad pair from a pad pair group
 
 </td></tr>
 <tr><td>
 
 [renameRuleConfiguration(originalConfigurationName, configurationName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 重命名设计规则配置
-
+**_(BETA)_** Rename the design rule configuration
 
 </td></tr>
 <tr><td>
 
 [saveRuleConfiguration(ruleConfiguration, configurationName, allowOverwrite)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 保存设计规则配置
-
+**_(BETA)_** Save Design rule configuration
 
 </td></tr>
 <tr><td>
 
 [setAsDefaultRuleConfiguration(configurationName)](./PCB_Drc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置为新建 PCB 默认设计规则配置
-
+**_(BETA)_** Set as the default design rule configuration for new PCBs
 
 </td></tr>
 </tbody></table>
@@ -644,12 +512,15 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将网络添加到等长网络组
+Add a net to an equal-length net group
 
 ## Signature
 
 ```typescript
-addNetToEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | Array<string>): Promise<boolean>;
+function addNetToEqualLengthNetGroup(
+	equalLengthNetGroupName: string,
+	net: string | Array<string>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -658,59 +529,48 @@ addNetToEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | Array
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 equalLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-等长网络组名称
-
+Equal-length net group name
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### addnettonetclass
 
@@ -718,12 +578,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将网络添加到网络类
+Will net add to net class
 
 ## Signature
 
 ```typescript
-addNetToNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
+function addNetToNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -732,59 +592,48 @@ addNetToNetClass(netClassName: string, net: string | Array<string>): Promise<boo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络类名称
-
+Net class name
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### addpadpairtopadpairgroup
 
@@ -792,12 +641,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将焊盘对添加到焊盘对组
+Add a pad pair to a pad pair group
 
 ## Signature
 
 ```typescript
-addPadPairToPadPairGroup(padPairGroupName: string, padPair: [string, string] | Array<[string, string]>): Promise<boolean>;
+function addPadPairToPadPairGroup(
+	padPairGroupName: string,
+	padPair: [string, string] | Array<[string, string]>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -806,63 +658,52 @@ addPadPairToPadPairGroup(padPairGroupName: string, padPair: [string, string] | A
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘对组名称
-
+Pad pair group name
 
 </td></tr>
 <tr><td>
 
 padPair
 
-
 </td><td>
 
 \[string, string\] \| Array&lt;\[string, string\]&gt;
 
-
 </td><td>
 
-焊盘对
-
+Pad for
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Example
 
-有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','e1'\]) // 器件焊盘 - 游离焊盘
+There are three different usages, and make sure the corresponding pads already exist on the canvas. They are: 1. Free pad - free pad; 2. Device pad - device pad; 3. Device pad - free pad await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','e1'\]) // 器件焊盘 - 游离焊盘
 
 ### check
 
@@ -870,12 +711,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-检查 DRC
+Check DRC
 
 ## Signature
 
 ```typescript
-check(strict: boolean, userInterface: boolean, includeVerboseError: false): Promise<boolean>;
+function check(
+	strict: boolean,
+	userInterface: boolean,
+	includeVerboseError: false,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -884,75 +729,61 @@ check(strict: boolean, userInterface: boolean, includeVerboseError: false): Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 strict
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否严格检查，当前 PCB 统一为严格检查模式
-
+Whether strict checking is enabled. The current PCB is uniformly in strict checking mode
 
 </td></tr>
 <tr><td>
 
 userInterface
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否显示 UI（呼出底部 DRC 窗口）
-
+Whether to show the UI (open the bottom DRC window)
 
 </td></tr>
 <tr><td>
 
 includeVerboseError
 
-
 </td><td>
 
 false
 
-
 </td><td>
 
-是否在返回值中包含详细错误信息，如若为 `true`<!-- -->，则返回值将始终为数组
-
+Whether to include detailed error information in the return value. If it is `true`<!-- -->, the return value will always be an array
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-DRC 检查是否通过
+Whether the DRC check passed
 
 ### check_1
 
@@ -960,12 +791,16 @@ DRC 检查是否通过
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-检查 DRC
+Check DRC
 
 ## Signature
 
 ```typescript
-check(strict: boolean, userInterface: boolean, includeVerboseError: true): Promise<Array<any>>;
+function check(
+	strict: boolean,
+	userInterface: boolean,
+	includeVerboseError: true,
+): Promise<Array<any>>;
 ```
 
 ## Parameters
@@ -974,75 +809,61 @@ check(strict: boolean, userInterface: boolean, includeVerboseError: true): Promi
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 strict
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否严格检查，当前 PCB 统一为严格检查模式
-
+Whether strict checking is enabled. The current PCB is uniformly in strict checking mode
 
 </td></tr>
 <tr><td>
 
 userInterface
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否显示 UI（呼出底部 DRC 窗口）
-
+Whether to show the UI (open the bottom DRC window)
 
 </td></tr>
 <tr><td>
 
 includeVerboseError
 
-
 </td><td>
 
 true
 
-
 </td><td>
 
-是否在返回值中包含详细错误信息，如若为 `true`<!-- -->，则返回值将始终为数组
-
+Whether to include detailed error information in the return value. If it is `true`<!-- -->, the return value will always be an array
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;any&gt;&gt;
 
-DRC 检查的详细结果
+Detailed results of the DRC check
 
 ### createdifferentialpair
 
@@ -1050,12 +871,16 @@ DRC 检查的详细结果
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建差分对
+Create a differential pair
 
 ## Signature
 
 ```typescript
-createDifferentialPair(differentialPairName: string, positiveNet: string, negativeNet: string): Promise<boolean>;
+function createDifferentialPair(
+	differentialPairName: string,
+	positiveNet: string,
+	negativeNet: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1064,75 +889,61 @@ createDifferentialPair(differentialPairName: string, positiveNet: string, negati
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 differentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-差分对名称
-
+Differential pair name
 
 </td></tr>
 <tr><td>
 
 positiveNet
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-正网络名称
-
+Positive net name
 
 </td></tr>
 <tr><td>
 
 negativeNet
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-负网络名称
-
+Negative net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### createequallengthnetgroup
 
@@ -1140,12 +951,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建等长网络组
+Create an equal-length net group
 
 ## Signature
 
 ```typescript
-createEqualLengthNetGroup(equalLengthNetGroupName: string, nets: Array<string>, color: IPCB_EqualLengthNetGroupItem['color']): Promise<boolean>;
+function createEqualLengthNetGroup(
+	equalLengthNetGroupName: string,
+	nets: Array<string>,
+	color: IPCB_EqualLengthNetGroupItem['color'],
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1154,75 +969,61 @@ createEqualLengthNetGroup(equalLengthNetGroupName: string, nets: Array<string>, 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 equalLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-等长网络组名称
-
+Equal-length net group name
 
 </td></tr>
 <tr><td>
 
 nets
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称数组
-
+Net name array
 
 </td></tr>
 <tr><td>
 
 color
 
-
 </td><td>
 
 [IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLengthNetGroupItem.md)<!-- -->\['color'\]
 
-
 </td><td>
 
-等长网络组颜色
-
+Equal-length net group color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### createnetclass
 
@@ -1230,12 +1031,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建网络类
+Create Net class
 
 ## Signature
 
 ```typescript
-createNetClass(netClassName: string, nets: Array<string>, color: IPCB_EqualLengthNetGroupItem['color']): Promise<boolean>;
+function createNetClass(
+	netClassName: string,
+	nets: Array<string>,
+	color: IPCB_EqualLengthNetGroupItem['color'],
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1244,75 +1049,61 @@ createNetClass(netClassName: string, nets: Array<string>, color: IPCB_EqualLengt
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络类名称
-
+Net class name
 
 </td></tr>
 <tr><td>
 
 nets
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称数组
-
+Net name array
 
 </td></tr>
 <tr><td>
 
 color
 
-
 </td><td>
 
 [IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLengthNetGroupItem.md)<!-- -->\['color'\]
 
-
 </td><td>
 
-网络类颜色
-
+Net class color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### createpadpairgroup
 
@@ -1320,12 +1111,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建焊盘对组
+Create a pad pair group
 
 ## Signature
 
 ```typescript
-createPadPairGroup(padPairGroupName: string, padPairs: Array<[string, string]>): Promise<boolean>;
+function createPadPairGroup(
+	padPairGroupName: string,
+	padPairs: Array<[string, string]>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1334,63 +1128,52 @@ createPadPairGroup(padPairGroupName: string, padPairs: Array<[string, string]>):
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘对组名称
-
+Pad pair group name
 
 </td></tr>
 <tr><td>
 
 padPairs
 
-
 </td><td>
 
 Array&lt;\[string, string\]&gt;
 
-
 </td><td>
 
-焊盘对数组
-
+Pad for array
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Example
 
-有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['e0','e1'\]\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','R1:2'\],\['R2:1','R2:2'\]\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','e0'\],\['R1:2','e1'\]\]) // 器件焊盘 - 游离焊盘
+There are three different usages, and make sure the corresponding pads already exist on the canvas. They are: 1. Free pad - free pad; 2. Device pad - device pad; 3. Device pad - free pad await eda.pcb\_Drc.createPadPairGroup('test',\[\['e0','e1'\]\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','R1:2'\],\['R2:1','R2:2'\]\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','e0'\],\['R1:2','e1'\]\]) // 器件焊盘 - 游离焊盘
 
 ### deletedifferentialpair
 
@@ -1398,12 +1181,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除差分对
+Delete the differential pair
 
 ## Signature
 
 ```typescript
-deleteDifferentialPair(differentialPairName: string): Promise<boolean>;
+function deleteDifferentialPair(differentialPairName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1412,43 +1195,35 @@ deleteDifferentialPair(differentialPairName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 differentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-差分对名称
-
+Differential pair name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### deleteequallengthnetgroup
 
@@ -1456,12 +1231,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除等长网络组
+Delete the equal-length net group
 
 ## Signature
 
 ```typescript
-deleteEqualLengthNetGroup(equalLengthNetGroupName: string): Promise<boolean>;
+function deleteEqualLengthNetGroup(equalLengthNetGroupName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1470,43 +1245,35 @@ deleteEqualLengthNetGroup(equalLengthNetGroupName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 equalLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-等长网络组名称
-
+Equal-length net group name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### deletenetclass
 
@@ -1514,12 +1281,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除网络类
+Delete Net class
 
 ## Signature
 
 ```typescript
-deleteNetClass(netClassName: string): Promise<boolean>;
+function deleteNetClass(netClassName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1528,43 +1295,35 @@ deleteNetClass(netClassName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络类名称
-
+Net class name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### deletepadpairgroup
 
@@ -1572,12 +1331,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除焊盘对组
+Delete the pad pair group
 
 ## Signature
 
 ```typescript
-deletePadPairGroup(padPairGroupName: string): Promise<boolean>;
+function deletePadPairGroup(padPairGroupName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1586,43 +1345,35 @@ deletePadPairGroup(padPairGroupName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘对组名称
-
+Pad pair group name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### deleteruleconfiguration
 
@@ -1630,12 +1381,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除设计规则配置
+Delete Design rule configuration
 
 ## Signature
 
 ```typescript
-deleteRuleConfiguration(configurationName: string): Promise<boolean>;
+function deleteRuleConfiguration(configurationName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1644,47 +1395,39 @@ deleteRuleConfiguration(configurationName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 configurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-配置名称
-
+Configuration name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除是否成功
+Delete Whether Successful
 
 ## Remarks
 
-系统配置不允许删除
+The system configuration does not allow deletion
 
 ### getalldifferentialpairs
 
@@ -1692,28 +1435,25 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有差分对的详细属性
+Get the detailed properties of all differential pairs
 
 ## Signature
 
 ```typescript
-getAllDifferentialPairs(): Promise<Array<IPCB_DifferentialPairItem> | {
-        [key: string]: any;
-    }>;
+function getAllDifferentialPairs(): Promise<
+	Array<IPCB_DifferentialPairItem> | { [key: string]: any }
+>;
 ```
-
 
 ## Returns
 
-Promise&lt;Array&lt;[IPCB\_DifferentialPairItem](../interfaces/IPCB_DifferentialPairItem.md)<!-- -->&gt; \| { \[key: string\]: any; }&gt;
+Promise&lt;Array&lt;[IPCB\_DifferentialPairItem](../interfaces/IPCB_DifferentialPairItem.md)<!-- -->&gt; \| { \[key: string\]: any }&gt;
 
-所有差分对的详细属性
+Detailed properties of all differential pairs
 
 ## Remarks
 
-BREAKING CHANGE since EDA v3.4
-
-- 返回值类型更改为对象
+- The return value type is changed to an object BREAKING CHANGE since EDA v3.4
 
 ### getallequallengthnetgroups
 
@@ -1721,20 +1461,19 @@ BREAKING CHANGE since EDA v3.4
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有等长网络组的详细属性
+Get the detailed properties of all equal-length net groups
 
 ## Signature
 
 ```typescript
-getAllEqualLengthNetGroups(): Promise<Array<IPCB_EqualLengthNetGroupItem>>;
+function getAllEqualLengthNetGroups(): Promise<Array<IPCB_EqualLengthNetGroupItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLengthNetGroupItem.md)<!-- -->&gt;&gt;
 
-所有等长网络组的详细属性
+Detailed properties of all equal-length net groups
 
 ### getallnetclasses
 
@@ -1742,20 +1481,19 @@ Promise&lt;Array&lt;[IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLeng
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有网络类的详细属性
+Get all Net class detailed properties of
 
 ## Signature
 
 ```typescript
-getAllNetClasses(): Promise<Array<IPCB_NetClassItem>>;
+function getAllNetClasses(): Promise<Array<IPCB_NetClassItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_NetClassItem](../interfaces/IPCB_NetClassItem.md)<!-- -->&gt;&gt;
 
-所有网络类的详细属性
+Detailed properties of all net classes
 
 ### getallpadpairgroups
 
@@ -1763,20 +1501,19 @@ Promise&lt;Array&lt;[IPCB\_NetClassItem](../interfaces/IPCB_NetClassItem.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有焊盘对组的详细属性
+Get the detailed properties of all pad pair groups
 
 ## Signature
 
 ```typescript
-getAllPadPairGroups(): Promise<Array<IPCB_PadPairGroupItem>>;
+function getAllPadPairGroups(): Promise<Array<IPCB_PadPairGroupItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PadPairGroupItem](../interfaces/IPCB_PadPairGroupItem.md)<!-- -->&gt;&gt;
 
-所有焊盘对组的详细属性
+Detailed properties of all pad pair groups
 
 ### getallruleconfigurations
 
@@ -1784,14 +1521,12 @@ Promise&lt;Array&lt;[IPCB\_PadPairGroupItem](../interfaces/IPCB_PadPairGroupItem
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有设计规则配置
+Get all Design rule configuration
 
 ## Signature
 
 ```typescript
-getAllRuleConfigurations(includeSystem?: boolean): Promise<Array<{
-        [key: string]: any;
-    }>>;
+function getAllRuleConfigurations(includeSystem?: boolean): Promise<Array<{ [key: string]: any }>>;
 ```
 
 ## Parameters
@@ -1800,43 +1535,35 @@ getAllRuleConfigurations(includeSystem?: boolean): Promise<Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 includeSystem
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否获取系统设计规则配置
-
+_(Optional)_ Whether Get System design rule configuration
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
+Promise&lt;Array&lt;{ \[key: string\]: any }&gt;&gt;
 
-所有设计规则配置
+All design rule configurations
 
 ### getcurrentruleconfiguration
 
@@ -1844,41 +1571,37 @@ Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前设计规则配置
+Get Current design rule configuration
 
 ## Signature
 
 ```typescript
-getCurrentRuleConfiguration(): Promise<{
-        [key: string]: any;
-    } | undefined>;
+function getCurrentRuleConfiguration(): Promise<{ [key: string]: any } | undefined>;
 ```
-
 
 ## Returns
 
-Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
+Promise&lt;{ \[key: string\]: any } \| undefined&gt;
 
-当前设计规则配置，`undefined` 为获取失败
+Current design rule configuration; `undefined` indicates that the retrieval failed
 
 ### getcurrentruleconfigurationname
 
 # PCB\_Drc.getCurrentRuleConfigurationName() method
 
-获取当前设计规则配置名称
+Get Current design rule configuration name
 
 ## Signature
 
 ```typescript
-getCurrentRuleConfigurationName(): Promise<string | undefined>;
+function getCurrentRuleConfigurationName(): Promise<string | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-当前设计规则配置名称，`undefined` 为获取失败
+Current design rule configuration name; `undefined` indicates that the retrieval failed
 
 ### getdefaultruleconfigurationname
 
@@ -1886,20 +1609,19 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取新建 PCB 默认设计规则配置的名称
+Get the name of the default design rule configuration for new PCBs
 
 ## Signature
 
 ```typescript
-getDefaultRuleConfigurationName(): Promise<string | undefined>;
+function getDefaultRuleConfigurationName(): Promise<string | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-默认设计规则配置的名称，`undefined` 为获取失败
+Default design rule configuration name of; `undefined` indicates that the retrieval failed
 
 ### getnetbynetrules
 
@@ -1907,22 +1629,19 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取网络-网络规则
+Get Net - net rules
 
 ## Signature
 
 ```typescript
-getNetByNetRules(): Promise<{
-        [key: string]: any;
-    }>;
+function getNetByNetRules(): Promise<{ [key: string]: any }>;
 ```
-
 
 ## Returns
 
-Promise&lt;{ \[key: string\]: any; }&gt;
+Promise&lt;{ \[key: string\]: any }&gt;
 
-当前 PCB 的所有网络-网络规则
+All net-by-net rules of the current PCB
 
 ### getnetrules
 
@@ -1930,22 +1649,19 @@ Promise&lt;{ \[key: string\]: any; }&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取网络规则
+Get Net rules
 
 ## Signature
 
 ```typescript
-getNetRules(): Promise<Array<{
-        [key: string]: any;
-    }>>;
+function getNetRules(): Promise<Array<{ [key: string]: any }>>;
 ```
-
 
 ## Returns
 
-Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
+Promise&lt;Array&lt;{ \[key: string\]: any }&gt;&gt;
 
-当前 PCB 的所有网络规则
+All net rules of the current PCB
 
 ### getpadpairgroupminwirelength
 
@@ -1953,12 +1669,14 @@ Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取焊盘对组最短导线长度
+Get the minimum wire length of a pad pair group
 
 ## Signature
 
 ```typescript
-getPadPairGroupMinWireLength(padPairGroupName: string): Promise<Array<IPCB_PadPairMinWireLengthItem>>;
+function getPadPairGroupMinWireLength(
+	padPairGroupName: string,
+): Promise<Array<IPCB_PadPairMinWireLengthItem>>;
 ```
 
 ## Parameters
@@ -1967,43 +1685,35 @@ getPadPairGroupMinWireLength(padPairGroupName: string): Promise<Array<IPCB_PadPa
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘对组名称
-
+Pad pair group name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PadPairMinWireLengthItem](../interfaces/IPCB_PadPairMinWireLengthItem.md)<!-- -->&gt;&gt;
 
-所有焊盘对的最短导线长度
+The minimum wire lengths of all pad pairs
 
 ### getregionrules
 
@@ -2011,35 +1721,32 @@ Promise&lt;Array&lt;[IPCB\_PadPairMinWireLengthItem](../interfaces/IPCB_PadPairM
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取区域规则
+Get region rules
 
 ## Signature
 
 ```typescript
-getRegionRules(): Promise<Array<{
-        [key: string]: any;
-    }>>;
+function getRegionRules(): Promise<Array<{ [key: string]: any }>>;
 ```
-
 
 ## Returns
 
-Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
+Promise&lt;Array&lt;{ \[key: string\]: any }&gt;&gt;
 
-- 当前 PCB 的所有区域规则
+- All region rules of the current PCB
 
 ### getruleconfiguration
 
 # PCB\_Drc.getRuleConfiguration() method
 
-获取指定设计规则配置
+Get Specify design rule configuration
 
 ## Signature
 
 ```typescript
-getRuleConfiguration(configurationName: string): Promise<{
-        [key: string]: any;
-    } | undefined>;
+function getRuleConfiguration(
+	configurationName: string,
+): Promise<{ [key: string]: any } | undefined>;
 ```
 
 ## Parameters
@@ -2048,43 +1755,35 @@ getRuleConfiguration(configurationName: string): Promise<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 configurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-配置名称
-
+Configuration name
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
+Promise&lt;{ \[key: string\]: any } \| undefined&gt;
 
-设计规则配置，`undefined` 为不存在该设计规则
+Design rule configuration, `undefined` is does not exist this design rules
 
 ### modifydifferentialpairname
 
@@ -2092,12 +1791,15 @@ Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改差分对的名称
+Modify the name of the differential pair
 
 ## Signature
 
 ```typescript
-modifyDifferentialPairName(originalDifferentialPairName: string, differentialPairName: string): Promise<boolean>;
+function modifyDifferentialPairName(
+	originalDifferentialPairName: string,
+	differentialPairName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2106,59 +1808,48 @@ modifyDifferentialPairName(originalDifferentialPairName: string, differentialPai
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 originalDifferentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原差分对名称
-
+Original differential pair name
 
 </td></tr>
 <tr><td>
 
 differentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-新差分对名称
-
+New differential pair name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifydifferentialpairnegativenet
 
@@ -2166,12 +1857,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改差分对负网络
+Modify the negative net of the differential pair
 
 ## Signature
 
 ```typescript
-modifyDifferentialPairNegativeNet(differentialPairName: string, negativeNet: string): Promise<boolean>;
+function modifyDifferentialPairNegativeNet(
+	differentialPairName: string,
+	negativeNet: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2180,59 +1874,48 @@ modifyDifferentialPairNegativeNet(differentialPairName: string, negativeNet: str
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 differentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-差分对名称
-
+Differential pair name
 
 </td></tr>
 <tr><td>
 
 negativeNet
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-负网络名称
-
+Negative net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifydifferentialpairpositivenet
 
@@ -2240,12 +1923,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改差分对正网络
+Modify the positive net of the differential pair
 
 ## Signature
 
 ```typescript
-modifyDifferentialPairPositiveNet(differentialPairName: string, positiveNet: string): Promise<boolean>;
+function modifyDifferentialPairPositiveNet(
+	differentialPairName: string,
+	positiveNet: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2254,59 +1940,48 @@ modifyDifferentialPairPositiveNet(differentialPairName: string, positiveNet: str
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 differentialPairName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-差分对名称
-
+Differential pair name
 
 </td></tr>
 <tr><td>
 
 positiveNet
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-正网络名称
-
+Positive net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifyequallengthnetgroupname
 
@@ -2314,12 +1989,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改等长网络组的名称
+Modify the name of the equal-length net group
 
 ## Signature
 
 ```typescript
-modifyEqualLengthNetGroupName(originalEqualLengthNetGroupName: string, equalLengthNetGroupName: string): Promise<boolean>;
+function modifyEqualLengthNetGroupName(
+	originalEqualLengthNetGroupName: string,
+	equalLengthNetGroupName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2328,59 +2006,48 @@ modifyEqualLengthNetGroupName(originalEqualLengthNetGroupName: string, equalLeng
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 originalEqualLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原等长网络组名称
-
+Original equal-length net group name
 
 </td></tr>
 <tr><td>
 
 equalLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-新等长网络组名称
-
+New equal-length net group name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifynetclassname
 
@@ -2388,12 +2055,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改网络类的名称
+Modify Net class name of
 
 ## Signature
 
 ```typescript
-modifyNetClassName(originalNetClassName: string, netClassName: string): Promise<boolean>;
+function modifyNetClassName(originalNetClassName: string, netClassName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2402,59 +2069,48 @@ modifyNetClassName(originalNetClassName: string, netClassName: string): Promise<
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 originalNetClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原网络类名称
-
+Original net class name
 
 </td></tr>
 <tr><td>
 
 netClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-新网络类名称
-
+New net class name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifypadpairgroupname
 
@@ -2462,12 +2118,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改焊盘对组的名称
+Modify the name of the pad pair group
 
 ## Signature
 
 ```typescript
-modifyPadPairGroupName(originalPadPairGroupName: string, padPairGroupName: string): Promise<boolean>;
+function modifyPadPairGroupName(
+	originalPadPairGroupName: string,
+	padPairGroupName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2476,59 +2135,48 @@ modifyPadPairGroupName(originalPadPairGroupName: string, padPairGroupName: strin
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 originalPadPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原焊盘对组名称
-
+Original pad pair group name
 
 </td></tr>
 <tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-新焊盘对组名称
-
+New pad pair group name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### overwritecurrentruleconfiguration
 
@@ -2536,14 +2184,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-覆写当前设计规则配置
+Overwrite current design rule configuration
 
 ## Signature
 
 ```typescript
-overwriteCurrentRuleConfiguration(ruleConfiguration: {
-        [key: string]: any;
-    }): Promise<boolean>;
+function overwriteCurrentRuleConfiguration(ruleConfiguration: {
+	[key: string]: any;
+}): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2552,47 +2200,39 @@ overwriteCurrentRuleConfiguration(ruleConfiguration: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 ruleConfiguration
 
+</td><td>
+
+\{ \[key: string\]: any \}
 
 </td><td>
 
-\{ \[key: string\]: any; \}
-
-
-</td><td>
-
-设计规则配置
-
+Design rule configuration
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-覆写是否成功
+Overwrite whether it is successful
 
 ## Remarks
 
-将会覆写 PCB 当前的设计规则配置，请注意数据丢失风险
+It will overwrite the current design rule configuration of the PCB. Please note the risk of data loss
 
 ### overwritenetbynetrules
 
@@ -2600,14 +2240,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-覆写网络-网络规则
+Overwrite net - net rules
 
 ## Signature
 
 ```typescript
-overwriteNetByNetRules(netByNetRules: {
-        [key: string]: any;
-    }): Promise<boolean>;
+function overwriteNetByNetRules(netByNetRules: { [key: string]: any }): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2616,47 +2254,39 @@ overwriteNetByNetRules(netByNetRules: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netByNetRules
 
+</td><td>
+
+\{ \[key: string\]: any \}
 
 </td><td>
 
-\{ \[key: string\]: any; \}
-
-
-</td><td>
-
-网络-网络规则
-
+Net - net rules
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-覆写是否成功
+Overwrite whether it is successful
 
 ## Remarks
 
-将会覆写当前 PCB 的所有网络-网络规则，请注意数据丢失风险
+It will overwrite all net-by-net rules of the current PCB. Please note the risk of data loss
 
 ### overwritenetrules
 
@@ -2664,14 +2294,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-覆写网络规则
+Overwrite net rules
 
 ## Signature
 
 ```typescript
-overwriteNetRules(netRules: Array<{
-        [key: string]: any;
-    }>): Promise<boolean>;
+function overwriteNetRules(netRules: Array<{ [key: string]: any }>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2680,47 +2308,39 @@ overwriteNetRules(netRules: Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netRules
 
+</td><td>
+
+Array&lt;{ \[key: string\]: any }&gt;
 
 </td><td>
 
-Array&lt;{ \[key: string\]: any; }&gt;
-
-
-</td><td>
-
-网络规则
-
+Net rules
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-覆写是否成功
+Overwrite whether it is successful
 
 ## Remarks
 
-将会覆写当前 PCB 的所有网络规则，请注意数据丢失风险
+It will overwrite all net rules of the current PCB. Please note the risk of data loss
 
 ### overwriteregionrules
 
@@ -2728,14 +2348,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-覆写区域规则
+Overwrite region rules
 
 ## Signature
 
 ```typescript
-overwriteRegionRules(regionRules: Array<{
-        [key: string]: any;
-    }>): Promise<boolean>;
+function overwriteRegionRules(regionRules: Array<{ [key: string]: any }>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2744,47 +2362,39 @@ overwriteRegionRules(regionRules: Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 regionRules
 
+</td><td>
+
+Array&lt;{ \[key: string\]: any }&gt;
 
 </td><td>
 
-Array&lt;{ \[key: string\]: any; }&gt;
-
-
-</td><td>
-
-区域规则
-
+Region rules
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-覆写是否成功
+Overwrite whether it is successful
 
 ## Remarks
 
-将会覆写当前 PCB 的所有区域规则，请注意数据丢失风险
+It will overwrite all region rules of the current PCB. Please note the risk of data loss
 
 ### removenetfromequallengthnetgroup
 
@@ -2792,12 +2402,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-从等长网络组中移除网络
+Remove a net from an equal-length net group
 
 ## Signature
 
 ```typescript
-removeNetFromEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | Array<string>): Promise<boolean>;
+function removeNetFromEqualLengthNetGroup(
+	equalLengthNetGroupName: string,
+	net: string | Array<string>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2806,59 +2419,48 @@ removeNetFromEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 equalLengthNetGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-等长网络组名称
-
+Equal-length net group name
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### removenetfromnetclass
 
@@ -2866,12 +2468,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-从网络类中移除网络
+From net class in remove net
 
 ## Signature
 
 ```typescript
-removeNetFromNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
+function removeNetFromNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2880,59 +2482,48 @@ removeNetFromNetClass(netClassName: string, net: string | Array<string>): Promis
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 netClassName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络类名称
-
+Net class name
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### removepadpairfrompadpairgroup
 
@@ -2940,12 +2531,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-从焊盘对组中移除焊盘对
+Remove a pad pair from a pad pair group
 
 ## Signature
 
 ```typescript
-removePadPairFromPadPairGroup(padPairGroupName: string, padPair: [string, string] | Array<[string, string]>): Promise<boolean>;
+function removePadPairFromPadPairGroup(
+	padPairGroupName: string,
+	padPair: [string, string] | Array<[string, string]>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2954,63 +2548,52 @@ removePadPairFromPadPairGroup(padPairGroupName: string, padPair: [string, string
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 padPairGroupName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘对组名称
-
+Pad pair group name
 
 </td></tr>
 <tr><td>
 
 padPair
 
-
 </td><td>
 
 \[string, string\] \| Array&lt;\[string, string\]&gt;
 
-
 </td><td>
 
-焊盘对
-
+Pad for
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Example
 
-有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:2','e1'\]) // 器件焊盘 - 游离焊盘
+There are three different usages, and make sure the corresponding pads already exist on the canvas. They are: 1. Free pad - free pad; 2. Device pad - device pad; 3. Device pad - free pad await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:2','e1'\]) // 器件焊盘 - 游离焊盘
 
 ### renameruleconfiguration
 
@@ -3018,12 +2601,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-重命名设计规则配置
+Rename the design rule configuration
 
 ## Signature
 
 ```typescript
-renameRuleConfiguration(originalConfigurationName: string, configurationName: string): Promise<boolean>;
+function renameRuleConfiguration(
+	originalConfigurationName: string,
+	configurationName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -3032,63 +2618,52 @@ renameRuleConfiguration(originalConfigurationName: string, configurationName: st
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 originalConfigurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原设计规则配置名称
-
+Original design rule configuration name
 
 </td></tr>
 <tr><td>
 
 configurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-新设计规则配置名称
-
+New design rule configuration name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-重命名是否成功
+Whether the rename was successful
 
 ## Remarks
 
-只有自定义配置可以重命名，系统配置不允许重命名
+Only custom configurations can be renamed. System configurations cannot be renamed
 
 ### saveruleconfiguration
 
@@ -3096,14 +2671,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-保存设计规则配置
+Save Design rule configuration
 
 ## Signature
 
 ```typescript
-saveRuleConfiguration(ruleConfiguration: {
-        [key: string]: any;
-    }, configurationName: string, allowOverwrite?: boolean): Promise<boolean>;
+function saveRuleConfiguration(
+	ruleConfiguration: { [key: string]: any },
+	configurationName: string,
+	allowOverwrite?: boolean,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -3112,79 +2689,65 @@ saveRuleConfiguration(ruleConfiguration: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 ruleConfiguration
 
+</td><td>
+
+\{ \[key: string\]: any \}
 
 </td><td>
 
-\{ \[key: string\]: any; \}
-
-
-</td><td>
-
-设计规则配置
-
+Design rule configuration
 
 </td></tr>
 <tr><td>
 
 configurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-配置名称
-
+Configuration name
 
 </td></tr>
 <tr><td>
 
 allowOverwrite
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false`<!-- -->，请注意可能的数据丢失风险
-
+_(Optional)_ Whether to allow overwriting a design rule configuration with the same name. If `false`<!-- -->, `false` will be returned when a configuration with the same name is encountered. Please note the possible risk of data loss
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-保存是否成功
+Save Whether Successful
 
 ## Remarks
 
-只有自定义配置可以覆盖保存，系统配置不允许修改和覆盖
+Only custom configurations can be overwritten and saved. System configurations cannot be modified or overwritten
 
 ### setasdefaultruleconfiguration
 
@@ -3192,12 +2755,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置为新建 PCB 默认设计规则配置
+Set as the default design rule configuration for new PCBs
 
 ## Signature
 
 ```typescript
-setAsDefaultRuleConfiguration(configurationName: string): Promise<boolean>;
+function setAsDefaultRuleConfiguration(configurationName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -3206,44 +2769,36 @@ setAsDefaultRuleConfiguration(configurationName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 configurationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-配置名称
-
+Configuration name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-设置是否成功
+Set Whether Successful
 
 ## Remarks
 
-返回值为结果导向，重复设置相同的设计规则为默认设计规则也将返回 `true`
+The return value is result-oriented. Repeatedly setting the same design rule as the default will also return `true`

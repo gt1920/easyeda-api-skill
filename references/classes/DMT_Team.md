@@ -1,11 +1,11 @@
 # DMT\_Team class
 
-文档树 / 团队类
+Document tree / Team class
 
 ## Signature
 
 ```typescript
-declare class DMT_Team 
+class DMT_Team
 ```
 
 ## Methods
@@ -14,58 +14,46 @@ declare class DMT_Team
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [getAllInvolvedTeamInfo()](./DMT_Team.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取所有参与的团队的详细属性
-
+Get the detailed properties of all involved teams
 
 </td></tr>
 <tr><td>
 
 [getAllTeamsInfo()](./DMT_Team.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取所有直接团队的详细属性
-
+Get the detailed properties of all direct teams
 
 </td></tr>
 <tr><td>
 
 [getCurrentTeamInfo()](./DMT_Team.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前团队的详细属性
-
+Get the detailed properties of the current team
 
 </td></tr>
 </tbody></table>
@@ -78,63 +66,60 @@ Description
 
 # DMT\_Team.getAllInvolvedTeamInfo() method
 
-获取所有参与的团队的详细属性
+Get the detailed properties of all involved teams
 
 ## Signature
 
 ```typescript
-getAllInvolvedTeamInfo(): Promise<Array<IDMT_TeamItem>>;
+function getAllInvolvedTeamInfo(): Promise<Array<IDMT_TeamItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;&gt;
 
-所有参与的团队的详细属性
+Detailed properties of all involved teams
 
 ### getallteamsinfo
 
 # DMT\_Team.getAllTeamsInfo() method
 
-获取所有直接团队的详细属性
+Get the detailed properties of all direct teams
 
 ## Signature
 
 ```typescript
-getAllTeamsInfo(): Promise<Array<IDMT_TeamItem>>;
+function getAllTeamsInfo(): Promise<Array<IDMT_TeamItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;&gt;
 
-所有团队的详细属性
+Detailed properties of all teams
 
 ## Remarks
 
-个人本质上也是一个名为 \*\*个人\*\* 的团队
+A personal space is essentially a team named \*\*Personal\*\*
 
 ### getcurrentteaminfo
 
 # DMT\_Team.getCurrentTeamInfo() method
 
-获取当前团队的详细属性
+Get the detailed properties of the current team
 
 ## Signature
 
 ```typescript
-getCurrentTeamInfo(): Promise<IDMT_TeamItem | undefined>;
+function getCurrentTeamInfo(): Promise<IDMT_TeamItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md) \| undefined&gt;
 
-团队的详细属性，如若为 `undefined` 则获取失败
+Detailed properties of the team. If it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的所属团队的详细属性
+It will get the detailed properties of the team that the project belongs to, associated with the currently open schematic, PCB, or panel that has the last input focus

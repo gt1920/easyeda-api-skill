@@ -1,16 +1,15 @@
 # ISCH\_PrimitiveText class
 
-文本图元
+Text primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitiveText implements ISCH_Primitive 
+class ISCH_PrimitiveText implements ISCH_Primitive
 ```
 **Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,422 +17,332 @@ declare class ISCH_PrimitiveText implements ISCH_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_AlignMode()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：对齐模式
-
+Get the property state: alignment mode
 
 </td></tr>
 <tr><td>
 
 [getState\_Bold()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否加粗
-
+Get the property state: whether it is bold
 
 </td></tr>
 <tr><td>
 
 [getState\_Content()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：文本内容
-
+Get the property state: text content
 
 </td></tr>
 <tr><td>
 
 [getState\_FontName()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：字体名称
-
+Get the property state: font name
 
 </td></tr>
 <tr><td>
 
 [getState\_FontSize()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：字体大小
-
+Get the property state: font size
 
 </td></tr>
 <tr><td>
 
 [getState\_Italic()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否斜体
-
+Get the property state: whether it is italic
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_TextColor()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：文本颜色
-
+Get the property state: text color
 
 </td></tr>
 <tr><td>
 
 [getState\_UnderLine()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否加下划线
-
+Get the property state: whether it is underlined
 
 </td></tr>
 <tr><td>
 
 [getState\_X()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 X
-
+Get the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [getState\_Y()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 Y
-
+Get the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_AlignMode(alignMode)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：对齐模式
-
+**_(BETA)_** Set the property state: alignment mode
 
 </td></tr>
 <tr><td>
 
 [setState\_Bold(bold)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否加粗
-
+**_(BETA)_** Set the property state: whether it is bold
 
 </td></tr>
 <tr><td>
 
 [setState\_Content(content)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：文本内容
-
+**_(BETA)_** Set the property state: text content
 
 </td></tr>
 <tr><td>
 
 [setState\_FontName(fontName)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：字体名称
-
+**_(BETA)_** Set the property state: font name
 
 </td></tr>
 <tr><td>
 
 [setState\_FontSize(fontSize)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：字体大小
-
+**_(BETA)_** Set the property state: font size
 
 </td></tr>
 <tr><td>
 
 [setState\_Italic(italic)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否斜体
-
+**_(BETA)_** Set the property state: whether it is italic
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：旋转角度
-
+**_(BETA)_** Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_TextColor(textColor)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：文本颜色
-
+**_(BETA)_** Set the property state: text color
 
 </td></tr>
 <tr><td>
 
 [setState\_UnderLine(underLine)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否加下划线
-
+**_(BETA)_** Set the property state: whether it is underlined
 
 </td></tr>
 <tr><td>
 
 [setState\_X(x)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 X
-
+**_(BETA)_** Set the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [setState\_Y(y)](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 Y
-
+**_(BETA)_** Set the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./ISCH_PrimitiveText.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -448,286 +357,271 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitiveText>;
+function done(): Promise<ISCH_PrimitiveText>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;
 
-文本图元对象
+Text primitive object
 
 ### getstate_alignmode
 
 # ISCH\_PrimitiveText.getState\_AlignMode() method
 
-获取属性状态：对齐模式
+Get the property state: alignment mode
 
 ## Signature
 
 ```typescript
-getState_AlignMode(): ESCH_PrimitiveTextAlignMode;
+function getState_AlignMode(): ESCH_PrimitiveTextAlignMode;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveTextAlignMode](../enums/ESCH_PrimitiveTextAlignMode.md)
 
-对齐模式
+Alignment mode
 
 ### getstate_bold
 
 # ISCH\_PrimitiveText.getState\_Bold() method
 
-获取属性状态：是否加粗
+Get the property state: whether it is bold
 
 ## Signature
 
 ```typescript
-getState_Bold(): boolean;
+function getState_Bold(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否加粗
+Whether it is bold
 
 ### getstate_content
 
 # ISCH\_PrimitiveText.getState\_Content() method
 
-获取属性状态：文本内容
+Get the property state: text content
 
 ## Signature
 
 ```typescript
-getState_Content(): string;
+function getState_Content(): string;
 ```
-
 
 ## Returns
 
 string
 
-文本内容
+Text content
 
 ### getstate_fontname
 
 # ISCH\_PrimitiveText.getState\_FontName() method
 
-获取属性状态：字体名称
+Get the property state: font name
 
 ## Signature
 
 ```typescript
-getState_FontName(): string | null;
+function getState_FontName(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-字体名称
+Font name
 
 ### getstate_fontsize
 
 # ISCH\_PrimitiveText.getState\_FontSize() method
 
-获取属性状态：字体大小
+Get the property state: font size
 
 ## Signature
 
 ```typescript
-getState_FontSize(): number | null;
+function getState_FontSize(): number | null;
 ```
-
 
 ## Returns
 
 number \| null
 
-字体大小
+Font size
 
 ### getstate_italic
 
 # ISCH\_PrimitiveText.getState\_Italic() method
 
-获取属性状态：是否斜体
+Get the property state: whether it is italic
 
 ## Signature
 
 ```typescript
-getState_Italic(): boolean;
+function getState_Italic(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否斜体
+Whether it is italic
 
 ### getstate_primitiveid
 
 # ISCH\_PrimitiveText.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # ISCH\_PrimitiveText.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): ESCH_PrimitiveType;
+function getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_rotation
 
 # ISCH\_PrimitiveText.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_textcolor
 
 # ISCH\_PrimitiveText.getState\_TextColor() method
 
-获取属性状态：文本颜色
+Get the property state: text color
 
 ## Signature
 
 ```typescript
-getState_TextColor(): string | null;
+function getState_TextColor(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-文本颜色
+Text color
 
 ### getstate_underline
 
 # ISCH\_PrimitiveText.getState\_UnderLine() method
 
-获取属性状态：是否加下划线
+Get the property state: whether it is underlined
 
 ## Signature
 
 ```typescript
-getState_UnderLine(): boolean;
+function getState_UnderLine(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否加下划线
+Whether it is underlined
 
 ### getstate_x
 
 # ISCH\_PrimitiveText.getState\_X() method
 
-获取属性状态：坐标 X
+Get the property state: X coordinate
 
 ## Signature
 
 ```typescript
-getState_X(): number;
+function getState_X(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 X
+X coordinate
 
 ### getstate_y
 
 # ISCH\_PrimitiveText.getState\_Y() method
 
-获取属性状态：坐标 Y
+Get the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-getState_Y(): number;
+function getState_Y(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 Y
+Y coordinate
 
 ### isasync
 
 # ISCH\_PrimitiveText.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -735,20 +629,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<ISCH_PrimitiveText>;
+function reset(): Promise<ISCH_PrimitiveText>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;
 
-文本图元对象
+Text primitive object
 
 ### setstate_alignmode
 
@@ -756,12 +649,12 @@ Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：对齐模式
+Set the property state: alignment mode
 
 ## Signature
 
 ```typescript
-setState_AlignMode(alignMode: ESCH_PrimitiveTextAlignMode): ISCH_PrimitiveText;
+function setState_AlignMode(alignMode: ESCH_PrimitiveTextAlignMode): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -770,43 +663,35 @@ setState_AlignMode(alignMode: ESCH_PrimitiveTextAlignMode): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 alignMode
 
-
 </td><td>
 
 [ESCH\_PrimitiveTextAlignMode](../enums/ESCH_PrimitiveTextAlignMode.md)
 
-
 </td><td>
 
-对齐模式
-
+Alignment mode
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_bold
 
@@ -814,12 +699,12 @@ alignMode
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否加粗
+Set the property state: whether it is bold
 
 ## Signature
 
 ```typescript
-setState_Bold(bold: boolean): ISCH_PrimitiveText;
+function setState_Bold(bold: boolean): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -828,43 +713,35 @@ setState_Bold(bold: boolean): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 bold
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否加粗
-
+Whether it is bold
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_content
 
@@ -872,12 +749,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：文本内容
+Set the property state: text content
 
 ## Signature
 
 ```typescript
-setState_Content(content: string): ISCH_PrimitiveText;
+function setState_Content(content: string): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -886,43 +763,35 @@ setState_Content(content: string): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 content
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文本内容
-
+Text content
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_fontname
 
@@ -930,12 +799,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：字体名称
+Set the property state: font name
 
 ## Signature
 
 ```typescript
-setState_FontName(fontName: string | null): ISCH_PrimitiveText;
+function setState_FontName(fontName: string | null): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -944,43 +813,35 @@ setState_FontName(fontName: string | null): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontName
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-字体名称
-
+Font name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_fontsize
 
@@ -988,12 +849,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：字体大小
+Set the property state: font size
 
 ## Signature
 
 ```typescript
-setState_FontSize(fontSize: number | null): ISCH_PrimitiveText;
+function setState_FontSize(fontSize: number | null): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1002,43 +863,35 @@ setState_FontSize(fontSize: number | null): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontSize
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-字体大小
-
+Font size
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_italic
 
@@ -1046,12 +899,12 @@ number \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否斜体
+Set the property state: whether it is italic
 
 ## Signature
 
 ```typescript
-setState_Italic(italic: boolean): ISCH_PrimitiveText;
+function setState_Italic(italic: boolean): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1060,43 +913,35 @@ setState_Italic(italic: boolean): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 italic
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否斜体
-
+Whether it is italic
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_rotation
 
@@ -1104,12 +949,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): ISCH_PrimitiveText;
+function setState_Rotation(rotation: number): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1118,43 +963,35 @@ setState_Rotation(rotation: number): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_textcolor
 
@@ -1162,12 +999,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：文本颜色
+Set the property state: text color
 
 ## Signature
 
 ```typescript
-setState_TextColor(textColor: string | null): ISCH_PrimitiveText;
+function setState_TextColor(textColor: string | null): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1176,43 +1013,35 @@ setState_TextColor(textColor: string | null): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 textColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-文本颜色
-
+Text color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_underline
 
@@ -1220,12 +1049,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否加下划线
+Set the property state: whether it is underlined
 
 ## Signature
 
 ```typescript
-setState_UnderLine(underLine: boolean): ISCH_PrimitiveText;
+function setState_UnderLine(underLine: boolean): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1234,43 +1063,35 @@ setState_UnderLine(underLine: boolean): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 underLine
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否加下划线
-
+Whether it is underlined
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_x
 
@@ -1278,12 +1099,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 X
+Set the property state: X coordinate
 
 ## Signature
 
 ```typescript
-setState_X(x: number): ISCH_PrimitiveText;
+function setState_X(x: number): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1292,43 +1113,35 @@ setState_X(x: number): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_y
 
@@ -1336,12 +1149,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 Y
+Set the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-setState_Y(y: number): ISCH_PrimitiveText;
+function setState_Y(y: number): ISCH_PrimitiveText;
 ```
 
 ## Parameters
@@ -1350,78 +1163,68 @@ setState_Y(y: number): ISCH_PrimitiveText;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### toasync
 
 # ISCH\_PrimitiveText.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): ISCH_PrimitiveText;
+function toAsync(): ISCH_PrimitiveText;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object
 
 ### tosync
 
 # ISCH\_PrimitiveText.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): ISCH_PrimitiveText;
+function toSync(): ISCH_PrimitiveText;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)
 
-文本图元对象
+Text primitive object

@@ -1,11 +1,11 @@
 # SYS\_Log class
 
-系统 / 日志类
+System / log class
 
 ## Signature
 
 ```typescript
-declare class SYS_Log 
+class SYS_Log
 ```
 
 ## Methods
@@ -14,86 +14,68 @@ declare class SYS_Log
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [add(message, type)](./SYS_Log.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-添加日志条目
-
+Add a log entry
 
 </td></tr>
 <tr><td>
 
 [clear()](./SYS_Log.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-清空日志
-
+Clear the log
 
 </td></tr>
 <tr><td>
 
 [export(types)](./SYS_Log.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-导出日志
-
+Export the log
 
 </td></tr>
 <tr><td>
 
 [find(message, types)](./SYS_Log.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查找条目
-
+Find entries
 
 </td></tr>
 <tr><td>
 
 [sort(types)](./SYS_Log.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-筛选并获取日志条目
-
+Filter and get log entries
 
 </td></tr>
 </tbody></table>
@@ -106,12 +88,12 @@ Description
 
 # SYS\_Log.add() method
 
-添加日志条目
+Add a log entry
 
 ## Signature
 
 ```typescript
-add(message: string, type?: ESYS_LogType): void;
+function add(message: string, type?: ESYS_LogType): void;
 ```
 
 ## Parameters
@@ -120,53 +102,42 @@ add(message: string, type?: ESYS_LogType): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 message
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-日志内容
-
+Log content
 
 </td></tr>
 <tr><td>
 
 type
 
-
 </td><td>
 
 [ESYS\_LogType](../enums/ESYS_LogType.md)
 
-
 </td><td>
 
-_(Optional)_ 日志类型
-
+_(Optional)_ Log type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -176,14 +147,13 @@ void
 
 # SYS\_Log.clear() method
 
-清空日志
+Clear the log
 
 ## Signature
 
 ```typescript
-clear(): void;
+function clear(): void;
 ```
-
 
 ## Returns
 
@@ -193,12 +163,12 @@ void
 
 # SYS\_Log.export() method
 
-导出日志
+Export the log
 
 ## Signature
 
 ```typescript
-export(types?: ESYS_LogType | Array<ESYS_LogType>): void;
+function export(types?: ESYS_LogType | Array<ESYS_LogType>): void;
 ```
 
 ## Parameters
@@ -207,37 +177,29 @@ export(types?: ESYS_LogType | Array<ESYS_LogType>): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 types
 
-
 </td><td>
 
 [ESYS\_LogType](../enums/ESYS_LogType.md) \| Array&lt;[ESYS\_LogType](../enums/ESYS_LogType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 日志类型
-
+_(Optional)_ Log type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -247,21 +209,29 @@ void
 
 # SYS\_Log.find() method
 
-查找条目
+Find entries
 
 ## Signature
 
 ```typescript
-find(message: string | Array<string | {
-        text: string;
-        attr?: {
-            id?: string;
-            path?: string;
-            sheet?: string;
-            pcbid?: string;
-            type?: string;
-        };
-    }>, types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
+function find(
+	message:
+		| string
+		| Array<
+			| string
+			| {
+				text: string;
+				attr?: {
+					id?: string;
+					path?: string;
+					sheet?: string;
+					pcbid?: string;
+					type?: string;
+				};
+			}
+		>,
+	types?: ESYS_LogType | Array<ESYS_LogType>,
+): Promise<Array<ISYS_LogLine>>;
 ```
 
 ## Parameters
@@ -270,74 +240,63 @@ find(message: string | Array<string | {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 message
 
+</td><td>
+
+string \| Array&lt;string \| { text: string; attr?: { id?: string; path?: string; sheet?: string; pcbid?: string; type?: string } }&gt;
 
 </td><td>
 
-string \| Array&lt;string \| { text: string; attr?: { id?: string; path?: string; sheet?: string; pcbid?: string; type?: string; }; }&gt;
-
-
-</td><td>
-
-查找内容
-
+Find content
 
 </td></tr>
 <tr><td>
 
 types
 
-
 </td><td>
 
 [ESYS\_LogType](../enums/ESYS_LogType.md) \| Array&lt;[ESYS\_LogType](../enums/ESYS_LogType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 日志类型数组，可以在指定的日志类型内查找
-
+_(Optional)_ Array of log types. The search can be performed within the specified log types
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISYS\_LogLine](../interfaces/ISYS_LogLine.md)<!-- -->&gt;&gt;
 
-符合查找条件的日志条目数组
+Array of log entries matching the find criteria
 
 ## Remarks
 
-如果日志面板处于打开状态，查找操作会同时在前端展现
+If the log panel is open, the find operation will also be displayed on the front end
 
 ### sort
 
 # SYS\_Log.sort() method
 
-筛选并获取日志条目
+Filter and get log entries
 
 ## Signature
 
 ```typescript
-sort(types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
+function sort(types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
 ```
 
 ## Parameters
@@ -346,44 +305,36 @@ sort(types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 types
 
-
 </td><td>
 
 [ESYS\_LogType](../enums/ESYS_LogType.md) \| Array&lt;[ESYS\_LogType](../enums/ESYS_LogType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型
-
+_(Optional)_ Array of log types. Multiple log types can be specified at the same time. If not specified, all types are used
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISYS\_LogLine](../interfaces/ISYS_LogLine.md)<!-- -->&gt;&gt;
 
-符合筛选条件的日志条目数组
+Array of log entries matching the filter criteria
 
 ## Remarks
 
-如果日志面板处于打开状态，筛选操作会同时在前端展现
+If the log panel is open, the filter operation will also be displayed on the front end

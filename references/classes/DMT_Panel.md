@@ -1,16 +1,16 @@
 # DMT\_Panel class
 
-文档树 / 面板管理类
+Document tree / Panel management class
 
 ## Signature
 
 ```typescript
-declare class DMT_Panel 
+class DMT_Panel
 ```
 
 ## Remarks
 
-在当前打开的工程内进行面板管理的相关操作
+Operations related to panel management in the currently open project
 
 ## Methods
 
@@ -18,114 +18,90 @@ declare class DMT_Panel
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copyPanel(panelUuid)](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-复制面板
-
+Copy Panel
 
 </td></tr>
 <tr><td>
 
 [createPanel()](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建面板
-
+**_(BETA)_** Create Panel
 
 </td></tr>
 <tr><td>
 
 [deletePanel(panelUuid)](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-删除面板
-
+Delete Panel
 
 </td></tr>
 <tr><td>
 
 [getAllPanelsInfo()](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取工程内所有面板的详细属性
-
+Get all in the project panel detailed properties of
 
 </td></tr>
 <tr><td>
 
 [getCurrentPanelInfo()](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前面板的详细属性
-
+Get detailed properties of Current panel
 
 </td></tr>
 <tr><td>
 
 [getPanelInfo(panelUuid)](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取面板的详细属性
-
+Get detailed properties of Panel
 
 </td></tr>
 <tr><td>
 
 [modifyPanelName(panelUuid, panelName)](./DMT_Panel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-修改面板名称
-
+Modify Panel name
 
 </td></tr>
 </tbody></table>
@@ -138,12 +114,12 @@ Description
 
 # DMT\_Panel.copyPanel() method
 
-复制面板
+Copy Panel
 
 ## Signature
 
 ```typescript
-copyPanel(panelUuid: string): Promise<string | undefined>;
+function copyPanel(panelUuid: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -152,43 +128,35 @@ copyPanel(panelUuid: string): Promise<string | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 panelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-源面板 UUID
-
+Source panel UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-新面板 UUID，如若为 `undefined` 则复制失败
+New panel UUID. If it is `undefined`<!-- -->, the copy failed
 
 ### createpanel
 
@@ -196,31 +164,30 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建面板
+Create Panel
 
 ## Signature
 
 ```typescript
-createPanel(): Promise<string | undefined>;
+function createPanel(): Promise<string | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-面板 UUID，如若为 `undefined` 则创建失败
+Panel UUID, if it is `undefined` creation fails
 
 ### deletepanel
 
 # DMT\_Panel.deletePanel() method
 
-删除面板
+Delete Panel
 
 ## Signature
 
 ```typescript
-deletePanel(panelUuid: string): Promise<boolean>;
+function deletePanel(panelUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -229,96 +196,86 @@ deletePanel(panelUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 panelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-面板 UUID
-
+Panel UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### getallpanelsinfo
 
 # DMT\_Panel.getAllPanelsInfo() method
 
-获取工程内所有面板的详细属性
+Get all in the project panel detailed properties of
 
 ## Signature
 
 ```typescript
-getAllPanelsInfo(): Promise<Array<IDMT_PanelItem>>;
+function getAllPanelsInfo(): Promise<Array<IDMT_PanelItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md)<!-- -->&gt;&gt;
 
-所有面板的详细属性的数组
+Array of detailed properties of all panels
 
 ### getcurrentpanelinfo
 
 # DMT\_Panel.getCurrentPanelInfo() method
 
-获取当前面板的详细属性
+Get detailed properties of Current panel
 
 ## Signature
 
 ```typescript
-getCurrentPanelInfo(): Promise<IDMT_PanelItem | undefined>;
+function getCurrentPanelInfo(): Promise<IDMT_PanelItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
-面板的详细属性，如若为 `undefined` 则获取失败
+Panel detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的面板的详细属性
+It will get the detailed properties of the currently open panel that has the last input focus
 
 ### getpanelinfo
 
 # DMT\_Panel.getPanelInfo() method
 
-获取面板的详细属性
+Get detailed properties of Panel
 
 ## Signature
 
 ```typescript
-getPanelInfo(panelUuid: string): Promise<IDMT_PanelItem | undefined>;
+function getPanelInfo(panelUuid: string): Promise<IDMT_PanelItem | undefined>;
 ```
 
 ## Parameters
@@ -327,54 +284,46 @@ getPanelInfo(panelUuid: string): Promise<IDMT_PanelItem | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 panelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-面板 UUID
-
+Panel UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
-面板的详细属性，如若为 `undefined` 则获取失败
+Panel detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ### modifypanelname
 
 # DMT\_Panel.modifyPanelName() method
 
-修改面板名称
+Modify Panel name
 
 ## Signature
 
 ```typescript
-modifyPanelName(panelUuid: string, panelName: string): Promise<boolean>;
+function modifyPanelName(panelUuid: string, panelName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -383,56 +332,45 @@ modifyPanelName(panelUuid: string, panelName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 panelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-面板 UUID
-
+Panel UUID
 
 </td></tr>
 <tr><td>
 
 panelName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-面板名称
-
+Panel name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful

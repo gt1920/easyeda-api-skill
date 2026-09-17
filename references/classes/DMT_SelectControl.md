@@ -1,16 +1,16 @@
 # DMT\_SelectControl class
 
-文档树 / 选择控制类
+Document tree / selection control class
 
 ## Signature
 
 ```typescript
-declare class DMT_SelectControl 
+class DMT_SelectControl
 ```
 
 ## Remarks
 
-在文档树内进行选择焦点的查询、控制
+Query and control of the selection focus in the document tree
 
 ## Methods
 
@@ -18,30 +18,24 @@ declare class DMT_SelectControl
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [getCurrentDocumentInfo()](./DMT_SelectControl.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前文档的属性
-
+**_(BETA)_** Get the properties of the current document
 
 </td></tr>
 </tbody></table>
@@ -56,21 +50,20 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前文档的属性
+Get the properties of the current document
 
 ## Signature
 
 ```typescript
-getCurrentDocumentInfo(): Promise<IDMT_EditorDocumentItem | undefined>;
+function getCurrentDocumentInfo(): Promise<IDMT_EditorDocumentItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_EditorDocumentItem](../interfaces/IDMT_EditorDocumentItem.md) \| undefined&gt;
 
-文档类型、UUID、所属工程的 UUID、所属库的 UUID 组成的对象，如若为 `undefined` 则获取失败
+An object composed of the document type, UUID, the UUID of the project it belongs to, and the UUID of the library it belongs to. If it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的文档的文档类型、UUID、所属工程的 UUID 或所属库的 UUID
+It will get the document type, UUID, and the UUID of the project or library it belongs to for the currently open document that has the last input focus

@@ -1,16 +1,15 @@
 # SCH\_PrimitiveComponent class
 
-原理图 &amp; 符号 / 器件图元类
+Schematic &amp; symbol / device primitive class
 
 ## Signature
 
 ```typescript
-declare class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI 
+class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI
 ```
 **Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,338 +17,266 @@ declare class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(component, x, y, subPartName, rotation, mirror, addIntoBom, addIntoPcb)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建器件
-
+**_(BETA)_** Create Device
 
 </td></tr>
 <tr><td>
 
 [createCbbSymbol(cbbSymbol, x, y, rotation, mirror)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建复用模块符号
-
+**_(BETA)_** Create Reuse block symbol
 
 </td></tr>
 <tr><td>
 
 [createNetFlag(identification, net, x, y, rotation, mirror)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建网络标识
-
+**_(BETA)_** Create Net flag
 
 </td></tr>
 <tr><td>
 
 [createNetPort(direction, net, x, y, rotation, mirror)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建网络端口
-
+**_(BETA)_** Create Net port
 
 </td></tr>
 <tr><td>
 
 [createShortCircuitFlag(x, y, rotation, mirror)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建短接标识
-
+**_(BETA)_** Create a short circuit flag
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除器件
-
+**_(BETA)_** Delete Device
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件
-
+**_(BETA)_** Get Device
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件
-
+**_(BETA)_** Get Device
 
 </td></tr>
 <tr><td>
 
 [getAll(componentType, allSchematicPages)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件
-
+**_(BETA)_** Get all Device
 
 </td></tr>
 <tr><td>
 
 [getAllPinsByPrimitiveId(primitiveId)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件关联的所有引脚
-
+**_(BETA)_** Get all pins associated with the device
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(componentType, allSchematicPages)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件的图元 ID
-
+**_(BETA)_** Get all Device primitive IDs
 
 </td></tr>
 <tr><td>
 
 [getAllPropertyNames()](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件的所有属性名称集合
-
+**_(BETA)_** Get The set of all property names of all devices
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改器件
-
+**_(BETA)_** Modify Device
 
 </td></tr>
 <tr><td>
 
 [placeCbbSchematicPage(cbbSchematicPage, x, y)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 放置复用模块原理图图页
-
+**_(BETA)_** Place reuse block schematic sheet
 
 </td></tr>
 <tr><td>
 
 [placeComponentWithMouse(component, subPartName)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用鼠标放置器件
-
+**_(BETA)_** Place with the mouse device
 
 </td></tr>
 <tr><td>
 
 [placeSymbolWithMouse(symbol, subPartName, properties)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用鼠标放置符号
-
+**_(BETA)_** Place with the mouse symbol
 
 </td></tr>
 <tr><td>
 
 [setNetFlagComponentUuid\_AnalogGround(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 AnalogGround 网络标识关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the AnalogGround net flag in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetFlagComponentUuid\_Ground(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 Ground 网络标识关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the Ground net flag in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetFlagComponentUuid\_Power(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 Power 网络标识关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the Power net flag in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetFlagComponentUuid\_ProtectGround(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 ProtectGround 网络标识关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the ProtectGround net flag in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetPortComponentUuid\_BI(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 BI 网络端口关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the BI net port in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetPortComponentUuid\_IN(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 IN 网络端口关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the IN net port in the extension API
 
 </td></tr>
 <tr><td>
 
 [setNetPortComponentUuid\_OUT(component)](./SCH_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置在扩展 API 中 OUT 网络端口关联的器件 UUID
-
+**_(BETA)_** Set the device UUID associated with the OUT net port in the extension API
 
 </td></tr>
 </tbody></table>
@@ -364,20 +291,27 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建器件
+Create Device
 
 ## Signature
 
 ```typescript
-create(component: {
-        libraryType?: ELIB_LibraryType.DEVICE;
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem | {
-        libraryType: ELIB_LibraryType.SYMBOL;
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_SymbolItem | ILIB_SymbolSearchItem, x: number, y: number, subPartName?: string, rotation?: number, mirror?: boolean, addIntoBom?: boolean, addIntoPcb?: boolean): Promise<ISCH_PrimitiveComponent | undefined>;
+function create(
+	component:
+		| { libraryType?: ELIB_LibraryType.DEVICE; libraryUuid: string; uuid: string }
+		| ILIB_DeviceItem
+		| ILIB_DeviceSearchItem
+		| { libraryType: ELIB_LibraryType.SYMBOL; libraryUuid: string; uuid: string }
+		| ILIB_SymbolItem
+		| ILIB_SymbolSearchItem,
+	x: number,
+	y: number,
+	subPartName?: string,
+	rotation?: number,
+	mirror?: boolean,
+	addIntoBom?: boolean,
+	addIntoPcb?: boolean,
+): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -386,155 +320,126 @@ create(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryType?: [ELIB\_LibraryType.DEVICE](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| { libraryType: [ELIB\_LibraryType.SYMBOL](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string } \| [ILIB\_SymbolItem](../interfaces/ILIB_SymbolItem.md) \| [ILIB\_SymbolSearchItem](../interfaces/ILIB_SymbolSearchItem.md)
 
 </td><td>
 
-{ libraryType?: [ELIB\_LibraryType.DEVICE](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| { libraryType: [ELIB\_LibraryType.SYMBOL](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string; } \| [ILIB\_SymbolItem](../interfaces/ILIB_SymbolItem.md) \| [ILIB\_SymbolSearchItem](../interfaces/ILIB_SymbolSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 subPartName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 子部件名称
-
+_(Optional)_ Sub-part name
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 <tr><td>
 
 addIntoBom
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否加入 BOM
-
+_(Optional)_ Whether Add to BOM
 
 </td></tr>
 <tr><td>
 
 addIntoPcb
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否转到 PCB
-
+_(Optional)_ Whether Transfer to PCB
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### createcbbsymbol
 
@@ -542,16 +447,18 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建复用模块符号
+Create Reuse block symbol
 
 ## Signature
 
 ```typescript
-createCbbSymbol(cbbSymbol: {
-        libraryUuid: string;
-        cbbUuid: string;
-        uuid?: string;
-    }, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveCbbSymbolComponent | undefined>;
+function createCbbSymbol(
+	cbbSymbol: { libraryUuid: string; cbbUuid: string; uuid?: string },
+	x: number,
+	y: number,
+	rotation?: number,
+	mirror?: boolean,
+): Promise<ISCH_PrimitiveCbbSymbolComponent | undefined>;
 ```
 
 ## Parameters
@@ -560,107 +467,87 @@ createCbbSymbol(cbbSymbol: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 cbbSymbol
 
+</td><td>
+
+\{ libraryUuid: string; cbbUuid: string; uuid?: string \}
 
 </td><td>
 
-\{ libraryUuid: string; cbbUuid: string; uuid?: string; \}
-
-
-</td><td>
-
-关联库复用模块符号，libraryUuid 是 CBB 工程所在库的 UUID，cbbUuid 是 CBB 工程的 UUID，uuid 是 CBB 工程内符号的 UUID，name 是符号的显示名称
-
+Associated library reuse block symbol. `libraryUuid` is the UUID of the library where the CBB project is located, `cbbUuid` is the UUID of the CBB project, and `uuid` is the UUID of the symbol in the CBB project
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCbbSymbolComponent](./ISCH_PrimitiveCbbSymbolComponent.md) \| undefined&gt;
 
-复用模块符号图元对象
+Reuse block symbol primitive object
 
 ### createnetflag
 
@@ -668,12 +555,19 @@ Promise&lt;[ISCH\_PrimitiveCbbSymbolComponent](./ISCH_PrimitiveCbbSymbolComponen
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建网络标识
+Create Net flag
 
 ## Signature
 
 ```typescript
-createNetFlag(identification: 'Power' | 'Ground' | 'AnalogGround' | 'ProtectGround', net: string, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent | undefined>;
+function createNetFlag(
+	identification: 'Power' | 'Ground' | 'AnalogGround' | 'ProtectGround',
+	net: string,
+	x: number,
+	y: number,
+	rotation?: number,
+	mirror?: boolean,
+): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -682,123 +576,100 @@ createNetFlag(identification: 'Power' | 'Ground' | 'AnalogGround' | 'ProtectGrou
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 identification
 
-
 </td><td>
 
 'Power' \| 'Ground' \| 'AnalogGround' \| 'ProtectGround'
 
-
 </td><td>
 
-标识类型
-
+Identification type
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### createnetport
 
@@ -806,12 +677,19 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建网络端口
+Create Net port
 
 ## Signature
 
 ```typescript
-createNetPort(direction: 'IN' | 'OUT' | 'BI', net: string, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent | undefined>;
+function createNetPort(
+	direction: 'IN' | 'OUT' | 'BI',
+	net: string,
+	x: number,
+	y: number,
+	rotation?: number,
+	mirror?: boolean,
+): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -820,123 +698,100 @@ createNetPort(direction: 'IN' | 'OUT' | 'BI', net: string, x: number, y: number,
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 direction
 
-
 </td><td>
 
 'IN' \| 'OUT' \| 'BI'
 
-
 </td><td>
 
-端口方向
-
+Port direction
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### createshortcircuitflag
 
@@ -944,12 +799,17 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建短接标识
+Create a short circuit flag
 
 ## Signature
 
 ```typescript
-createShortCircuitFlag(x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent | undefined>;
+function createShortCircuitFlag(
+	x: number,
+	y: number,
+	rotation?: number,
+	mirror?: boolean,
+): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -958,91 +818,74 @@ createShortCircuitFlag(x: number, y: number, rotation?: number, mirror?: boolean
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### delete
 
@@ -1050,12 +893,12 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除器件
+Delete Device
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | ISCH_PrimitiveComponent | Array<string> | Array<ISCH_PrimitiveComponent>): Promise<boolean>;
+function delete(primitiveIds: string | ISCH_PrimitiveComponent | Array<string> | Array<ISCH_PrimitiveComponent>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1064,43 +907,35 @@ delete(primitiveIds: string | ISCH_PrimitiveComponent | Array<string> | Array<IS
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| Array&lt;string&gt; \| Array&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;
 
-
 </td><td>
 
-器件的图元 ID 或器件图元对象
-
+Device primitive ID or Device primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -1108,12 +943,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件
+Get Device
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<ISCH_PrimitiveComponent | undefined>;
+function get(primitiveIds: string): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -1122,43 +957,35 @@ get(primitiveIds: string): Promise<ISCH_PrimitiveComponent | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Device primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象，`undefined` 表示获取失败
+Device primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -1166,12 +993,12 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件
+Get Device
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveComponent>>;
+function get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveComponent>>;
 ```
 
 ## Parameters
@@ -1180,47 +1007,39 @@ get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveComponent>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-器件的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Device primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
-器件图元对象，空数组表示获取失败
+Device primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -1228,12 +1047,15 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件
+Get all Device
 
 ## Signature
 
 ```typescript
-getAll(componentType?: ESCH_PrimitiveComponentType, allSchematicPages?: boolean): Promise<Array<ISCH_PrimitiveComponent>>;
+function getAll(
+	componentType?: ESCH_PrimitiveComponentType,
+	allSchematicPages?: boolean,
+): Promise<Array<ISCH_PrimitiveComponent>>;
 ```
 
 ## Parameters
@@ -1242,59 +1064,48 @@ getAll(componentType?: ESCH_PrimitiveComponentType, allSchematicPages?: boolean)
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 componentType
 
-
 </td><td>
 
 [ESCH\_PrimitiveComponentType](../enums/ESCH_PrimitiveComponentType.md)
 
-
 </td><td>
 
-_(Optional)_ 器件类型
-
+_(Optional)_ Device type
 
 </td></tr>
 <tr><td>
 
 allSchematicPages
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否获取所有原理图图页的器件
-
+_(Optional)_ Whether to get the devices of all schematic sheets
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
-器件图元对象数组
+Array of Device primitive objects
 
 ### getallpinsbyprimitiveid
 
@@ -1302,12 +1113,14 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件关联的所有引脚
+Get all pins associated with the device
 
 ## Signature
 
 ```typescript
-getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<ISCH_PrimitiveComponentPin> | undefined>;
+function getAllPinsByPrimitiveId(
+	primitiveId: string,
+): Promise<Array<ISCH_PrimitiveComponentPin> | undefined>;
 ```
 
 ## Parameters
@@ -1316,43 +1129,35 @@ getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<ISCH_PrimitiveCompon
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件图元 ID
-
+Device primitive ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)<!-- -->&gt; \| undefined&gt;
 
-器件引脚图元数组
+Device pin primitive array
 
 ### getallprimitiveid
 
@@ -1360,12 +1165,15 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.m
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件的图元 ID
+Get all Device primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(componentType?: ESCH_PrimitiveComponentType, allSchematicPages?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	componentType?: ESCH_PrimitiveComponentType,
+	allSchematicPages?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -1374,59 +1182,48 @@ getAllPrimitiveId(componentType?: ESCH_PrimitiveComponentType, allSchematicPages
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 componentType
 
-
 </td><td>
 
 [ESCH\_PrimitiveComponentType](../enums/ESCH_PrimitiveComponentType.md)
 
-
 </td><td>
 
-_(Optional)_ 器件类型
-
+_(Optional)_ Device type
 
 </td></tr>
 <tr><td>
 
 allSchematicPages
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否获取所有原理图图页的器件
-
+_(Optional)_ Whether to get the devices of all schematic sheets
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-器件的图元 ID 数组
+Array of Device primitive IDs
 
 ### getallpropertynames
 
@@ -1434,20 +1231,19 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件的所有属性名称集合
+Get The set of all property names of all devices
 
 ## Signature
 
 ```typescript
-getAllPropertyNames(): Promise<Array<string>>;
+function getAllPropertyNames(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-所有器件的所有属性名称集合
+The set of all property names of all devices
 
 ### modify
 
@@ -1455,27 +1251,30 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改器件
+Modify Device
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | ISCH_PrimitiveComponent, property: {
-        x?: number;
-        y?: number;
-        rotation?: number;
-        mirror?: boolean;
-        addIntoBom?: boolean;
-        addIntoPcb?: boolean;
-        designator?: string | null;
-        name?: string | null;
-        uniqueId?: string | null;
-        manufacturer?: string | null;
-        manufacturerId?: string | null;
-        supplier?: string | null;
-        supplierId?: string | null;
-        otherProperty?: Record<string, string | number | boolean>;
-    }): Promise<ISCH_PrimitiveComponent | undefined>;
+function modify(
+	primitiveId: string | ISCH_PrimitiveComponent,
+	property: {
+		x?: number;
+		y?: number;
+		rotation?: number;
+		mirror?: boolean;
+		addIntoBom?: boolean;
+		addIntoPcb?: boolean;
+		designator?: string | null;
+		name?: string | null;
+		uniqueId?: string | null;
+		manufacturer?: string | null;
+		manufacturerId?: string | null;
+		supplier?: string | null;
+		supplierId?: string | null;
+		otherProperty?: Record<string, string | number | boolean>;
+	},
+): Promise<ISCH_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -1484,61 +1283,50 @@ modify(primitiveId: string | ISCH_PrimitiveComponent, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
-
 </td><td>
 
-{ x?: number; y?: number; rotation?: number; mirror?: boolean; addIntoBom?: boolean; addIntoPcb?: boolean; designator?: string \| null; name?: string \| null; uniqueId?: string \| null; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: Record&lt;string, string \| number \| boolean&gt;; }
-
+{ x?: number; y?: number; rotation?: number; mirror?: boolean; addIntoBom?: boolean; addIntoPcb?: boolean; designator?: string \| null; name?: string \| null; uniqueId?: string \| null; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: Record&lt;string, string \| number \| boolean&gt; }
 
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ## Remarks
 
-仅当器件类型为 [COMPONENT](../enums/ESCH_PrimitiveComponentType.md) 时允许使用该方法进行修改
+This method can only be used for modification when the device type is [COMPONENT](../enums/ESCH_PrimitiveComponentType.md)
 
 ### placecbbschematicpage
 
@@ -1546,16 +1334,16 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-放置复用模块原理图图页
+Place reuse block schematic sheet
 
 ## Signature
 
 ```typescript
-placeCbbSchematicPage(cbbSchematicPage: {
-        libraryUuid: string;
-        cbbUuid: string;
-        uuid: string;
-    }, x: number, y: number): Promise<boolean>;
+function placeCbbSchematicPage(
+	cbbSchematicPage: { libraryUuid: string; cbbUuid: string; uuid: string },
+	x: number,
+	y: number,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1564,75 +1352,61 @@ placeCbbSchematicPage(cbbSchematicPage: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 cbbSchematicPage
 
+</td><td>
+
+\{ libraryUuid: string; cbbUuid: string; uuid: string \}
 
 </td><td>
 
-\{ libraryUuid: string; cbbUuid: string; uuid: string; \}
-
-
-</td><td>
-
-复用模块原理图图页
-
+Reuse block schematic sheet. `libraryUuid` is the UUID of the library where the CBB project is located, `cbbUuid` is the UUID of the CBB project, and `uuid` is the UUID of the schematic sheet in the CBB project
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-放置操作是否成功
+Place whether the operation is successful
 
 ### placecomponentwithmouse
 
@@ -1640,15 +1414,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用鼠标放置器件
+Place with the mouse device
 
 ## Signature
 
 ```typescript
-placeComponentWithMouse(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem, subPartName?: string): Promise<boolean>;
+function placeComponentWithMouse(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+	subPartName?: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1657,65 +1431,54 @@ placeComponentWithMouse(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 <tr><td>
 
 subPartName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 子部件名称
-
+_(Optional)_ Sub-part name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否找到器件
+Whether the device was found
 
 ## Remarks
 
-本接口模拟前端点击放置按钮，指定的器件将绑定到当前鼠标，并在用户后续点击时放置于画布
+This API simulates clicking the placement button on the front end. The specified device will be bound to the current mouse and placed on the canvas when the user clicks subsequently
 
-本接口的返回时机并不会等待用户的放置操作，一旦器件被绑定到鼠标，本接口将立即返回 `true` 的结果
+The return timing of this API does not wait for the user's placement operation. Once the device is bound to the mouse, this API will immediately return `true`
 
 ### placesymbolwithmouse
 
@@ -1723,17 +1486,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用鼠标放置符号
+Place with the mouse symbol
 
 ## Signature
 
 ```typescript
-placeSymbolWithMouse(symbol: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_SymbolItem | ILIB_SymbolSearchItem, subPartName?: string, properties?: {
-        [key: string]: boolean | number | string | undefined;
-    }): Promise<boolean>;
+function placeSymbolWithMouse(
+	symbol: { libraryUuid: string; uuid: string } | ILIB_SymbolItem | ILIB_SymbolSearchItem,
+	subPartName?: string,
+	properties?: { [key: string]: boolean | number | string | undefined },
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1742,83 +1504,67 @@ placeSymbolWithMouse(symbol: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 symbol
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_SymbolItem](../interfaces/ILIB_SymbolItem.md) \| [ILIB\_SymbolSearchItem](../interfaces/ILIB_SymbolSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_SymbolItem](../interfaces/ILIB_SymbolItem.md) \| [ILIB\_SymbolSearchItem](../interfaces/ILIB_SymbolSearchItem.md)
-
-
-</td><td>
-
-关联库符号
-
+Associate library symbol
 
 </td></tr>
 <tr><td>
 
 subPartName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 子部件名称
-
+_(Optional)_ Sub-part name
 
 </td></tr>
 <tr><td>
 
 properties
 
+</td><td>
+
+\{ \[key: string\]: boolean \| number \| string \| undefined \}
 
 </td><td>
 
-\{ \[key: string\]: boolean \| number \| string \| undefined; \}
-
-
-</td><td>
-
-_(Optional)_ 器件属性
-
+_(Optional)_ Device property
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否找到符号
+Whether the symbol was found
 
 ## Remarks
 
-ADD since API v0.2.26
+This API simulates clicking the placement button on the front end. The specified symbol will be bound to the current mouse and placed on the canvas when the user clicks subsequently
 
-本接口模拟前端点击放置按钮，指定的符号将绑定到当前鼠标，并在用户后续点击时放置于画布
-
-本接口的返回时机并不会等待用户的放置操作，一旦符号被绑定到鼠标，本接口将立即返回 `true` 的结果
+The return timing of this API does not wait for the user's placement operation. Once the symbol is bound to the mouse, this API will immediately return `true` ADD since API v0.2.26
 
 ### setnetflagcomponentuuid_analogground
 
@@ -1826,15 +1572,14 @@ ADD since API v0.2.26
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 AnalogGround 网络标识关联的器件 UUID
+Set the device UUID associated with the AnalogGround net flag in the extension API
 
 ## Signature
 
 ```typescript
-setNetFlagComponentUuid_AnalogGround(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetFlagComponentUuid_AnalogGround(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1843,43 +1588,35 @@ setNetFlagComponentUuid_AnalogGround(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetflagcomponentuuid_ground
 
@@ -1887,15 +1624,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 Ground 网络标识关联的器件 UUID
+Set the device UUID associated with the Ground net flag in the extension API
 
 ## Signature
 
 ```typescript
-setNetFlagComponentUuid_Ground(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetFlagComponentUuid_Ground(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1904,43 +1640,35 @@ setNetFlagComponentUuid_Ground(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetflagcomponentuuid_power
 
@@ -1948,15 +1676,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 Power 网络标识关联的器件 UUID
+Set the device UUID associated with the Power net flag in the extension API
 
 ## Signature
 
 ```typescript
-setNetFlagComponentUuid_Power(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetFlagComponentUuid_Power(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1965,43 +1692,35 @@ setNetFlagComponentUuid_Power(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetflagcomponentuuid_protectground
 
@@ -2009,15 +1728,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 ProtectGround 网络标识关联的器件 UUID
+Set the device UUID associated with the ProtectGround net flag in the extension API
 
 ## Signature
 
 ```typescript
-setNetFlagComponentUuid_ProtectGround(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetFlagComponentUuid_ProtectGround(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2026,43 +1744,35 @@ setNetFlagComponentUuid_ProtectGround(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetportcomponentuuid_bi
 
@@ -2070,15 +1780,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 BI 网络端口关联的器件 UUID
+Set the device UUID associated with the BI net port in the extension API
 
 ## Signature
 
 ```typescript
-setNetPortComponentUuid_BI(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetPortComponentUuid_BI(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2087,43 +1796,35 @@ setNetPortComponentUuid_BI(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetportcomponentuuid_in
 
@@ -2131,15 +1832,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 IN 网络端口关联的器件 UUID
+Set the device UUID associated with the IN net port in the extension API
 
 ## Signature
 
 ```typescript
-setNetPortComponentUuid_IN(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetPortComponentUuid_IN(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2148,43 +1848,35 @@ setNetPortComponentUuid_IN(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setnetportcomponentuuid_out
 
@@ -2192,15 +1884,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置在扩展 API 中 OUT 网络端口关联的器件 UUID
+Set the device UUID associated with the OUT net port in the extension API
 
 ## Signature
 
 ```typescript
-setNetPortComponentUuid_OUT(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function setNetPortComponentUuid_OUT(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -2209,40 +1900,32 @@ setNetPortComponentUuid_OUT(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful

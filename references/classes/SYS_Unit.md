@@ -1,16 +1,16 @@
 # SYS\_Unit class
 
-系统 / 单位类
+System / unit class
 
 ## Signature
 
 ```typescript
-declare class SYS_Unit 
+class SYS_Unit
 ```
 
 ## Remarks
 
-控制系统数据单位与单位转换基础函数，当前原理图数据单位跨度等效为 `10mil` 或 `0.01inch`<!-- -->，PCB 数据单位跨度等效为 `mil`
+Controls the system data units and unit conversion basic functions. Currently, the schematic data unit span is equivalent to `10mil` or `0.01inch`<!-- -->, and the PCB data unit span is equivalent to `mil`
 
 ## Methods
 
@@ -18,114 +18,90 @@ declare class SYS_Unit
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [getFrontendDataUnit()](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取 EDA 前端数据单位跨度
-
+**_(BETA)_** Get the EDA front-end data unit span
 
 </td></tr>
 <tr><td>
 
 [inchToMil(inch, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：英寸到密尔
-
+Unit conversion: inches to mils
 
 </td></tr>
 <tr><td>
 
 [inchToMm(inch, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：英寸到毫米
-
+Unit conversion: inches to millimeters
 
 </td></tr>
 <tr><td>
 
 [milToInch(mil, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：密尔到英寸
-
+Unit conversion: mils to inches
 
 </td></tr>
 <tr><td>
 
 [milToMm(mil, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：密尔到毫米
-
+Unit conversion: mils to millimeters
 
 </td></tr>
 <tr><td>
 
 [mmToInch(mm, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：毫米到英寸
-
+Unit conversion: millimeters to inches
 
 </td></tr>
 <tr><td>
 
 [mmToMil(mm, numberOfDecimals)](./SYS_Unit.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-单位转换：毫米到密尔
-
+Unit conversion: millimeters to mils
 
 </td></tr>
 </tbody></table>
@@ -140,35 +116,34 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取 EDA 前端数据单位跨度
+Get the EDA front-end data unit span
 
 ## Signature
 
 ```typescript
-getFrontendDataUnit(): Promise<ESYS_Unit | undefined>;
+function getFrontendDataUnit(): Promise<ESYS_Unit | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ESYS\_Unit](../enums/ESYS_Unit.md) \| undefined&gt;
 
-单位
+Unit
 
 ## Remarks
 
-此处指的是前端用户可以切换的单位，需要同时兼容原理图和 PCB 画布
+This refers to the units that front-end users can switch, and it needs to be compatible with both the schematic and PCB canvases
 
 ### inchtomil
 
 # SYS\_Unit.inchToMil() method
 
-单位转换：英寸到密尔
+Unit conversion: inches to mils
 
 ## Signature
 
 ```typescript
-inchToMil(inch: number, numberOfDecimals?: number): number;
+function inchToMil(inch: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -177,70 +152,59 @@ inchToMil(inch: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 inch
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入英寸数
-
+Input value in inches
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出密尔数
+Output value in mils
 
 ### inchtomm
 
 # SYS\_Unit.inchToMm() method
 
-单位转换：英寸到毫米
+Unit conversion: inches to millimeters
 
 ## Signature
 
 ```typescript
-inchToMm(inch: number, numberOfDecimals?: number): number;
+function inchToMm(inch: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -249,70 +213,59 @@ inchToMm(inch: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 inch
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入英寸数
-
+Input value in inches
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出毫米数
+Output value in millimeters
 
 ### miltoinch
 
 # SYS\_Unit.milToInch() method
 
-单位转换：密尔到英寸
+Unit conversion: mils to inches
 
 ## Signature
 
 ```typescript
-milToInch(mil: number, numberOfDecimals?: number): number;
+function milToInch(mil: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -321,70 +274,59 @@ milToInch(mil: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mil
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入密尔数
-
+Input value in mils
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出英寸数
+Output value in inches
 
 ### miltomm
 
 # SYS\_Unit.milToMm() method
 
-单位转换：密尔到毫米
+Unit conversion: mils to millimeters
 
 ## Signature
 
 ```typescript
-milToMm(mil: number, numberOfDecimals?: number): number;
+function milToMm(mil: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -393,70 +335,59 @@ milToMm(mil: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mil
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入密尔数
-
+Input value in mils
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出毫米数
+Output value in millimeters
 
 ### mmtoinch
 
 # SYS\_Unit.mmToInch() method
 
-单位转换：毫米到英寸
+Unit conversion: millimeters to inches
 
 ## Signature
 
 ```typescript
-mmToInch(mm: number, numberOfDecimals?: number): number;
+function mmToInch(mm: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -465,70 +396,59 @@ mmToInch(mm: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mm
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入毫米数
-
+Input value in millimeters
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出英寸数
+Output value in inches
 
 ### mmtomil
 
 # SYS\_Unit.mmToMil() method
 
-单位转换：毫米到密尔
+Unit conversion: millimeters to mils
 
 ## Signature
 
 ```typescript
-mmToMil(mm: number, numberOfDecimals?: number): number;
+function mmToMil(mm: number, numberOfDecimals?: number): number;
 ```
 
 ## Parameters
@@ -537,56 +457,45 @@ mmToMil(mm: number, numberOfDecimals?: number): number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mm
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-输入毫米数
-
+Input value in millimeters
 
 </td></tr>
 <tr><td>
 
 numberOfDecimals
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
-
+_(Optional)_ Number of decimal places to keep, default is `4`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 number
 
-输出密尔数
+Output value in mils

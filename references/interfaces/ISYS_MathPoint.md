@@ -1,11 +1,11 @@
 # ISYS\_MathPoint interface
 
-离散点
+Discrete points
 
 ## Signature
 
 ```typescript
-interface ISYS_MathPoint 
+interface ISYS_MathPoint
 ```
 
 ## Properties
@@ -14,59 +14,47 @@ interface ISYS_MathPoint
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [x](./ISYS_MathPoint.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-X 坐标
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 [y](./ISYS_MathPoint.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-Y 坐标
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
@@ -79,7 +67,7 @@ Y 坐标
 
 # ISYS\_MathPoint.x property
 
-X 坐标
+X coordinate
 
 ## Signature
 
@@ -91,7 +79,7 @@ x: number;
 
 # ISYS\_MathPoint.y property
 
-Y 坐标
+Y coordinate
 
 ## Signature
 

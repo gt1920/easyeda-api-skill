@@ -1,17 +1,17 @@
 # SCH\_PrimitivePin class
 
-原理图 &amp; 符号 / 引脚图元类
+Schematic &amp; symbol / pin primitive class
 
 ## Signature
 
 ```typescript
-declare class SCH_PrimitivePin implements ISCH_PrimitiveAPI 
+class SCH_PrimitivePin implements ISCH_PrimitiveAPI
 ```
 **Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
 ## Remarks
 
-引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 [器件引脚图元](./ISCH_PrimitiveComponentPin.md)
+Pin primitives are only available in the symbol editor. In a schematic sheet, the pin associated with a symbol is called [a device pin primitive](./ISCH_PrimitiveComponentPin.md)
 
 ## Methods
 
@@ -19,114 +19,90 @@ declare class SCH_PrimitivePin implements ISCH_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(x, y, pinNumber, pinName, rotation, pinLength, pinColor, pinShape, pinType)](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建引脚
-
+**_(BETA)_** Create Pin
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除引脚
-
+**_(BETA)_** Delete Pin
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取引脚
-
+**_(BETA)_** Get Pin
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取引脚
-
+**_(BETA)_** Get Pin
 
 </td></tr>
 <tr><td>
 
 [getAll()](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有引脚
-
+**_(BETA)_** Get all Pin
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId()](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有引脚的图元 ID
-
+**_(BETA)_** Get all Pin primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./SCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改引脚
-
+**_(BETA)_** Modify Pin
 
 </td></tr>
 </tbody></table>
@@ -141,12 +117,22 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建引脚
+Create Pin
 
 ## Signature
 
 ```typescript
-create(x: number, y: number, pinNumber: string, pinName?: string, rotation?: number, pinLength?: number, pinColor?: string | null, pinShape?: ESCH_PrimitivePinShape, pinType?: ESCH_PrimitivePinType): Promise<ISCH_PrimitivePin | undefined>;
+function create(
+	x: number,
+	y: number,
+	pinNumber: string,
+	pinName?: string,
+	rotation?: number,
+	pinLength?: number,
+	pinColor?: string | null,
+	pinShape?: ESCH_PrimitivePinShape,
+	pinType?: ESCH_PrimitivePinType,
+): Promise<ISCH_PrimitivePin | undefined>;
 ```
 
 ## Parameters
@@ -155,171 +141,139 @@ create(x: number, y: number, pinNumber: string, pinName?: string, rotation?: num
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 pinNumber
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-引脚编号
-
+Pin number
 
 </td></tr>
 <tr><td>
 
 pinName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 引脚名称
-
+_(Optional)_ Pin name
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度，可选 `0` `90` `180` `270`
-
+_(Optional)_ Rotation angle. Options: `0` `90` `180` `270`
 
 </td></tr>
 <tr><td>
 
 pinLength
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 引脚长度
-
+_(Optional)_ Pin length
 
 </td></tr>
 <tr><td>
 
 pinColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 引脚颜色，`null` 表示默认
-
+_(Optional)_ Pin color, `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 pinShape
 
-
 </td><td>
 
 [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)
 
-
 </td><td>
 
-_(Optional)_ 引脚形状
-
+_(Optional)_ Pin shape
 
 </td></tr>
 <tr><td>
 
 pinType
 
-
 </td><td>
 
 [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)
 
-
 </td><td>
 
-_(Optional)_ 引脚类型
-
+_(Optional)_ Pin type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| undefined&gt;
 
-引脚图元对象
+Pin primitive object
 
 ### delete
 
@@ -327,12 +281,12 @@ Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除引脚
+Delete Pin
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | ISCH_PrimitivePin | Array<string> | Array<ISCH_PrimitivePin>): Promise<boolean>;
+function delete(primitiveIds: string | ISCH_PrimitivePin | Array<string> | Array<ISCH_PrimitivePin>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -341,43 +295,35 @@ delete(primitiveIds: string | ISCH_PrimitivePin | Array<string> | Array<ISCH_Pri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| Array&lt;string&gt; \| Array&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
-
 </td><td>
 
-引脚的图元 ID 或引脚图元对象
-
+Pin primitive ID or Pin primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -385,12 +331,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取引脚
+Get Pin
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin | undefined>;
+function get(
+	primitiveIds: string,
+): Promise<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin | undefined>;
 ```
 
 ## Parameters
@@ -399,43 +347,35 @@ get(primitiveIds: string): Promise<ISCH_PrimitivePin | ISCH_PrimitiveComponentPi
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-引脚的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Pin primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md) \| undefined&gt;
 
-引脚图元对象，`undefined` 表示获取失败
+Pin primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -443,12 +383,14 @@ Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_PrimitiveCompo
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取引脚
+Get Pin
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin>>;
+function get(
+	primitiveIds: Array<string>,
+): Promise<Array<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin>>;
 ```
 
 ## Parameters
@@ -457,47 +399,39 @@ get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitivePin | ISCH_Primiti
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-引脚的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Pin primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)<!-- -->&gt;&gt;
 
-引脚图元对象，空数组表示获取失败
+Pin primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -505,20 +439,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_Primi
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有引脚
+Get all Pin
 
 ## Signature
 
 ```typescript
-getAll(): Promise<Array<ISCH_PrimitivePin>>;
+function getAll(): Promise<Array<ISCH_PrimitivePin>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;&gt;
 
-引脚图元对象数组
+Array of Pin primitive objects
 
 ### getallprimitiveid
 
@@ -526,20 +459,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有引脚的图元 ID
+Get all Pin primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(): Promise<Array<string>>;
+function getAllPrimitiveId(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-引脚的图元 ID 数组
+Array of Pin primitive IDs
 
 ### modify
 
@@ -547,24 +479,27 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改引脚
+Modify Pin
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | ISCH_PrimitivePin | ISCH_PrimitiveComponentPin, property: {
-        x?: number;
-        y?: number;
-        pinNumber?: string;
-        pinName?: string;
-        rotation?: number;
-        pinLength?: number;
-        pinColor?: string | null;
-        pinShape?: ESCH_PrimitivePinShape;
-        pinType?: ESCH_PrimitivePinType;
-        noConnected?: boolean;
-        otherProperty?: Record<string, string | number | boolean>;
-    }): Promise<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin | undefined>;
+function modify(
+	primitiveId: string | ISCH_PrimitivePin | ISCH_PrimitiveComponentPin,
+	property: {
+		x?: number;
+		y?: number;
+		pinNumber?: string;
+		pinName?: string;
+		rotation?: number;
+		pinLength?: number;
+		pinColor?: string | null;
+		pinShape?: ESCH_PrimitivePinShape;
+		pinType?: ESCH_PrimitivePinType;
+		noConnected?: boolean;
+		otherProperty?: Record<string, string | number | boolean>;
+	},
+): Promise<ISCH_PrimitivePin | ISCH_PrimitiveComponentPin | undefined>;
 ```
 
 ## Parameters
@@ -573,56 +508,45 @@ modify(primitiveId: string | ISCH_PrimitivePin | ISCH_PrimitiveComponentPin, pro
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ x?: number; y?: number; pinNumber?: string; pinName?: string; rotation?: number; pinLength?: number; pinColor?: string \| null; pinShape?: [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)<!-- -->; pinType?: [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)<!-- -->; noConnected?: boolean; otherProperty?: Record&lt;string, string \| number \| boolean&gt; }
 
 </td><td>
 
-{ x?: number; y?: number; pinNumber?: string; pinName?: string; rotation?: number; pinLength?: number; pinColor?: string \| null; pinShape?: [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)<!-- -->; pinType?: [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)<!-- -->; noConnected?: boolean; otherProperty?: Record&lt;string, string \| number \| boolean&gt;; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md) \| [ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md) \| undefined&gt;
 
-引脚图元对象
+Pin primitive object

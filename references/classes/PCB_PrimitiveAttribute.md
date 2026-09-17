@@ -1,11 +1,11 @@
 # PCB\_PrimitiveAttribute class
 
-PCB &amp; 封装 / 属性图元类
+PCB &amp; footprint / property primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitiveAttribute implements IPCB_PrimitiveAPI 
+class PCB_PrimitiveAttribute implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,100 +15,79 @@ declare class PCB_PrimitiveAttribute implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除属性
-
+**_(BETA)_** Delete Property
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取属性
-
+**_(BETA)_** Get Property
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取属性
-
+**_(BETA)_** Get Property
 
 </td></tr>
 <tr><td>
 
 [getAll(parentPrimitiveId, layer, primitiveLock)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有属性
-
+**_(BETA)_** Get all Property
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(parentPrimitiveId, layer, primitiveLock)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有属性的图元 ID
-
+**_(BETA)_** Get all Property primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitiveAttribute.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改文本
-
+**_(BETA)_** Modify Text
 
 </td></tr>
 </tbody></table>
@@ -123,12 +102,12 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除属性
+Delete Property
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitiveAttribute | Array<string> | Array<IPCB_PrimitiveAttribute>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitiveAttribute | Array<string> | Array<IPCB_PrimitiveAttribute>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -137,43 +116,35 @@ delete(primitiveIds: string | IPCB_PrimitiveAttribute | Array<string> | Array<IP
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!-- -->&gt;
 
-
 </td><td>
 
-属性的图元 ID 或文本图元对象
-
+Property primitive ID or Text primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -181,12 +152,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取属性
+Get Property
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitiveAttribute | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitiveAttribute | undefined>;
 ```
 
 ## Parameters
@@ -195,43 +166,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitiveAttribute | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-属性的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Property primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md) \| undefined&gt;
 
-属性图元对象，`undefined` 表示获取失败
+Attribute primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -239,12 +202,12 @@ Promise&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取属性
+Get Property
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveAttribute>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveAttribute>>;
 ```
 
 ## Parameters
@@ -253,47 +216,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveAttribute>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-属性的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Property primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!-- -->&gt;&gt;
 
-属性图元对象，空数组表示获取失败
+Property primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹��到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -301,12 +256,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有属性
+Get all Property
 
 ## Signature
 
 ```typescript
-getAll(parentPrimitiveId?: string, layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveAttribute>>;
+function getAll(
+	parentPrimitiveId?: string,
+	layer?: TPCB_LayersOfImage,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitiveAttribute>>;
 ```
 
 ## Parameters
@@ -315,75 +274,61 @@ getAll(parentPrimitiveId?: string, layer?: TPCB_LayersOfImage, primitiveLock?: b
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 parentPrimitiveId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 关联的父图元 ID
-
+_(Optional)_ Associated parent primitive ID
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!-- -->&gt;&gt;
 
-属性图元对象数组
+Array of Property primitive objects
 
 ### getallprimitiveid
 
@@ -391,12 +336,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有属性的图元 ID
+Get all Property primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(parentPrimitiveId?: string, layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	parentPrimitiveId?: string,
+	layer?: TPCB_LayersOfImage,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -405,75 +354,61 @@ getAllPrimitiveId(parentPrimitiveId?: string, layer?: TPCB_LayersOfImage, primit
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 parentPrimitiveId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 关联的父图元 ID
-
+_(Optional)_ Associated parent primitive ID
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-属性的图元 ID 数组
+Array of Property primitive IDs
 
 ### modify
 
@@ -481,29 +416,32 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改文本
+Modify Text
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitiveAttribute, property: {
-        layer?: TPCB_LayersOfImage;
-        x?: number;
-        y?: number;
-        key?: string;
-        value?: string;
-        keyVisible?: boolean;
-        valueVisible?: boolean;
-        fontFamily?: string;
-        fontSize?: number;
-        lineWidth?: number;
-        alignMode?: EPCB_PrimitiveStringAlignMode;
-        rotation?: number;
-        reverse?: boolean;
-        expansion?: number;
-        mirror?: boolean;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitiveAttribute | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitiveAttribute,
+	property: {
+		layer?: TPCB_LayersOfImage;
+		x?: number;
+		y?: number;
+		key?: string;
+		value?: string;
+		keyVisible?: boolean;
+		valueVisible?: boolean;
+		fontFamily?: string;
+		fontSize?: number;
+		lineWidth?: number;
+		alignMode?: EPCB_PrimitiveStringAlignMode;
+		rotation?: number;
+		reverse?: boolean;
+		expansion?: number;
+		mirror?: boolean;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitiveAttribute | undefined>;
 ```
 
 ## Parameters
@@ -512,56 +450,45 @@ modify(primitiveId: string | IPCB_PrimitiveAttribute, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ layer?: [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)<!-- -->; x?: number; y?: number; key?: string; value?: string; keyVisible?: boolean; valueVisible?: boolean; fontFamily?: string; fontSize?: number; lineWidth?: number; alignMode?: [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)<!-- -->; rotation?: number; reverse?: boolean; expansion?: number; mirror?: boolean; primitiveLock?: boolean }
 
 </td><td>
 
-{ layer?: [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)<!-- -->; x?: number; y?: number; key?: string; value?: string; keyVisible?: boolean; valueVisible?: boolean; fontFamily?: string; fontSize?: number; lineWidth?: number; alignMode?: [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)<!-- -->; rotation?: number; reverse?: boolean; expansion?: number; mirror?: boolean; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md) \| undefined&gt;
 
-文本图元对象
+Text primitive object

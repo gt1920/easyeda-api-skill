@@ -1,15 +1,14 @@
 # IPCB\_Polygon class
 
-单多边形
+Single polygon
 
 ## Signature
 
 ```typescript
-declare class IPCB_Polygon 
+class IPCB_Polygon
 ```
 
 ## Remarks
-
 
 ## Methods
 
@@ -17,58 +16,46 @@ declare class IPCB_Polygon
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [discretize(options)](./IPCB_Polygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将单多边形离散化为点数据
-
+**_(BETA)_** Discretize a single polygon into point data
 
 </td></tr>
 <tr><td>
 
 [getCenter()](./IPCB_Polygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取单多边形中心点
-
+**_(BETA)_** Get Single polygon center point
 
 </td></tr>
 <tr><td>
 
 [getSource()](./IPCB_Polygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取单多边形数据
-
+Get Single polygon data
 
 </td></tr>
 </tbody></table>
@@ -83,12 +70,12 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将单多边形离散化为点数据
+Discretize a single polygon into point data
 
 ## Signature
 
 ```typescript
-discretize(options?: IPCB_DiscretizeOptions): Array<IPCB_DiscretizedPoint>;
+function discretize(options?: IPCB_DiscretizeOptions): Array<IPCB_DiscretizedPoint>;
 ```
 
 ## Parameters
@@ -97,47 +84,39 @@ discretize(options?: IPCB_DiscretizeOptions): Array<IPCB_DiscretizedPoint>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 options
 
-
 </td><td>
 
 [IPCB\_DiscretizeOptions](../interfaces/IPCB_DiscretizeOptions.md)
 
-
 </td><td>
 
-_(Optional)_ 离散化选项
-
+_(Optional)_ Discretization options
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Array&lt;[IPCB\_DiscretizedPoint](../interfaces/IPCB_DiscretizedPoint.md)<!-- -->&gt;
 
-离散化点数据
+Discretized point data
 
 ## Remarks
 
-将单多边形的边界离散化为一系列点
+Discretize the boundary of a single polygon into a series of points
 
 ### getcenter
 
@@ -145,39 +124,34 @@ Array&lt;[IPCB\_DiscretizedPoint](../interfaces/IPCB_DiscretizedPoint.md)<!-- --
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取单多边形中心点
+Get Single polygon center point
 
 ## Signature
 
 ```typescript
-getCenter(): Promise<{
-        x: number;
-        y: number;
-    }>;
+function getCenter(): Promise<{ x: number; y: number }>;
 ```
-
 
 ## Returns
 
-Promise&lt;{ x: number; y: number; }&gt;
+Promise&lt;{ x: number; y: number }&gt;
 
-单多边形中心点
+Single polygon center point
 
 ### getsource
 
 # IPCB\_Polygon.getSource() method
 
-获取单多边形数据
+Get Single polygon data
 
 ## Signature
 
 ```typescript
-getSource(): TPCB_PolygonSourceArray;
+function getSource(): TPCB_PolygonSourceArray;
 ```
-
 
 ## Returns
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)
 
-单多边形数据
+Single polygon data

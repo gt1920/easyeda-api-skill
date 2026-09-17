@@ -1,11 +1,11 @@
 # EDMT\_EditorTabEventType enum
 
-编辑器标签页事件类型
+Editor tab event type
 
 ## Signature
 
 ```typescript
-declare enum EDMT_EditorTabEventType 
+enum EDMT_EditorTabEventType
 ```
 
 ## Enumeration Members
@@ -14,68 +14,50 @@ declare enum EDMT_EditorTabEventType
 
 Member
 
-
 </th><th>
 
 Value
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 CLOSE
 
-
 </td><td>
 
-`"close"`
-
+`'close'`
 
 </td><td>
-
-关闭
-
 
 </td></tr>
 <tr><td>
 
 OPEN
 
-
 </td><td>
 
-`"open"`
-
+`'open'`
 
 </td><td>
-
-打开
-
 
 </td></tr>
 <tr><td>
 
 TOGGLE
 
-
 </td><td>
 
-`"toggle"`
-
+`'toggle'`
 
 </td><td>
-
-切换
-
 
 </td></tr>
 </tbody></table>
 
 ## Remarks
 
-在类型为 [关闭](./EDMT_EditorTabEventType.md) 或 [打开](./EDMT_EditorTabEventType.md) 时，均会同时触发 [切换](./EDMT_EditorTabEventType.md) 事件
+When the type is [close](./EDMT_EditorTabEventType.md) or [open](./EDMT_EditorTabEventType.md)<!-- -->, the [switch](./EDMT_EditorTabEventType.md) event will also be triggered

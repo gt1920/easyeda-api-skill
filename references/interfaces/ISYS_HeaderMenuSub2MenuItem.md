@@ -1,11 +1,11 @@
 # ISYS\_HeaderMenuSub2MenuItem interface
 
-顶部三级菜单项
+Top-level tertiary menu item
 
 ## Signature
 
 ```typescript
-interface ISYS_HeaderMenuSub2MenuItem 
+interface ISYS_HeaderMenuSub2MenuItem
 ```
 
 ## Properties
@@ -14,97 +14,77 @@ interface ISYS_HeaderMenuSub2MenuItem
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [icon?](./ISYS_HeaderMenuSub2MenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 菜单项图标
-
+_(Optional)_ Menu item icon
 
 </td></tr>
 <tr><td>
 
 [id](./ISYS_HeaderMenuSub2MenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-菜单项 ID，不可重复
-
+Menu item ID, cannot be repeated
 
 </td></tr>
 <tr><td>
 
 [registerFn?](./ISYS_HeaderMenuSub2MenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 注册方法名称（需要在扩展入口文件导出该方法）
-
+_(Optional)_ Registration method name (the method needs to be exported in the extension entry file)
 
 </td></tr>
 <tr><td>
 
 [title](./ISYS_HeaderMenuSub2MenuItem.md)
 
-
 </td><td>
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
-菜单项标题
-
+Menu item title
 
 </td></tr>
 </tbody></table>
@@ -117,7 +97,7 @@ string
 
 # ISYS\_HeaderMenuSub2MenuItem.icon property
 
-菜单项图标
+Menu item icon
 
 ## Signature
 
@@ -129,7 +109,7 @@ icon?: string;
 
 # ISYS\_HeaderMenuSub2MenuItem.id property
 
-菜单项 ID，不可重复
+Menu item ID, cannot be repeated
 
 ## Signature
 
@@ -141,7 +121,7 @@ id: string;
 
 # ISYS\_HeaderMenuSub2MenuItem.title property
 
-菜单项标题
+Menu item title
 
 ## Signature
 
@@ -158,7 +138,7 @@ title: string;
 
 # ISYS\_HeaderMenuSub2MenuItem.registerFn property
 
-注册方法名称（需要在扩展入口文件导出该方法）
+Registration method name (the method needs to be exported in the extension entry file)
 
 ## Signature
 

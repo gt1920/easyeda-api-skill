@@ -1,11 +1,11 @@
 # PCB\_Layer class
 
-PCB &amp; 封装 / 图层操作类
+PCB &amp; footprint / layer operation class
 
 ## Signature
 
 ```typescript
-declare class PCB_Layer 
+class PCB_Layer
 ```
 
 ## Methods
@@ -14,212 +14,167 @@ declare class PCB_Layer
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addCustomLayer()](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 新增自定义层
-
+**_(BETA)_** Add a custom layer
 
 </td></tr>
 <tr><td>
 
 [getAllLayers()](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有图层的详细属性
-
+**_(BETA)_** Get the detailed properties of all layers
 
 </td></tr>
 <tr><td>
 
 [lockLayer(layer)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 锁定层
-
+**_(BETA)_** Lock the layer
 
 </td></tr>
 <tr><td>
 
 [modifyLayer(layer, property)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改图层属性
-
+**_(BETA)_** Modify Layer properties
 
 </td></tr>
 <tr><td>
 
 [removeLayer(layer)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 移除层
-
+**_(BETA)_** Remove Layer
 
 </td></tr>
 <tr><td>
 
 [selectLayer(layer)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-选中图层
-
+Select a layer
 
 </td></tr>
 <tr><td>
 
 [setInactiveLayerDisplayMode(displayMode)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置非激活层展示模式
-
+**_(BETA)_** Set Inactive layer display mode
 
 </td></tr>
 <tr><td>
 
 [setInactiveLayerTransparency(transparency)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置非激活层透明度
-
+**_(BETA)_** Set the inactive layer transparency
 
 </td></tr>
 <tr><td>
 
 [setLayerColorConfiguration(colorConfiguration)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置层颜色配置
-
+**_(BETA)_** Set the layer color configuration
 
 </td></tr>
 <tr><td>
 
 [setLayerInvisible(layer, setOtherLayerVisible)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将层设置为不可见
-
+**_(BETA)_** Set the layer to invisible
 
 </td></tr>
 <tr><td>
 
 [setLayerVisible(layer, setOtherLayerInvisible)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将层设置为可见
-
+**_(BETA)_** Set the layer to visible
 
 </td></tr>
 <tr><td>
 
 [setPcbType(pcbType)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置 PCB 类型
-
+**_(BETA)_** Set PCB type
 
 </td></tr>
 <tr><td>
 
 [setTheNumberOfCopperLayers(numberOfLayers)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置铜箔层数
-
+**_(BETA)_** Set Number of copper layers
 
 </td></tr>
 <tr><td>
 
 [unlockLayer(layer)](./PCB_Layer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 取消锁定层
-
+**_(BETA)_** Unlock the layer
 
 </td></tr>
 </tbody></table>
@@ -234,20 +189,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-新增自定义层
+Add a custom layer
 
 ## Signature
 
 ```typescript
-addCustomLayer(): Promise<TPCB_LayersOfCustom | undefined>;
+function addCustomLayer(): Promise<TPCB_LayersOfCustom | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[TPCB\_LayersOfCustom](../types/TPCB_LayersOfCustom.md) \| undefined&gt;
 
-新增的自定义层的图层 ID，如若为 `undefined` 则为新增失败，可能是自定义层数量已达到上限
+The layer ID of the newly added custom layer. If it is `undefined`<!-- -->, the addition failed, possibly because the number of custom layers has reached the upper limit
 
 ### getalllayers
 
@@ -255,20 +209,19 @@ Promise&lt;[TPCB\_LayersOfCustom](../types/TPCB_LayersOfCustom.md) \| undefined&
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有图层的详细属性
+Get the detailed properties of all layers
 
 ## Signature
 
 ```typescript
-getAllLayers(): Promise<Array<IPCB_LayerItem>>;
+function getAllLayers(): Promise<Array<IPCB_LayerItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_LayerItem](../interfaces/IPCB_LayerItem.md)<!-- -->&gt;&gt;
 
-所有图层的详细属性
+Detailed properties of all layers
 
 ### locklayer
 
@@ -276,12 +229,14 @@ Promise&lt;Array&lt;[IPCB\_LayerItem](../interfaces/IPCB_LayerItem.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-锁定层
+Lock the layer
 
 ## Signature
 
 ```typescript
-lockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>): Promise<boolean>;
+function lockLayer(
+	layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -290,43 +245,35 @@ lockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md) \| Array&lt;[TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
-
+_(Optional)_ Layer. If no layer is specified, all layers are used by default
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### modifylayer
 
@@ -334,17 +281,20 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改图层属性
+Modify Layer properties
 
 ## Signature
 
 ```typescript
-modifyLayer(layer: TPCB_LayersInTheSelectable, property: {
-        name?: string;
-        type?: TPCB_LayerTypesOfInnerLayer;
-        color?: string;
-        transparency?: number;
-    }): Promise<boolean>;
+function modifyLayer(
+	layer: TPCB_LayersInTheSelectable,
+	property: {
+		name?: string;
+		type?: TPCB_LayerTypesOfInnerLayer;
+		color?: string;
+		transparency?: number;
+	},
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -353,63 +303,52 @@ modifyLayer(layer: TPCB_LayersInTheSelectable, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ name?: string; type?: [TPCB\_LayerTypesOfInnerLayer](../types/TPCB_LayerTypesOfInnerLayer.md)<!-- -->; color?: string; transparency?: number }
 
 </td><td>
 
-{ name?: string; type?: [TPCB\_LayerTypesOfInnerLayer](../types/TPCB_LayerTypesOfInnerLayer.md)<!-- -->; color?: string; transparency?: number; }
-
-
-</td><td>
-
-属性
-
+Property
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-修改后的图层属性，如若为 `undefined` 则代表修改失败或图层不存在
+The modified layer properties. If it is `undefined`<!-- -->, the modification failed or the layer does not exist
 
 ## Remarks
 
-仅内层和自定义层允许修改名称；仅内层允许修改类型, 透明度仅支持0-100之间的数
+Only inner layers and custom layers can have their names modified; only inner layers can have their types modified. Transparency only supports values between 0-100
 
 ### removelayer
 
@@ -417,12 +356,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-移除层
+Remove Layer
 
 ## Signature
 
 ```typescript
-removeLayer(layer: TPCB_LayersOfCustom): Promise<boolean>;
+function removeLayer(layer: TPCB_LayersOfCustom): Promise<boolean>;
 ```
 
 ## Parameters
@@ -431,58 +370,50 @@ removeLayer(layer: TPCB_LayersOfCustom): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
-
 
 </th><th>
 
 Description
 
-
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
-
 
 </td><td>
 
 [TPCB\_LayersOfCustom](../types/TPCB_LayersOfCustom.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-当前仅支持移除自定义层
+Currently only custom layers can be removed
 
 ### selectlayer
 
 # PCB\_Layer.selectLayer() method
 
-选中图层
+Select a layer
 
 ## Signature
 
 ```typescript
-selectLayer(layer: TPCB_LayersInTheSelectable): Promise<boolean>;
+function selectLayer(layer: TPCB_LayersInTheSelectable): Promise<boolean>;
 ```
 
 ## Parameters
@@ -491,43 +422,35 @@ selectLayer(layer: TPCB_LayersInTheSelectable): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功，不存在指定层将返回 `false`
+Whether the operation was successful. `false` is returned if the specified layer does not exist
 
 ### setinactivelayerdisplaymode
 
@@ -535,12 +458,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置非激活层展示模式
+Set Inactive layer display mode
 
 ## Signature
 
 ```typescript
-setInactiveLayerDisplayMode(displayMode?: EPCB_InactiveLayerDisplayMode): Promise<boolean>;
+function setInactiveLayerDisplayMode(displayMode?: EPCB_InactiveLayerDisplayMode): Promise<boolean>;
 ```
 
 ## Parameters
@@ -549,43 +472,35 @@ setInactiveLayerDisplayMode(displayMode?: EPCB_InactiveLayerDisplayMode): Promis
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 displayMode
 
-
 </td><td>
 
 [EPCB\_InactiveLayerDisplayMode](../enums/EPCB_InactiveLayerDisplayMode.md)
 
-
 </td><td>
 
-_(Optional)_ 展示模式
-
+_(Optional)_ Display mode
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否设置成功
+Whether Set Successful
 
 ### setinactivelayertransparency
 
@@ -593,12 +508,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置非激活层透明度
+Set the inactive layer transparency
 
 ## Signature
 
 ```typescript
-setInactiveLayerTransparency(transparency: number): Promise<boolean>;
+function setInactiveLayerTransparency(transparency: number): Promise<boolean>;
 ```
 
 ## Parameters
@@ -607,43 +522,35 @@ setInactiveLayerTransparency(transparency: number): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 transparency
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-透明度，范围 `0-100`
-
+Transparency, range `0-100`
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setlayercolorconfiguration
 
@@ -651,12 +558,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置层颜色配置
+Set the layer color configuration
 
 ## Signature
 
 ```typescript
-setLayerColorConfiguration(colorConfiguration: EPCB_LayerColorConfiguration): Promise<boolean>;
+function setLayerColorConfiguration(
+	colorConfiguration: EPCB_LayerColorConfiguration,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -665,43 +574,35 @@ setLayerColorConfiguration(colorConfiguration: EPCB_LayerColorConfiguration): Pr
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 colorConfiguration
 
-
 </td><td>
 
 [EPCB\_LayerColorConfiguration](../enums/EPCB_LayerColorConfiguration.md)
 
-
 </td><td>
 
-颜色配置
-
+Color configuration
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setlayerinvisible
 
@@ -709,12 +610,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将层设置为不可见
+Set the layer to invisible
 
 ## Signature
 
 ```typescript
-setLayerInvisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>, setOtherLayerVisible?: boolean): Promise<boolean>;
+function setLayerInvisible(
+	layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>,
+	setOtherLayerVisible?: boolean,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -723,59 +627,48 @@ setLayerInvisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSel
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md) \| Array&lt;[TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
-
+_(Optional)_ Layer. If no layer is specified, all layers are used by default
 
 </td></tr>
 <tr><td>
 
 setOtherLayerVisible
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否将其它层设置为可见
-
+_(Optional)_ Whether to set other layers to visible
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setlayervisible
 
@@ -783,12 +676,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将层设置为可见
+Set the layer to visible
 
 ## Signature
 
 ```typescript
-setLayerVisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>, setOtherLayerInvisible?: boolean): Promise<boolean>;
+function setLayerVisible(
+	layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>,
+	setOtherLayerInvisible?: boolean,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -797,59 +693,48 @@ setLayerVisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelec
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md) \| Array&lt;[TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
-
+_(Optional)_ Layer. If no layer is specified, all layers are used by default
 
 </td></tr>
 <tr><td>
 
 setOtherLayerInvisible
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否将其它层设置为不可见
-
+_(Optional)_ Whether to set other layers to invisible
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### setpcbtype
 
@@ -857,12 +742,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置 PCB 类型
+Set PCB type
 
 ## Signature
 
 ```typescript
-setPcbType(pcbType: EPCB_PcbPlateType): Promise<boolean>;
+function setPcbType(pcbType: EPCB_PcbPlateType): Promise<boolean>;
 ```
 
 ## Parameters
@@ -871,53 +756,45 @@ setPcbType(pcbType: EPCB_PcbPlateType): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pcbType
 
-
 </td><td>
 
 [EPCB\_PcbPlateType](../enums/EPCB_PcbPlateType.md)
 
-
 </td><td>
 
-PCB 类型
-
+PCB type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-此处主要是为了适配 FPC 软板的设计，如若将 PCB 类型设置为 FPC 软板，将会新增 FPC 补强层图层。
+This is mainly to support FPC flexible board design. If the PCB type is set to FPC flexible board, an FPC stiffener layer will be added.
 
-请注意：
+Please note:
 
-1. 嘉立创暂不支持超过 2 层铜箔层的 FPC 软板生产；
+1. EasyEDA does not yet support FPC flexible board production with more than 2 copper layers;
 
-2. 将 PCB 类型从 FPC 软板切换为普通板材时需要预先删除 FPC 补强层上的任何图元，否则将无法切换并返回 `false` 的结果。
+2. When switching the PCB type from FPC flexible board to ordinary board, any primitives on the FPC stiffener layer must be deleted in advance; otherwise, the switch will fail and `false` will be returned.
 
 ### setthenumberofcopperlayers
 
@@ -925,12 +802,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置铜箔层数
+Set Number of copper layers
 
 ## Signature
 
 ```typescript
-setTheNumberOfCopperLayers(numberOfLayers: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32): Promise<boolean>;
+function setTheNumberOfCopperLayers(
+	numberOfLayers: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -939,47 +818,39 @@ setTheNumberOfCopperLayers(numberOfLayers: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 1
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 numberOfLayers
 
-
 </td><td>
 
 2 \| 4 \| 6 \| 8 \| 10 \| 12 \| 14 \| 16 \| 18 \| 20 \| 22 \| 24 \| 26 \| 28 \| 30 \| 32
 
-
 </td><td>
 
-层数
-
+Number of copper layers
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-新建的 PCB 文档默认拥有两层铜箔层
+A newly created PCB document has two copper layers by default
 
 ### unlocklayer
 
@@ -987,12 +858,14 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-取消锁定层
+Unlock the layer
 
 ## Signature
 
 ```typescript
-unlockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>): Promise<boolean>;
+function unlockLayer(
+	layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1001,40 +874,32 @@ unlockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectabl
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md) \| Array&lt;[TPCB\_LayersInTheSelectable](../types/TPCB_LayersInTheSelectable.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
-
+_(Optional)_ Layer. If no layer is specified, all layers are used by default
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful

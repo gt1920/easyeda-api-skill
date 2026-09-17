@@ -1,18 +1,17 @@
 # ISCH\_PrimitivePin class
 
-引脚图元
+Pin primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitivePin implements ISCH_Primitive 
+class ISCH_PrimitivePin implements ISCH_Primitive
 ```
 **Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
 ## Remarks
 
-引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 [器件引脚图元](./ISCH_PrimitiveComponentPin.md)
-
+Pin primitives are only available in the symbol editor. In a schematic sheet, the pin associated with a symbol is called [a device pin primitive](./ISCH_PrimitiveComponentPin.md)
 
 ## Properties
 
@@ -20,237 +19,192 @@ declare class ISCH_PrimitivePin implements ISCH_Primitive
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [async](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
 异步
-
 
 </td></tr>
 <tr><td>
 
 [noConnected?](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
 _(Optional)_ 是否存在非连接标识
-
 
 </td></tr>
 <tr><td>
 
 [otherProperty?](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 Record&lt;string, string \| number \| boolean&gt;
 
-
 </td><td>
 
 _(Optional)_ 其它参数
-
 
 </td></tr>
 <tr><td>
 
 [pinColor](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 string \| null
 
-
 </td><td>
 
 引脚颜色
-
 
 </td></tr>
 <tr><td>
 
 [pinLength](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
 引脚长度
-
 
 </td></tr>
 <tr><td>
 
 [pinName](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 引脚名称
-
 
 </td></tr>
 <tr><td>
 
 [pinNumber](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 引脚编号
-
 
 </td></tr>
 <tr><td>
 
 [pinShape](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)
 
-
 </td><td>
 
 引脚形状
-
 
 </td></tr>
 <tr><td>
 
 [pinType](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)
 
-
 </td><td>
 
 引脚类型
-
 
 </td></tr>
 <tr><td>
 
 [primitiveId?](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 string
 
-
 </td><td>
 
 _(Optional)_ 图元 ID
-
 
 </td></tr>
 <tr><td>
 
 [primitiveType](./ISCH_PrimitivePin.md)
-
 
 </td><td>
 
@@ -258,79 +212,64 @@ _(Optional)_ 图元 ID
 
 `readonly`
 
-
 </td><td>
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-
 </td><td>
 
 图元类型
-
 
 </td></tr>
 <tr><td>
 
 [rotation](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
 旋转角度
-
 
 </td></tr>
 <tr><td>
 
 [x](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
 坐标 X
-
 
 </td></tr>
 <tr><td>
 
 [y](./ISCH_PrimitivePin.md)
 
-
 </td><td>
 
 `protected`
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
 坐标 Y
-
 
 </td></tr>
 </tbody></table>
@@ -341,422 +280,332 @@ number
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_NoConnected()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否存在非连接标识
-
+Get the property state: whether there is a no-connect flag
 
 </td></tr>
 <tr><td>
 
 [getState\_OtherProperty()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：其它参数
-
+Get the property state: other parameters
 
 </td></tr>
 <tr><td>
 
 [getState\_PinColor()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚颜色
-
+Get the property state: pin color
 
 </td></tr>
 <tr><td>
 
 [getState\_PinLength()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚长度
-
+Get the property state: pin length
 
 </td></tr>
 <tr><td>
 
 [getState\_PinName()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚名称
-
+Get the property state: pin name
 
 </td></tr>
 <tr><td>
 
 [getState\_PinNumber()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚编号
-
+Get the property state: pin number
 
 </td></tr>
 <tr><td>
 
 [getState\_PinShape()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚形状
-
+Get the property state: pin shape
 
 </td></tr>
 <tr><td>
 
 [getState\_pinType()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：引脚类型
-
+Get the property state: pin type
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_X()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 X
-
+Get the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [getState\_Y()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 Y
-
+Get the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_NoConnected(noConnected)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否存在非连接标识
-
+**_(BETA)_** Set the property state: whether there is a no-connect flag
 
 </td></tr>
 <tr><td>
 
 [setState\_OtherProperty(otherProperty)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：其它参数
-
+**_(BETA)_** Set the property state: other parameters
 
 </td></tr>
 <tr><td>
 
 [setState\_PinColor(pinColor)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚颜色
-
+**_(BETA)_** Set the property state: pin color
 
 </td></tr>
 <tr><td>
 
 [setState\_PinLength(pinLength)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚长度
-
+**_(BETA)_** Set the property state: pin length
 
 </td></tr>
 <tr><td>
 
 [setState\_PinName(pinName)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚名称
-
+**_(BETA)_** Set the property state: pin name
 
 </td></tr>
 <tr><td>
 
 [setState\_PinNumber(pinNumber)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚编号
-
+**_(BETA)_** Set the property state: pin number
 
 </td></tr>
 <tr><td>
 
 [setState\_PinShape(pinShape)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚形状
-
+**_(BETA)_** Set the property state: pin shape
 
 </td></tr>
 <tr><td>
 
 [setState\_PinType(pinType)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：引脚类型
-
+**_(BETA)_** Set the property state: pin type
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：旋转角度
-
+**_(BETA)_** Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_X(x)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 X
-
+**_(BETA)_** Set the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [setState\_Y(y)](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 Y
-
+**_(BETA)_** Set the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./ISCH_PrimitivePin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -774,7 +623,7 @@ Description
 ## Signature
 
 ```typescript
-protected async: boolean;
+function async: boolean;
 ```
 
 ### noconnected
@@ -786,7 +635,7 @@ protected async: boolean;
 ## Signature
 
 ```typescript
-protected noConnected?: boolean;
+function noConnected?: boolean;
 ```
 
 ### otherproperty
@@ -798,7 +647,7 @@ protected noConnected?: boolean;
 ## Signature
 
 ```typescript
-protected otherProperty?: Record<string, string | number | boolean>;
+function otherProperty?: Record<string, string | number | boolean>;
 ```
 
 ### pincolor
@@ -810,7 +659,7 @@ protected otherProperty?: Record<string, string | number | boolean>;
 ## Signature
 
 ```typescript
-protected pinColor: string | null;
+function pinColor: string | null;
 ```
 
 ### pinlength
@@ -822,7 +671,7 @@ protected pinColor: string | null;
 ## Signature
 
 ```typescript
-protected pinLength: number;
+function pinLength: number;
 ```
 
 ### pinname
@@ -834,7 +683,7 @@ protected pinLength: number;
 ## Signature
 
 ```typescript
-protected pinName: string;
+function pinName: string;
 ```
 
 ### pinnumber
@@ -846,7 +695,7 @@ protected pinName: string;
 ## Signature
 
 ```typescript
-protected pinNumber: string;
+function pinNumber: string;
 ```
 
 ### pinshape
@@ -858,7 +707,7 @@ protected pinNumber: string;
 ## Signature
 
 ```typescript
-protected pinShape: ESCH_PrimitivePinShape;
+function pinShape: ESCH_PrimitivePinShape;
 ```
 
 ### pintype
@@ -870,7 +719,7 @@ protected pinShape: ESCH_PrimitivePinShape;
 ## Signature
 
 ```typescript
-protected pinType: ESCH_PrimitivePinType;
+function pinType: ESCH_PrimitivePinType;
 ```
 
 ### primitiveid
@@ -882,7 +731,7 @@ protected pinType: ESCH_PrimitivePinType;
 ## Signature
 
 ```typescript
-protected primitiveId?: string;
+function primitiveId?: string;
 ```
 
 ### primitivetype
@@ -894,7 +743,7 @@ protected primitiveId?: string;
 ## Signature
 
 ```typescript
-protected readonly primitiveType: ESCH_PrimitiveType;
+function readonly primitiveType: ESCH_PrimitiveType;
 ```
 
 ### rotation
@@ -906,7 +755,7 @@ protected readonly primitiveType: ESCH_PrimitiveType;
 ## Signature
 
 ```typescript
-protected rotation: number;
+function rotation: number;
 ```
 
 ### x
@@ -918,7 +767,7 @@ protected rotation: number;
 ## Signature
 
 ```typescript
-protected x: number;
+function x: number;
 ```
 
 ### y
@@ -930,7 +779,7 @@ protected x: number;
 ## Signature
 
 ```typescript
-protected y: number;
+function y: number;
 ```
 
 
@@ -944,286 +793,271 @@ protected y: number;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitivePin>;
+function done(): Promise<ISCH_PrimitivePin>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
-引脚图元对象
+Pin primitive object
 
 ### getstate_noconnected
 
 # ISCH\_PrimitivePin.getState\_NoConnected() method
 
-获取属性状态：是否存在非连接标识
+Get the property state: whether there is a no-connect flag
 
 ## Signature
 
 ```typescript
-getState_NoConnected(): boolean | undefined;
+function getState_NoConnected(): boolean | undefined;
 ```
-
 
 ## Returns
 
 boolean \| undefined
 
-是否存在非连接标识
+Whether there is a no-connect flag
 
 ### getstate_otherproperty
 
 # ISCH\_PrimitivePin.getState\_OtherProperty() method
 
-获取属性状态：其它参数
+Get the property state: other parameters
 
 ## Signature
 
 ```typescript
-getState_OtherProperty(): Record<string, string | number | boolean> | undefined;
+function getState_OtherProperty(): Record<string, string | number | boolean> | undefined;
 ```
-
 
 ## Returns
 
 Record&lt;string, string \| number \| boolean&gt; \| undefined
 
-其它参数
+Other parameters
 
 ### getstate_pincolor
 
 # ISCH\_PrimitivePin.getState\_PinColor() method
 
-获取属性状态：引脚颜色
+Get the property state: pin color
 
 ## Signature
 
 ```typescript
-getState_PinColor(): string | null;
+function getState_PinColor(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-引脚颜色
+Pin color
 
 ### getstate_pinlength
 
 # ISCH\_PrimitivePin.getState\_PinLength() method
 
-获取属性状态：引脚长度
+Get the property state: pin length
 
 ## Signature
 
 ```typescript
-getState_PinLength(): number;
+function getState_PinLength(): number;
 ```
-
 
 ## Returns
 
 number
 
-引脚长度
+Pin length
 
 ### getstate_pinname
 
 # ISCH\_PrimitivePin.getState\_PinName() method
 
-获取属性状态：引脚名称
+Get the property state: pin name
 
 ## Signature
 
 ```typescript
-getState_PinName(): string;
+function getState_PinName(): string;
 ```
-
 
 ## Returns
 
 string
 
-引脚名称
+Pin name
 
 ### getstate_pinnumber
 
 # ISCH\_PrimitivePin.getState\_PinNumber() method
 
-获取属性状态：引脚编号
+Get the property state: pin number
 
 ## Signature
 
 ```typescript
-getState_PinNumber(): string;
+function getState_PinNumber(): string;
 ```
-
 
 ## Returns
 
 string
 
-引脚编号
+Pin number
 
 ### getstate_pinshape
 
 # ISCH\_PrimitivePin.getState\_PinShape() method
 
-获取属性状态：引脚形状
+Get the property state: pin shape
 
 ## Signature
 
 ```typescript
-getState_PinShape(): ESCH_PrimitivePinShape;
+function getState_PinShape(): ESCH_PrimitivePinShape;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)
 
-引脚形状
+Pin shape
 
 ### getstate_pintype
 
 # ISCH\_PrimitivePin.getState\_pinType() method
 
-获取属性状态：引脚类型
+Get the property state: pin type
 
 ## Signature
 
 ```typescript
-getState_pinType(): ESCH_PrimitivePinType;
+function getState_pinType(): ESCH_PrimitivePinType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)
 
-引脚类型
+Pin type
 
 ### getstate_primitiveid
 
 # ISCH\_PrimitivePin.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # ISCH\_PrimitivePin.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): ESCH_PrimitiveType;
+function getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_rotation
 
 # ISCH\_PrimitivePin.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_x
 
 # ISCH\_PrimitivePin.getState\_X() method
 
-获取属性状态：坐标 X
+Get the property state: X coordinate
 
 ## Signature
 
 ```typescript
-getState_X(): number;
+function getState_X(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 X
+X coordinate
 
 ### getstate_y
 
 # ISCH\_PrimitivePin.getState\_Y() method
 
-获取属性状态：坐标 Y
+Get the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-getState_Y(): number;
+function getState_Y(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 Y
+Y coordinate
 
 ### isasync
 
 # ISCH\_PrimitivePin.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -1231,20 +1065,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<ISCH_PrimitivePin>;
+function reset(): Promise<ISCH_PrimitivePin>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_noconnected
 
@@ -1252,12 +1085,12 @@ Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否存在非连接标识
+Set the property state: whether there is a no-connect flag
 
 ## Signature
 
 ```typescript
-setState_NoConnected(noConnected: boolean): ISCH_PrimitivePin;
+function setState_NoConnected(noConnected: boolean): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1266,43 +1099,35 @@ setState_NoConnected(noConnected: boolean): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 noConnected
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否存在非连接标识
-
+Whether there is a no-connect flag
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_otherproperty
 
@@ -1310,12 +1135,14 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：其它参数
+Set the property state: other parameters
 
 ## Signature
 
 ```typescript
-setState_OtherProperty(otherProperty: Record<string, string | number | boolean>): ISCH_PrimitivePin;
+function setState_OtherProperty(
+	otherProperty: Record<string, string | number | boolean>,
+): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1324,43 +1151,35 @@ setState_OtherProperty(otherProperty: Record<string, string | number | boolean>)
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 otherProperty
 
-
 </td><td>
 
 Record&lt;string, string \| number \| boolean&gt;
 
-
 </td><td>
 
-其它参数
-
+Other parameters
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pincolor
 
@@ -1368,12 +1187,12 @@ Record&lt;string, string \| number \| boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚颜色
+Set the property state: pin color
 
 ## Signature
 
 ```typescript
-setState_PinColor(pinColor: string | null): ISCH_PrimitivePin;
+function setState_PinColor(pinColor: string | null): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1382,43 +1201,35 @@ setState_PinColor(pinColor: string | null): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-引脚颜色
-
+Pin color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pinlength
 
@@ -1426,12 +1237,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚长度
+Set the property state: pin length
 
 ## Signature
 
 ```typescript
-setState_PinLength(pinLength: number): ISCH_PrimitivePin;
+function setState_PinLength(pinLength: number): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1440,43 +1251,35 @@ setState_PinLength(pinLength: number): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinLength
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-引脚长度
-
+Pin length
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pinname
 
@@ -1484,12 +1287,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚名称
+Set the property state: pin name
 
 ## Signature
 
 ```typescript
-setState_PinName(pinName: string): ISCH_PrimitivePin;
+function setState_PinName(pinName: string): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1498,43 +1301,35 @@ setState_PinName(pinName: string): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-引脚名称
-
+Pin name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pinnumber
 
@@ -1542,12 +1337,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚编号
+Set the property state: pin number
 
 ## Signature
 
 ```typescript
-setState_PinNumber(pinNumber: string): ISCH_PrimitivePin;
+function setState_PinNumber(pinNumber: string): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1556,43 +1351,35 @@ setState_PinNumber(pinNumber: string): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinNumber
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-引脚编号
-
+Pin number
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pinshape
 
@@ -1600,12 +1387,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚形状
+Set the property state: pin shape
 
 ## Signature
 
 ```typescript
-setState_PinShape(pinShape: ESCH_PrimitivePinShape): ISCH_PrimitivePin;
+function setState_PinShape(pinShape: ESCH_PrimitivePinShape): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1614,43 +1401,35 @@ setState_PinShape(pinShape: ESCH_PrimitivePinShape): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinShape
 
-
 </td><td>
 
 [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)
 
-
 </td><td>
 
-引脚形状
-
+Pin shape
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_pintype
 
@@ -1658,12 +1437,12 @@ pinShape
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：引脚类型
+Set the property state: pin type
 
 ## Signature
 
 ```typescript
-setState_PinType(pinType: ESCH_PrimitivePinType): ISCH_PrimitivePin;
+function setState_PinType(pinType: ESCH_PrimitivePinType): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1672,43 +1451,35 @@ setState_PinType(pinType: ESCH_PrimitivePinType): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pinType
 
-
 </td><td>
 
 [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)
 
-
 </td><td>
 
-引脚类型
-
+Pin type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_rotation
 
@@ -1716,12 +1487,12 @@ pinType
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): ISCH_PrimitivePin;
+function setState_Rotation(rotation: number): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1730,43 +1501,35 @@ setState_Rotation(rotation: number): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_x
 
@@ -1774,12 +1537,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 X
+Set the property state: X coordinate
 
 ## Signature
 
 ```typescript
-setState_X(x: number): ISCH_PrimitivePin;
+function setState_X(x: number): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1788,43 +1551,35 @@ setState_X(x: number): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### setstate_y
 
@@ -1832,12 +1587,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 Y
+Set the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-setState_Y(y: number): ISCH_PrimitivePin;
+function setState_Y(y: number): ISCH_PrimitivePin;
 ```
 
 ## Parameters
@@ -1846,78 +1601,68 @@ setState_Y(y: number): ISCH_PrimitivePin;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### toasync
 
 # ISCH\_PrimitivePin.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): ISCH_PrimitivePin;
+function toAsync(): ISCH_PrimitivePin;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object
 
 ### tosync
 
 # ISCH\_PrimitivePin.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): ISCH_PrimitivePin;
+function toSync(): ISCH_PrimitivePin;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-引脚图元对象
+Pin primitive object

@@ -1,11 +1,11 @@
 # SCH\_PrimitiveObject class
 
-原理图 &amp; 符号 / 二进制内嵌对象图元类
+Schematic &amp; symbol / binary embedded object primitive class
 
 ## Signature
 
 ```typescript
-declare class SCH_PrimitiveObject implements ISCH_PrimitiveAPI 
+class SCH_PrimitiveObject implements ISCH_PrimitiveAPI
 ```
 **Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class SCH_PrimitiveObject implements ISCH_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(content, startX, startY, width, height, rotation, mirror, fileName)](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建二进制内嵌对象
-
+**_(BETA)_** Create Binary embedded object
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除二进制内嵌对象
-
+**_(BETA)_** Delete Binary embedded object
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取二进制内嵌对象
-
+**_(BETA)_** Get Binary embedded object
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取二进制内嵌对象
-
+**_(BETA)_** Get Binary embedded object
 
 </td></tr>
 <tr><td>
 
 [getAll()](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有二进制内嵌对象
-
+**_(BETA)_** Get all Binary embedded object
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId()](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有二进制内嵌对象的图元 ID
-
+**_(BETA)_** Get all Binary embedded object primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./SCH_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改二进制内嵌对象
-
+**_(BETA)_** Modify Binary embedded object
 
 </td></tr>
 </tbody></table>
@@ -137,12 +113,21 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建二进制内嵌对象
+Create Binary embedded object
 
 ## Signature
 
 ```typescript
-create(content: File | string, startX: number, startY: number, width?: number, height?: number, rotation?: number, mirror?: boolean, fileName?: string): Promise<ISCH_PrimitiveObject | undefined>;
+function create(
+	content: File | string,
+	startX: number,
+	startY: number,
+	width?: number,
+	height?: number,
+	rotation?: number,
+	mirror?: boolean,
+	fileName?: string,
+): Promise<ISCH_PrimitiveObject | undefined>;
 ```
 
 ## Parameters
@@ -151,155 +136,126 @@ create(content: File | string, startX: number, startY: number, width?: number, h
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 content
 
-
 </td><td>
 
 File \| string
 
-
 </td><td>
 
-对象内容
-
+Object content
 
 </td></tr>
 <tr><td>
 
 startX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起点坐标 X
-
+Start point coordinates X
 
 </td></tr>
 <tr><td>
 
 startY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起点坐标 Y
-
+Start point coordinates Y
 
 </td></tr>
 <tr><td>
 
 width
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 宽
-
+_(Optional)_ Width
 
 </td></tr>
 <tr><td>
 
 height
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 高
-
+_(Optional)_ Height
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否镜像
-
+_(Optional)_ Whether it is mirrored
 
 </td></tr>
 <tr><td>
 
 fileName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件名称
-
+_(Optional)_ File name
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;ISCH\_PrimitiveObject \| undefined&gt;
+Promise&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md) \| undefined&gt;
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### delete
 
@@ -307,12 +263,12 @@ Promise&lt;ISCH\_PrimitiveObject \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除二进制内嵌对象
+Delete Binary embedded object
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | ISCH_PrimitiveObject | Array<string> | Array<ISCH_PrimitiveObject>): Promise<boolean>;
+function delete(primitiveIds: string | ISCH_PrimitiveObject | Array<string> | Array<ISCH_PrimitiveObject>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -321,43 +277,35 @@ delete(primitiveIds: string | ISCH_PrimitiveObject | Array<string> | Array<ISCH_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
+</td><td>
+
+string \| [ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md) \| Array&lt;string&gt; \| Array&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md)<!-- -->&gt;
 
 </td><td>
 
-string \| ISCH\_PrimitiveObject \| Array&lt;string&gt; \| Array&lt;ISCH\_PrimitiveObject&gt;
-
-
-</td><td>
-
-二进制内嵌对象的图元 ID 或二进制内嵌对象图元对象
-
+Binary embedded object primitive ID or Binary embedded object primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -365,12 +313,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取二进制内嵌对象
+Get Binary embedded object
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<ISCH_PrimitiveObject | undefined>;
+function get(primitiveIds: string): Promise<ISCH_PrimitiveObject | undefined>;
 ```
 
 ## Parameters
@@ -379,43 +327,35 @@ get(primitiveIds: string): Promise<ISCH_PrimitiveObject | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-二进制内嵌对象的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Binary embedded object primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;ISCH\_PrimitiveObject \| undefined&gt;
+Promise&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md) \| undefined&gt;
 
-二进制内嵌对象图元对象，`undefined` 表示获取失败
+Binary embedded object primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -423,12 +363,12 @@ Promise&lt;ISCH\_PrimitiveObject \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取二进制内嵌对象
+Get Binary embedded object
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveObject>>;
+function get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveObject>>;
 ```
 
 ## Parameters
@@ -437,47 +377,39 @@ get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveObject>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-二进制内嵌对象的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Binary embedded object primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;Array&lt;ISCH\_PrimitiveObject&gt;&gt;
+Promise&lt;Array&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md)<!-- -->&gt;&gt;
 
-二进制内嵌对象图元对象，空数组表示获取失败
+Binary embedded object primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -485,20 +417,19 @@ Promise&lt;Array&lt;ISCH\_PrimitiveObject&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有二进制内嵌对象
+Get all Binary embedded object
 
 ## Signature
 
 ```typescript
-getAll(): Promise<Array<ISCH_PrimitiveObject>>;
+function getAll(): Promise<Array<ISCH_PrimitiveObject>>;
 ```
-
 
 ## Returns
 
-Promise&lt;Array&lt;ISCH\_PrimitiveObject&gt;&gt;
+Promise&lt;Array&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md)<!-- -->&gt;&gt;
 
-二进制内嵌对象图元对象数组
+Array of Binary embedded object primitive objects
 
 ### getallprimitiveid
 
@@ -506,20 +437,19 @@ Promise&lt;Array&lt;ISCH\_PrimitiveObject&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有二进制内嵌对象的图元 ID
+Get all Binary embedded object primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(): Promise<Array<string>>;
+function getAllPrimitiveId(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-二进制内嵌对象的图元 ID 数组
+Array of Binary embedded object primitive IDs
 
 ### modify
 
@@ -527,21 +457,24 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改二进制内嵌对象
+Modify Binary embedded object
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | ISCH_PrimitiveObject, property: {
-        content?: File | string;
-        startX?: number;
-        startY?: number;
-        width?: number;
-        height?: number;
-        rotation?: number;
-        mirror?: boolean;
-        fileName?: string;
-    }): Promise<ISCH_PrimitiveObject | undefined>;
+function modify(
+	primitiveId: string | ISCH_PrimitiveObject,
+	property: {
+		content?: File | string;
+		startX?: number;
+		startY?: number;
+		width?: number;
+		height?: number;
+		rotation?: number;
+		mirror?: boolean;
+		fileName?: string;
+	},
+): Promise<ISCH_PrimitiveObject | undefined>;
 ```
 
 ## Parameters
@@ -550,56 +483,45 @@ modify(primitiveId: string | ISCH_PrimitiveObject, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
+</td><td>
+
+string \| [ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md)
 
 </td><td>
 
-string \| ISCH\_PrimitiveObject
-
-
-</td><td>
-
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+\{ content?: File \| string; startX?: number; startY?: number; width?: number; height?: number; rotation?: number; mirror?: boolean; fileName?: string \}
 
 </td><td>
 
-\{ content?: File \| string; startX?: number; startY?: number; width?: number; height?: number; rotation?: number; mirror?: boolean; fileName?: string; \}
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;ISCH\_PrimitiveObject \| undefined&gt;
+Promise&lt;[ISCH\_PrimitiveObject](./ISCH_PrimitiveObject.md) \| undefined&gt;
 
-二进制内嵌对象图元对象，`undefined` 表示修改失败
+Binary embedded object primitive object, `undefined` indicates that the modification failed

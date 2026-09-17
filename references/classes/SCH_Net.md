@@ -1,9 +1,9 @@
 # SCH\_Net class
 
-原理图 &amp; 符号 / 网络类
+Schematic &amp; symbol / net class
 
 ## Signature
 
 ```typescript
-declare class SCH_Net 
+class SCH_Net
 ```

@@ -1,16 +1,15 @@
 # IPCB\_PrimitiveRegion class
 
-区域图元
+Region primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveRegion implements IPCB_Primitive 
+class IPCB_PrimitiveRegion implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,324 +17,255 @@ declare class IPCB_PrimitiveRegion implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [convertToFill()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：填充图元
-
+**_(BETA)_** Convert to: fill primitive
 
 </td></tr>
 <tr><td>
 
 [convertToPolyline()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：折线图元
-
+**_(BETA)_** Convert to: polyline primitive
 
 </td></tr>
 <tr><td>
 
 [convertToPour()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：覆铜边框图元
-
+**_(BETA)_** Convert to: Copper border primitive
 
 </td></tr>
 <tr><td>
 
 [done()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_ComplexPolygon()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：复杂多边形
-
+Get the property state: complex polygon
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_RegionName()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：区域名称
-
+Get the property state: region name
 
 </td></tr>
 <tr><td>
 
 [getState\_RuleType()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：区域规则类型
-
+Get the property state: region rule type
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_ComplexPolygon(complexPolygon)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：复杂多边形
-
+**_(BETA)_** Set the property state: complex polygon
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_RegionName(regionName)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：区域名称
-
+**_(BETA)_** Set the property state: region name
 
 </td></tr>
 <tr><td>
 
 [setState\_RuleType(ruleType)](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：区域规则类型
-
+**_(BETA)_** Set the property state: region rule type
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -350,20 +280,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：填充图元
+Convert to: fill primitive
 
 ## Signature
 
 ```typescript
-convertToFill(): Promise<IPCB_PrimitiveFill>;
+function convertToFill(): Promise<IPCB_PrimitiveFill>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
-填充图元对象
+Fill primitive object
 
 ### converttopolyline
 
@@ -371,20 +300,19 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：折线图元
+Convert to: polyline primitive
 
 ## Signature
 
 ```typescript
-convertToPolyline(): Promise<IPCB_PrimitivePolyline>;
+function convertToPolyline(): Promise<IPCB_PrimitivePolyline>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
-折线图元对象
+Polyline primitive object
 
 ### converttopour
 
@@ -392,20 +320,19 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：覆铜边框图元
+Convert to: Copper border primitive
 
 ## Signature
 
 ```typescript
-convertToPour(): Promise<IPCB_PrimitivePour>;
+function convertToPour(): Promise<IPCB_PrimitivePour>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### done
 
@@ -413,191 +340,181 @@ Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveRegion>;
+function done(): Promise<IPCB_PrimitiveRegion>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
-区域图元对象
+Region primitive object
 
 ### getstate_complexpolygon
 
 # IPCB\_PrimitiveRegion.getState\_ComplexPolygon() method
 
-获取属性状态：复杂多边形
+Get the property state: complex polygon
 
 ## Signature
 
 ```typescript
-getState_ComplexPolygon(): IPCB_Polygon;
+function getState_ComplexPolygon(): IPCB_Polygon;
 ```
-
 
 ## Returns
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-复杂多边形
+Complex polygon
 
 ### getstate_layer
 
 # IPCB\_PrimitiveRegion.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfRegion;
+function getState_Layer(): TPCB_LayersOfRegion;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
-层
+Layer
 
 ### getstate_linewidth
 
 # IPCB\_PrimitiveRegion.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number;
+function getState_LineWidth(): number;
 ```
-
 
 ## Returns
 
 number
 
-线宽
+Line width
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveRegion.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveRegion.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveRegion.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_regionname
 
 # IPCB\_PrimitiveRegion.getState\_RegionName() method
 
-获取属性状态：区域名称
+Get the property state: region name
 
 ## Signature
 
 ```typescript
-getState_RegionName(): string | undefined;
+function getState_RegionName(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-区域名称
+Region name
 
 ### getstate_ruletype
 
 # IPCB\_PrimitiveRegion.getState\_RuleType() method
 
-获取属性状态：区域规则类型
+Get the property state: region rule type
 
 ## Signature
 
 ```typescript
-getState_RuleType(): Array<EPCB_PrimitiveRegionRuleType>;
+function getState_RuleType(): Array<EPCB_PrimitiveRegionRuleType>;
 ```
-
 
 ## Returns
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
-区域规则类型
+Region rule type
 
 ### isasync
 
 # IPCB\_PrimitiveRegion.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -605,20 +522,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveRegion>;
+function reset(): Promise<IPCB_PrimitiveRegion>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
-区域图元对象
+Region primitive object
 
 ### setstate_complexpolygon
 
@@ -626,12 +542,12 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：复杂多边形
+Set the property state: complex polygon
 
 ## Signature
 
 ```typescript
-setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitiveRegion;
+function setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -640,43 +556,35 @@ setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitiveRegion;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 complexPolygon
 
-
 </td><td>
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-
 </td><td>
 
-复杂多边形
-
+Complex polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### setstate_layer
 
@@ -684,12 +592,12 @@ complexPolygon
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfRegion): IPCB_PrimitiveRegion;
+function setState_Layer(layer: TPCB_LayersOfRegion): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -698,43 +606,35 @@ setState_Layer(layer: TPCB_LayersOfRegion): IPCB_PrimitiveRegion;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### setstate_linewidth
 
@@ -742,12 +642,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number): IPCB_PrimitiveRegion;
+function setState_LineWidth(lineWidth: number): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -756,43 +656,35 @@ setState_LineWidth(lineWidth: number): IPCB_PrimitiveRegion;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### setstate_primitivelock
 
@@ -800,12 +692,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveRegion;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -814,43 +706,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveRegion;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### setstate_regionname
 
@@ -858,12 +742,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：区域名称
+Set the property state: region name
 
 ## Signature
 
 ```typescript
-setState_RegionName(regionName?: string): IPCB_PrimitiveRegion;
+function setState_RegionName(regionName?: string): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -872,49 +756,41 @@ setState_RegionName(regionName?: string): IPCB_PrimitiveRegion;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 regionName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 区域名称
-
+_(Optional)_ Region name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ## Remarks
 
-仅当 `ruleType` 为 [EPCB\_PrimitiveRegionRuleType.FOLLOW\_REGION\_RULE](../enums/EPCB_PrimitiveRegionRuleType.md) 时有效，用于匹配区域 DRC 规则
+Only valid when `ruleType` is [EPCB\_PrimitiveRegionRuleType.FOLLOW\_REGION\_RULE](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->, used to match region DRC rules
 
-如若 `ruleType` 为 [EPCB\_PrimitiveRegionRuleType.FOLLOW\_REGION\_RULE](../enums/EPCB_PrimitiveRegionRuleType.md) 但 `regionName` 为空，则系统将会自动分配名称
+If `ruleType` is [EPCB\_PrimitiveRegionRuleType.FOLLOW\_REGION\_RULE](../enums/EPCB_PrimitiveRegionRuleType.md) but `regionName` is empty, the system will automatically assign a name
 
 ### setstate_ruletype
 
@@ -922,12 +798,12 @@ _(Optional)_ 区域名称
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：区域规则类型
+Set the property state: region rule type
 
 ## Signature
 
 ```typescript
-setState_RuleType(ruleType: Array<EPCB_PrimitiveRegionRuleType>): IPCB_PrimitiveRegion;
+function setState_RuleType(ruleType: Array<EPCB_PrimitiveRegionRuleType>): IPCB_PrimitiveRegion;
 ```
 
 ## Parameters
@@ -936,78 +812,68 @@ setState_RuleType(ruleType: Array<EPCB_PrimitiveRegionRuleType>): IPCB_Primitive
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 ruleType
 
-
 </td><td>
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
-
 </td><td>
 
-区域规则类型
-
+Region rule type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveRegion.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveRegion;
+function toAsync(): IPCB_PrimitiveRegion;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveRegion.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveRegion;
+function toSync(): IPCB_PrimitiveRegion;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-区域图元对象
+Region primitive object

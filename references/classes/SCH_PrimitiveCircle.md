@@ -1,11 +1,11 @@
 # SCH\_PrimitiveCircle class
 
-原理图 &amp; 符号 / 圆图元类
+Schematic &amp; symbol / circle primitive class
 
 ## Signature
 
 ```typescript
-declare class SCH_PrimitiveCircle implements ISCH_PrimitiveAPI 
+class SCH_PrimitiveCircle implements ISCH_PrimitiveAPI
 ```
 **Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class SCH_PrimitiveCircle implements ISCH_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(centerX, centerY, radius, color, fillColor, lineWidth, lineType, fillStyle)](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建圆
-
+**_(BETA)_** Create a circle
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除圆
-
+**_(BETA)_** Delete the circle
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取圆
-
+**_(BETA)_** Get the circle
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取圆
-
+**_(BETA)_** Get the circle
 
 </td></tr>
 <tr><td>
 
 [getAll()](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有圆
-
+**_(BETA)_** Get all circles
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId()](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有圆的图元 ID
-
+**_(BETA)_** Get the primitive IDs of all circles
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./SCH_PrimitiveCircle.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改圆
-
+**_(BETA)_** Modify the circle
 
 </td></tr>
 </tbody></table>
@@ -137,12 +113,21 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建圆
+Create a circle
 
 ## Signature
 
 ```typescript
-create(centerX: number, centerY: number, radius: number, color?: string | null, fillColor?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null, fillStyle?: ESCH_PrimitiveFillStyle | null): Promise<ISCH_PrimitiveCircle | undefined>;
+function create(
+	centerX: number,
+	centerY: number,
+	radius: number,
+	color?: string | null,
+	fillColor?: string | null,
+	lineWidth?: number | null,
+	lineType?: ESCH_PrimitiveLineType | null,
+	fillStyle?: ESCH_PrimitiveFillStyle | null,
+): Promise<ISCH_PrimitiveCircle | undefined>;
 ```
 
 ## Parameters
@@ -151,155 +136,126 @@ create(centerX: number, centerY: number, radius: number, color?: string | null, 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 centerX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-圆心 X
-
+Center of the circle X
 
 </td></tr>
 <tr><td>
 
 centerY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-圆心 Y
-
+Center of the circle Y
 
 </td></tr>
 <tr><td>
 
 radius
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-半径
-
+Radius
 
 </td></tr>
 <tr><td>
 
 color
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 颜色，`null` 表示默认
-
+_(Optional)_ Color, `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 fillColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 填充颜色，`none` 表示无填充，`null` 表示默认
-
+_(Optional)_ Fill color. `none` indicates no fill, `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-_(Optional)_ 线宽，范围 `1-10`<!-- -->，`null` 表示默认
-
+_(Optional)_ Line width, range `1-10`<!-- -->. `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 lineType
 
-
 </td><td>
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-
 </td><td>
 
-_(Optional)_ 线型，`null` 表示默认
-
+_(Optional)_ Line type. `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 fillStyle
 
-
 </td><td>
 
 [ESCH\_PrimitiveFillStyle](../enums/ESCH_PrimitiveFillStyle.md) \| null
 
-
 </td><td>
 
-_(Optional)_ 填充样式，`null` 表示默认
-
+_(Optional)_ Fill style, `null` indicates the default
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| undefined&gt;
 
-圆图元对象
+Circle primitive object
 
 ### delete
 
@@ -307,12 +263,12 @@ Promise&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除圆
+Delete the circle
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | ISCH_PrimitiveCircle | Array<string> | Array<ISCH_PrimitiveCircle>): Promise<boolean>;
+function delete(primitiveIds: string | ISCH_PrimitiveCircle | Array<string> | Array<ISCH_PrimitiveCircle>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -321,43 +277,35 @@ delete(primitiveIds: string | ISCH_PrimitiveCircle | Array<string> | Array<ISCH_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| Array&lt;string&gt; \| Array&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)<!-- -->&gt;
 
-
 </td><td>
 
-圆的图元 ID 或圆图元对象
-
+Primitive ID of the circle or the circle primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -365,12 +313,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取圆
+Get the circle
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<ISCH_PrimitiveCircle | undefined>;
+function get(primitiveIds: string): Promise<ISCH_PrimitiveCircle | undefined>;
 ```
 
 ## Parameters
@@ -379,43 +327,35 @@ get(primitiveIds: string): Promise<ISCH_PrimitiveCircle | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-圆的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the circle, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| undefined&gt;
 
-圆图元对象，`undefined` 表示获取失败
+Circle primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -423,12 +363,12 @@ Promise&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取圆
+Get the circle
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveCircle>>;
+function get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveCircle>>;
 ```
 
 ## Parameters
@@ -437,47 +377,39 @@ get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveCircle>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-圆的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the circle, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)<!-- -->&gt;&gt;
 
-圆图元对象，空数组表示获取失败
+Circle primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -485,20 +417,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有圆
+Get all circles
 
 ## Signature
 
 ```typescript
-getAll(): Promise<Array<ISCH_PrimitiveCircle>>;
+function getAll(): Promise<Array<ISCH_PrimitiveCircle>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)<!-- -->&gt;&gt;
 
-圆图元对象数组
+Array of circle primitive objects
 
 ### getallprimitiveid
 
@@ -506,20 +437,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有圆的图元 ID
+Get the primitive IDs of all circles
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(): Promise<Array<string>>;
+function getAllPrimitiveId(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-圆的图元 ID 数组
+Array of circle primitive IDs
 
 ### modify
 
@@ -527,21 +457,24 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改圆
+Modify the circle
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | ISCH_PrimitiveCircle, property: {
-        centerX?: number;
-        centerY?: number;
-        radius?: number;
-        color?: string | null;
-        fillColor?: string | null;
-        lineWidth?: number | null;
-        lineType?: ESCH_PrimitiveLineType | null;
-        fillStyle?: ESCH_PrimitiveFillStyle | null;
-    }): Promise<ISCH_PrimitiveCircle | undefined>;
+function modify(
+	primitiveId: string | ISCH_PrimitiveCircle,
+	property: {
+		centerX?: number;
+		centerY?: number;
+		radius?: number;
+		color?: string | null;
+		fillColor?: string | null;
+		lineWidth?: number | null;
+		lineType?: ESCH_PrimitiveLineType | null;
+		fillStyle?: ESCH_PrimitiveFillStyle | null;
+	},
+): Promise<ISCH_PrimitiveCircle | undefined>;
 ```
 
 ## Parameters
@@ -550,56 +483,45 @@ modify(primitiveId: string | ISCH_PrimitiveCircle, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ centerX?: number; centerY?: number; radius?: number; color?: string \| null; fillColor?: string \| null; lineWidth?: number \| null; lineType?: [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null; fillStyle?: [ESCH\_PrimitiveFillStyle](../enums/ESCH_PrimitiveFillStyle.md) \| null }
 
 </td><td>
 
-{ centerX?: number; centerY?: number; radius?: number; color?: string \| null; fillColor?: string \| null; lineWidth?: number \| null; lineType?: [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null; fillStyle?: [ESCH\_PrimitiveFillStyle](../enums/ESCH_PrimitiveFillStyle.md) \| null; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \| undefined&gt;
 
-圆图元对象
+Circle primitive object

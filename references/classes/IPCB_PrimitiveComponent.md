@@ -1,16 +1,15 @@
 # IPCB\_PrimitiveComponent class
 
-器件图元
+Device primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveComponent implements IPCB_Primitive 
+class IPCB_PrimitiveComponent implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,590 +17,464 @@ declare class IPCB_PrimitiveComponent implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getAllPins()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件关联的所有焊盘
-
+**_(BETA)_** Get all pads associated with the device
 
 </td></tr>
 <tr><td>
 
 [getState\_AddIntoBom()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否加入 BOM
-
+Get the property state: whether to add BOM
 
 </td></tr>
 <tr><td>
 
 [getState\_Component()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：关联库器件
-
+Get the property state: associate library device
 
 </td></tr>
 <tr><td>
 
 [getState\_Designator()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：位号
-
+Get the property state: designator
 
 </td></tr>
 <tr><td>
 
 [getState\_Footprint()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：关联库封装
-
+Get the property state: associate library footprint
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_Manufacturer()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：制造商
-
+Get the property state: manufacturer
 
 </td></tr>
 <tr><td>
 
 [getState\_ManufacturerId()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：制造商编号
-
+Get the property state: manufacturer ID
 
 </td></tr>
 <tr><td>
 
 [getState\_Model3D()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：关联库 3D 模型
-
+Get the property state: associate library 3D model
 
 </td></tr>
 <tr><td>
 
 [getState\_Name()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：名称
-
+Get the property state: name
 
 </td></tr>
 <tr><td>
 
 [getState\_OtherProperty()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：其它参数
-
+Get the property state: other parameters
 
 </td></tr>
 <tr><td>
 
 [getState\_Pads()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：焊盘
-
+Get the property state: pad
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_Supplier()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：供应商
-
+Get the property state: supplier
 
 </td></tr>
 <tr><td>
 
 [getState\_SupplierId()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：供应商编号
-
+Get the property state: supplier ID
 
 </td></tr>
 <tr><td>
 
 [getState\_UniqueId()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：唯一 ID
-
+Get the property state: unique ID
 
 </td></tr>
 <tr><td>
 
 [getState\_X()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 X
-
+Get the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [getState\_Y()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 Y
-
+Get the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setAttribute(key, value, keyVisible, valueVisible)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性
-
+**_(BETA)_** Set Property
 
 </td></tr>
 <tr><td>
 
 [setState\_AddIntoBom(addIntoBom)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否加入 BOM
-
+**_(BETA)_** Set the property state: whether to add BOM
 
 </td></tr>
 <tr><td>
 
 [setState\_Designator(designator)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：位号
-
+**_(BETA)_** Set the property state: designator
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_Manufacturer(manufacturer)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：制造商
-
+**_(BETA)_** Set the property state: manufacturer
 
 </td></tr>
 <tr><td>
 
 [setState\_ManufacturerId(manufacturerId)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：制造商编号
-
+**_(BETA)_** Set the property state: manufacturer ID
 
 </td></tr>
 <tr><td>
 
 [setState\_Name(name)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：名称
-
+**_(BETA)_** Set the property state: name
 
 </td></tr>
 <tr><td>
 
 [setState\_OtherProperty(otherProperty)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：其它参数
-
+**_(BETA)_** Set the property state: other parameters
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：旋转角度
-
+**_(BETA)_** Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_Supplier(supplier)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：供应商
-
+**_(BETA)_** Set the property state: supplier
 
 </td></tr>
 <tr><td>
 
 [setState\_SupplierId(supplierId)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：供应商编号
-
+**_(BETA)_** Set the property state: supplier ID
 
 </td></tr>
 <tr><td>
 
 [setState\_UniqueId(uniqueId)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：唯一 ID
-
+**_(BETA)_** Set the property state: unique ID
 
 </td></tr>
 <tr><td>
 
 [setState\_X(x)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 X
-
+**_(BETA)_** Set the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [setState\_Y(y)](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 Y
-
+**_(BETA)_** Set the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -616,20 +489,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveComponent>;
+function done(): Promise<IPCB_PrimitiveComponent>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
-器件图元对象
+Device primitive object
 
 ### getallpins
 
@@ -637,437 +509,398 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件关联的所有焊盘
+Get all pads associated with the device
 
 ## Signature
 
 ```typescript
-getAllPins(): Promise<Array<IPCB_PrimitiveComponentPad>>;
+function getAllPins(): Promise<Array<IPCB_PrimitiveComponentPad>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- -->&gt;&gt;
 
-器件焊盘图元数组
+Device pad primitive array
 
 ### getstate_addintobom
 
 # IPCB\_PrimitiveComponent.getState\_AddIntoBom() method
 
-获取属性状态：是否加入 BOM
+Get the property state: whether to add BOM
 
 ## Signature
 
 ```typescript
-getState_AddIntoBom(): boolean;
+function getState_AddIntoBom(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否加入 BOM
+Whether Add to BOM
 
 ### getstate_component
 
 # IPCB\_PrimitiveComponent.getState\_Component() method
 
-获取属性状态：关联库器件
+Get the property state: associate library device
 
 ## Signature
 
 ```typescript
-getState_Component(): {
-        libraryUuid: string;
-        uuid: string;
-        name?: string;
-    } | undefined;
+function getState_Component(): { libraryUuid: string; uuid: string; name?: string } | undefined;
 ```
-
 
 ## Returns
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; name?: string } \| undefined
 
-关联库器件
+Associate library device
 
 ### getstate_designator
 
 # IPCB\_PrimitiveComponent.getState\_Designator() method
 
-获取属性状态：位号
+Get the property state: designator
 
 ## Signature
 
 ```typescript
-getState_Designator(): string | undefined;
+function getState_Designator(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-位号
+Designator
 
 ### getstate_footprint
 
 # IPCB\_PrimitiveComponent.getState\_Footprint() method
 
-获取属性状态：关联库封装
+Get the property state: associate library footprint
 
 ## Signature
 
 ```typescript
-getState_Footprint(): {
-        libraryUuid: string;
-        uuid: string;
-        name?: string;
-    } | undefined;
+function getState_Footprint(): { libraryUuid: string; uuid: string; name?: string } | undefined;
 ```
-
 
 ## Returns
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; name?: string } \| undefined
 
-关联库封装
+Associate library footprint
 
 ### getstate_layer
 
 # IPCB\_PrimitiveComponent.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfComponent;
+function getState_Layer(): TPCB_LayersOfComponent;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
-层
+Layer
 
 ### getstate_manufacturer
 
 # IPCB\_PrimitiveComponent.getState\_Manufacturer() method
 
-获取属性状态：制造商
+Get the property state: manufacturer
 
 ## Signature
 
 ```typescript
-getState_Manufacturer(): string | undefined;
+function getState_Manufacturer(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-制造商
+Manufacturer
 
 ### getstate_manufacturerid
 
 # IPCB\_PrimitiveComponent.getState\_ManufacturerId() method
 
-获取属性状态：制造商编号
+Get the property state: manufacturer ID
 
 ## Signature
 
 ```typescript
-getState_ManufacturerId(): string | undefined;
+function getState_ManufacturerId(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-制造商编号
+Manufacturer ID
 
 ### getstate_model3d
 
 # IPCB\_PrimitiveComponent.getState\_Model3D() method
 
-获取属性状态：关联库 3D 模型
+Get the property state: associate library 3D model
 
 ## Signature
 
 ```typescript
-getState_Model3D(): {
-        libraryUuid: string;
-        uuid: string;
-        name?: string;
-    } | undefined;
+function getState_Model3D(): { libraryUuid: string; uuid: string; name?: string } | undefined;
 ```
-
 
 ## Returns
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; name?: string } \| undefined
 
-关联库 3D 模型
+Associate library 3D model
 
 ### getstate_name
 
 # IPCB\_PrimitiveComponent.getState\_Name() method
 
-获取属性状态：名称
+Get the property state: name
 
 ## Signature
 
 ```typescript
-getState_Name(): string | undefined;
+function getState_Name(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-名称
+Name
 
 ### getstate_otherproperty
 
 # IPCB\_PrimitiveComponent.getState\_OtherProperty() method
 
-获取属性状态：其它参数
+Get the property state: other parameters
 
 ## Signature
 
 ```typescript
-getState_OtherProperty(): {
-        [key: string]: string | number | boolean;
-    } | undefined;
+function getState_OtherProperty(): { [key: string]: string | number | boolean } | undefined;
 ```
-
 
 ## Returns
 
-{ \[key: string\]: string \| number \| boolean; } \| undefined
+{ \[key: string\]: string \| number \| boolean } \| undefined
 
-其它参数
+Other parameters
 
 ### getstate_pads
 
 # IPCB\_PrimitiveComponent.getState\_Pads() method
 
-获取属性状态：焊盘
+Get the property state: pad
 
 ## Signature
 
 ```typescript
-getState_Pads(): Array<{
-        primitiveId: string;
-        net: string;
-        padNumber: string;
-    }> | undefined;
+function getState_Pads():
+	Array<{ primitiveId: string; net: string; padNumber: string }> | undefined;
 ```
-
 
 ## Returns
 
-Array&lt;{ primitiveId: string; net: string; padNumber: string; }&gt; \| undefined
+Array&lt;{ primitiveId: string; net: string; padNumber: string }&gt; \| undefined
 
-焊盘
+Pad
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveComponent.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveComponent.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveComponent.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_rotation
 
 # IPCB\_PrimitiveComponent.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_supplier
 
 # IPCB\_PrimitiveComponent.getState\_Supplier() method
 
-获取属性状态：供应商
+Get the property state: supplier
 
 ## Signature
 
 ```typescript
-getState_Supplier(): string | undefined;
+function getState_Supplier(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-供应商
+Supplier
 
 ### getstate_supplierid
 
 # IPCB\_PrimitiveComponent.getState\_SupplierId() method
 
-获取属性状态：供应商编号
+Get the property state: supplier ID
 
 ## Signature
 
 ```typescript
-getState_SupplierId(): string | undefined;
+function getState_SupplierId(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-供应商编号
+Supplier ID
 
 ### getstate_uniqueid
 
 # IPCB\_PrimitiveComponent.getState\_UniqueId() method
 
-获取属性状态：唯一 ID
+Get the property state: unique ID
 
 ## Signature
 
 ```typescript
-getState_UniqueId(): string | undefined;
+function getState_UniqueId(): string | undefined;
 ```
-
 
 ## Returns
 
 string \| undefined
 
-唯一 ID
+Unique ID
 
 ### getstate_x
 
 # IPCB\_PrimitiveComponent.getState\_X() method
 
-获取属性状态：坐标 X
+Get the property state: X coordinate
 
 ## Signature
 
 ```typescript
-getState_X(): number;
+function getState_X(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 X
+X coordinate
 
 ### getstate_y
 
 # IPCB\_PrimitiveComponent.getState\_Y() method
 
-获取属性状态：坐标 Y
+Get the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-getState_Y(): number;
+function getState_Y(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 Y
+Y coordinate
 
 ### isasync
 
 # IPCB\_PrimitiveComponent.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -1075,20 +908,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveComponent>;
+function reset(): Promise<IPCB_PrimitiveComponent>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
-器件图元对象
+Device primitive object
 
 ### setattribute
 
@@ -1096,12 +928,17 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性
+Set Property
 
 ## Signature
 
 ```typescript
-setAttribute(key: string, value?: string | number | boolean, keyVisible?: boolean, valueVisible?: boolean): Promise<IPCB_PrimitiveAttribute>;
+function setAttribute(
+	key: string,
+	value?: string | number | boolean,
+	keyVisible?: boolean,
+	valueVisible?: boolean,
+): Promise<IPCB_PrimitiveAttribute>;
 ```
 
 ## Parameters
@@ -1110,91 +947,74 @@ setAttribute(key: string, value?: string | number | boolean, keyVisible?: boolea
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 key
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-属性名，如若器件不存在该属性名的属性，将会新增该属性
-
+Attribute name. If the device does not have an attribute with this name, the attribute will be added
 
 </td></tr>
 <tr><td>
 
 value
 
-
 </td><td>
 
 string \| number \| boolean
 
-
 </td><td>
 
-_(Optional)_ 属性值
-
+_(Optional)_ Property value
 
 </td></tr>
 <tr><td>
 
 keyVisible
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 属性名可见性
-
+_(Optional)_ Attribute name visibility
 
 </td></tr>
 <tr><td>
 
 valueVisible
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 属性值可见性
-
+_(Optional)_ Attribute value visibility
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!-- -->&gt;
 
-属性图元对象
+Attribute primitive object
 
 ### setstate_addintobom
 
@@ -1202,12 +1022,12 @@ Promise&lt;[IPCB\_PrimitiveAttribute](./IPCB_PrimitiveAttribute.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否加入 BOM
+Set the property state: whether to add BOM
 
 ## Signature
 
 ```typescript
-setState_AddIntoBom(addIntoBom: boolean): IPCB_PrimitiveComponent;
+function setState_AddIntoBom(addIntoBom: boolean): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1216,43 +1036,35 @@ setState_AddIntoBom(addIntoBom: boolean): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 addIntoBom
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否加入 BOM
-
+Whether Add to BOM
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_designator
 
@@ -1260,12 +1072,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：位号
+Set the property state: designator
 
 ## Signature
 
 ```typescript
-setState_Designator(designator: string | undefined): IPCB_PrimitiveComponent;
+function setState_Designator(designator: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1274,43 +1086,35 @@ setState_Designator(designator: string | undefined): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 designator
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-位号
-
+Designator
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_layer
 
@@ -1318,12 +1122,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfComponent): IPCB_PrimitiveComponent;
+function setState_Layer(layer: TPCB_LayersOfComponent): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1332,43 +1136,35 @@ setState_Layer(layer: TPCB_LayersOfComponent): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_manufacturer
 
@@ -1376,12 +1172,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：制造商
+Set the property state: manufacturer
 
 ## Signature
 
 ```typescript
-setState_Manufacturer(manufacturer: string | undefined): IPCB_PrimitiveComponent;
+function setState_Manufacturer(manufacturer: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1390,43 +1186,35 @@ setState_Manufacturer(manufacturer: string | undefined): IPCB_PrimitiveComponent
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 manufacturer
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-制造商
-
+Manufacturer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_manufacturerid
 
@@ -1434,12 +1222,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：制造商编号
+Set the property state: manufacturer ID
 
 ## Signature
 
 ```typescript
-setState_ManufacturerId(manufacturerId: string | undefined): IPCB_PrimitiveComponent;
+function setState_ManufacturerId(manufacturerId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1448,43 +1236,35 @@ setState_ManufacturerId(manufacturerId: string | undefined): IPCB_PrimitiveCompo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 manufacturerId
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-制造商编号
-
+Manufacturer ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_name
 
@@ -1492,12 +1272,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：名称
+Set the property state: name
 
 ## Signature
 
 ```typescript
-setState_Name(name: string | undefined): IPCB_PrimitiveComponent;
+function setState_Name(name: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1506,43 +1286,35 @@ setState_Name(name: string | undefined): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 name
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-名称
-
+Name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_otherproperty
 
@@ -1550,14 +1322,14 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：其它参数
+Set the property state: other parameters
 
 ## Signature
 
 ```typescript
-setState_OtherProperty(otherProperty: {
-        [key: string]: string | number | boolean;
-    }): IPCB_PrimitiveComponent;
+function setState_OtherProperty(otherProperty: {
+	[key: string]: string | number | boolean;
+}): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1566,43 +1338,35 @@ setState_OtherProperty(otherProperty: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 otherProperty
 
+</td><td>
+
+\{ \[key: string\]: string \| number \| boolean \}
 
 </td><td>
 
-\{ \[key: string\]: string \| number \| boolean; \}
-
-
-</td><td>
-
-其它参数
-
+Other parameters
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_primitivelock
 
@@ -1610,12 +1374,12 @@ otherProperty
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveComponent;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1624,43 +1388,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_rotation
 
@@ -1668,12 +1424,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): IPCB_PrimitiveComponent;
+function setState_Rotation(rotation: number): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1682,43 +1438,35 @@ setState_Rotation(rotation: number): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_supplier
 
@@ -1726,12 +1474,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：供应商
+Set the property state: supplier
 
 ## Signature
 
 ```typescript
-setState_Supplier(supplier: string | undefined): IPCB_PrimitiveComponent;
+function setState_Supplier(supplier: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1740,43 +1488,35 @@ setState_Supplier(supplier: string | undefined): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 supplier
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-供应商
-
+Supplier
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_supplierid
 
@@ -1784,12 +1524,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：供应商编号
+Set the property state: supplier ID
 
 ## Signature
 
 ```typescript
-setState_SupplierId(supplierId: string | undefined): IPCB_PrimitiveComponent;
+function setState_SupplierId(supplierId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1798,43 +1538,35 @@ setState_SupplierId(supplierId: string | undefined): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 supplierId
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-供应商编号
-
+Supplier ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_uniqueid
 
@@ -1842,12 +1574,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：唯一 ID
+Set the property state: unique ID
 
 ## Signature
 
 ```typescript
-setState_UniqueId(uniqueId: string | undefined): IPCB_PrimitiveComponent;
+function setState_UniqueId(uniqueId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1856,43 +1588,35 @@ setState_UniqueId(uniqueId: string | undefined): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 uniqueId
 
-
 </td><td>
 
 string \| undefined
 
-
 </td><td>
 
-唯一 ID
-
+Unique ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_x
 
@@ -1900,12 +1624,12 @@ string \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 X
+Set the property state: X coordinate
 
 ## Signature
 
 ```typescript
-setState_X(x: number): IPCB_PrimitiveComponent;
+function setState_X(x: number): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1914,43 +1638,35 @@ setState_X(x: number): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### setstate_y
 
@@ -1958,12 +1674,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 Y
+Set the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-setState_Y(y: number): IPCB_PrimitiveComponent;
+function setState_Y(y: number): IPCB_PrimitiveComponent;
 ```
 
 ## Parameters
@@ -1972,78 +1688,68 @@ setState_Y(y: number): IPCB_PrimitiveComponent;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveComponent.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveComponent;
+function toAsync(): IPCB_PrimitiveComponent;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveComponent.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveComponent;
+function toSync(): IPCB_PrimitiveComponent;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-器件图元对象
+Device primitive object

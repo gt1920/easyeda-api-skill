@@ -1,16 +1,15 @@
 # ISCH\_PrimitiveArc class
 
-圆弧图元
+Arc primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitiveArc implements ISCH_Primitive 
+class ISCH_PrimitiveArc implements ISCH_Primitive
 ```
 **Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,394 +17,310 @@ declare class ISCH_PrimitiveArc implements ISCH_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_Color()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：颜色
-
+Get the property state: color
 
 </td></tr>
 <tr><td>
 
 [getState\_EndX()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：终止点 X
-
+Get the property state: end point X
 
 </td></tr>
 <tr><td>
 
 [getState\_EndY()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：终止点 Y
-
+Get the property state: end point Y
 
 </td></tr>
 <tr><td>
 
 [getState\_FillColor()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：填充颜色
-
+Get the property state: fill color
 
 </td></tr>
 <tr><td>
 
 [getState\_LineType()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线型
-
+Get the property state: line type
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_ReferenceX()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：参考点 X
-
+Get the property state: reference point X
 
 </td></tr>
 <tr><td>
 
 [getState\_ReferenceY()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：参考点 Y
-
+Get the property state: reference point Y
 
 </td></tr>
 <tr><td>
 
 [getState\_StartX()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：起始点 X
-
+Get the property state: start point X
 
 </td></tr>
 <tr><td>
 
 [getState\_StartY()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：起始点 Y
-
+Get the property state: start point Y
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_Color(color)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：颜色
-
+**_(BETA)_** Set the property state: color
 
 </td></tr>
 <tr><td>
 
 [setState\_EndX(endX)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：终止点 X
-
+**_(BETA)_** Set the property state: end point X
 
 </td></tr>
 <tr><td>
 
 [setState\_EndY(endY)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：终止点 Y
-
+**_(BETA)_** Set the property state: end point Y
 
 </td></tr>
 <tr><td>
 
 [setState\_FillColor(fillColor)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：填充颜色
-
+**_(BETA)_** Set the property state: fill color
 
 </td></tr>
 <tr><td>
 
 [setState\_LineType(lineType)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线型
-
+**_(BETA)_** Set the property state: line type
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_ReferenceX(referenceX)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：参考点 X
-
+**_(BETA)_** Set the property state: reference point X
 
 </td></tr>
 <tr><td>
 
 [setState\_ReferenceY(referenceY)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：参考点 Y
-
+**_(BETA)_** Set the property state: reference point Y
 
 </td></tr>
 <tr><td>
 
 [setState\_StartX(startX)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：起始点 X
-
+**_(BETA)_** Set the property state: start point X
 
 </td></tr>
 <tr><td>
 
 [setState\_StartY(startY)](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：起始点 Y
-
+**_(BETA)_** Set the property state: start point Y
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./ISCH_PrimitiveArc.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -420,267 +335,253 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitiveArc>;
+function done(): Promise<ISCH_PrimitiveArc>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
-圆弧图元对象
+Arc primitive object
 
 ### getstate_color
 
 # ISCH\_PrimitiveArc.getState\_Color() method
 
-获取属性状态：颜色
+Get the property state: color
 
 ## Signature
 
 ```typescript
-getState_Color(): string | null;
+function getState_Color(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-颜色
+Color
 
 ### getstate_endx
 
 # ISCH\_PrimitiveArc.getState\_EndX() method
 
-获取属性状态：终止点 X
+Get the property state: end point X
 
 ## Signature
 
 ```typescript
-getState_EndX(): number;
+function getState_EndX(): number;
 ```
-
 
 ## Returns
 
 number
 
-终止点 X
+End point X
 
 ### getstate_endy
 
 # ISCH\_PrimitiveArc.getState\_EndY() method
 
-获取属性状态：终止点 Y
+Get the property state: end point Y
 
 ## Signature
 
 ```typescript
-getState_EndY(): number;
+function getState_EndY(): number;
 ```
-
 
 ## Returns
 
 number
 
-终止点 Y
+End point Y
 
 ### getstate_fillcolor
 
 # ISCH\_PrimitiveArc.getState\_FillColor() method
 
-获取属性状态：填充颜色
+Get the property state: fill color
 
 ## Signature
 
 ```typescript
-getState_FillColor(): string | null;
+function getState_FillColor(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-填充颜色
+Fill color
 
 ### getstate_linetype
 
 # ISCH\_PrimitiveArc.getState\_LineType() method
 
-获取属性状态：线型
+Get the property state: line type
 
 ## Signature
 
 ```typescript
-getState_LineType(): ESCH_PrimitiveLineType | null;
+function getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-线型
+Line type
 
 ### getstate_linewidth
 
 # ISCH\_PrimitiveArc.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number | null;
+function getState_LineWidth(): number | null;
 ```
-
 
 ## Returns
 
 number \| null
 
-线宽
+Line width
 
 ### getstate_primitiveid
 
 # ISCH\_PrimitiveArc.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # ISCH\_PrimitiveArc.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): ESCH_PrimitiveType;
+function getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_referencex
 
 # ISCH\_PrimitiveArc.getState\_ReferenceX() method
 
-获取属性状态：参考点 X
+Get the property state: reference point X
 
 ## Signature
 
 ```typescript
-getState_ReferenceX(): number;
+function getState_ReferenceX(): number;
 ```
-
 
 ## Returns
 
 number
 
-参考点 X
+Reference point X
 
 ### getstate_referencey
 
 # ISCH\_PrimitiveArc.getState\_ReferenceY() method
 
-获取属性状态：参考点 Y
+Get the property state: reference point Y
 
 ## Signature
 
 ```typescript
-getState_ReferenceY(): number;
+function getState_ReferenceY(): number;
 ```
-
 
 ## Returns
 
 number
 
-参考点 Y
+Reference point Y
 
 ### getstate_startx
 
 # ISCH\_PrimitiveArc.getState\_StartX() method
 
-获取属性状态：起始点 X
+Get the property state: start point X
 
 ## Signature
 
 ```typescript
-getState_StartX(): number;
+function getState_StartX(): number;
 ```
-
 
 ## Returns
 
 number
 
-起始点 X
+Start point X
 
 ### getstate_starty
 
 # ISCH\_PrimitiveArc.getState\_StartY() method
 
-获取属性状态：起始点 Y
+Get the property state: start point Y
 
 ## Signature
 
 ```typescript
-getState_StartY(): number;
+function getState_StartY(): number;
 ```
-
 
 ## Returns
 
 number
 
-起始点 Y
+Start point Y
 
 ### isasync
 
 # ISCH\_PrimitiveArc.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -688,20 +589,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<ISCH_PrimitiveArc>;
+function reset(): Promise<ISCH_PrimitiveArc>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_color
 
@@ -709,12 +609,12 @@ Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：颜色
+Set the property state: color
 
 ## Signature
 
 ```typescript
-setState_Color(color: string | null): ISCH_PrimitiveArc;
+function setState_Color(color: string | null): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -723,43 +623,35 @@ setState_Color(color: string | null): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 color
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-颜色
-
+Color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_endx
 
@@ -767,12 +659,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：终止点 X
+Set the property state: end point X
 
 ## Signature
 
 ```typescript
-setState_EndX(endX: number): ISCH_PrimitiveArc;
+function setState_EndX(endX: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -781,43 +673,35 @@ setState_EndX(endX: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 endX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-终止点 X
-
+End point X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_endy
 
@@ -825,12 +709,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：终止点 Y
+Set the property state: end point Y
 
 ## Signature
 
 ```typescript
-setState_EndY(endY: number): ISCH_PrimitiveArc;
+function setState_EndY(endY: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -839,43 +723,35 @@ setState_EndY(endY: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 endY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-终止点 Y
-
+End point Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_fillcolor
 
@@ -883,12 +759,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：填充颜色
+Set the property state: fill color
 
 ## Signature
 
 ```typescript
-setState_FillColor(fillColor: string | null): ISCH_PrimitiveArc;
+function setState_FillColor(fillColor: string | null): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -897,43 +773,35 @@ setState_FillColor(fillColor: string | null): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fillColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-填充颜色
-
+Fill color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_linetype
 
@@ -941,12 +809,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线型
+Set the property state: line type
 
 ## Signature
 
 ```typescript
-setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveArc;
+function setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -955,43 +823,35 @@ setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineType
 
-
 </td><td>
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-
 </td><td>
 
-线型
-
+Line type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_linewidth
 
@@ -999,12 +859,12 @@ lineType
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveArc;
+function setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -1013,43 +873,35 @@ setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_referencex
 
@@ -1057,12 +909,12 @@ number \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：参考点 X
+Set the property state: reference point X
 
 ## Signature
 
 ```typescript
-setState_ReferenceX(referenceX: number): ISCH_PrimitiveArc;
+function setState_ReferenceX(referenceX: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -1071,43 +923,35 @@ setState_ReferenceX(referenceX: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 referenceX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-参考点 X
-
+Reference point X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_referencey
 
@@ -1115,12 +959,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：参考点 Y
+Set the property state: reference point Y
 
 ## Signature
 
 ```typescript
-setState_ReferenceY(referenceY: number): ISCH_PrimitiveArc;
+function setState_ReferenceY(referenceY: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -1129,43 +973,35 @@ setState_ReferenceY(referenceY: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 referenceY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-参考点 Y
-
+Reference point Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_startx
 
@@ -1173,12 +1009,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：起始点 X
+Set the property state: start point X
 
 ## Signature
 
 ```typescript
-setState_StartX(startX: number): ISCH_PrimitiveArc;
+function setState_StartX(startX: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -1187,43 +1023,35 @@ setState_StartX(startX: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 startX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起始点 X
-
+Start point X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### setstate_starty
 
@@ -1231,12 +1059,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：起始点 Y
+Set the property state: start point Y
 
 ## Signature
 
 ```typescript
-setState_StartY(startY: number): ISCH_PrimitiveArc;
+function setState_StartY(startY: number): ISCH_PrimitiveArc;
 ```
 
 ## Parameters
@@ -1245,78 +1073,68 @@ setState_StartY(startY: number): ISCH_PrimitiveArc;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 startY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-起始点 Y
-
+Start point Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### toasync
 
 # ISCH\_PrimitiveArc.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): ISCH_PrimitiveArc;
+function toAsync(): ISCH_PrimitiveArc;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object
 
 ### tosync
 
 # ISCH\_PrimitiveArc.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): ISCH_PrimitiveArc;
+function toSync(): ISCH_PrimitiveArc;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
-圆弧图元对象
+Arc primitive object

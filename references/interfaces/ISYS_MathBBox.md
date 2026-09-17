@@ -1,11 +1,11 @@
 # ISYS\_MathBBox interface
 
-BBox（最小外接矩形）
+BBox (minimum bounding rectangle)
 
 ## Signature
 
 ```typescript
-interface ISYS_MathBBox 
+interface ISYS_MathBBox
 ```
 
 ## Properties
@@ -14,97 +14,77 @@ interface ISYS_MathBBox
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [maxX](./ISYS_MathBBox.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-最大 X 坐标
-
+Maximum X coordinate
 
 </td></tr>
 <tr><td>
 
 [maxY](./ISYS_MathBBox.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-最大 Y 坐标
-
+Maximum Y coordinate
 
 </td></tr>
 <tr><td>
 
 [minX](./ISYS_MathBBox.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-最小 X 坐标
-
+Minimum X coordinate
 
 </td></tr>
 <tr><td>
 
 [minY](./ISYS_MathBBox.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-最小 Y 坐标
-
+Minimum Y coordinate
 
 </td></tr>
 </tbody></table>
@@ -117,7 +97,7 @@ number
 
 # ISYS\_MathBBox.maxX property
 
-最大 X 坐标
+Maximum X coordinate
 
 ## Signature
 
@@ -129,7 +109,7 @@ maxX: number;
 
 # ISYS\_MathBBox.maxY property
 
-最大 Y 坐标
+Maximum Y coordinate
 
 ## Signature
 
@@ -141,7 +121,7 @@ maxY: number;
 
 # ISYS\_MathBBox.minX property
 
-最小 X 坐标
+Minimum X coordinate
 
 ## Signature
 
@@ -153,7 +133,7 @@ minX: number;
 
 # ISYS\_MathBBox.minY property
 
-最小 Y 坐标
+Minimum Y coordinate
 
 ## Signature
 

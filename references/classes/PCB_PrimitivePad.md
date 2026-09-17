@@ -1,11 +1,11 @@
 # PCB\_PrimitivePad class
 
-PCB &amp; 封装 / 焊盘图元类
+PCB &amp; footprint / pad primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitivePad implements IPCB_PrimitiveAPI 
+class PCB_PrimitivePad implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class PCB_PrimitivePad implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(layer, padNumber, x, y, rotation, pad, net, hole, holeOffsetX, holeOffsetY, holeRotation, metallization, padType, specialPad, solderMaskAndPasteMaskExpansion, heatWelding, primitiveLock)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-创建焊盘
-
+Create Pad
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除焊盘
-
+**_(BETA)_** Delete Pad
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取焊盘
-
+**_(BETA)_** Get Pad
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取焊盘
-
+**_(BETA)_** Get Pad
 
 </td></tr>
 <tr><td>
 
 [getAll(layer, net, primitiveLock, padType)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有焊盘
-
+**_(BETA)_** Get all Pad
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(layer, net, primitiveLock, padType)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有焊盘的图元 ID
-
+**_(BETA)_** Get all Pad primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitivePad.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改焊盘
-
+**_(BETA)_** Modify Pad
 
 </td></tr>
 </tbody></table>
@@ -135,12 +111,30 @@ Description
 
 # PCB\_PrimitivePad.create() method
 
-创建焊盘
+Create Pad
 
 ## Signature
 
 ```typescript
-create(layer: TPCB_LayersOfPad, padNumber: string, x: number, y: number, rotation?: number, pad?: TPCB_PrimitivePadShape, net?: string, hole?: TPCB_PrimitivePadHole | null, holeOffsetX?: number, holeOffsetY?: number, holeRotation?: number, metallization?: boolean, padType?: EPCB_PrimitivePadType, specialPad?: TPCB_PrimitiveSpecialPadShape, solderMaskAndPasteMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null, heatWelding?: IPCB_PrimitivePadHeatWelding | null, primitiveLock?: boolean): Promise<IPCB_PrimitivePad | undefined>;
+function create(
+	layer: TPCB_LayersOfPad,
+	padNumber: string,
+	x: number,
+	y: number,
+	rotation?: number,
+	pad?: TPCB_PrimitivePadShape,
+	net?: string,
+	hole?: TPCB_PrimitivePadHole | null,
+	holeOffsetX?: number,
+	holeOffsetY?: number,
+	holeRotation?: number,
+	metallization?: boolean,
+	padType?: EPCB_PrimitivePadType,
+	specialPad?: TPCB_PrimitiveSpecialPadShape,
+	solderMaskAndPasteMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null,
+	heatWelding?: IPCB_PrimitivePadHeatWelding | null,
+	primitiveLock?: boolean,
+): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
 ## Parameters
@@ -149,299 +143,243 @@ create(layer: TPCB_LayersOfPad, padNumber: string, x: number, y: number, rotatio
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 padNumber
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘编号
-
+Pad number
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-位置 X
-
+X position
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-位置 Y
-
+Y position
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 pad
 
-
 </td><td>
 
 [TPCB\_PrimitivePadShape](../types/TPCB_PrimitivePadShape.md)
 
-
 </td><td>
 
-_(Optional)_ 焊盘外形，在特殊焊盘外形实现前，该参数必传
-
+_(Optional)_ Pad shape. This parameter is required before the special pad shape is implemented
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 网络名称
-
+_(Optional)_ Net name
 
 </td></tr>
 <tr><td>
 
 hole
 
-
 </td><td>
 
 [TPCB\_PrimitivePadHole](../types/TPCB_PrimitivePadHole.md) \| null
 
-
 </td><td>
 
-_(Optional)_ 孔，`null` 标识无孔
-
+_(Optional)_ Hole. `null` indicates no hole
 
 </td></tr>
 <tr><td>
 
 holeOffsetX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 孔偏移 X
-
+_(Optional)_ Hole offset X
 
 </td></tr>
 <tr><td>
 
 holeOffsetY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 孔偏移 Y
-
+_(Optional)_ Hole offset Y
 
 </td></tr>
 <tr><td>
 
 holeRotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 孔相对于焊盘的旋转角度
-
+_(Optional)_ Rotation angle of the hole relative to the pad
 
 </td></tr>
 <tr><td>
 
 metallization
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否金属化孔壁
-
+_(Optional)_ Whether the hole wall is plated
 
 </td></tr>
 <tr><td>
 
 padType
 
-
 </td><td>
 
 [EPCB\_PrimitivePadType](../enums/EPCB_PrimitivePadType.md)
 
-
 </td><td>
 
-_(Optional)_ 焊盘类型
-
+_(Optional)_ Pad type
 
 </td></tr>
 <tr><td>
 
 specialPad
 
-
 </td><td>
 
 [TPCB\_PrimitiveSpecialPadShape](../types/TPCB_PrimitiveSpecialPadShape.md)
 
-
 </td><td>
 
-_(Optional)_ 特殊焊盘外形，当前暂未实现，请勿使用
-
+_(Optional)_ Special pad shape. Currently not implemented; please do not use it
 
 </td></tr>
 <tr><td>
 
 solderMaskAndPasteMaskExpansion
 
-
 </td><td>
 
 [IPCB\_PrimitiveSolderMaskAndPasteMaskExpansion](../interfaces/IPCB_PrimitiveSolderMaskAndPasteMaskExpansion.md) \| null
 
-
 </td><td>
 
-_(Optional)_ 阻焊/助焊扩展，`null` 表示遵循规则
-
+_(Optional)_ Solder mask/paste mask expansion. `null` means following the rules
 
 </td></tr>
 <tr><td>
 
 heatWelding
 
+</td><td>
+
+[IPCB\_PrimitivePadHeatWelding](../interfaces/IPCB_PrimitivePadHeatWelding.md) \| null
 
 </td><td>
 
-IPCB\_PrimitivePadHeatWelding \| null
-
-
-</td><td>
-
-_(Optional)_ 热焊优化参数
-
+_(Optional)_ Thermal relief optimization parameters
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
-焊盘图元对象
+Pad primitive object
 
 ### delete
 
@@ -449,12 +387,12 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除焊盘
+Delete Pad
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitivePad | Array<string> | Array<IPCB_PrimitivePad>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitivePad | Array<string> | Array<IPCB_PrimitivePad>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -463,43 +401,35 @@ delete(primitiveIds: string | IPCB_PrimitivePad | Array<string> | Array<IPCB_Pri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
-
 </td><td>
 
-焊盘的图元 ID 或焊盘图元对象
-
+Pad primitive ID or Pad primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -507,12 +437,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取焊盘
+Get Pad
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitivePad | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
 ## Parameters
@@ -521,43 +451,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitivePad | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-焊盘的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Pad primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
-焊盘图元对象，`undefined` 表示获取失败
+Pad primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -565,12 +487,12 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取焊盘
+Get Pad
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePad>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePad>>;
 ```
 
 ## Parameters
@@ -579,47 +501,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePad>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-焊盘的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Pad primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
-焊盘图元对象，空数组表示获取失败
+Pad primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -627,12 +541,17 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有焊盘
+Get all Pad
 
 ## Signature
 
 ```typescript
-getAll(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolean, padType?: EPCB_PrimitivePadType): Promise<Array<IPCB_PrimitivePad>>;
+function getAll(
+	layer?: TPCB_LayersOfPad,
+	net?: string,
+	primitiveLock?: boolean,
+	padType?: EPCB_PrimitivePadType,
+): Promise<Array<IPCB_PrimitivePad>>;
 ```
 
 ## Parameters
@@ -641,91 +560,74 @@ getAll(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolean, padType?
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 网络名称
-
+_(Optional)_ Net name
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 <tr><td>
 
 padType
 
-
 </td><td>
 
 [EPCB\_PrimitivePadType](../enums/EPCB_PrimitivePadType.md)
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
-焊盘图元对象数组
+Array of Pad primitive objects
 
 ### getallprimitiveid
 
@@ -733,12 +635,17 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有焊盘的图元 ID
+Get all Pad primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolean, padType?: EPCB_PrimitivePadType): Promise<Array<string>>;
+function getAllPrimitiveId(
+	layer?: TPCB_LayersOfPad,
+	net?: string,
+	primitiveLock?: boolean,
+	padType?: EPCB_PrimitivePadType,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -747,91 +654,74 @@ getAllPrimitiveId(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolea
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 网络名称
-
+_(Optional)_ Net name
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 <tr><td>
 
 padType
 
-
 </td><td>
 
 [EPCB\_PrimitivePadType](../enums/EPCB_PrimitivePadType.md)
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-焊盘的图元 ID 数组
+Array of Pad primitive IDs
 
 ### modify
 
@@ -839,29 +729,32 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改焊盘
+Modify Pad
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitivePad, property: {
-        layer?: TPCB_LayersOfPad;
-        padNumber?: string;
-        x?: number;
-        y?: number;
-        rotation?: number;
-        pad?: TPCB_PrimitivePadShape;
-        net?: string;
-        hole?: TPCB_PrimitivePadHole | null;
-        holeOffsetX?: number;
-        holeOffsetY?: number;
-        holeRotation?: number;
-        metallization?: boolean;
-        specialPad?: TPCB_PrimitiveSpecialPadShape;
-        solderMaskAndPasteMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null;
-        heatWelding?: IPCB_PrimitivePadHeatWelding | null;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitivePad | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitivePad,
+	property: {
+		layer?: TPCB_LayersOfPad;
+		padNumber?: string;
+		x?: number;
+		y?: number;
+		rotation?: number;
+		pad?: TPCB_PrimitivePadShape;
+		net?: string;
+		hole?: TPCB_PrimitivePadHole | null;
+		holeOffsetX?: number;
+		holeOffsetY?: number;
+		holeRotation?: number;
+		metallization?: boolean;
+		specialPad?: TPCB_PrimitiveSpecialPadShape;
+		solderMaskAndPasteMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null;
+		heatWelding?: IPCB_PrimitivePadHeatWelding | null;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
 ## Parameters
@@ -870,56 +763,45 @@ modify(primitiveId: string | IPCB_PrimitivePad, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ layer?: [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)<!-- -->; padNumber?: string; x?: number; y?: number; rotation?: number; pad?: [TPCB\_PrimitivePadShape](../types/TPCB_PrimitivePadShape.md)<!-- -->; net?: string; hole?: [TPCB\_PrimitivePadHole](../types/TPCB_PrimitivePadHole.md) \| null; holeOffsetX?: number; holeOffsetY?: number; holeRotation?: number; metallization?: boolean; specialPad?: [TPCB\_PrimitiveSpecialPadShape](../types/TPCB_PrimitiveSpecialPadShape.md)<!-- -->; solderMaskAndPasteMaskExpansion?: [IPCB\_PrimitiveSolderMaskAndPasteMaskExpansion](../interfaces/IPCB_PrimitiveSolderMaskAndPasteMaskExpansion.md) \| null; heatWelding?: [IPCB\_PrimitivePadHeatWelding](../interfaces/IPCB_PrimitivePadHeatWelding.md) \| null; primitiveLock?: boolean }
 
 </td><td>
 
-{ layer?: [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)<!-- -->; padNumber?: string; x?: number; y?: number; rotation?: number; pad?: [TPCB\_PrimitivePadShape](../types/TPCB_PrimitivePadShape.md)<!-- -->; net?: string; hole?: [TPCB\_PrimitivePadHole](../types/TPCB_PrimitivePadHole.md) \| null; holeOffsetX?: number; holeOffsetY?: number; holeRotation?: number; metallization?: boolean; specialPad?: [TPCB\_PrimitiveSpecialPadShape](../types/TPCB_PrimitiveSpecialPadShape.md)<!-- -->; solderMaskAndPasteMaskExpansion?: [IPCB\_PrimitiveSolderMaskAndPasteMaskExpansion](../interfaces/IPCB_PrimitiveSolderMaskAndPasteMaskExpansion.md) \| null; heatWelding?: IPCB\_PrimitivePadHeatWelding \| null; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
-焊盘图元对象
+Pad primitive object

@@ -1,11 +1,11 @@
 # PCB\_PrimitivePoured class
 
-PCB &amp; 封装 / 覆铜填充图元类
+PCB &amp; footprint / copper fill primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitivePoured implements IPCB_PrimitiveAPI 
+class PCB_PrimitivePoured implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,86 +15,68 @@ declare class PCB_PrimitivePoured implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除覆铜填充
-
+**_(BETA)_** Delete Copper fill
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取覆铜填充
-
+**_(BETA)_** Get Copper fill
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取覆铜填充
-
+**_(BETA)_** Get Copper fill
 
 </td></tr>
 <tr><td>
 
 [getAll()](./PCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有覆铜填充图元
-
+**_(BETA)_** Get all Copper fill primitive
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId()](./PCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有覆铜填充的图元 ID
-
+**_(BETA)_** Get all Copper fill primitive IDs
 
 </td></tr>
 </tbody></table>
@@ -109,12 +91,12 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除覆铜填充
+Delete Copper fill
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitivePoured | Array<string> | Array<IPCB_PrimitivePoured>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitivePoured | Array<string> | Array<IPCB_PrimitivePoured>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -123,43 +105,35 @@ delete(primitiveIds: string | IPCB_PrimitivePoured | Array<string> | Array<IPCB_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&gt;
 
-
 </td><td>
 
-覆铜填充的图元 ID 或覆铜填充图元对象
-
+Copper fill primitive ID or Copper fill primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -167,12 +141,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取覆铜填充
+Get Copper fill
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitivePoured | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitivePoured | undefined>;
 ```
 
 ## Parameters
@@ -181,43 +155,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitivePoured | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-覆铜填充的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Copper fill primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| undefined&gt;
 
-覆铜填充图元对象，`undefined` 表示获取失败
+Copper fill primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -225,12 +191,12 @@ Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取覆铜填充
+Get Copper fill
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePoured>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePoured>>;
 ```
 
 ## Parameters
@@ -239,47 +205,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePoured>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-覆铜填充的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Copper fill primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&gt;&gt;
 
-覆铜填充图元对象，空数组表示获取失败
+Copper fill primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -287,20 +245,19 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有覆铜填充图元
+Get all Copper fill primitive
 
 ## Signature
 
 ```typescript
-getAll(): Promise<Array<IPCB_PrimitivePoured>>;
+function getAll(): Promise<Array<IPCB_PrimitivePoured>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&gt;&gt;
 
-覆铜填充图元对象数组
+Array of Copper fill primitive objects
 
 ### getallprimitiveid
 
@@ -308,17 +265,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有覆铜填充的图元 ID
+Get all Copper fill primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(): Promise<Array<string>>;
+function getAllPrimitiveId(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-覆铜填充的图元 ID 数组
+Array of Copper fill primitive IDs

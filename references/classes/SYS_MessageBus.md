@@ -1,15 +1,14 @@
 # SYS\_MessageBus class
 
-系统 / 消息总线类
+System / message bus class
 
 ## Signature
 
 ```typescript
-declare class SYS_MessageBus 
+class SYS_MessageBus
 ```
 
 ## Remarks
-
 
 ## Methods
 
@@ -17,268 +16,211 @@ declare class SYS_MessageBus
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [createPrivateMessageBus()](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-创建私有消息总线
-
+Create Private message bus
 
 </td></tr>
 <tr><td>
 
 [publish(topic, message)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：发布消息
-
+Private message bus: publish a message
 
 </td></tr>
 <tr><td>
 
 [publishPublic(topic, message)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：发布消息
-
+Public message bus: publish a message
 
 </td></tr>
 <tr><td>
 
 [pull(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：拉消息
-
+Private message bus: pull a message
 
 </td></tr>
 <tr><td>
 
 [pullAsync(topic)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：拉消息 Promise 版本
-
+Private message bus: pull a message (Promise version)
 
 </td></tr>
 <tr><td>
 
 [pullAsyncPublic(topic)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：拉消息 Promise 版本
-
+Public message bus: pull a message (Promise version)
 
 </td></tr>
 <tr><td>
 
 [pullPublic(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：拉消息
-
+Public message bus: pull a message
 
 </td></tr>
 <tr><td>
 
 [push(topic, message)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：推消息
-
+Private message bus: push a message
 
 </td></tr>
 <tr><td>
 
 [pushPublic(topic, message)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：推消息
-
+Public message bus: push a message
 
 </td></tr>
 <tr><td>
 
 [removePrivateMessageBus()](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-移除私有消息总线
-
+Remove Private message bus
 
 </td></tr>
 <tr><td>
 
 [rpcCall(topic, message, timeout)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：调用 RPC 服务
-
+Private message bus: call RPC service
 
 </td></tr>
 <tr><td>
 
 [rpcCallPublic(topic, message, timeout)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：调用 RPC 服务
-
+Public message bus: call RPC service
 
 </td></tr>
 <tr><td>
 
 [rpcService(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：注册 RPC 服务
-
+Private message bus: register RPC service
 
 </td></tr>
 <tr><td>
 
 [rpcServicePublic(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：注册 RPC 服务
-
+Public message bus: register RPC service
 
 </td></tr>
 <tr><td>
 
 [subscribe(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：订阅消息
-
+Private message bus: subscribe to a message
 
 </td></tr>
 <tr><td>
 
 [subscribeOnce(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-私有消息总线：订阅单次消息
-
+Private message bus: subscribe to a message once
 
 </td></tr>
 <tr><td>
 
 [subscribeOncePublic(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：订阅单次消息
-
+Public message bus: subscribe to a message once
 
 </td></tr>
 <tr><td>
 
 [subscribePublic(topic, callbackFn)](./SYS_MessageBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-公共消息总线：订阅消息
-
+Public message bus: subscribe to a message
 
 </td></tr>
 </tbody></table>
@@ -291,14 +233,13 @@ Description
 
 # SYS\_MessageBus.createPrivateMessageBus() method
 
-创建私有消息总线
+Create Private message bus
 
 ## Signature
 
 ```typescript
-createPrivateMessageBus(): void;
+function createPrivateMessageBus(): void;
 ```
-
 
 ## Returns
 
@@ -306,18 +247,18 @@ void
 
 ## Remarks
 
-一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线
+Generally, there is no need to call this method. The private message bus is automatically created when listening or sending messages
 
 ### publish
 
 # SYS\_MessageBus.publish() method
 
-私有消息总线：发布消息
+Private message bus: publish a message
 
 ## Signature
 
 ```typescript
-publish(topic: string, message: any): void;
+function publish(topic: string, message: any): void;
 ```
 
 ## Parameters
@@ -326,53 +267,42 @@ publish(topic: string, message: any): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-消息
-
+Message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -380,18 +310,18 @@ void
 
 ## Remarks
 
-将消息广播给每一个 Subscriber
+Broadcast the message to every Subscriber
 
 ### publishpublic
 
 # SYS\_MessageBus.publishPublic() method
 
-公共消息总线：发布消息
+Public message bus: publish a message
 
 ## Signature
 
 ```typescript
-publishPublic(topic: string, message: any): void;
+function publishPublic(topic: string, message: any): void;
 ```
 
 ## Parameters
@@ -400,53 +330,42 @@ publishPublic(topic: string, message: any): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-消息
-
+Message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -454,18 +373,18 @@ void
 
 ## Remarks
 
-将消息广播给每一个 Subscriber
+Broadcast the message to every Subscriber
 
 ### pull
 
 # SYS\_MessageBus.pull() method
 
-私有消息总线：拉消息
+Private message bus: pull a message
 
 ## Signature
 
 ```typescript
-pull(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function pull(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -474,74 +393,63 @@ pull(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-拉到消息后的回调
-
+Callback after a message is pulled
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ## Remarks
 
-每次只能拉一个消息
+Only one message can be pulled at a time
 
 ### pullasync
 
 # SYS\_MessageBus.pullAsync() method
 
-私有消息总线：拉消息 Promise 版本
+Private message bus: pull a message (Promise version)
 
 ## Signature
 
 ```typescript
-pullAsync(topic: string): Promise<any>;
+function pullAsync(topic: string): Promise<any>;
 ```
 
 ## Parameters
@@ -550,58 +458,50 @@ pullAsync(topic: string): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-拉取到的消息
+The pulled message
 
 ## Remarks
 
-每次只能拉一个消息，可以使用 `await` 等待消息拉取
+Only one message can be pulled at a time. You can use `await` to wait for the message to be pulled
 
 ### pullasyncpublic
 
 # SYS\_MessageBus.pullAsyncPublic() method
 
-公共消息总线：拉消息 Promise 版本
+Public message bus: pull a message (Promise version)
 
 ## Signature
 
 ```typescript
-pullAsyncPublic(topic: string): Promise<any>;
+function pullAsyncPublic(topic: string): Promise<any>;
 ```
 
 ## Parameters
@@ -610,58 +510,50 @@ pullAsyncPublic(topic: string): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-拉取到的消息
+The pulled message
 
 ## Remarks
 
-每次只能拉一个消息，可以使用 `await` 等待消息拉取
+Only one message can be pulled at a time. You can use `await` to wait for the message to be pulled
 
 ### pullpublic
 
 # SYS\_MessageBus.pullPublic() method
 
-公共消息总线：拉消息
+Public message bus: pull a message
 
 ## Signature
 
 ```typescript
-pullPublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function pullPublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -670,74 +562,63 @@ pullPublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTa
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
-
 
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-拉到消息后的回调
-
+Callback after a message is pulled
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ## Remarks
 
-每次只能拉一个消息
+Only one message can be pulled at a time
 
 ### push
 
 # SYS\_MessageBus.push() method
 
-私有消息总线：推消息
+Private message bus: push a message
 
 ## Signature
 
 ```typescript
-push(topic: string, message: any): void;
+function push(topic: string, message: any): void;
 ```
 
 ## Parameters
@@ -746,53 +627,42 @@ push(topic: string, message: any): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-消息
-
+Message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -800,18 +670,18 @@ void
 
 ## Remarks
 
-每个消息只有一个 Puller 可以收到
+Each message can only be received by one Puller
 
 ### pushpublic
 
 # SYS\_MessageBus.pushPublic() method
 
-公共消息总线：推消息
+Public message bus: push a message
 
 ## Signature
 
 ```typescript
-pushPublic(topic: string, message: any): void;
+function pushPublic(topic: string, message: any): void;
 ```
 
 ## Parameters
@@ -820,53 +690,42 @@ pushPublic(topic: string, message: any): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-消息
-
+Message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -874,20 +733,19 @@ void
 
 ## Remarks
 
-每个消息只有一个 Puller 可以收到
+Each message can only be received by one Puller
 
 ### removeprivatemessagebus
 
 # SYS\_MessageBus.removePrivateMessageBus() method
 
-移除私有消息总线
+Remove Private message bus
 
 ## Signature
 
 ```typescript
-removePrivateMessageBus(): void;
+function removePrivateMessageBus(): void;
 ```
-
 
 ## Returns
 
@@ -895,18 +753,18 @@ void
 
 ## Remarks
 
-一般无需调用该方法，除非你知道自己在做什么
+Generally, there is no need to call this method unless you know what you are doing
 
 ### rpccall
 
 # SYS\_MessageBus.rpcCall() method
 
-私有消息总线：调用 RPC 服务
+Private message bus: call RPC service
 
 ## Signature
 
 ```typescript
-rpcCall(topic: string, message?: any, timeout?: number): Promise<any>;
+function rpcCall(topic: string, message?: any, timeout?: number): Promise<any>;
 ```
 
 ## Parameters
@@ -915,86 +773,72 @@ rpcCall(topic: string, message?: any, timeout?: number): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-_(Optional)_ 消息
-
+_(Optional)_ Message
 
 </td></tr>
 <tr><td>
 
 timeout
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 超时
-
+_(Optional)_ Timeout
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-RPC 服务返回
+RPC service return
 
 ### rpccallpublic
 
 # SYS\_MessageBus.rpcCallPublic() method
 
-公共消息总线：调用 RPC 服务
+Public message bus: call RPC service
 
 ## Signature
 
 ```typescript
-rpcCallPublic(topic: string, message?: any, timeout?: number): Promise<any>;
+function rpcCallPublic(topic: string, message?: any, timeout?: number): Promise<any>;
 ```
 
 ## Parameters
@@ -1003,86 +847,72 @@ rpcCallPublic(topic: string, message?: any, timeout?: number): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 message
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-_(Optional)_ 消息
-
+_(Optional)_ Message
 
 </td></tr>
 <tr><td>
 
 timeout
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 超时
-
+_(Optional)_ Timeout
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-RPC 服务返回
+RPC service return
 
 ### rpcservice
 
 # SYS\_MessageBus.rpcService() method
 
-私有消息总线：注册 RPC 服务
+Private message bus: register RPC service
 
 ## Signature
 
 ```typescript
-rpcService(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void;
+function rpcService(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void;
 ```
 
 ## Parameters
@@ -1091,53 +921,42 @@ rpcService(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (...args: Array&lt;any&gt;) =&gt; any \| Promise&lt;any&gt;
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -1147,12 +966,15 @@ void
 
 # SYS\_MessageBus.rpcServicePublic() method
 
-公共消息总线：注册 RPC 服务
+Public message bus: register RPC service
 
 ## Signature
 
 ```typescript
-rpcServicePublic(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void;
+function rpcServicePublic(
+	topic: string,
+	callbackFn: (...args: Array<any>) => any | Promise<any>,
+): void;
 ```
 
 ## Parameters
@@ -1161,53 +983,42 @@ rpcServicePublic(topic: string, callbackFn: (...args: Array<any>) => any | Promi
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (...args: Array&lt;any&gt;) =&gt; any \| Promise&lt;any&gt;
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -1217,12 +1028,12 @@ void
 
 # SYS\_MessageBus.subscribe() method
 
-私有消息总线：订阅消息
+Private message bus: subscribe to a message
 
 ## Signature
 
 ```typescript
-subscribe(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function subscribe(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -1231,74 +1042,63 @@ subscribe(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTas
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ## Remarks
 
-持久性订阅消息
+Persistent subscription message
 
 ### subscribeonce
 
 # SYS\_MessageBus.subscribeOnce() method
 
-私有消息总线：订阅单次消息
+Private message bus: subscribe to a message once
 
 ## Signature
 
 ```typescript
-subscribeOnce(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function subscribeOnce(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -1307,70 +1107,62 @@ subscribeOnce(topic: string, callbackFn: (message: any) => void): ISYS_MessageBu
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ### subscribeoncepublic
 
 # SYS\_MessageBus.subscribeOncePublic() method
 
-公共消息总线：订阅单次消息
+Public message bus: subscribe to a message once
 
 ## Signature
 
 ```typescript
-subscribeOncePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function subscribeOncePublic(
+	topic: string,
+	callbackFn: (message: any) => void,
+): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -1379,70 +1171,59 @@ subscribeOncePublic(topic: string, callbackFn: (message: any) => void): ISYS_Mes
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ### subscribepublic
 
 # SYS\_MessageBus.subscribePublic() method
 
-公共消息总线：订阅消息
+Public message bus: subscribe to a message
 
 ## Signature
 
 ```typescript
-subscribePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
+function subscribePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
 ## Parameters
@@ -1451,60 +1232,49 @@ subscribePublic(topic: string, callbackFn: (message: any) => void): ISYS_Message
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topic
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-主题
-
+Theme
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (message: any) =&gt; void
 
-
 </td><td>
 
-接收到消息后的回调
-
+Callback after receiving the message
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
-消息总线任务
+Message bus task
 
 ## Remarks
 
-持久性订阅消息
+Persistent subscription message

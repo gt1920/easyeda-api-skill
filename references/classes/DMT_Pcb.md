@@ -1,16 +1,16 @@
 # DMT\_Pcb class
 
-文档树 / PCB 管理类
+Document tree / PCB management class
 
 ## Signature
 
 ```typescript
-declare class DMT_Pcb 
+class DMT_Pcb
 ```
 
 ## Remarks
 
-在当前打开的工程内进行 PCB 管理的相关操作
+Operations related to PCB management in the currently open project
 
 ## Methods
 
@@ -18,114 +18,90 @@ declare class DMT_Pcb
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copyPcb(pcbUuid, boardName)](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-复制 PCB
-
+Copy PCB
 
 </td></tr>
 <tr><td>
 
 [createPcb(boardName)](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-创建 PCB
-
+Create PCB
 
 </td></tr>
 <tr><td>
 
 [deletePcb(pcbUuid)](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-删除 PCB
-
+Delete PCB
 
 </td></tr>
 <tr><td>
 
 [getAllPcbsInfo()](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取工程内所有 PCB 的详细属性
-
+Get all in the project PCB detailed properties of
 
 </td></tr>
 <tr><td>
 
 [getCurrentPcbInfo()](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前 PCB 的详细属性
-
+Get detailed properties of Current PCB
 
 </td></tr>
 <tr><td>
 
 [getPcbInfo(pcbUuid)](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取 PCB 的详细属性
-
+Get detailed properties of PCB
 
 </td></tr>
 <tr><td>
 
 [modifyPcbName(pcbUuid, pcbName)](./DMT_Pcb.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-修改 PCB 名称
-
+Modify PCB name
 
 </td></tr>
 </tbody></table>
@@ -138,12 +114,12 @@ Description
 
 # DMT\_Pcb.copyPcb() method
 
-复制 PCB
+Copy PCB
 
 ## Signature
 
 ```typescript
-copyPcb(pcbUuid: string, boardName?: string): Promise<string | undefined>;
+function copyPcb(pcbUuid: string, boardName?: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -152,74 +128,63 @@ copyPcb(pcbUuid: string, boardName?: string): Promise<string | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pcbUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-源 PCB UUID
-
+Source PCB UUID
 
 </td></tr>
 <tr><td>
 
 boardName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 新 PCB 所属板子名称，如若不指定则为游离 PCB
-
+_(Optional)_ Name of the board the new PCB belongs to. If not specified, it is a free PCB
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-新 PCB UUID，如若为 `undefined` 则复制失败
+New PCB UUID. If it is `undefined`<!-- -->, the copy failed
 
 ## Remarks
 
-即使此处 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），也不新建复用模块符号，此操作逻辑与当前编辑器前端保持一致
+Even if the PCB here is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), no new reuse block symbol will be created. This operation logic is consistent with the current editor front end
 
 ### createpcb
 
 # DMT\_Pcb.createPcb() method
 
-创建 PCB
+Create PCB
 
 ## Signature
 
 ```typescript
-createPcb(boardName?: string): Promise<string | undefined>;
+function createPcb(boardName?: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -228,54 +193,46 @@ createPcb(boardName?: string): Promise<string | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 boardName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 所属板子名称，如若不指定则为游离 PCB
-
+_(Optional)_ Name of the board it belongs to. If not specified, it is a free PCB
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-PCB UUID，如若为 `undefined` 则创建失败
+PCB UUID, if it is `undefined` creation fails
 
 ### deletepcb
 
 # DMT\_Pcb.deletePcb() method
 
-删除 PCB
+Delete PCB
 
 ## Signature
 
 ```typescript
-deletePcb(pcbUuid: string): Promise<boolean>;
+function deletePcb(pcbUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -284,100 +241,90 @@ deletePcb(pcbUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pcbUuid
 
-
 </td><td>
 
 string
-
 
 </td><td>
 
 PCB UUID
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则删除 PCB 时将同步删除关联的原理图和复用模块符号，复用模块符号不可删除则跳过
+If the PCB is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), deleting the PCB will also delete the associated schematic and reuse block symbol. If the reuse block symbol cannot be deleted, it will be skipped
 
 ### getallpcbsinfo
 
 # DMT\_Pcb.getAllPcbsInfo() method
 
-获取工程内所有 PCB 的详细属性
+Get all in the project PCB detailed properties of
 
 ## Signature
 
 ```typescript
-getAllPcbsInfo(): Promise<Array<IDMT_PcbItem>>;
+function getAllPcbsInfo(): Promise<Array<IDMT_PcbItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md)<!-- -->&gt;&gt;
 
-所有 PCB 的详细属性的数组
+Array of detailed properties of all PCBs
 
 ### getcurrentpcbinfo
 
 # DMT\_Pcb.getCurrentPcbInfo() method
 
-获取当前 PCB 的详细属性
+Get detailed properties of Current PCB
 
 ## Signature
 
 ```typescript
-getCurrentPcbInfo(): Promise<IDMT_PcbItem | undefined>;
+function getCurrentPcbInfo(): Promise<IDMT_PcbItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md) \| undefined&gt;
 
-PCB 的详细属性，如若为 `undefined` 则获取失败
+PCB detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的 PCB 的详细属性
+It will get the detailed properties of the currently open PCB that has the last input focus
 
 ### getpcbinfo
 
 # DMT\_Pcb.getPcbInfo() method
 
-获取 PCB 的详细属性
+Get detailed properties of PCB
 
 ## Signature
 
 ```typescript
-getPcbInfo(pcbUuid: string): Promise<IDMT_PcbItem | undefined>;
+function getPcbInfo(pcbUuid: string): Promise<IDMT_PcbItem | undefined>;
 ```
 
 ## Parameters
@@ -386,54 +333,46 @@ getPcbInfo(pcbUuid: string): Promise<IDMT_PcbItem | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pcbUuid
 
-
 </td><td>
 
 string
-
 
 </td><td>
 
 PCB UUID
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md) \| undefined&gt;
 
-PCB 的详细属性，如若为 `undefined` 则获取失败
+PCB detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ### modifypcbname
 
 # DMT\_Pcb.modifyPcbName() method
 
-修改 PCB 名称
+Modify PCB name
 
 ## Signature
 
 ```typescript
-modifyPcbName(pcbUuid: string, pcbName: string): Promise<boolean>;
+function modifyPcbName(pcbUuid: string, pcbName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -442,60 +381,49 @@ modifyPcbName(pcbUuid: string, pcbName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pcbUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
 PCB UUID
-
 
 </td></tr>
 <tr><td>
 
 pcbName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-PCB 名称
-
+PCB name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful
 
 ## Remarks
 
-如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联原理图名称
+If the PCB is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), modifying the name will also modify the reuse block symbol name and the associated schematic name

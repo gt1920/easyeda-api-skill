@@ -1,11 +1,11 @@
 # LIB\_3DModel class
 
-综合库 / 3D 模型类
+Comprehensive library / 3D model class
 
 ## Signature
 
 ```typescript
-declare class LIB_3DModel 
+class LIB_3DModel
 ```
 
 ## Methods
@@ -14,100 +14,79 @@ declare class LIB_3DModel
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copy(modelUuid, libraryUuid, targetLibraryUuid, targetClassification, newModelName)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 复制 3D 模型
-
+**_(BETA)_** Copy 3D model
 
 </td></tr>
 <tr><td>
 
 [create(libraryUuid, modelFile, classification, unit)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建 3D 模型
-
+**_(BETA)_** Create 3D model
 
 </td></tr>
 <tr><td>
 
 [delete(modelUuid, libraryUuid)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除 3D 模型
-
+**_(BETA)_** Delete 3D model
 
 </td></tr>
 <tr><td>
 
 [get(modelUuid, libraryUuid)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取 3D 模型的所有属性
-
+**_(BETA)_** Get all properties of the 3D model
 
 </td></tr>
 <tr><td>
 
 [modify(modelUuid, libraryUuid, modelName, classification, description)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改 3D 模型
-
+**_(BETA)_** Modify 3D model
 
 </td></tr>
 <tr><td>
 
 [search(key, libraryUuid, classification, itemsOfPage, page)](./LIB_3DModel.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 搜索 3D 模型
-
+**_(BETA)_** Search 3D model
 
 </td></tr>
 </tbody></table>
@@ -122,12 +101,18 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-复制 3D 模型
+Copy 3D model
 
 ## Signature
 
 ```typescript
-copy(modelUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newModelName?: string): Promise<string | undefined>;
+function copy(
+	modelUuid: string,
+	libraryUuid: string,
+	targetLibraryUuid: string,
+	targetClassification?: ILIB_ClassificationIndex | Array<string>,
+	newModelName?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -136,107 +121,87 @@ copy(modelUuid: string, libraryUuid: string, targetLibraryUuid: string, targetCl
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 modelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-3D 模型 UUID
-
+3D model UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 targetLibraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-目标库 UUID
-
+Target library UUID
 
 </td></tr>
 <tr><td>
 
 targetClassification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 目标库内的分类
-
+_(Optional)_ Classification in the target library
 
 </td></tr>
 <tr><td>
 
 newModelName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 新 3D 模型名称，如若目标库内存在重名 3D 模型将导致复制失败
-
+_(Optional)_ New 3D model name. If a 3D model with the same name exists in the target library, the copy will fail
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-目标库内新 3D 模型的 UUID
+UUID of the new 3D model in the target library
 
 ### create
 
@@ -244,12 +209,22 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建 3D 模型
+Create 3D model
 
 ## Signature
 
 ```typescript
-create(libraryUuid: string, modelFile: Blob, classification?: ILIB_ClassificationIndex | Array<string>, unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.METER | ESYS_Unit.MIL | ESYS_Unit.INCH): Promise<Array<string> | undefined>;
+function create(
+	libraryUuid: string,
+	modelFile: Blob,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	unit?:
+		| ESYS_Unit.MILLIMETER
+		| ESYS_Unit.CENTIMETER
+		| ESYS_Unit.METER
+		| ESYS_Unit.MIL
+		| ESYS_Unit.INCH,
+): Promise<Array<string> | undefined>;
 ```
 
 ## Parameters
@@ -258,95 +233,78 @@ create(libraryUuid: string, modelFile: Blob, classification?: ILIB_Classificatio
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 modelFile
 
-
 </td><td>
 
 Blob
 
-
 </td><td>
 
-3D 模型文件数据
-
+3D model file data
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 unit
 
-
 </td><td>
 
 [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.METER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md)
 
-
 </td><td>
 
-_(Optional)_ 单位
-
+_(Optional)_ Unit
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt; \| undefined&gt;
 
-创建的所有 3D 模型的 UUID
+UUIDs of all created 3D models
 
 ## Remarks
 
-传入的 `modelFile` 可以为多个模型文件的压缩包，EDA 将会自动提取多个模型
+The passed-in `modelFile` can be an archive of multiple model files. EDA will automatically extract the multiple models
 
 ### delete
 
@@ -354,12 +312,12 @@ Promise&lt;Array&lt;string&gt; \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除 3D 模型
+Delete 3D model
 
 ## Signature
 
 ```typescript
-delete(modelUuid: string, libraryUuid: string): Promise<boolean>;
+function delete(modelUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -368,59 +326,48 @@ delete(modelUuid: string, libraryUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 modelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-3D 模型 UUID
-
+3D model UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### get
 
@@ -428,12 +375,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取 3D 模型的所有属性
+Get all properties of the 3D model
 
 ## Signature
 
 ```typescript
-get(modelUuid: string, libraryUuid?: string): Promise<ILIB_3DModelItem | undefined>;
+function get(modelUuid: string, libraryUuid?: string): Promise<ILIB_3DModelItem | undefined>;
 ```
 
 ## Parameters
@@ -442,59 +389,48 @@ get(modelUuid: string, libraryUuid?: string): Promise<ILIB_3DModelItem | undefin
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 modelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-3D 模型 UUID
-
+3D model UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_3DModelItem](../interfaces/ILIB_3DModelItem.md) \| undefined&gt;
 
-3D 模型属性
+3D model property
 
 ### modify
 
@@ -502,12 +438,18 @@ Promise&lt;[ILIB\_3DModelItem](../interfaces/ILIB_3DModelItem.md) \| undefined&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改 3D 模型
+Modify 3D model
 
 ## Signature
 
 ```typescript
-modify(modelUuid: string, libraryUuid: string, modelName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
+function modify(
+	modelUuid: string,
+	libraryUuid: string,
+	modelName?: string,
+	classification?: ILIB_ClassificationIndex | Array<string> | null,
+	description?: string | null,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -516,111 +458,91 @@ modify(modelUuid: string, libraryUuid: string, modelName?: string, classificatio
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 modelUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-3D 模型 UUID
-
+3D model UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 modelName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 3D 模型名称
-
+_(Optional)_ 3D model name
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt; \| null
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 描述
-
+_(Optional)_ Description
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-如希望清除某些属性，则将其的值设置为 `null`
+If you want to clear certain properties, set their values to `null`
 
 ### search
 
@@ -628,12 +550,18 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-搜索 3D 模型
+Search 3D model
 
 ## Signature
 
 ```typescript
-search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_3DModelSearchItem>>;
+function search(
+	key: string,
+	libraryUuid?: string,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	itemsOfPage?: number,
+	page?: number,
+): Promise<Array<ILIB_3DModelSearchItem>>;
 ```
 
 ## Parameters
@@ -642,104 +570,84 @@ search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIn
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 key
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-搜索关键字
-
+Search keyword
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类，默认为全部
-
+_(Optional)_ Classification, defaults to all
 
 </td></tr>
 <tr><td>
 
 itemsOfPage
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
-
+_(Optional)_ Number of search results per page
 
 </td></tr>
 <tr><td>
 
 page
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 页数
-
+_(Optional)_ Page count
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_3DModelSearchItem](../interfaces/ILIB_3DModelSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的 3D 模型属性列表
+List of searched 3D model properties

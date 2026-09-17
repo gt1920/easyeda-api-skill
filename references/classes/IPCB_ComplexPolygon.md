@@ -1,17 +1,16 @@
 # IPCB\_ComplexPolygon class
 
-复杂多边形
+Complex polygon
 
 ## Signature
 
 ```typescript
-declare class IPCB_ComplexPolygon 
+class IPCB_ComplexPolygon
 ```
 
 ## Remarks
 
-复杂多边形可以包含多个单多边形，通过 [fill-rule](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule) 将其组合，以实现多边形的布尔运算。 目前嘉立创 EDA 专业版固定使用 [nonzero](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero) 这个 fill-rule。
-
+developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule \| fill-rule<!-- -->} to combine them to achieve Boolean operations on polygons.
 
 ## Methods
 
@@ -19,86 +18,68 @@ declare class IPCB_ComplexPolygon
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addSource(complexPolygon)](./IPCB_ComplexPolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-添加多边形数据
-
+Add Polygon data
 
 </td></tr>
 <tr><td>
 
 [getCenter()](./IPCB_ComplexPolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取复杂多边形中心点
-
+**_(BETA)_** Get Complex polygon center point
 
 </td></tr>
 <tr><td>
 
 [getSource()](./IPCB_ComplexPolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取多边形数据
-
+Get Polygon data
 
 </td></tr>
 <tr><td>
 
 [getSourceStrictComplex()](./IPCB_ComplexPolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取复杂多边形数据
-
+Get Complex polygon data
 
 </td></tr>
 <tr><td>
 
 [toPolygon()](./IPCB_ComplexPolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-拆分为单多边形数组
-
+Split is single polygon array
 
 </td></tr>
 </tbody></table>
@@ -111,12 +92,18 @@ Description
 
 # IPCB\_ComplexPolygon.addSource() method
 
-添加多边形数据
+Add Polygon data
 
 ## Signature
 
 ```typescript
-addSource(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | Array<IPCB_Polygon>): IPCB_ComplexPolygon;
+function addSource(
+	complexPolygon:
+		| TPCB_PolygonSourceArray
+		| Array<TPCB_PolygonSourceArray>
+		| IPCB_Polygon
+		| Array<IPCB_Polygon>,
+): IPCB_ComplexPolygon;
 ```
 
 ## Parameters
@@ -125,43 +112,35 @@ addSource(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArra
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 complexPolygon
 
-
 </td><td>
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) \| Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt; \| [IPCB\_Polygon](./IPCB_Polygon.md) \| Array&lt;[IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->&gt;
 
-
 </td><td>
 
-复杂多边形数据
-
+Complex polygon data
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md)
 
-复杂多边形对象
+Complex polygon object
 
 ### getcenter
 
@@ -169,89 +148,82 @@ complexPolygon
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取复杂多边形中心点
+Get Complex polygon center point
 
 ## Signature
 
 ```typescript
-getCenter(): {
-        x: number;
-        y: number;
-    };
+function getCenter(): { x: number; y: number };
 ```
-
 
 ## Returns
 
-\{ x: number; y: number; \}
+\{ x: number; y: number \}
 
-复杂多边形中心点
+Complex polygon center point
 
 ### getsource
 
 # IPCB\_ComplexPolygon.getSource() method
 
-获取多边形数据
+Get Polygon data
 
 ## Signature
 
 ```typescript
-getSource(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
+function getSource(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
 ```
-
 
 ## Returns
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) \| Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
-单多边形或复杂多边形数据
+Single polygon or complex polygon data
 
 ## Remarks
 
-如遇仅包含单一的单多边形，将会化简最外层的数组
+If it only contains a single polygon, the outermost array will be simplified
 
 ### getsourcestrictcomplex
 
 # IPCB\_ComplexPolygon.getSourceStrictComplex() method
 
-获取复杂多边形数据
+Get Complex polygon data
 
 ## Signature
 
 ```typescript
-getSourceStrictComplex(): Array<TPCB_PolygonSourceArray>;
+function getSourceStrictComplex(): Array<TPCB_PolygonSourceArray>;
 ```
-
 
 ## Returns
 
 Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
-复杂多边形数据
+Complex polygon data
 
 ## Remarks
 
-强制返回复杂多边形格式数据，即使它仅包含单一的单多边形
+Forcibly return data in complex polygon format, even if it only contains a single polygon
 
 ### topolygon
 
 # IPCB\_ComplexPolygon.toPolygon() method
 
-拆分为单多边形数组
+Split is single polygon array
 
 ## Signature
 
 ```typescript
-toPolygon(): Array<IPCB_Polygon>;
+function toPolygon(): Array<IPCB_Polygon>;
 ```
-
 
 ## Returns
 
 Array&lt;[IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->&gt;
 
-单多边形数组
+Single polygon array
 
 ## Remarks
 
-将复杂多边形拆分为单多边形对象数组
+Will complex polygon split is single polygon array of objects

@@ -1,20 +1,19 @@
 # ISCH\_PrimitiveComponentPin class
 
-器件引脚图元
+Device pin primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin 
+class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin
 ```
 **Extends:** [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
 ## Remarks
 
-器件引脚图元是一个特殊的图元，它指的是在原理图画布上关联到符号的引脚
+A device pin primitive is a special primitive. It refers to the pin associated with a symbol on the schematic canvas
 
-器件引脚图元仅可更改 `pinNumber`<!-- -->、`noConnected` 属性，其它所有属性均为只读， 并且你只能通过 [器件类的 getAllPinsByPrimitiveId 方法](./SCH_PrimitiveComponent.md) 或 [器件图元的 getAllPins 方法](./ISCH_PrimitiveComponent.md) 获取到器件引脚图元
-
+For a device pin primitive, only the `pinNumber` and `noConnected` properties can be changed; all other properties are read-only. And you can only obtain a device pin primitive through [the getAllPinsByPrimitiveId method of the device class](./SCH_PrimitiveComponent.md) or [the getAllPins method of the device primitive](./ISCH_PrimitiveComponent.md)
 
 ## Properties
 
@@ -22,27 +21,22 @@ declare class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [primitiveType](./ISCH_PrimitiveComponentPin.md)
-
 
 </td><td>
 
@@ -50,16 +44,13 @@ Description
 
 `readonly`
 
-
 </td><td>
 
 [ESCH\_PrimitiveType.COMPONENT\_PIN](../enums/ESCH_PrimitiveType.md)
 
-
 </td><td>
 
 图元类型
-
 
 </td></tr>
 </tbody></table>
@@ -70,30 +61,24 @@ Description
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitiveComponentPin.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 </tbody></table>
@@ -111,7 +96,7 @@ Description
 ## Signature
 
 ```typescript
-protected readonly primitiveType: ESCH_PrimitiveType.COMPONENT_PIN;
+function readonly primitiveType: ESCH_PrimitiveType.COMPONENT_PIN;
 ```
 
 
@@ -125,17 +110,16 @@ protected readonly primitiveType: ESCH_PrimitiveType.COMPONENT_PIN;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitiveComponentPin>;
+function done(): Promise<ISCH_PrimitiveComponentPin>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)<!-- -->&gt;
 
-器件引脚图元对象
+Device pin primitive object

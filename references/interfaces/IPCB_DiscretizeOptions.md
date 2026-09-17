@@ -1,11 +1,11 @@
 # IPCB\_DiscretizeOptions interface
 
-离散化选项
+Discretization options
 
 ## Signature
 
 ```typescript
-interface IPCB_DiscretizeOptions 
+interface IPCB_DiscretizeOptions
 ```
 
 ## Properties
@@ -14,40 +14,32 @@ interface IPCB_DiscretizeOptions
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [step?](./IPCB_DiscretizeOptions.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
 _(Optional)_ 离散步长，即相邻离散点之间的最大距离
-
 
 </td></tr>
 </tbody></table>

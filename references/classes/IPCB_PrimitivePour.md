@@ -1,16 +1,15 @@
 # IPCB\_PrimitivePour class
 
-覆铜边框图元
+Copper border primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitivePour implements IPCB_Primitive 
+class IPCB_PrimitivePour implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,436 +17,343 @@ declare class IPCB_PrimitivePour implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [convertToFill()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：填充图元(默认是填充区域)
-
+**_(BETA)_** Convert to: fill primitive (default is the fill region)
 
 </td></tr>
 <tr><td>
 
 [convertToPolyline()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：折线图元(默认是线条)
-
+**_(BETA)_** Convert to: polyline primitive (default is the line)
 
 </td></tr>
 <tr><td>
 
 [convertToRegion()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：区域图元(默认是禁止区域)
-
+**_(BETA)_** Convert to: region primitive (default is the forbidden region)
 
 </td></tr>
 <tr><td>
 
 [done()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getCopperRegion()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取铺铜区域覆铜填充图元
-
+**_(BETA)_** Get the copper fill primitive of the copper region
 
 </td></tr>
 <tr><td>
 
 [getState\_ComplexPolygon()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：复杂多边形
-
+Get the property state: complex polygon
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_Net()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：网络名称
-
+Get the property state: net name
 
 </td></tr>
 <tr><td>
 
 [getState\_PourFillMethod()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：覆铜填充方法
-
+Get the property state: copper fill method
 
 </td></tr>
 <tr><td>
 
 [getState\_PourName()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：覆铜边框名称
-
+Get the property state: copper border name
 
 </td></tr>
 <tr><td>
 
 [getState\_PourPriority()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：覆铜优先级
-
+Get the property state: copper priority
 
 </td></tr>
 <tr><td>
 
 [getState\_PreserveSilos()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否保留孤岛
-
+Get the property state: whether to keep islands
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [rebuildCopperRegion()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 重建铺铜区域覆铜填充
-
+**_(BETA)_** Rebuild the copper fill of the copper region
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_ComplexPolygon(complexPolygon)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：复杂多边形
-
+**_(BETA)_** Set the property state: complex polygon
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_Net(net)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：网络名称
-
+**_(BETA)_** Set the property state: net name
 
 </td></tr>
 <tr><td>
 
 [setState\_PourFillMethod(pourFillMethod)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：覆铜填充方法
-
+**_(BETA)_** Set the property state: copper fill method
 
 </td></tr>
 <tr><td>
 
 [setState\_PourName(pourName)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：覆铜边框名称
-
+**_(BETA)_** Set the property state: copper border name
 
 </td></tr>
 <tr><td>
 
 [setState\_PourPriority(pourPriority)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：覆铜优先级
-
+**_(BETA)_** Set the property state: copper priority
 
 </td></tr>
 <tr><td>
 
 [setState\_PreserveSilos(preserveSilos)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否保留孤岛
-
+**_(BETA)_** Set the property state: whether to keep islands
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitivePour.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -462,20 +368,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：填充图元(默认是填充区域)
+Convert to: fill primitive (default is the fill region)
 
 ## Signature
 
 ```typescript
-convertToFill(): Promise<IPCB_PrimitiveFill>;
+function convertToFill(): Promise<IPCB_PrimitiveFill>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
-填充图元对象
+Fill primitive object
 
 ### converttopolyline
 
@@ -483,20 +388,19 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：折线图元(默认是线条)
+Convert to: polyline primitive (default is the line)
 
 ## Signature
 
 ```typescript
-convertToPolyline(): Promise<IPCB_PrimitivePolyline>;
+function convertToPolyline(): Promise<IPCB_PrimitivePolyline>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
-折线图元对象
+Polyline primitive object
 
 ### converttoregion
 
@@ -504,20 +408,19 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：区域图元(默认是禁止区域)
+Convert to: region primitive (default is the forbidden region)
 
 ## Signature
 
 ```typescript
-convertToRegion(): Promise<IPCB_PrimitiveRegion>;
+function convertToRegion(): Promise<IPCB_PrimitiveRegion>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
-区域图元对象
+Region primitive object
 
 ### done
 
@@ -525,20 +428,19 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitivePour>;
+function done(): Promise<IPCB_PrimitivePour>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### getcopperregion
 
@@ -546,248 +448,235 @@ Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取铺铜区域覆铜填充图元
+Get the copper fill primitive of the copper region
 
 ## Signature
 
 ```typescript
-getCopperRegion(): Promise<IPCB_PrimitivePoured | undefined>;
+function getCopperRegion(): Promise<IPCB_PrimitivePoured | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| undefined&gt;
 
-覆铜填充图元，如若不存在关联的覆铜填充图元则返回 `undefined`
+The copper fill primitive. If no associated copper fill primitive exists, `undefined` is returned
 
 ### getstate_complexpolygon
 
 # IPCB\_PrimitivePour.getState\_ComplexPolygon() method
 
-获取属性状态：复杂多边形
+Get the property state: complex polygon
 
 ## Signature
 
 ```typescript
-getState_ComplexPolygon(): IPCB_Polygon;
+function getState_ComplexPolygon(): IPCB_Polygon;
 ```
-
 
 ## Returns
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-复杂多边形
+Complex polygon
 
 ### getstate_layer
 
 # IPCB\_PrimitivePour.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfCopper;
+function getState_Layer(): TPCB_LayersOfCopper;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfCopper](../types/TPCB_LayersOfCopper.md)
 
-层
+Layer
 
 ### getstate_linewidth
 
 # IPCB\_PrimitivePour.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number;
+function getState_LineWidth(): number;
 ```
-
 
 ## Returns
 
 number
 
-线宽
+Line width
 
 ### getstate_net
 
 # IPCB\_PrimitivePour.getState\_Net() method
 
-获取属性状态：网络名称
+Get the property state: net name
 
 ## Signature
 
 ```typescript
-getState_Net(): string;
+function getState_Net(): string;
 ```
-
 
 ## Returns
 
 string
 
-网络名称
+Net name
 
 ### getstate_pourfillmethod
 
 # IPCB\_PrimitivePour.getState\_PourFillMethod() method
 
-获取属性状态：覆铜填充方法
+Get the property state: copper fill method
 
 ## Signature
 
 ```typescript
-getState_PourFillMethod(): any;
+function getState_PourFillMethod(): any;
 ```
-
 
 ## Returns
 
 any
 
-覆铜填充方法
+Copper fill method
 
 ### getstate_pourname
 
 # IPCB\_PrimitivePour.getState\_PourName() method
 
-获取属性状态：覆铜边框名称
+Get the property state: copper border name
 
 ## Signature
 
 ```typescript
-getState_PourName(): string;
+function getState_PourName(): string;
 ```
-
 
 ## Returns
 
 string
 
-覆铜边框名称
+Copper border name
 
 ### getstate_pourpriority
 
 # IPCB\_PrimitivePour.getState\_PourPriority() method
 
-获取属性状态：覆铜优先级
+Get the property state: copper priority
 
 ## Signature
 
 ```typescript
-getState_PourPriority(): number;
+function getState_PourPriority(): number;
 ```
-
 
 ## Returns
 
 number
 
-覆铜优先级
+Copper priority
 
 ### getstate_preservesilos
 
 # IPCB\_PrimitivePour.getState\_PreserveSilos() method
 
-获取属性状态：是否保留孤岛
+Get the property state: whether to keep islands
 
 ## Signature
 
 ```typescript
-getState_PreserveSilos(): boolean;
+function getState_PreserveSilos(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否保留孤岛
+Whether to keep islands
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitivePour.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitivePour.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitivePour.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### isasync
 
 # IPCB\_PrimitivePour.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### rebuildcopperregion
 
@@ -795,20 +684,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-重建铺铜区域覆铜填充
+Rebuild the copper fill of the copper region
 
 ## Signature
 
 ```typescript
-rebuildCopperRegion(): Promise<IPCB_PrimitivePoured | undefined>;
+function rebuildCopperRegion(): Promise<IPCB_PrimitivePoured | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| undefined&gt;
 
-覆铜填充图元，如若未重建出覆铜填充图元则返回 `undefined`
+The copper fill primitive. If no copper fill primitive is rebuilt, `undefined` is returned
 
 ### reset
 
@@ -816,20 +704,19 @@ Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitivePour>;
+function reset(): Promise<IPCB_PrimitivePour>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_complexpolygon
 
@@ -837,12 +724,12 @@ Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：复杂多边形
+Set the property state: complex polygon
 
 ## Signature
 
 ```typescript
-setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitivePour;
+function setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -851,43 +738,35 @@ setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 complexPolygon
 
-
 </td><td>
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-
 </td><td>
 
-复杂多边形
-
+Complex polygon
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_layer
 
@@ -895,12 +774,12 @@ complexPolygon
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfCopper): IPCB_PrimitivePour;
+function setState_Layer(layer: TPCB_LayersOfCopper): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -909,43 +788,35 @@ setState_Layer(layer: TPCB_LayersOfCopper): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfCopper](../types/TPCB_LayersOfCopper.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_linewidth
 
@@ -953,12 +824,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number): IPCB_PrimitivePour;
+function setState_LineWidth(lineWidth: number): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -967,43 +838,35 @@ setState_LineWidth(lineWidth: number): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_net
 
@@ -1011,12 +874,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：网络名称
+Set the property state: net name
 
 ## Signature
 
 ```typescript
-setState_Net(net: string): IPCB_PrimitivePour;
+function setState_Net(net: string): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1025,43 +888,35 @@ setState_Net(net: string): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_pourfillmethod
 
@@ -1069,12 +924,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：覆铜填充方法
+Set the property state: copper fill method
 
 ## Signature
 
 ```typescript
-setState_PourFillMethod(pourFillMethod: EPCB_PrimitivePourFillMethod): IPCB_PrimitivePour;
+function setState_PourFillMethod(pourFillMethod: EPCB_PrimitivePourFillMethod): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1083,43 +938,35 @@ setState_PourFillMethod(pourFillMethod: EPCB_PrimitivePourFillMethod): IPCB_Prim
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourFillMethod
 
-
 </td><td>
 
 [EPCB\_PrimitivePourFillMethod](../enums/EPCB_PrimitivePourFillMethod.md)
 
-
 </td><td>
 
-覆铜填充方法
-
+Copper fill method
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_pourname
 
@@ -1127,12 +974,12 @@ pourFillMethod
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：覆铜边框名称
+Set the property state: copper border name
 
 ## Signature
 
 ```typescript
-setState_PourName(pourName: string): IPCB_PrimitivePour;
+function setState_PourName(pourName: string): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1141,43 +988,35 @@ setState_PourName(pourName: string): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-覆铜边框名称
-
+Copper border name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_pourpriority
 
@@ -1185,12 +1024,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：覆铜优先级
+Set the property state: copper priority
 
 ## Signature
 
 ```typescript
-setState_PourPriority(pourPriority: number): IPCB_PrimitivePour;
+function setState_PourPriority(pourPriority: number): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1199,43 +1038,35 @@ setState_PourPriority(pourPriority: number): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourPriority
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-覆铜优先级
-
+Copper priority
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_preservesilos
 
@@ -1243,12 +1074,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否保留孤岛
+Set the property state: whether to keep islands
 
 ## Signature
 
 ```typescript
-setState_PreserveSilos(preserveSilos: boolean): IPCB_PrimitivePour;
+function setState_PreserveSilos(preserveSilos: boolean): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1257,43 +1088,35 @@ setState_PreserveSilos(preserveSilos: boolean): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 preserveSilos
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否保留孤岛
-
+Whether to keep islands
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### setstate_primitivelock
 
@@ -1301,12 +1124,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitivePour;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitivePour;
 ```
 
 ## Parameters
@@ -1315,78 +1138,68 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitivePour;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### toasync
 
 # IPCB\_PrimitivePour.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitivePour;
+function toAsync(): IPCB_PrimitivePour;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object
 
 ### tosync
 
 # IPCB\_PrimitivePour.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitivePour;
+function toSync(): IPCB_PrimitivePour;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)
 
-覆铜边框图元对象
+Copper border primitive object

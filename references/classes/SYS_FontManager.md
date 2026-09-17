@@ -1,16 +1,16 @@
 # SYS\_FontManager class
 
-系统 / 字体管理类
+System / font manager class
 
 ## Signature
 
 ```typescript
-declare class SYS_FontManager 
+class SYS_FontManager
 ```
 
 ## Remarks
 
-配置嘉立创 EDA 专业版允许调用的系统字体列表
+Configure the list of system fonts that EasyEDA Pro is allowed to use
 
 ## Methods
 
@@ -18,58 +18,46 @@ declare class SYS_FontManager
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addFont(fontName)](./SYS_FontManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-添加字体到字体列表
-
+Add Font to font list
 
 </td></tr>
 <tr><td>
 
 [deleteFont(fontName)](./SYS_FontManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-删除字体列表内的指定字体
-
+Delete the specified font from the font list
 
 </td></tr>
 <tr><td>
 
 [getFontsList()](./SYS_FontManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前已经配置的字体列表
-
+Get the currently configured font list
 
 </td></tr>
 </tbody></table>
@@ -82,12 +70,12 @@ Description
 
 # SYS\_FontManager.addFont() method
 
-添加字体到字体列表
+Add Font to font list
 
 ## Signature
 
 ```typescript
-addFont(fontName: string): Promise<boolean>;
+function addFont(fontName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -96,54 +84,46 @@ addFont(fontName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-字体名称
-
+Font name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-添加操作是否成功
+Add Whether the operation is successful
 
 ### deletefont
 
 # SYS\_FontManager.deleteFont() method
 
-删除字体列表内的指定字体
+Delete the specified font from the font list
 
 ## Signature
 
 ```typescript
-deleteFont(fontName: string): Promise<boolean>;
+function deleteFont(fontName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -152,59 +132,50 @@ deleteFont(fontName: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-字体名称
-
+Font name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### getfontslist
 
 # SYS\_FontManager.getFontsList() method
 
-获取当前已经配置的字体列表
+Get the currently configured font list
 
 ## Signature
 
 ```typescript
-getFontsList(): Promise<Array<string>>;
+function getFontsList(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-字体列表
+Font list

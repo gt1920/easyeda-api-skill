@@ -1,11 +1,11 @@
 # SYS\_LoadingAndProgressBar class
 
-系统 / 加载与进度条类
+System / loading and progress bar class
 
 ## Signature
 
 ```typescript
-declare class SYS_LoadingAndProgressBar 
+class SYS_LoadingAndProgressBar
 ```
 
 ## Methods
@@ -14,72 +14,57 @@ declare class SYS_LoadingAndProgressBar
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [destroyLoading()](./SYS_LoadingAndProgressBar.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-销毁无进度加载覆盖
-
+Destroy the no-progress loading overlay
 
 </td></tr>
 <tr><td>
 
 [destroyProgressBar()](./SYS_LoadingAndProgressBar.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-销毁进度条
-
+Destroy the progress bar
 
 </td></tr>
 <tr><td>
 
 [showLoading()](./SYS_LoadingAndProgressBar.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-显示无进度加载覆盖
-
+Show the no-progress loading overlay
 
 </td></tr>
 <tr><td>
 
 [showProgressBar(progress, title)](./SYS_LoadingAndProgressBar.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-显示进度条或设置进度条进度
-
+Show the progress bar or set its progress
 
 </td></tr>
 </tbody></table>
@@ -92,14 +77,13 @@ Description
 
 # SYS\_LoadingAndProgressBar.destroyLoading() method
 
-销毁无进度加载覆盖
+Destroy the no-progress loading overlay
 
 ## Signature
 
 ```typescript
-destroyLoading(): void;
+function destroyLoading(): void;
 ```
-
 
 ## Returns
 
@@ -109,14 +93,13 @@ void
 
 # SYS\_LoadingAndProgressBar.destroyProgressBar() method
 
-销毁进度条
+Destroy the progress bar
 
 ## Signature
 
 ```typescript
-destroyProgressBar(): void;
+function destroyProgressBar(): void;
 ```
-
 
 ## Returns
 
@@ -126,14 +109,13 @@ void
 
 # SYS\_LoadingAndProgressBar.showLoading() method
 
-显示无进度加载覆盖
+Show the no-progress loading overlay
 
 ## Signature
 
 ```typescript
-showLoading(): void;
+function showLoading(): void;
 ```
-
 
 ## Returns
 
@@ -141,18 +123,18 @@ void
 
 ## Remarks
 
-没有进度指示，但会存在与进度条一致的灰色覆盖，阻止用户进一步操作
+There is no progress indicator, but a gray overlay consistent with the progress bar will appear to prevent further user operations
 
 ### showprogressbar
 
 # SYS\_LoadingAndProgressBar.showProgressBar() method
 
-显示进度条或设置进度条进度
+Show the progress bar or set its progress
 
 ## Signature
 
 ```typescript
-showProgressBar(progress?: number, title?: string): void;
+function showProgressBar(progress?: number, title?: string): void;
 ```
 
 ## Parameters
@@ -161,53 +143,42 @@ showProgressBar(progress?: number, title?: string): void;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 progress
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 进度值，取值范围 `0-100`
-
+_(Optional)_ Progress value, value range `0-100`
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 进度条标题
-
+_(Optional)_ Progress bar title
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -215,4 +186,4 @@ void
 
 ## Remarks
 
-当进度达到 `100` 时，进度条将自动销毁
+When the progress reaches `100`<!-- -->, the progress bar will be automatically destroyed

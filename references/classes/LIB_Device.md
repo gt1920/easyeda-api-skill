@@ -1,11 +1,11 @@
 # LIB\_Device class
 
-综合库 / 器件类
+Comprehensive library / device class
 
 ## Signature
 
 ```typescript
-declare class LIB_Device 
+class LIB_Device
 ```
 
 ## Methods
@@ -14,142 +14,112 @@ declare class LIB_Device
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copy(deviceUuid, libraryUuid, targetLibraryUuid, targetClassification, newDeviceName)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 复制器件
-
+**_(BETA)_** Copy Device
 
 </td></tr>
 <tr><td>
 
 [create(libraryUuid, deviceName, classification, association, description, property)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建器件
-
+**_(BETA)_** Create Device
 
 </td></tr>
 <tr><td>
 
 [delete(deviceUuid, libraryUuid)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除器件
-
+**_(BETA)_** Delete Device
 
 </td></tr>
 <tr><td>
 
 [get(deviceUuid, libraryUuid)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件的所有属性
-
+**_(BETA)_** Get all properties of the device
 
 </td></tr>
 <tr><td>
 
 [getByLcscIds(lcscIds, libraryUuid, allowMultiMatch)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用立创 C 编号获取器件
-
+**_(BETA)_** Get a device using an LCSC C number
 
 </td></tr>
 <tr><td>
 
 [getByLcscIds(lcscIds, libraryUuid, allowMultiMatch)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用立创 C 编号批量获取器件
-
+**_(BETA)_** Batch get devices using LCSC C numbers
 
 </td></tr>
 <tr><td>
 
 [modify(deviceUuid, libraryUuid, deviceName, classification, association, description, property)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改器件
-
+**_(BETA)_** Modify Device
 
 </td></tr>
 <tr><td>
 
 [search(key, libraryUuid, classification, symbolType, itemsOfPage, page)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 搜索器件
-
+**_(BETA)_** Search device
 
 </td></tr>
 <tr><td>
 
 [searchByProperties(properties, libraryUuid, classification, symbolType, itemsOfPage, page)](./LIB_Device.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用属性精确搜索器件
-
+**_(BETA)_** Search devices precisely by properties
 
 </td></tr>
 </tbody></table>
@@ -164,12 +134,18 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-复制器件
+Copy Device
 
 ## Signature
 
 ```typescript
-copy(deviceUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newDeviceName?: string): Promise<string | undefined>;
+function copy(
+	deviceUuid: string,
+	libraryUuid: string,
+	targetLibraryUuid: string,
+	targetClassification?: ILIB_ClassificationIndex | Array<string>,
+	newDeviceName?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -178,107 +154,87 @@ copy(deviceUuid: string, libraryUuid: string, targetLibraryUuid: string, targetC
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 deviceUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件 UUID
-
+Device UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 targetLibraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-目标库 UUID
-
+Target library UUID
 
 </td></tr>
 <tr><td>
 
 targetClassification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 目标库内的分类
-
+_(Optional)_ Classification in the target library
 
 </td></tr>
 <tr><td>
 
 newDeviceName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 新器件名称，如若目标库内存在重名器件将导致复制失败
-
+_(Optional)_ New device name. If a device with the same name exists in the target library, the copy will fail
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-目标库内新器件的 UUID
+UUID of the new device in the target library
 
 ### create
 
@@ -286,29 +242,27 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建器件
+Create Device
 
 ## Signature
 
 ```typescript
-create(libraryUuid: string, deviceName: string, classification?: ILIB_ClassificationIndex | Array<string>, association?: {
-        symbolType?: ELIB_SymbolType;
-        symbolUuid?: string;
-        symbol?: {
-            uuid: string;
-            libraryUuid: string;
-        };
-        footprintUuid?: string;
-        footprint?: {
-            uuid: string;
-            libraryUuid: string;
-        };
-        model3D?: {
-            uuid: string;
-            libraryUuid: string;
-        };
-        imageData?: File | Blob;
-    }, description?: string, property?: ILIB_DeviceExtendPropertyItem): Promise<string | undefined>;
+function create(
+	libraryUuid: string,
+	deviceName: string,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	association?: {
+		symbolType?: ELIB_SymbolType;
+		symbolUuid?: string;
+		symbol?: { uuid: string; libraryUuid: string };
+		footprintUuid?: string;
+		footprint?: { uuid: string; libraryUuid: string };
+		model3D?: { uuid: string; libraryUuid: string };
+		imageData?: File | Blob;
+	},
+	description?: string,
+	property?: ILIB_DeviceExtendPropertyItem,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -317,123 +271,100 @@ create(libraryUuid: string, deviceName: string, classification?: ILIB_Classifica
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 deviceName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件名称
-
+Device name
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 association
 
+</td><td>
+
+{ symbolType?: [ELIB\_SymbolType](../enums/ELIB_SymbolType.md)<!-- -->; symbolUuid?: string; symbol?: { uuid: string; libraryUuid: string }; footprintUuid?: string; footprint?: { uuid: string; libraryUuid: string }; model3D?: { uuid: string; libraryUuid: string }; imageData?: File \| Blob }
 
 </td><td>
 
-{ symbolType?: [ELIB\_SymbolType](../enums/ELIB_SymbolType.md)<!-- -->; symbolUuid?: string; symbol?: { uuid: string; libraryUuid: string; }; footprintUuid?: string; footprint?: { uuid: string; libraryUuid: string; }; model3D?: { uuid: string; libraryUuid: string; }; imageData?: File \| Blob; }
-
-
-</td><td>
-
-_(Optional)_ 关联符号、封装、图像，指定 `symbolType` 则创建新符号，无需新建符号则无需指定 `symbolType`<!-- -->，但请注意，如若不新建符号也不指定符号的关联信息将无法创建器件
-
+_(Optional)_ Associate a symbol, footprint, and image. Specifying `symbolType` creates a new symbol; if no new symbol is needed, `symbolType` does not need to be specified. However, note that if no new symbol is created and no symbol association information is specified, the device cannot be created
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 描述
-
+_(Optional)_ Description
 
 </td></tr>
 <tr><td>
 
 property
 
-
 </td><td>
 
 [ILIB\_DeviceExtendPropertyItem](../interfaces/ILIB_DeviceExtendPropertyItem.md)
 
-
 </td><td>
 
-_(Optional)_ 其它属性，仅 `designator`<!-- -->、`addIntoBom`<!-- -->、`addIntoPcb` 存在默认值
-
+_(Optional)_ Other property, only `designator`<!-- -->, `addIntoBom`<!-- -->, `addIntoPcb` exists default value
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-器件 UUID
+Device UUID
 
 ### delete
 
@@ -441,12 +372,12 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除器件
+Delete Device
 
 ## Signature
 
 ```typescript
-delete(deviceUuid: string, libraryUuid: string): Promise<boolean>;
+function delete(deviceUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -455,59 +386,48 @@ delete(deviceUuid: string, libraryUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 deviceUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件 UUID
-
+Device UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### get
 
@@ -515,12 +435,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件的所有属性
+Get all properties of the device
 
 ## Signature
 
 ```typescript
-get(deviceUuid: string, libraryUuid?: string): Promise<ILIB_DeviceItem | undefined>;
+function get(deviceUuid: string, libraryUuid?: string): Promise<ILIB_DeviceItem | undefined>;
 ```
 
 ## Parameters
@@ -529,59 +449,48 @@ get(deviceUuid: string, libraryUuid?: string): Promise<ILIB_DeviceItem | undefin
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 deviceUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件 UUID
-
+Device UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| undefined&gt;
 
-器件属性
+Device property
 
 ### getbylcscids
 
@@ -589,12 +498,16 @@ Promise&lt;[ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用立创 C 编号获取器件
+Get a device using an LCSC C number
 
 ## Signature
 
 ```typescript
-getByLcscIds<T extends boolean>(lcscIds: string, libraryUuid?: string, allowMultiMatch?: T): Promise<T extends true ? ILIB_DeviceSearchItem | undefined : Array<ILIB_DeviceSearchItem>>;
+function getByLcscIds<T extends boolean>(
+	lcscIds: string,
+	libraryUuid?: string,
+	allowMultiMatch?: T,
+): Promise<T extends true ? ILIB_DeviceSearchItem | undefined : Array<ILIB_DeviceSearchItem>>;
 ```
 
 ## Parameters
@@ -603,83 +516,69 @@ getByLcscIds<T extends boolean>(lcscIds: string, libraryUuid?: string, allowMult
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lcscIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-立创 C 编号
-
+LCSC C number
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 allowMultiMatch
 
-
 </td><td>
 
 T
 
-
 </td><td>
 
-_(Optional)_ 是否允许单个立创 C 编号匹配多个结果
-
+_(Optional)_ Whether a single LCSC C number is allowed to match multiple results
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;T extends true ? [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| undefined : Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的器件属性
+Searched device properties
 
 ## Remarks
 
-默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；
+By default, if multiple devices with the same C number are matched in the same library, only the first result will be returned;
 
-如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true`<!-- -->；
+If you want to return multiple results, set `allowMultiMatch` to `true`<!-- -->;
 
-私有化部署环境暂无法使用本接口
+This API is temporarily unavailable in the private deployment environment
 
 ### getbylcscids_1
 
@@ -687,12 +586,16 @@ Promise&lt;T extends true ? [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSe
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用立创 C 编号批量获取器件
+Batch get devices using LCSC C numbers
 
 ## Signature
 
 ```typescript
-getByLcscIds(lcscIds: Array<string>, libraryUuid?: string, allowMultiMatch?: boolean): Promise<Array<ILIB_DeviceSearchItem>>;
+function getByLcscIds(
+	lcscIds: Array<string>,
+	libraryUuid?: string,
+	allowMultiMatch?: boolean,
+): Promise<Array<ILIB_DeviceSearchItem>>;
 ```
 
 ## Parameters
@@ -701,83 +604,69 @@ getByLcscIds(lcscIds: Array<string>, libraryUuid?: string, allowMultiMatch?: boo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lcscIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-立创 C 编号数组
-
+Array of LCSC C numbers
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 allowMultiMatch
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否允许单个立创 C 编号匹配多个结果
-
+_(Optional)_ Whether a single LCSC C number is allowed to match multiple results
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的器件属性的列表
+List of searched device properties
 
 ## Remarks
 
-默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；
+By default, if multiple devices with the same C number are matched in the same library, only the first result will be returned;
 
-如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true`<!-- -->；
+If you want to return multiple results, set `allowMultiMatch` to `true`<!-- -->;
 
-私有化部署环境暂无法使用本接口
+This API is temporarily unavailable in the private deployment environment
 
 ### modify
 
@@ -785,41 +674,38 @@ Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改器件
+Modify Device
 
 ## Signature
 
 ```typescript
-modify(deviceUuid: string, libraryUuid: string, deviceName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, association?: {
-        symbolUuid?: string;
-        symbol?: {
-            uuid: string;
-            libraryUuid: string;
-        };
-        footprintUuid?: string | null;
-        footprint?: {
-            uuid: string;
-            libraryUuid: string;
-        } | null;
-        model3D?: {
-            uuid: string;
-            libraryUuid: string;
-        } | null;
-        imageData?: File | Blob | null;
-    }, description?: string | null, property?: {
-        name?: string | null;
-        designator?: string;
-        addIntoBom?: boolean;
-        addIntoPcb?: boolean;
-        net?: string;
-        manufacturer?: string | null;
-        manufacturerId?: string | null;
-        supplier?: string | null;
-        supplierId?: string | null;
-        otherProperty?: {
-            [key: string]: boolean | number | string | undefined | null;
-        };
-    }): Promise<boolean>;
+function modify(
+	deviceUuid: string,
+	libraryUuid: string,
+	deviceName?: string,
+	classification?: ILIB_ClassificationIndex | Array<string> | null,
+	association?: {
+		symbolUuid?: string;
+		symbol?: { uuid: string; libraryUuid: string };
+		footprintUuid?: string | null;
+		footprint?: { uuid: string; libraryUuid: string } | null;
+		model3D?: { uuid: string; libraryUuid: string } | null;
+		imageData?: File | Blob | null;
+	},
+	description?: string | null,
+	property?: {
+		name?: string | null;
+		designator?: string;
+		addIntoBom?: boolean;
+		addIntoPcb?: boolean;
+		net?: string;
+		manufacturer?: string | null;
+		manufacturerId?: string | null;
+		supplier?: string | null;
+		supplierId?: string | null;
+		otherProperty?: { [key: string]: boolean | number | string | undefined | null };
+	},
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -828,143 +714,117 @@ modify(deviceUuid: string, libraryUuid: string, deviceName?: string, classificat
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 deviceUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件 UUID
-
+Device UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+Library UUID, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 deviceName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 器件名称
-
+_(Optional)_ Device name
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt; \| null
 
-
 </td><td>
 
-_(Optional)_ 分类
-
+_(Optional)_ Classification
 
 </td></tr>
 <tr><td>
 
 association
 
+</td><td>
+
+\{ symbolUuid?: string; symbol?: \{ uuid: string; libraryUuid: string \}; footprintUuid?: string \| null; footprint?: \{ uuid: string; libraryUuid: string \} \| null; model3D?: \{ uuid: string; libraryUuid: string \} \| null; imageData?: File \| Blob \| null \}
 
 </td><td>
 
-\{ symbolUuid?: string; symbol?: \{ uuid: string; libraryUuid: string; \}; footprintUuid?: string \| null; footprint?: \{ uuid: string; libraryUuid: string; \} \| null; model3D?: \{ uuid: string; libraryUuid: string; \} \| null; imageData?: File \| Blob \| null; \}
-
-
-</td><td>
-
-_(Optional)_ 关联符号、封装、图像
-
+_(Optional)_ Associated symbol, footprint, image
 
 </td></tr>
 <tr><td>
 
 description
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 描述
-
+_(Optional)_ Description
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+\{ name?: string \| null; designator?: string; addIntoBom?: boolean; addIntoPcb?: boolean; net?: string; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: \{ \[key: string\]: boolean \| number \| string \| undefined \| null \} \}
 
 </td><td>
 
-\{ name?: string \| null; designator?: string; addIntoBom?: boolean; addIntoPcb?: boolean; net?: string; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: \{ \[key: string\]: boolean \| number \| string \| undefined \| null; \}; \}
-
-
-</td><td>
-
-_(Optional)_ 其它属性
-
+_(Optional)_ Other property
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-如希望清除某些属性，则将其的值设置为 `null`
+If you want to clear certain properties, set their values to `null`
 
 ### search
 
@@ -972,12 +832,19 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-搜索器件
+Search device
 
 ## Signature
 
 ```typescript
-search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, symbolType?: ELIB_SymbolType, itemsOfPage?: number, page?: number): Promise<Array<ILIB_DeviceSearchItem>>;
+function search(
+	key: string,
+	libraryUuid?: string,
+	classification?: ILIB_ClassificationIndex | Array<string>,
+	symbolType?: ELIB_SymbolType,
+	itemsOfPage?: number,
+	page?: number,
+): Promise<Array<ILIB_DeviceSearchItem>>;
 ```
 
 ## Parameters
@@ -986,123 +853,100 @@ search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIn
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 key
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-搜索关键字
-
+Search keyword
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类，默认为全部
-
+_(Optional)_ Classification, defaults to all
 
 </td></tr>
 <tr><td>
 
 symbolType
 
-
 </td><td>
 
 [ELIB\_SymbolType](../enums/ELIB_SymbolType.md)
 
-
 </td><td>
 
-_(Optional)_ 符号类型，默认为全部
-
+_(Optional)_ Symbol type, defaults to all
 
 </td></tr>
 <tr><td>
 
 itemsOfPage
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
-
+_(Optional)_ Number of search results per page
 
 </td></tr>
 <tr><td>
 
 page
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 页数
-
+_(Optional)_ Page count
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的器件属性的列表
+List of searched device properties
 
 ### searchbyproperties
 
@@ -1110,12 +954,19 @@ Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用属性精确搜索器件
+Search devices precisely by properties
 
 ## Signature
 
 ```typescript
-searchByProperties(properties: ILIB_DevicePropertiesForSearch, libraryUuid?: string, classification?: Array<string>, symbolType?: ELIB_SymbolType, itemsOfPage?: number, page?: number): Promise<Array<ILIB_DeviceSearchItem>>;
+function searchByProperties(
+	properties: ILIB_DevicePropertiesForSearch,
+	libraryUuid?: string,
+	classification?: Array<string>,
+	symbolType?: ELIB_SymbolType,
+	itemsOfPage?: number,
+	page?: number,
+): Promise<Array<ILIB_DeviceSearchItem>>;
 ```
 
 ## Parameters
@@ -1124,122 +975,97 @@ searchByProperties(properties: ILIB_DevicePropertiesForSearch, libraryUuid?: str
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 properties
 
+</td><td>
+
+[ILIB\_DevicePropertiesForSearch](../interfaces/ILIB_DevicePropertiesForSearch.md)
 
 </td><td>
 
-ILIB\_DevicePropertiesForSearch
-
-
-</td><td>
-
-属性
-
+Property
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
-
+_(Optional)_ Library UUID, default is system library, you can use [LIB\_LibrariesList](./LIB_LibrariesList.md) APIs in
 
 </td></tr>
 <tr><td>
 
 classification
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-_(Optional)_ 分类，默认为全部
-
-ADD since EDA v4
-
+_(Optional)_ Classification, defaults to all ADD since EDA v4
 
 </td></tr>
 <tr><td>
 
 symbolType
 
-
 </td><td>
 
 [ELIB\_SymbolType](../enums/ELIB_SymbolType.md)
 
-
 </td><td>
 
-_(Optional)_ 符号类型，默认为全部
-
+_(Optional)_ Symbol type, defaults to all
 
 </td></tr>
 <tr><td>
 
 itemsOfPage
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
-
+_(Optional)_ Number of search results per page
 
 </td></tr>
 <tr><td>
 
 page
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 页数
-
+_(Optional)_ Page count
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
-搜索到的器件属性的列表
+List of searched device properties

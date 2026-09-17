@@ -1,11 +1,11 @@
 # IPCB\_PrimitiveString class
 
-文本图元
+Text primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveString implements IPCB_Primitive 
+class IPCB_PrimitiveString implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
@@ -15,30 +15,24 @@ declare class IPCB_PrimitiveString implements IPCB_Primitive
 
 Constructor
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [(constructor)(layer, x, y, text, fontFamily, fontSize, lineWidth, alignMode, rotation, reverse, expansion, mirror, primitiveLock, primitiveId)](./IPCB_PrimitiveString.md)
 
-
 </td><td>
-
 
 </td><td>
 
 Constructs a new instance of the `IPCB_PrimitiveString` class
-
 
 </td></tr>
 </tbody></table>
@@ -49,478 +43,376 @@ Constructs a new instance of the `IPCB_PrimitiveString` class
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_AlignMode()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：对齐模式
-
+Get the property state: alignment mode
 
 </td></tr>
 <tr><td>
 
 [getState\_Expansion()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：反相扩展
-
+Get the property state: inverted expansion
 
 </td></tr>
 <tr><td>
 
 [getState\_FontFamily()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：字体
-
+Get the property state: font
 
 </td></tr>
 <tr><td>
 
 [getState\_FontSize()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：字号
-
+Get the property state: font size
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_Mirror()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否镜像
-
+Get the property state: whether it is mirrored
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Reverse()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否反相
-
+Get the property state: whether it is inverted
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_Text()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：文本内容
-
+Get the property state: text content
 
 </td></tr>
 <tr><td>
 
 [getState\_X()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 X
-
+Get the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [getState\_Y()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标 Y
-
+Get the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_AlignMode(alignMode)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：对齐模式
-
+**_(BETA)_** Set the property state: alignment mode
 
 </td></tr>
 <tr><td>
 
 [setState\_Expansion(expansion)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：反相扩展
-
+**_(BETA)_** Set the property state: inverted expansion
 
 </td></tr>
 <tr><td>
 
 [setState\_FontFamily(fontFamily)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：字体
-
+**_(BETA)_** Set the property state: font
 
 </td></tr>
 <tr><td>
 
 [setState\_FontSize(fontSize)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：字号
-
+**_(BETA)_** Set the property state: font size
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [setState\_Mirror(mirror)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否镜像
-
+**_(BETA)_** Set the property state: whether it is mirrored
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_Reverse(reverse)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否反相
-
+**_(BETA)_** Set the property state: whether it is inverted
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：旋转角度
-
+**_(BETA)_** Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_Text(text)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：文本内容
-
+**_(BETA)_** Set the property state: text content
 
 </td></tr>
 <tr><td>
 
 [setState\_X(x)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 X
-
+**_(BETA)_** Set the property state: X coordinate
 
 </td></tr>
 <tr><td>
 
 [setState\_Y(y)](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标 Y
-
+**_(BETA)_** Set the property state: Y coordinate
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -538,7 +430,22 @@ Constructs a new instance of the `IPCB_PrimitiveString` class
 ## Signature
 
 ```typescript
-constructor(layer: TPCB_LayersOfImage, x: number, y: number, text: string, fontFamily?: string, fontSize?: number, lineWidth?: number, alignMode?: EPCB_PrimitiveStringAlignMode, rotation?: number, reverse?: boolean, expansion?: number, mirror?: boolean, primitiveLock?: boolean, primitiveId?: string);
+function constructor(
+	layer: TPCB_LayersOfImage,
+	x: number,
+	y: number,
+	text: string,
+	fontFamily?: string,
+	fontSize?: number,
+	lineWidth?: number,
+	alignMode?: EPCB_PrimitiveStringAlignMode,
+	rotation?: number,
+	reverse?: boolean,
+	expansion?: number,
+	mirror?: boolean,
+	primitiveLock?: boolean,
+	primitiveId?: string,
+);
 ```
 
 ## Parameters
@@ -547,232 +454,187 @@ constructor(layer: TPCB_LayersOfImage, x: number, y: number, text: string, fontF
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 text
 
-
 </td><td>
 
 string
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 fontFamily
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 fontSize
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 alignMode
 
-
 </td><td>
 
 [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 reverse
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 expansion
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 </tbody></table>
@@ -788,324 +650,307 @@ _(Optional)_
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveString>;
+function done(): Promise<IPCB_PrimitiveString>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;
 
-文本图元对象
+Text primitive object
 
 ### getstate_alignmode
 
 # IPCB\_PrimitiveString.getState\_AlignMode() method
 
-获取属性状态：对齐模式
+Get the property state: alignment mode
 
 ## Signature
 
 ```typescript
-getState_AlignMode(): EPCB_PrimitiveStringAlignMode;
+function getState_AlignMode(): EPCB_PrimitiveStringAlignMode;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)
 
-对齐模式
+Alignment mode
 
 ### getstate_expansion
 
 # IPCB\_PrimitiveString.getState\_Expansion() method
 
-获取属性状态：反相扩展
+Get the property state: inverted expansion
 
 ## Signature
 
 ```typescript
-getState_Expansion(): number;
+function getState_Expansion(): number;
 ```
-
 
 ## Returns
 
 number
 
-反相扩展
+Inverted expansion
 
 ### getstate_fontfamily
 
 # IPCB\_PrimitiveString.getState\_FontFamily() method
 
-获取属性状态：字体
+Get the property state: font
 
 ## Signature
 
 ```typescript
-getState_FontFamily(): string;
+function getState_FontFamily(): string;
 ```
-
 
 ## Returns
 
 string
 
-字体
+Font
 
 ### getstate_fontsize
 
 # IPCB\_PrimitiveString.getState\_FontSize() method
 
-获取属性状态：字号
+Get the property state: font size
 
 ## Signature
 
 ```typescript
-getState_FontSize(): number;
+function getState_FontSize(): number;
 ```
-
 
 ## Returns
 
 number
 
-字号
+Font size
 
 ### getstate_layer
 
 # IPCB\_PrimitiveString.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfImage;
+function getState_Layer(): TPCB_LayersOfImage;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-层
+Layer
 
 ### getstate_linewidth
 
 # IPCB\_PrimitiveString.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number;
+function getState_LineWidth(): number;
 ```
-
 
 ## Returns
 
 number
 
-线宽
+Line width
 
 ### getstate_mirror
 
 # IPCB\_PrimitiveString.getState\_Mirror() method
 
-获取属性状态：是否镜像
+Get the property state: whether it is mirrored
 
 ## Signature
 
 ```typescript
-getState_Mirror(): boolean;
+function getState_Mirror(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否镜像
+Whether it is mirrored
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveString.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveString.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveString.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_reverse
 
 # IPCB\_PrimitiveString.getState\_Reverse() method
 
-获取属性状态：是否反相
+Get the property state: whether it is inverted
 
 ## Signature
 
 ```typescript
-getState_Reverse(): boolean;
+function getState_Reverse(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否反相
+Whether it is inverted
 
 ### getstate_rotation
 
 # IPCB\_PrimitiveString.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_text
 
 # IPCB\_PrimitiveString.getState\_Text() method
 
-获取属性状态：文本内容
+Get the property state: text content
 
 ## Signature
 
 ```typescript
-getState_Text(): string;
+function getState_Text(): string;
 ```
-
 
 ## Returns
 
 string
 
-文本内容
+Text content
 
 ### getstate_x
 
 # IPCB\_PrimitiveString.getState\_X() method
 
-获取属性状态：坐标 X
+Get the property state: X coordinate
 
 ## Signature
 
 ```typescript
-getState_X(): number;
+function getState_X(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 X
+X coordinate
 
 ### getstate_y
 
 # IPCB\_PrimitiveString.getState\_Y() method
 
-获取属性状态：坐标 Y
+Get the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-getState_Y(): number;
+function getState_Y(): number;
 ```
-
 
 ## Returns
 
 number
 
-坐标 Y
+Y coordinate
 
 ### isasync
 
 # IPCB\_PrimitiveString.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -1113,20 +958,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveString>;
+function reset(): Promise<IPCB_PrimitiveString>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;
 
-���本图元对象
+This primitive object
 
 ### setstate_alignmode
 
@@ -1134,12 +978,12 @@ Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：对齐模式
+Set the property state: alignment mode
 
 ## Signature
 
 ```typescript
-setState_AlignMode(alignMode: EPCB_PrimitiveStringAlignMode): IPCB_PrimitiveString;
+function setState_AlignMode(alignMode: EPCB_PrimitiveStringAlignMode): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1148,43 +992,35 @@ setState_AlignMode(alignMode: EPCB_PrimitiveStringAlignMode): IPCB_PrimitiveStri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 alignMode
 
-
 </td><td>
 
 [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)
 
-
 </td><td>
 
-对齐模式
-
+Alignment mode
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_expansion
 
@@ -1192,12 +1028,12 @@ alignMode
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：反相扩展
+Set the property state: inverted expansion
 
 ## Signature
 
 ```typescript
-setState_Expansion(expansion: number): IPCB_PrimitiveString;
+function setState_Expansion(expansion: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1206,43 +1042,35 @@ setState_Expansion(expansion: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 expansion
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-反相扩展
-
+Inverted expansion
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_fontfamily
 
@@ -1250,12 +1078,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：字体
+Set the property state: font
 
 ## Signature
 
 ```typescript
-setState_FontFamily(fontFamily: string): IPCB_PrimitiveString;
+function setState_FontFamily(fontFamily: string): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1264,43 +1092,35 @@ setState_FontFamily(fontFamily: string): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontFamily
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-字体
-
+Font
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_fontsize
 
@@ -1308,12 +1128,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：字号
+Set the property state: font size
 
 ## Signature
 
 ```typescript
-setState_FontSize(fontSize: number): IPCB_PrimitiveString;
+function setState_FontSize(fontSize: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1322,43 +1142,35 @@ setState_FontSize(fontSize: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fontSize
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-字号
-
+Font size
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_layer
 
@@ -1366,12 +1178,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveString;
+function setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1380,43 +1192,35 @@ setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_linewidth
 
@@ -1424,12 +1228,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number): IPCB_PrimitiveString;
+function setState_LineWidth(lineWidth: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1438,43 +1242,35 @@ setState_LineWidth(lineWidth: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_mirror
 
@@ -1482,12 +1278,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否镜像
+Set the property state: whether it is mirrored
 
 ## Signature
 
 ```typescript
-setState_Mirror(mirror: boolean): IPCB_PrimitiveString;
+function setState_Mirror(mirror: boolean): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1496,43 +1292,35 @@ setState_Mirror(mirror: boolean): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否镜像
-
+Whether it is mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_primitivelock
 
@@ -1540,12 +1328,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveString;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1554,43 +1342,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_reverse
 
@@ -1598,12 +1378,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否反相
+Set the property state: whether it is inverted
 
 ## Signature
 
 ```typescript
-setState_Reverse(reverse: boolean): IPCB_PrimitiveString;
+function setState_Reverse(reverse: boolean): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1612,47 +1392,39 @@ setState_Reverse(reverse: boolean): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 reverse
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否反相
-
+Whether it is inverted
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ## Remarks
 
-默认字体不支持反相
+The default font does not support inversion
 
 ### setstate_rotation
 
@@ -1660,12 +1432,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): IPCB_PrimitiveString;
+function setState_Rotation(rotation: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1674,43 +1446,35 @@ setState_Rotation(rotation: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_text
 
@@ -1718,12 +1482,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：文本内容
+Set the property state: text content
 
 ## Signature
 
 ```typescript
-setState_Text(text: string): IPCB_PrimitiveString;
+function setState_Text(text: string): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1732,43 +1496,35 @@ setState_Text(text: string): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 text
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文本内容
-
+Text content
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_x
 
@@ -1776,12 +1532,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 X
+Set the property state: X coordinate
 
 ## Signature
 
 ```typescript
-setState_X(x: number): IPCB_PrimitiveString;
+function setState_X(x: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1790,43 +1546,35 @@ setState_X(x: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### setstate_y
 
@@ -1834,12 +1582,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标 Y
+Set the property state: Y coordinate
 
 ## Signature
 
 ```typescript
-setState_Y(y: number): IPCB_PrimitiveString;
+function setState_Y(y: number): IPCB_PrimitiveString;
 ```
 
 ## Parameters
@@ -1848,78 +1596,68 @@ setState_Y(y: number): IPCB_PrimitiveString;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveString.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveString;
+function toAsync(): IPCB_PrimitiveString;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveString.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveString;
+function toSync(): IPCB_PrimitiveString;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-文本图元对象
+Text primitive object

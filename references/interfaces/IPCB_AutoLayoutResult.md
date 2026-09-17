@@ -1,11 +1,11 @@
 # IPCB\_AutoLayoutResult interface
 
-自动布局结果
+Auto layout result
 
 ## Signature
 
 ```typescript
-interface IPCB_AutoLayoutResult 
+interface IPCB_AutoLayoutResult
 ```
 
 ## Properties
@@ -14,116 +14,92 @@ interface IPCB_AutoLayoutResult
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [duration](./IPCB_AutoLayoutResult.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-自动布局耗时（毫秒）
-
+Auto layout duration (milliseconds)
 
 </td></tr>
 <tr><td>
 
 [failedComponents](./IPCB_AutoLayoutResult.md)
 
-
 </td><td>
-
 
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-未能完成布局的器件图元 ID 列表
-
+List of device primitive IDs that failed to be laid out
 
 </td></tr>
 <tr><td>
 
 [success](./IPCB_AutoLayoutResult.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
-自动布局是否成功启动
-
+Whether auto layout started successfully
 
 </td></tr>
 <tr><td>
 
 [successComponentsCount](./IPCB_AutoLayoutResult.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-成功完成布局的器件数量
-
+Number of devices that were laid out successfully
 
 </td></tr>
 <tr><td>
 
 [totalComponentsCount](./IPCB_AutoLayoutResult.md)
 
-
 </td><td>
-
 
 </td><td>
 
 number
 
-
 </td><td>
 
-参与自动布局的器件总数
-
+Total number of devices participating in auto layout
 
 </td></tr>
 </tbody></table>
@@ -136,7 +112,7 @@ number
 
 # IPCB\_AutoLayoutResult.duration property
 
-自动布局耗时（毫秒）
+Auto layout duration (milliseconds)
 
 ## Signature
 
@@ -148,7 +124,7 @@ duration: number;
 
 # IPCB\_AutoLayoutResult.failedComponents property
 
-未能完成布局的器件图元 ID 列表
+List of device primitive IDs that failed to be laid out
 
 ## Signature
 
@@ -160,7 +136,7 @@ failedComponents: Array<string>;
 
 # IPCB\_AutoLayoutResult.success property
 
-自动布局是否成功启动
+Whether auto layout started successfully
 
 ## Signature
 
@@ -172,7 +148,7 @@ success: boolean;
 
 # IPCB\_AutoLayoutResult.successComponentsCount property
 
-成功完成布局的器件数量
+Number of devices that were laid out successfully
 
 ## Signature
 
@@ -184,7 +160,7 @@ successComponentsCount: number;
 
 # IPCB\_AutoLayoutResult.totalComponentsCount property
 
-参与自动布局的器件总数
+Total number of devices participating in auto layout
 
 ## Signature
 

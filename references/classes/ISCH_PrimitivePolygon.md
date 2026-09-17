@@ -1,16 +1,15 @@
 # ISCH\_PrimitivePolygon class
 
-多边形（折线）图元
+Polygon (polyline) primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitivePolygon implements ISCH_Primitive 
+class ISCH_PrimitivePolygon implements ISCH_Primitive
 ```
 **Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,254 +17,200 @@ declare class ISCH_PrimitivePolygon implements ISCH_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_Color()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：颜色
-
+Get the property state: color
 
 </td></tr>
 <tr><td>
 
 [getState\_FillColor()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：填充颜色
-
+Get the property state: fill color
 
 </td></tr>
 <tr><td>
 
 [getState\_Line()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：坐标组
-
+Get the property state: coordinate group
 
 </td></tr>
 <tr><td>
 
 [getState\_LineType()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线型
-
+Get the property state: line type
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_Color(color)](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：颜色
-
+**_(BETA)_** Set the property state: color
 
 </td></tr>
 <tr><td>
 
 [setState\_FillColor(fillColor)](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：填充颜色
-
+**_(BETA)_** Set the property state: fill color
 
 </td></tr>
 <tr><td>
 
 [setState\_Line(line)](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：坐标组
-
+**_(BETA)_** Set the property state: coordinate group
 
 </td></tr>
 <tr><td>
 
 [setState\_LineType(lineType)](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线型
-
+**_(BETA)_** Set the property state: line type
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./ISCH_PrimitivePolygon.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -280,172 +225,163 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitivePolygon>;
+function done(): Promise<ISCH_PrimitivePolygon>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)<!-- -->&gt;
 
-多边形图元对象
+Polygon primitive object
 
 ### getstate_color
 
 # ISCH\_PrimitivePolygon.getState\_Color() method
 
-获取属性状态：颜色
+Get the property state: color
 
 ## Signature
 
 ```typescript
-getState_Color(): string | null;
+function getState_Color(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-颜色
+Color
 
 ### getstate_fillcolor
 
 # ISCH\_PrimitivePolygon.getState\_FillColor() method
 
-获取属性状态：填充颜色
+Get the property state: fill color
 
 ## Signature
 
 ```typescript
-getState_FillColor(): string | null;
+function getState_FillColor(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-填充颜色
+Fill color
 
 ### getstate_line
 
 # ISCH\_PrimitivePolygon.getState\_Line() method
 
-获取属性状态：坐标组
+Get the property state: coordinate group
 
 ## Signature
 
 ```typescript
-getState_Line(): Array<number>;
+function getState_Line(): Array<number>;
 ```
-
 
 ## Returns
 
 Array&lt;number&gt;
 
-坐标组
+Coordinate group
 
 ### getstate_linetype
 
 # ISCH\_PrimitivePolygon.getState\_LineType() method
 
-获取属性状态：线型
+Get the property state: line type
 
 ## Signature
 
 ```typescript
-getState_LineType(): ESCH_PrimitiveLineType | null;
+function getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-线型
+Line type
 
 ### getstate_linewidth
 
 # ISCH\_PrimitivePolygon.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number | null;
+function getState_LineWidth(): number | null;
 ```
-
 
 ## Returns
 
 number \| null
 
-线宽
+Line width
 
 ### getstate_primitiveid
 
 # ISCH\_PrimitivePolygon.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # ISCH\_PrimitivePolygon.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): ESCH_PrimitiveType;
+function getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### isasync
 
 # ISCH\_PrimitivePolygon.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -453,20 +389,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<ISCH_PrimitivePolygon>;
+function reset(): Promise<ISCH_PrimitivePolygon>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)<!-- -->&gt;
 
-多边形图元对象
+Polygon primitive object
 
 ### setstate_color
 
@@ -474,12 +409,12 @@ Promise&lt;[ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：颜色
+Set the property state: color
 
 ## Signature
 
 ```typescript
-setState_Color(color: string | null): ISCH_PrimitivePolygon;
+function setState_Color(color: string | null): ISCH_PrimitivePolygon;
 ```
 
 ## Parameters
@@ -488,43 +423,35 @@ setState_Color(color: string | null): ISCH_PrimitivePolygon;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 color
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-颜色
-
+Color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### setstate_fillcolor
 
@@ -532,12 +459,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：填充颜色
+Set the property state: fill color
 
 ## Signature
 
 ```typescript
-setState_FillColor(fillColor: string | null): ISCH_PrimitivePolygon;
+function setState_FillColor(fillColor: string | null): ISCH_PrimitivePolygon;
 ```
 
 ## Parameters
@@ -546,43 +473,35 @@ setState_FillColor(fillColor: string | null): ISCH_PrimitivePolygon;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fillColor
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-填充颜色
-
+Fill color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### setstate_line
 
@@ -590,12 +509,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：坐标组
+Set the property state: coordinate group
 
 ## Signature
 
 ```typescript
-setState_Line(line: Array<number>): ISCH_PrimitivePolygon;
+function setState_Line(line: Array<number>): ISCH_PrimitivePolygon;
 ```
 
 ## Parameters
@@ -604,43 +523,35 @@ setState_Line(line: Array<number>): ISCH_PrimitivePolygon;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 line
 
-
 </td><td>
 
 Array&lt;number&gt;
 
-
 </td><td>
 
-坐标组
-
+Coordinate group
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### setstate_linetype
 
@@ -648,12 +559,12 @@ Array&lt;number&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线型
+Set the property state: line type
 
 ## Signature
 
 ```typescript
-setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitivePolygon;
+function setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitivePolygon;
 ```
 
 ## Parameters
@@ -662,43 +573,35 @@ setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitivePolygo
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineType
 
-
 </td><td>
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-
 </td><td>
 
-线型
-
+Line type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### setstate_linewidth
 
@@ -706,12 +609,12 @@ lineType
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number | null): ISCH_PrimitivePolygon;
+function setState_LineWidth(lineWidth: number | null): ISCH_PrimitivePolygon;
 ```
 
 ## Parameters
@@ -720,78 +623,68 @@ setState_LineWidth(lineWidth: number | null): ISCH_PrimitivePolygon;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### toasync
 
 # ISCH\_PrimitivePolygon.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): ISCH_PrimitivePolygon;
+function toAsync(): ISCH_PrimitivePolygon;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object
 
 ### tosync
 
 # ISCH\_PrimitivePolygon.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): ISCH_PrimitivePolygon;
+function toSync(): ISCH_PrimitivePolygon;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
-多边形图元对象
+Polygon primitive object

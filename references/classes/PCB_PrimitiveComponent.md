@@ -1,11 +1,11 @@
 # PCB\_PrimitiveComponent class
 
-PCB &amp; 封装 / 器件图元类
+PCB &amp; footprint / device primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI 
+class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,170 +15,134 @@ declare class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(component, layer, x, y, rotation, primitiveLock)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建器件
-
+**_(BETA)_** Create Device
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除器件
-
+**_(BETA)_** Delete Device
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件
-
+**_(BETA)_** Get Device
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件
-
+**_(BETA)_** Get Device
 
 </td></tr>
 <tr><td>
 
 [getAll(layer, primitiveLock)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件
-
+**_(BETA)_** Get all Device
 
 </td></tr>
 <tr><td>
 
 [getAllPinsByPrimitiveId(primitiveId)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取器件关联的所有焊盘
-
+**_(BETA)_** Get all pads associated with the device
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(layer, primitiveLock)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件的图元 ID
-
+**_(BETA)_** Get all Device primitive IDs
 
 </td></tr>
 <tr><td>
 
 [getAllPropertyNames()](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有器件的所有属性名称集合
-
+**_(BETA)_** Get The set of all property names of all devices
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改器件
-
+**_(BETA)_** Modify Device
 
 </td></tr>
 <tr><td>
 
 [placeComponentWithMouse(component)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用鼠标放置器件
-
+**_(BETA)_** Place with the mouse device
 
 </td></tr>
 <tr><td>
 
 [placeFootprintWithMouse(footprint, properties)](./PCB_PrimitiveComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用鼠标放置封装
-
+**_(BETA)_** Place with the mouse footprint
 
 </td></tr>
 </tbody></table>
@@ -193,19 +157,25 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建器件
+Create Device
 
 ## Signature
 
 ```typescript
-create(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem | {
-        libraryType: ELIB_LibraryType.FOOTPRINT;
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_FootprintItem | ILIB_FootprintSearchItem, layer: TPCB_LayersOfComponent, x: number, y: number, rotation?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveComponent | undefined>;
+function create(
+	component:
+		| { libraryUuid: string; uuid: string }
+		| ILIB_DeviceItem
+		| ILIB_DeviceSearchItem
+		| { libraryType: ELIB_LibraryType.FOOTPRINT; libraryUuid: string; uuid: string }
+		| ILIB_FootprintItem
+		| ILIB_FootprintSearchItem,
+	layer: TPCB_LayersOfComponent,
+	x: number,
+	y: number,
+	rotation?: number,
+	primitiveLock?: boolean,
+): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -214,123 +184,100 @@ create(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| { libraryType: [ELIB\_LibraryType.FOOTPRINT](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string } \| [ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| [ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| { libraryType: [ELIB\_LibraryType.FOOTPRINT](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string; } \| [ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| [ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 旋转角度
-
+_(Optional)_ Rotation angle
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### delete
 
@@ -338,12 +285,12 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除器件
+Delete Device
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitiveComponent | Array<string> | Array<IPCB_PrimitiveComponent>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitiveComponent | Array<string> | Array<IPCB_PrimitiveComponent>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -352,43 +299,35 @@ delete(primitiveIds: string | IPCB_PrimitiveComponent | Array<string> | Array<IP
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
-
 </td><td>
 
-器件的图元 ID 或器件图元对象
-
+Device primitive ID or Device primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -396,12 +335,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件
+Get Device
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitiveComponent | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -410,43 +349,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitiveComponent | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Device primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象，`undefined` 表示获取失败
+Device primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -454,12 +385,12 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件
+Get Device
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveComponent>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveComponent>>;
 ```
 
 ## Parameters
@@ -468,47 +399,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveComponent>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-器件的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Device primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
-器件图元对象，空数组表示获取失败
+Device primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -516,12 +439,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件
+Get all Device
 
 ## Signature
 
 ```typescript
-getAll(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveComponent>>;
+function getAll(
+	layer?: TPCB_LayersOfComponent,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitiveComponent>>;
 ```
 
 ## Parameters
@@ -530,59 +456,48 @@ getAll(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<I
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
-器件图元对象数组
+Array of Device primitive objects
 
 ### getallpinsbyprimitiveid
 
@@ -590,12 +505,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!--
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取器件关联的所有焊盘
+Get all pads associated with the device
 
 ## Signature
 
 ```typescript
-getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<IPCB_PrimitiveComponentPad> | undefined>;
+function getAllPinsByPrimitiveId(
+	primitiveId: string,
+): Promise<Array<IPCB_PrimitiveComponentPad> | undefined>;
 ```
 
 ## Parameters
@@ -604,43 +521,35 @@ getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<IPCB_PrimitiveCompon
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-器件图元 ID
-
+Device primitive ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- -->&gt; \| undefined&gt;
 
-器件焊盘图元数组
+Device pad primitive array
 
 ### getallprimitiveid
 
@@ -648,12 +557,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.m
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件的图元 ID
+Get all Device primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	layer?: TPCB_LayersOfComponent,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -662,59 +574,48 @@ getAllPrimitiveId(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-器件的图元 ID 数组
+Array of Device primitive IDs
 
 ### getallpropertynames
 
@@ -722,20 +623,19 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有器件的所有属性名称集合
+Get The set of all property names of all devices
 
 ## Signature
 
 ```typescript
-getAllPropertyNames(): Promise<Array<string>>;
+function getAllPropertyNames(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-所有器件的所有属性名称集合
+The set of all property names of all devices
 
 ### modify
 
@@ -743,29 +643,30 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改器件
+Modify Device
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitiveComponent, property: {
-        layer?: TPCB_LayersOfComponent;
-        x?: number;
-        y?: number;
-        rotation?: number;
-        primitiveLock?: boolean;
-        addIntoBom?: boolean;
-        designator?: string | null;
-        name?: string | null;
-        uniqueId?: string | null;
-        manufacturer?: string | null;
-        manufacturerId?: string | null;
-        supplier?: string | null;
-        supplierId?: string | null;
-        otherProperty?: {
-            [key: string]: any;
-        };
-    }): Promise<IPCB_PrimitiveComponent | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitiveComponent,
+	property: {
+		layer?: TPCB_LayersOfComponent;
+		x?: number;
+		y?: number;
+		rotation?: number;
+		primitiveLock?: boolean;
+		addIntoBom?: boolean;
+		designator?: string | null;
+		name?: string | null;
+		uniqueId?: string | null;
+		manufacturer?: string | null;
+		manufacturerId?: string | null;
+		supplier?: string | null;
+		supplierId?: string | null;
+		otherProperty?: { [key: string]: any };
+	},
+): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
 ## Parameters
@@ -774,57 +675,46 @@ modify(primitiveId: string | IPCB_PrimitiveComponent, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
-
 </td><td>
 
-{ layer?: [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)<!-- -->; x?: number; y?: number; rotation?: number; primitiveLock?: boolean; addIntoBom?: boolean; designator?: string \| null; name?: string \| null; uniqueId?: string \| null; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: { \[key: string\]: any; }; }
-
+{ layer?: [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)<!-- -->; x?: number; y?: number; rotation?: number; primitiveLock?: boolean; addIntoBom?: boolean; designator?: string \| null; name?: string \| null; uniqueId?: string \| null; manufacturer?: string \| null; manufacturerId?: string \| null; supplier?: string \| null; supplierId?: string \| null; otherProperty?: { \[key: string\]: any } }
 
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
-器件图元对象
+Device primitive object
 
 ### placecomponentwithmouse
 
@@ -832,15 +722,14 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用鼠标放置器件
+Place with the mouse device
 
 ## Signature
 
 ```typescript
-placeComponentWithMouse(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
+function placeComponentWithMouse(
+	component: { libraryUuid: string; uuid: string } | ILIB_DeviceItem | ILIB_DeviceSearchItem,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -849,49 +738,41 @@ placeComponentWithMouse(component: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 component
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
+Associate library device
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否找到器件
+Whether the device was found
 
 ## Remarks
 
-本接口模拟前端点击放置按钮，指定的器件将绑定到当前鼠标，并在用户后续点击时放置于画布
+This API simulates clicking the placement button on the front end. The specified device will be bound to the current mouse and placed on the canvas when the user clicks subsequently
 
-本接口的返回时机并不会等待用户的放置操作，一旦器件被绑定到鼠标，本接口将立即返回 `true` 的结果
+The return timing of this API does not wait for the user's placement operation. Once the device is bound to the mouse, this API will immediately return `true`
 
 ### placefootprintwithmouse
 
@@ -899,17 +780,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用鼠标放置封装
+Place with the mouse footprint
 
 ## Signature
 
 ```typescript
-placeFootprintWithMouse(footprint: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_FootprintItem | ILIB_FootprintSearchItem, properties?: {
-        [key: string]: boolean | number | string | undefined;
-    }): Promise<boolean>;
+function placeFootprintWithMouse(
+	footprint:
+		{ libraryUuid: string; uuid: string } | ILIB_FootprintItem | ILIB_FootprintSearchItem,
+	properties?: { [key: string]: boolean | number | string | undefined },
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -918,64 +798,51 @@ placeFootprintWithMouse(footprint: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprint
 
+</td><td>
+
+{ libraryUuid: string; uuid: string } \| [ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| [ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| [ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)
-
-
-</td><td>
-
-关联库封装
-
+Associate library footprint
 
 </td></tr>
 <tr><td>
 
 properties
 
+</td><td>
+
+\{ \[key: string\]: boolean \| number \| string \| undefined \}
 
 </td><td>
 
-\{ \[key: string\]: boolean \| number \| string \| undefined; \}
-
-
-</td><td>
-
-_(Optional)_ 器件属性
-
+_(Optional)_ Device property
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否找到封装
+Whether the footprint was found
 
 ## Remarks
 
-ADD since API v0.2.26
+This API simulates clicking the placement button on the front end. The specified footprint will be bound to the current mouse and placed on the canvas when the user clicks subsequently
 
-本接口模拟前端点击放置按钮，指定的封装将绑定到当前鼠标，并在用户后续点击时放置于画布
-
-本接口的返回时机并不会等待用户的放置操作，一旦封装被绑定到鼠标，本接口将立即返回 `true` 的结果
+The return timing of this API does not wait for the user's placement operation. Once the footprint is bound to the mouse, this API will immediately return `true` ADD since API v0.2.26

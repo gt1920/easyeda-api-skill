@@ -1,16 +1,15 @@
 # IPCB\_PrimitiveObject class
 
-二进制内嵌对象图元
+Binary embedded object primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveObject implements IPCB_Primitive 
+class IPCB_PrimitiveObject implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,394 +17,310 @@ declare class IPCB_PrimitiveObject implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_BinaryData()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：二进制数据
-
+Get the property state: binary data
 
 </td></tr>
 <tr><td>
 
 [getState\_FileName()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：文件名
-
+Get the property state: file name
 
 </td></tr>
 <tr><td>
 
 [getState\_Height()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：高
-
+Get the property state: height
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_Mirror()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否水平镜像
-
+Get the property state: whether it is horizontally mirrored
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_TopLeftX()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：左上点 X
-
+Get the property state: top-left point X
 
 </td></tr>
 <tr><td>
 
 [getState\_TopLeftY()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：左上点 Y
-
+Get the property state: top-left point Y
 
 </td></tr>
 <tr><td>
 
 [getState\_Width()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：宽
-
+Get the property state: width
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_BinaryData(binaryData)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：二进制数据
-
+Set the property state: binary data
 
 </td></tr>
 <tr><td>
 
 [setState\_FileName(fileName)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：文件名
-
+Set the property state: file name
 
 </td></tr>
 <tr><td>
 
 [setState\_Height(height)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：高
-
+Set the property state: height
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_Mirror(mirror)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：是否水平镜像
-
+Set the property state: whether it is horizontally mirrored
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：旋转角度
-
+Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_TopLeftX(topLeftX)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：左上点 X
-
+Set the property state: top-left point X
 
 </td></tr>
 <tr><td>
 
 [setState\_TopLeftY(topLeftY)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：左上点 Y
-
+Set the property state: top-left point Y
 
 </td></tr>
 <tr><td>
 
 [setState\_Width(width)](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置属性状态：宽
-
+Set the property state: width
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveObject.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -420,273 +335,259 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveObject>;
+function done(): Promise<IPCB_PrimitiveObject>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### getstate_binarydata
 
 # IPCB\_PrimitiveObject.getState\_BinaryData() method
 
-获取属性状态：二进制数据
+Get the property state: binary data
 
 ## Signature
 
 ```typescript
-getState_BinaryData(): string;
+function getState_BinaryData(): string;
 ```
-
 
 ## Returns
 
 string
 
-二进制数据
+Binary data
 
 ## Remarks
 
-从画布取回的 `binaryData` 数据可能为 `hashId`<!-- -->，这是由于我们后端存储二进制内嵌对象数据的是对象存储，
+The `binaryData` retrieved from the canvas may be a `hashId`<!-- -->, because our backend stores binary embedded object data in object storage,
 
-对象存储以 `hashId` 作为索引，需要完整取回数据将会造成额外请求消耗性能
+The object storage uses `hashId` as the index. Fully retrieving the data will cause additional requests and consume performance
 
 ### getstate_filename
 
 # IPCB\_PrimitiveObject.getState\_FileName() method
 
-获取属性状态：文件名
+Get the property state: file name
 
 ## Signature
 
 ```typescript
-getState_FileName(): string;
+function getState_FileName(): string;
 ```
-
 
 ## Returns
 
 string
 
-文件名
+File name
 
 ### getstate_height
 
 # IPCB\_PrimitiveObject.getState\_Height() method
 
-获取属性状态：高
+Get the property state: height
 
 ## Signature
 
 ```typescript
-getState_Height(): number;
+function getState_Height(): number;
 ```
-
 
 ## Returns
 
 number
 
-高
+Height
 
 ### getstate_layer
 
 # IPCB\_PrimitiveObject.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfObject | undefined;
+function getState_Layer(): TPCB_LayersOfObject | undefined;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfObject](../types/TPCB_LayersOfObject.md) \| undefined
 
-层
+Layer
 
 ### getstate_mirror
 
 # IPCB\_PrimitiveObject.getState\_Mirror() method
 
-获取属性状态：是否水平镜像
+Get the property state: whether it is horizontally mirrored
 
 ## Signature
 
 ```typescript
-getState_Mirror(): boolean;
+function getState_Mirror(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否水平镜像
+Whether it is horizontally mirrored
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveObject.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveObject.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveObject.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_rotation
 
 # IPCB\_PrimitiveObject.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_topleftx
 
 # IPCB\_PrimitiveObject.getState\_TopLeftX() method
 
-获取属性状态：左上点 X
+Get the property state: top-left point X
 
 ## Signature
 
 ```typescript
-getState_TopLeftX(): number | undefined;
+function getState_TopLeftX(): number | undefined;
 ```
-
 
 ## Returns
 
 number \| undefined
 
-左上点 X
+Top-left point X
 
 ### getstate_toplefty
 
 # IPCB\_PrimitiveObject.getState\_TopLeftY() method
 
-获取属性状态：左上点 Y
+Get the property state: top-left point Y
 
 ## Signature
 
 ```typescript
-getState_TopLeftY(): number | undefined;
+function getState_TopLeftY(): number | undefined;
 ```
-
 
 ## Returns
 
 number \| undefined
 
-左上点 Y
+Top-left point Y
 
 ### getstate_width
 
 # IPCB\_PrimitiveObject.getState\_Width() method
 
-获取属性状态：宽
+Get the property state: width
 
 ## Signature
 
 ```typescript
-getState_Width(): number;
+function getState_Width(): number;
 ```
-
 
 ## Returns
 
 number
 
-宽
+Width
 
 ### isasync
 
 # IPCB\_PrimitiveObject.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -694,31 +595,30 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveObject>;
+function reset(): Promise<IPCB_PrimitiveObject>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_binarydata
 
 # IPCB\_PrimitiveObject.setState\_BinaryData() method
 
-设置属性状态：二进制数据
+Set the property state: binary data
 
 ## Signature
 
 ```typescript
-setState_BinaryData(binaryData: string): IPCB_PrimitiveObject;
+function setState_BinaryData(binaryData: string): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -727,60 +627,52 @@ setState_BinaryData(binaryData: string): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 binaryData
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-二进制数据
-
+Binary data
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ## Remarks
 
-从画布重新取回的 `binaryData` 数据可能为 `hashId`<!-- -->，这是由于我们后端存储二进制内嵌对象数据的是对象存储，
+The `binaryData` re-retrieved from the canvas may be a `hashId`<!-- -->, because our backend stores binary embedded object data in object storage,
 
-对象存储以 `hashId` 作为索引，需要完整取回数据将会造成额外请求消耗性能
+The object storage uses `hashId` as the index. Fully retrieving the data will cause additional requests and consume performance
 
 ### setstate_filename
 
 # IPCB\_PrimitiveObject.setState\_FileName() method
 
-设置属性状态：文件名
+Set the property state: file name
 
 ## Signature
 
 ```typescript
-setState_FileName(fileName: string): IPCB_PrimitiveObject;
+function setState_FileName(fileName: string): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -789,54 +681,46 @@ setState_FileName(fileName: string): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fileName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文件名
-
+File name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_height
 
 # IPCB\_PrimitiveObject.setState\_Height() method
 
-设置属性状态：高
+Set the property state: height
 
 ## Signature
 
 ```typescript
-setState_Height(height: number): IPCB_PrimitiveObject;
+function setState_Height(height: number): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -845,43 +729,35 @@ setState_Height(height: number): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 height
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-高
-
+Height
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_layer
 
@@ -889,12 +765,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfObject): IPCB_PrimitiveObject;
+function setState_Layer(layer: TPCB_LayersOfObject): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -903,54 +779,46 @@ setState_Layer(layer: TPCB_LayersOfObject): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfObject](../types/TPCB_LayersOfObject.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_mirror
 
 # IPCB\_PrimitiveObject.setState\_Mirror() method
 
-设置属性状态：是否水平镜像
+Set the property state: whether it is horizontally mirrored
 
 ## Signature
 
 ```typescript
-setState_Mirror(mirror: boolean): IPCB_PrimitiveObject;
+function setState_Mirror(mirror: boolean): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -959,43 +827,35 @@ setState_Mirror(mirror: boolean): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否水平镜像
-
+Whether it is horizontally mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_primitivelock
 
@@ -1003,12 +863,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveObject;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -1017,54 +877,46 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_rotation
 
 # IPCB\_PrimitiveObject.setState\_Rotation() method
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): IPCB_PrimitiveObject;
+function setState_Rotation(rotation: number): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -1073,54 +925,46 @@ setState_Rotation(rotation: number): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_topleftx
 
 # IPCB\_PrimitiveObject.setState\_TopLeftX() method
 
-设置属性状态：左上点 X
+Set the property state: top-left point X
 
 ## Signature
 
 ```typescript
-setState_TopLeftX(topLeftX: number): IPCB_PrimitiveObject;
+function setState_TopLeftX(topLeftX: number): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -1129,54 +973,46 @@ setState_TopLeftX(topLeftX: number): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topLeftX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-左上点 X
-
+Top-left point X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_toplefty
 
 # IPCB\_PrimitiveObject.setState\_TopLeftY() method
 
-设置属性状态：左上点 Y
+Set the property state: top-left point Y
 
 ## Signature
 
 ```typescript
-setState_TopLeftY(topLeftY: number): IPCB_PrimitiveObject;
+function setState_TopLeftY(topLeftY: number): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -1185,54 +1021,46 @@ setState_TopLeftY(topLeftY: number): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 topLeftY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-左上点 Y
-
+Top-left point Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### setstate_width
 
 # IPCB\_PrimitiveObject.setState\_Width() method
 
-设置属性状态：宽
+Set the property state: width
 
 ## Signature
 
 ```typescript
-setState_Width(width: number): IPCB_PrimitiveObject;
+function setState_Width(width: number): IPCB_PrimitiveObject;
 ```
 
 ## Parameters
@@ -1241,78 +1069,68 @@ setState_Width(width: number): IPCB_PrimitiveObject;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 width
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-宽
-
+Width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveObject.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveObject;
+function toAsync(): IPCB_PrimitiveObject;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveObject.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveObject;
+function toSync(): IPCB_PrimitiveObject;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
-二进制内嵌对象图元对象
+Binary embedded object primitive object

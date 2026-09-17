@@ -1,11 +1,11 @@
 # PCB\_PrimitivePolyline class
 
-PCB &amp; 封装 / 折线图元类
+PCB &amp; footprint / polyline primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitivePolyline implements IPCB_PrimitiveAPI 
+class PCB_PrimitivePolyline implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class PCB_PrimitivePolyline implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(net, layer, polygon, lineWidth, primitiveLock)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-创建折线
-
+Create a polyline
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除折线
-
+**_(BETA)_** Delete the polyline
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取折线
-
+**_(BETA)_** Get the polyline
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取折线
-
+**_(BETA)_** Get the polyline
 
 </td></tr>
 <tr><td>
 
 [getAll(net, layer, primitiveLock)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有折线
-
+**_(BETA)_** Get all polylines
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(net, layer, primitiveLock)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有折线的图元 ID
-
+**_(BETA)_** Get the primitive IDs of all polylines
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitivePolyline.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改折线
-
+**_(BETA)_** Modify the polyline
 
 </td></tr>
 </tbody></table>
@@ -135,12 +111,18 @@ Description
 
 # PCB\_PrimitivePolyline.create() method
 
-创建折线
+Create a polyline
 
 ## Signature
 
 ```typescript
-create(net: string, layer: TPCB_LayersOfLine, polygon: IPCB_Polygon, lineWidth?: number, primitiveLock?: boolean): Promise<IPCB_PrimitivePolyline | undefined>;
+function create(
+	net: string,
+	layer: TPCB_LayersOfLine,
+	polygon: IPCB_Polygon,
+	lineWidth?: number,
+	primitiveLock?: boolean,
+): Promise<IPCB_PrimitivePolyline | undefined>;
 ```
 
 ## Parameters
@@ -149,107 +131,87 @@ create(net: string, layer: TPCB_LayersOfLine, polygon: IPCB_Polygon, lineWidth?:
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-网络名称
-
+Net name
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 polygon
 
-
 </td><td>
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-
 </td><td>
 
-单多边形对象
-
+Single polygon object
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 线宽
-
+_(Optional)_ Line width
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| undefined&gt;
 
-折线图元对象
+Polyline primitive object
 
 ### delete
 
@@ -257,12 +219,12 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| undefined&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除折线
+Delete the polyline
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitivePolyline | Array<string> | Array<IPCB_PrimitivePolyline>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitivePolyline | Array<string> | Array<IPCB_PrimitivePolyline>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -271,43 +233,35 @@ delete(primitiveIds: string | IPCB_PrimitivePolyline | Array<string> | Array<IPC
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
-
 </td><td>
 
-折线的图元 ID 或折线图元对象
-
+Primitive ID of the polyline or the polyline primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -315,12 +269,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取折线
+Get the polyline
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitivePolyline | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitivePolyline | undefined>;
 ```
 
 ## Parameters
@@ -329,43 +283,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitivePolyline | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-折线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the polyline, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| undefined&gt;
 
-折线图元对象，`undefined` 表示获取失败
+Polyline primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -373,12 +319,12 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| undefined&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取折线
+Get the polyline
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePolyline>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePolyline>>;
 ```
 
 ## Parameters
@@ -387,47 +333,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePolyline>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-折线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the polyline, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;&gt;
 
-折线图元对象，空数组表示获取失败
+Polyline primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -435,12 +373,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有折线
+Get all polylines
 
 ## Signature
 
 ```typescript
-getAll(net?: string, layer?: TPCB_LayersOfLine, primitiveLock?: boolean): Promise<Array<IPCB_PrimitivePolyline>>;
+function getAll(
+	net?: string,
+	layer?: TPCB_LayersOfLine,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitivePolyline>>;
 ```
 
 ## Parameters
@@ -449,75 +391,61 @@ getAll(net?: string, layer?: TPCB_LayersOfLine, primitiveLock?: boolean): Promis
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 网络名称
-
+_(Optional)_ Net name
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;&gt;
 
-折线图元对象数组
+Polyline primitive object array
 
 ### getallprimitiveid
 
@@ -525,12 +453,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有折线的图元 ID
+Get the primitive IDs of all polylines
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(net?: string, layer?: TPCB_LayersOfLine, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	net?: string,
+	layer?: TPCB_LayersOfLine,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -539,75 +471,61 @@ getAllPrimitiveId(net?: string, layer?: TPCB_LayersOfLine, primitiveLock?: boole
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 net
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 网络名称
-
+_(Optional)_ Net name
 
 </td></tr>
 <tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-折线的图元 ID 数组
+Array of polyline primitive IDs
 
 ### modify
 
@@ -615,18 +533,21 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改折线
+Modify the polyline
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitivePolyline, property: {
-        net?: string;
-        layer?: TPCB_LayersOfLine;
-        polygon?: IPCB_Polygon;
-        lineWidth?: number;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitivePolyline | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitivePolyline,
+	property: {
+		net?: string;
+		layer?: TPCB_LayersOfLine;
+		polygon?: IPCB_Polygon;
+		lineWidth?: number;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitivePolyline | undefined>;
 ```
 
 ## Parameters
@@ -635,56 +556,45 @@ modify(primitiveId: string | IPCB_PrimitivePolyline, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ net?: string; layer?: [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)<!-- -->; polygon?: [IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->; lineWidth?: number; primitiveLock?: boolean }
 
 </td><td>
 
-{ net?: string; layer?: [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)<!-- -->; polygon?: [IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->; lineWidth?: number; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| undefined&gt;
 
-折线图元对象
+Polyline primitive object

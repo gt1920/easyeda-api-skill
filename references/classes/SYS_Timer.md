@@ -1,17 +1,16 @@
 # SYS\_Timer class
 
-系统 / 定时器类
+System / timer class
 
 ## Signature
 
 ```typescript
-declare class SYS_Timer 
+class SYS_Timer
 ```
 
 ## Remarks
 
-设置定时器
-
+Set Timer
 
 ## Methods
 
@@ -19,72 +18,57 @@ declare class SYS_Timer
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [clearIntervalTimer(id)](./SYS_Timer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-清除指定循环定时器
-
+Clear the specified interval timer
 
 </td></tr>
 <tr><td>
 
 [clearTimeoutTimer(id)](./SYS_Timer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-清除指定单次定时器
-
+Clear the specified timeout timer
 
 </td></tr>
 <tr><td>
 
 [setIntervalTimer(id, timeout, callFn, args)](./SYS_Timer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置循环定时器
-
+Set an interval timer
 
 </td></tr>
 <tr><td>
 
 [setTimeoutTimer(id, timeout, callFn, args)](./SYS_Timer.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置单次定时器
-
+Set a timeout timer
 
 </td></tr>
 </tbody></table>
@@ -97,12 +81,12 @@ Description
 
 # SYS\_Timer.clearIntervalTimer() method
 
-清除指定循环定时器
+Clear the specified interval timer
 
 ## Signature
 
 ```typescript
-clearIntervalTimer(id: string): boolean;
+function clearIntervalTimer(id: string): boolean;
 ```
 
 ## Parameters
@@ -111,54 +95,46 @@ clearIntervalTimer(id: string): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-定时器 ID
-
+Timer ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-定时器是否清除成功
+Whether the timer was cleared successfully
 
 ### cleartimeouttimer
 
 # SYS\_Timer.clearTimeoutTimer() method
 
-清除指定单次定时器
+Clear the specified timeout timer
 
 ## Signature
 
 ```typescript
-clearTimeoutTimer(id: string): boolean;
+function clearTimeoutTimer(id: string): boolean;
 ```
 
 ## Parameters
@@ -167,54 +143,51 @@ clearTimeoutTimer(id: string): boolean;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-定时器 ID
-
+Timer ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-定时器是否清除成功
+Whether the timer was cleared successfully
 
 ### setintervaltimer
 
 # SYS\_Timer.setIntervalTimer() method
 
-设置循环定时器
+Set an interval timer
 
 ## Signature
 
 ```typescript
-setIntervalTimer(id: string, timeout: number, callFn: (...args: any) => void, ...args: any): boolean;
+function setIntervalTimer(
+	id: string,
+	timeout: number,
+	callFn: (...args: any) => void,
+	...args: any
+): boolean;
 ```
 
 ## Parameters
@@ -223,106 +196,94 @@ setIntervalTimer(id: string, timeout: number, callFn: (...args: any) => void, ..
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-定时器 ID，用于定位&amp;删除定时器
-
+Timer ID, used to locate and delete the timer
 
 </td></tr>
 <tr><td>
 
 timeout
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-定时时间，单位 ms
-
+Timer duration, unit ms
 
 </td></tr>
 <tr><td>
 
 callFn
 
-
 </td><td>
 
 (...args: any) =&gt; void
 
-
 </td><td>
 
-定时调用函数
-
+Function called by the timer
 
 </td></tr>
 <tr><td>
 
 args
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-传给定时调用函数的参数
-
+Arguments passed to the timer callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-定时器是否设置成功
+Whether the timer was set successfully
 
 ## Remarks
 
-如果遇到 ID 重复的定时器，则之前设置的定时器将被清除
+If a timer with a duplicate ID is encountered, the previously set timer will be cleared
 
 ### settimeouttimer
 
 # SYS\_Timer.setTimeoutTimer() method
 
-设置单次定时器
+Set a timeout timer
 
 ## Signature
 
 ```typescript
-setTimeoutTimer(id: string, timeout: number, callFn: (...args: any) => void, ...args: any): boolean;
+function setTimeoutTimer(
+	id: string,
+	timeout: number,
+	callFn: (...args: any) => void,
+	...args: any
+): boolean;
 ```
 
 ## Parameters
@@ -331,92 +292,75 @@ setTimeoutTimer(id: string, timeout: number, callFn: (...args: any) => void, ...
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 id
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-定时器 ID
-
+Timer ID
 
 </td></tr>
 <tr><td>
 
 timeout
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-定时时间，单位 ms
-
+Timer duration, unit ms
 
 </td></tr>
 <tr><td>
 
 callFn
 
-
 </td><td>
 
 (...args: any) =&gt; void
 
-
 </td><td>
 
-定时调用函数
-
+Function called by the timer
 
 </td></tr>
 <tr><td>
 
 args
 
-
 </td><td>
 
 any
 
-
 </td><td>
 
-传给定时调用函数的参数
-
+Arguments passed to the timer callback function
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 boolean
 
-定时器是否设置成功
+Whether the timer was set successfully
 
 ## Remarks
 
-如果遇到 ID 重复的定时器，则之前设置的定时器将被清除
+If a timer with a duplicate ID is encountered, the previously set timer will be cleared

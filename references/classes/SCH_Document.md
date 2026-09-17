@@ -1,16 +1,16 @@
 # SCH\_Document class
 
-原理图 &amp; 符号 / 文档操作类
+Schematic &amp; symbol / document operation class
 
 ## Signature
 
 ```typescript
-declare class SCH_Document 
+class SCH_Document
 ```
 
 ## Remarks
 
-对设计文档总体进行的操作
+Operations performed on the design document as a whole
 
 ## Methods
 
@@ -18,72 +18,57 @@ declare class SCH_Document
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [autoLayout(props)](./SCH_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 自动布局
-
+**_(BETA)_** Auto layout
 
 </td></tr>
 <tr><td>
 
 [autoRouting(props)](./SCH_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 自动布线
-
+**_(BETA)_** Auto routing
 
 </td></tr>
 <tr><td>
 
 [importChanges()](./SCH_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-从 PCB 导入变更
-
+Import changes from the PCB
 
 </td></tr>
 <tr><td>
 
 [save()](./SCH_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-保存文档
-
+Save Document
 
 </td></tr>
 </tbody></table>
@@ -98,33 +83,39 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-自动布局
+Auto layout
 
 ## Signature
 
 ```typescript
-autoLayout(props?: {
-        uuids?: Array<string>;
-        netlist?: {
-            component: {
-                [uniqueId: string]: {
-                    pinInfoMap: {
-                        [key: string]: {
-                            name: string;
-                            number: string;
-                            net: string;
-                            props: {
-                                'Pin Number': string;
-                            };
-                        };
-                    };
-                };
-            };
-        };
-        designatorDeviceTypeMap?: {
-            [designator: string]: 'resistor' | 'capacitor' | 'inductive' | 'diode' | 'triode' | 'oscillator' | 'chip' | 'otherDevice';
-        };
-    }): Promise<any>;
+function autoLayout(props?: {
+	uuids?: Array<string>;
+	netlist?: {
+		component: {
+			[uniqueId: string]: {
+				pinInfoMap: {
+					[key: string]: {
+						name: string;
+						number: string;
+						net: string;
+						props: { 'Pin Number': string };
+					};
+				};
+			};
+		};
+	};
+	designatorDeviceTypeMap?: {
+		[designator: string]:
+			| 'resistor'
+			| 'capacitor'
+			| 'inductive'
+			| 'diode'
+			| 'triode'
+			| 'oscillator'
+			| 'chip'
+			| 'otherDevice';
+	};
+}): Promise<any>;
 ```
 
 ## Parameters
@@ -133,47 +124,39 @@ autoLayout(props?: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 props
 
+</td><td>
+
+{ uuids?: Array&lt;string&gt;; netlist?: { component: { \[uniqueId: string\]: { pinInfoMap: { \[key: string\]: { name: string; number: string; net: string; props: { 'Pin Number': string } } } } } }; designatorDeviceTypeMap?: { \[designator: string\]: 'resistor' \| 'capacitor' \| 'inductive' \| 'diode' \| 'triode' \| 'oscillator' \| 'chip' \| 'otherDevice' } }
 
 </td><td>
 
-{ uuids?: Array&lt;string&gt;; netlist?: { component: { \[uniqueId: string\]: { pinInfoMap: { \[key: string\]: { name: string; number: string; net: string; props: { 'Pin Number': string; }; }; }; }; }; }; designatorDeviceTypeMap?: { \[designator: string\]: 'resistor' \| 'capacitor' \| 'inductive' \| 'diode' \| 'triode' \| 'oscillator' \| 'chip' \| 'otherDevice'; }; }
-
-
-</td><td>
-
-_(Optional)_ 自动布局参数
-
+_(Optional)_ Auto layout parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-自动布局结果
+Auto layout result
 
 ## Remarks
 
-如不传入任何参数，将对所有器件进行自动布局
+If no parameters are passed in, auto layout will be performed for all devices
 
 ### autorouting
 
@@ -181,33 +164,39 @@ Promise&lt;any&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-自动布线
+Auto routing
 
 ## Signature
 
 ```typescript
-autoRouting(props?: {
-        uuids?: Array<string>;
-        netlist?: {
-            component: {
-                [uniqueId: string]: {
-                    pinInfoMap: {
-                        [key: string]: {
-                            name: string;
-                            number: string;
-                            net: string;
-                            props: {
-                                'Pin Number': string;
-                            };
-                        };
-                    };
-                };
-            };
-        };
-        designatorDeviceTypeMap?: {
-            [designator: string]: 'resistor' | 'capacitor' | 'inductive' | 'diode' | 'triode' | 'oscillator' | 'chip' | 'otherDevice';
-        };
-    }): Promise<any>;
+function autoRouting(props?: {
+	uuids?: Array<string>;
+	netlist?: {
+		component: {
+			[uniqueId: string]: {
+				pinInfoMap: {
+					[key: string]: {
+						name: string;
+						number: string;
+						net: string;
+						props: { 'Pin Number': string };
+					};
+				};
+			};
+		};
+	};
+	designatorDeviceTypeMap?: {
+		[designator: string]:
+			| 'resistor'
+			| 'capacitor'
+			| 'inductive'
+			| 'diode'
+			| 'triode'
+			| 'oscillator'
+			| 'chip'
+			| 'otherDevice';
+	};
+}): Promise<any>;
 ```
 
 ## Parameters
@@ -216,82 +205,72 @@ autoRouting(props?: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 props
 
+</td><td>
+
+{ uuids?: Array&lt;string&gt;; netlist?: { component: { \[uniqueId: string\]: { pinInfoMap: { \[key: string\]: { name: string; number: string; net: string; props: { 'Pin Number': string } } } } } }; designatorDeviceTypeMap?: { \[designator: string\]: 'resistor' \| 'capacitor' \| 'inductive' \| 'diode' \| 'triode' \| 'oscillator' \| 'chip' \| 'otherDevice' } }
 
 </td><td>
 
-{ uuids?: Array&lt;string&gt;; netlist?: { component: { \[uniqueId: string\]: { pinInfoMap: { \[key: string\]: { name: string; number: string; net: string; props: { 'Pin Number': string; }; }; }; }; }; }; designatorDeviceTypeMap?: { \[designator: string\]: 'resistor' \| 'capacitor' \| 'inductive' \| 'diode' \| 'triode' \| 'oscillator' \| 'chip' \| 'otherDevice'; }; }
-
-
-</td><td>
-
-_(Optional)_ 自动布线参数
-
+_(Optional)_ Auto routing parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-自动布线结果
+Auto routing result
 
 ## Remarks
 
-如不传入任何参数，将对所有未布线的网络进行自动布线
+If no parameters are passed in, auto routing will be performed for all unrouted nets
 
 ### importchanges
 
 # SCH\_Document.importChanges() method
 
-从 PCB 导入变更
+Import changes from the PCB
 
 ## Signature
 
 ```typescript
-importChanges(): Promise<boolean>;
+function importChanges(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-导入操作是否成功，导入失败或游离原理图返回 `false`
+Whether the import operation is successful, import failed or a free schematic return `false`
 
 ### save
 
 # SCH\_Document.save() method
 
-保存文档
+Save Document
 
 ## Signature
 
 ```typescript
-save(): Promise<boolean>;
+function save(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-保存操作是否成功，保存失败、上传失败等错误均返回 `false`
+Whether the save operation was successful. Errors such as save failure and upload failure all return `false`

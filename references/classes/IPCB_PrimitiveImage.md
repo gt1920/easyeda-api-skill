@@ -1,16 +1,15 @@
 # IPCB\_PrimitiveImage class
 
-图像图元
+Image primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitiveImage implements IPCB_Primitive 
+class IPCB_PrimitiveImage implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,352 +17,277 @@ declare class IPCB_PrimitiveImage implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_ComplexPolygon()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图像源数据（复杂多边形）
-
+Get the property state: image source data ( complex polygon)
 
 </td></tr>
 <tr><td>
 
 [getState\_Height()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：高
-
+Get the property state: height
 
 </td></tr>
 <tr><td>
 
 [getState\_HorizonMirror()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否水平镜像
-
+Get the property state: whether it is horizontally mirrored
 
 </td></tr>
 <tr><td>
 
 [getState\_Layer()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：层
-
+Get the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveLock()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：是否锁定
-
+Get the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [getState\_Rotation()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：旋转角度
-
+Get the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [getState\_Width()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：宽
-
+Get the property state: width
 
 </td></tr>
 <tr><td>
 
 [getState\_X()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：BBox 左上点坐标 X
-
+Get the property state: BBox top-left point coordinates X
 
 </td></tr>
 <tr><td>
 
 [getState\_Y()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：BBox 左上点坐标 Y
-
+Get the property state: BBox top-left point coordinates Y
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 <tr><td>
 
 [setState\_Height(height)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：高
-
+**_(BETA)_** Set the property state: height
 
 </td></tr>
 <tr><td>
 
 [setState\_HorizonMirror(horizonMirror)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否水平镜像
-
+**_(BETA)_** Set the property state: whether it is horizontally mirrored
 
 </td></tr>
 <tr><td>
 
 [setState\_Layer(layer)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：层
-
+**_(BETA)_** Set the property state: Layer
 
 </td></tr>
 <tr><td>
 
 [setState\_PrimitiveLock(primitiveLock)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：是否锁定
-
+**_(BETA)_** Set the property state: whether it is locked
 
 </td></tr>
 <tr><td>
 
 [setState\_Rotation(rotation)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：旋转角度
-
+**_(BETA)_** Set the property state: rotation angle
 
 </td></tr>
 <tr><td>
 
 [setState\_Width(width)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：宽
-
+**_(BETA)_** Set the property state: width
 
 </td></tr>
 <tr><td>
 
 [setState\_X(x)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：BBox 左上点坐标 X
-
+**_(BETA)_** Set the property state: BBox top-left point coordinates X
 
 </td></tr>
 <tr><td>
 
 [setState\_Y(y)](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：BBox 左上点坐标 Y
-
+**_(BETA)_** Set the property state: BBox top-left point coordinates Y
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./IPCB_PrimitiveImage.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -378,248 +302,235 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<IPCB_PrimitiveImage>;
+function done(): Promise<IPCB_PrimitiveImage>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
-图像图元对象
+Image primitive object
 
 ### getstate_complexpolygon
 
 # IPCB\_PrimitiveImage.getState\_ComplexPolygon() method
 
-获取属性状态：图像源数据（复杂多边形）
+Get the property state: image source data ( complex polygon)
 
 ## Signature
 
 ```typescript
-getState_ComplexPolygon(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
+function getState_ComplexPolygon(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
 ```
-
 
 ## Returns
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) \| Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
-图像源数据（复杂多边形）
+Image source data ( complex polygon)
 
 ### getstate_height
 
 # IPCB\_PrimitiveImage.getState\_Height() method
 
-获取属性状态：高
+Get the property state: height
 
 ## Signature
 
 ```typescript
-getState_Height(): number;
+function getState_Height(): number;
 ```
-
 
 ## Returns
 
 number
 
-高
+Height
 
 ### getstate_horizonmirror
 
 # IPCB\_PrimitiveImage.getState\_HorizonMirror() method
 
-获取属性状态：是否水平镜像
+Get the property state: whether it is horizontally mirrored
 
 ## Signature
 
 ```typescript
-getState_HorizonMirror(): boolean;
+function getState_HorizonMirror(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否水平镜像
+Whether it is horizontally mirrored
 
 ### getstate_layer
 
 # IPCB\_PrimitiveImage.getState\_Layer() method
 
-获取属性状态：层
+Get the property state: Layer
 
 ## Signature
 
 ```typescript
-getState_Layer(): TPCB_LayersOfImage;
+function getState_Layer(): TPCB_LayersOfImage;
 ```
-
 
 ## Returns
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-层
+Layer
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitiveImage.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivelock
 
 # IPCB\_PrimitiveImage.getState\_PrimitiveLock() method
 
-获取属性状态：是否锁定
+Get the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-getState_PrimitiveLock(): boolean;
+function getState_PrimitiveLock(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否锁定
+Whether it is locked
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitiveImage.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### getstate_rotation
 
 # IPCB\_PrimitiveImage.getState\_Rotation() method
 
-获取属性状态：旋转角度
+Get the property state: rotation angle
 
 ## Signature
 
 ```typescript
-getState_Rotation(): number;
+function getState_Rotation(): number;
 ```
-
 
 ## Returns
 
 number
 
-旋转角度
+Rotation angle
 
 ### getstate_width
 
 # IPCB\_PrimitiveImage.getState\_Width() method
 
-获取属性状态：宽
+Get the property state: width
 
 ## Signature
 
 ```typescript
-getState_Width(): number;
+function getState_Width(): number;
 ```
-
 
 ## Returns
 
 number
 
-宽
+Width
 
 ### getstate_x
 
 # IPCB\_PrimitiveImage.getState\_X() method
 
-获取属性状态：BBox 左上点坐标 X
+Get the property state: BBox top-left point coordinates X
 
 ## Signature
 
 ```typescript
-getState_X(): number;
+function getState_X(): number;
 ```
-
 
 ## Returns
 
 number
 
-BBox 左上点坐标 X
+BBox top-left point coordinates X
 
 ### getstate_y
 
 # IPCB\_PrimitiveImage.getState\_Y() method
 
-获取属性状态：BBox 左上点坐标 Y
+Get the property state: BBox top-left point coordinates Y
 
 ## Signature
 
 ```typescript
-getState_Y(): number;
+function getState_Y(): number;
 ```
-
 
 ## Returns
 
 number
 
-BBox 左上点坐标 Y
+BBox top-left point coordinates Y
 
 ### isasync
 
 # IPCB\_PrimitiveImage.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### reset
 
@@ -627,20 +538,19 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitiveImage>;
+function reset(): Promise<IPCB_PrimitiveImage>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
-图像图元对象
+Image primitive object
 
 ### setstate_height
 
@@ -648,12 +558,12 @@ Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：高
+Set the property state: height
 
 ## Signature
 
 ```typescript
-setState_Height(height: number): IPCB_PrimitiveImage;
+function setState_Height(height: number): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -662,43 +572,35 @@ setState_Height(height: number): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 height
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-高
-
+Height
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_horizonmirror
 
@@ -706,12 +608,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否水平镜像
+Set the property state: whether it is horizontally mirrored
 
 ## Signature
 
 ```typescript
-setState_HorizonMirror(horizonMirror: boolean): IPCB_PrimitiveImage;
+function setState_HorizonMirror(horizonMirror: boolean): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -720,43 +622,35 @@ setState_HorizonMirror(horizonMirror: boolean): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 horizonMirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否水平镜像
-
+Whether it is horizontally mirrored
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_layer
 
@@ -764,12 +658,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：层
+Set the property state: Layer
 
 ## Signature
 
 ```typescript
-setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveImage;
+function setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -778,43 +672,35 @@ setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_primitivelock
 
@@ -822,12 +708,12 @@ layer
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：是否锁定
+Set the property state: whether it is locked
 
 ## Signature
 
 ```typescript
-setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveImage;
+function setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -836,43 +722,35 @@ setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_rotation
 
@@ -880,12 +758,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：旋转角度
+Set the property state: rotation angle
 
 ## Signature
 
 ```typescript
-setState_Rotation(rotation: number): IPCB_PrimitiveImage;
+function setState_Rotation(rotation: number): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -894,43 +772,35 @@ setState_Rotation(rotation: number): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_width
 
@@ -938,12 +808,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：宽
+Set the property state: width
 
 ## Signature
 
 ```typescript
-setState_Width(width: number): IPCB_PrimitiveImage;
+function setState_Width(width: number): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -952,43 +822,35 @@ setState_Width(width: number): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 width
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-宽
-
+Width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_x
 
@@ -996,12 +858,12 @@ number
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：BBox 左上点坐标 X
+Set the property state: BBox top-left point coordinates X
 
 ## Signature
 
 ```typescript
-setState_X(x: number): IPCB_PrimitiveImage;
+function setState_X(x: number): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -1010,43 +872,35 @@ setState_X(x: number): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-BBox 左上点坐标 X
-
+BBox top-left point coordinates X
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### setstate_y
 
@@ -1054,12 +908,12 @@ BBox 左上点坐标 X
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：BBox 左上点坐标 Y
+Set the property state: BBox top-left point coordinates Y
 
 ## Signature
 
 ```typescript
-setState_Y(y: number): IPCB_PrimitiveImage;
+function setState_Y(y: number): IPCB_PrimitiveImage;
 ```
 
 ## Parameters
@@ -1068,78 +922,68 @@ setState_Y(y: number): IPCB_PrimitiveImage;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-BBox 左上点坐标 Y
-
+BBox top-left point coordinates Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### toasync
 
 # IPCB\_PrimitiveImage.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): IPCB_PrimitiveImage;
+function toAsync(): IPCB_PrimitiveImage;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object
 
 ### tosync
 
 # IPCB\_PrimitiveImage.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): IPCB_PrimitiveImage;
+function toSync(): IPCB_PrimitiveImage;
 ```
-
 
 ## Returns
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
-图像图元对象
+Image primitive object

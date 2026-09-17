@@ -1,11 +1,11 @@
 # SCH\_PrimitiveBus class
 
-原理图 &amp; 符号 / 总线图元类
+Schematic &amp; symbol / bus primitive class
 
 ## Signature
 
 ```typescript
-declare class SCH_PrimitiveBus implements ISCH_PrimitiveAPI 
+class SCH_PrimitiveBus implements ISCH_PrimitiveAPI
 ```
 **Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class SCH_PrimitiveBus implements ISCH_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(busName, line, color, lineWidth, lineType)](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建总线
-
+**_(BETA)_** Create a bus
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除总线
-
+**_(BETA)_** Delete the bus
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取总线
-
+**_(BETA)_** Get the bus
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取总线
-
+**_(BETA)_** Get the bus
 
 </td></tr>
 <tr><td>
 
 [getAll()](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有总线
-
+**_(BETA)_** Get all buses
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId()](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有总线的图元 ID
-
+**_(BETA)_** Get the primitive IDs of all buses
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./SCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改总线
-
+**_(BETA)_** Modify the bus
 
 </td></tr>
 </tbody></table>
@@ -137,12 +113,18 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建总线
+Create a bus
 
 ## Signature
 
 ```typescript
-create(busName: string, line: Array<number> | Array<Array<number>>, color?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null): Promise<ISCH_PrimitiveBus | undefined>;
+function create(
+	busName: string,
+	line: Array<number> | Array<Array<number>>,
+	color?: string | null,
+	lineWidth?: number | null,
+	lineType?: ESCH_PrimitiveLineType | null,
+): Promise<ISCH_PrimitiveBus | undefined>;
 ```
 
 ## Parameters
@@ -151,107 +133,87 @@ create(busName: string, line: Array<number> | Array<Array<number>>, color?: stri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 busName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-总线名称
-
+Bus name
 
 </td></tr>
 <tr><td>
 
 line
 
-
 </td><td>
 
 Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
-
 </td><td>
 
-多段线坐标组，每段都是连续的一组 `[x1, y1, x2, y2, x3, y3]` 所描述的线，如若多段线彼此无任何连接则创建将会失败 1.类型为number\[\]\[\]的案例说明： 1.1 设置\[\[\],\[0,0,0,1\]\]，段1没有路径，非法 1.2 设置\[\[1\], \[0,0,0,1\]\]，段1只有x，缺少y，非法 1.3 设置\[\[0,0,-1,0\],\[0,0,1,1\]\]，段1为水平线，但段2为斜线，非法 1.4 设置\[\[0,0,-1,0,-1,1\], \[0,1,1,1\]\]，两段彼此无连接，非法 1.5 设置\[\[1,1\],\[1,2,2,2\]\]，段1只有一个点，忽略此段，段2为水平段，最终路径仅保留段2，合法 1.6 设置\[\[1,1\], \[1,2\]\]，段1只有一个点，忽略此段，段2亦忽略，最终路径为空，非法
-
+Polyline coordinate group. Each segment is a continuous line described by `[x1, y1, x2, y2, x3, y3]`<!-- -->. If the polylines have no connection to each other, the creation will fail. Examples for the type `Array<Array<number>>`<!-- -->: 1. `[[], [0, 0, 0, 1]]` - segment 1 has no path, invalid; 2. `[[1], [0, 0, 0, 1]]` - segment 1 only has x, missing y, invalid; 3. `[[0, 0, -1, 0], [0, 0, 1, 1]]` - segment 1 is a horizontal line but segment 2 is a diagonal line, invalid; 4. `[[0, 0, -1, 0, -1, 1], [0, 1, 1, 1]]` - the two segments have no connection, invalid; 5. `[[1, 1], [1, 2, 2, 2]]` - segment 1 has only one point, ignored; segment 2 is a horizontal segment, and the final path keeps only segment 2, valid; 6. `[[1, 1], [1, 2]]` - segment 1 has only one point, ignored; segment 2 is also ignored, and the final path is empty, invalid
 
 </td></tr>
 <tr><td>
 
 color
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-_(Optional)_ 总线颜色，`null` 表示默认
-
+_(Optional)_ Bus color. `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-_(Optional)_ 线宽，范围 `1-10`<!-- -->，`null` 表示默认
-
+_(Optional)_ Line width, range `1-10`<!-- -->. `null` indicates the default
 
 </td></tr>
 <tr><td>
 
 lineType
 
-
 </td><td>
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-
 </td><td>
 
-_(Optional)_ 线型，`null` 表示默认
-
+_(Optional)_ Line type. `null` indicates the default
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| undefined&gt;
 
-总线图元对象
+Bus primitive object
 
 ### delete
 
@@ -259,12 +221,12 @@ Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除总线
+Delete the bus
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | ISCH_PrimitiveBus | Array<string> | Array<ISCH_PrimitiveBus>): Promise<boolean>;
+function delete(primitiveIds: string | ISCH_PrimitiveBus | Array<string> | Array<ISCH_PrimitiveBus>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -273,43 +235,35 @@ delete(primitiveIds: string | ISCH_PrimitiveBus | Array<string> | Array<ISCH_Pri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| Array&lt;string&gt; \| Array&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;
 
-
 </td><td>
 
-总线的图元 ID 或总线图元对象
-
+Primitive ID of the bus or the bus primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -317,12 +271,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取总线
+Get the bus
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<ISCH_PrimitiveBus | undefined>;
+function get(primitiveIds: string): Promise<ISCH_PrimitiveBus | undefined>;
 ```
 
 ## Parameters
@@ -331,43 +285,35 @@ get(primitiveIds: string): Promise<ISCH_PrimitiveBus | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-总线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the bus, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| undefined&gt;
 
-总线图元对象，`undefined` 表示获取失败
+Bus primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -375,12 +321,12 @@ Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取总线
+Get the bus
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveBus>>;
+function get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveBus>>;
 ```
 
 ## Parameters
@@ -389,47 +335,39 @@ get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveBus>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-总线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Primitive ID of the bus, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;&gt;
 
-总线图元对象，空数组表示获取失败
+Bus primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -437,20 +375,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有总线
+Get all buses
 
 ## Signature
 
 ```typescript
-getAll(): Promise<Array<ISCH_PrimitiveBus>>;
+function getAll(): Promise<Array<ISCH_PrimitiveBus>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;&gt;
 
-总线图元对象数组
+Bus primitive object array
 
 ### getallprimitiveid
 
@@ -458,20 +395,19 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有总线的图元 ID
+Get the primitive IDs of all buses
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(): Promise<Array<string>>;
+function getAllPrimitiveId(): Promise<Array<string>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-总线的图元 ID 数组
+Array of bus primitive IDs
 
 ### modify
 
@@ -479,18 +415,21 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改总线
+Modify the bus
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | ISCH_PrimitiveBus, property: {
-        busName?: string;
-        line?: Array<number> | Array<Array<number>>;
-        color?: string | null;
-        lineWidth?: number | null;
-        lineType?: ESCH_PrimitiveLineType | null;
-    }): Promise<ISCH_PrimitiveBus | undefined>;
+function modify(
+	primitiveId: string | ISCH_PrimitiveBus,
+	property: {
+		busName?: string;
+		line?: Array<number> | Array<Array<number>>;
+		color?: string | null;
+		lineWidth?: number | null;
+		lineType?: ESCH_PrimitiveLineType | null;
+	},
+): Promise<ISCH_PrimitiveBus | undefined>;
 ```
 
 ## Parameters
@@ -499,56 +438,45 @@ modify(primitiveId: string | ISCH_PrimitiveBus, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-
 </td><td>
 
-总线的图元 ID 或总线图元对象
-
+Primitive ID of the bus or the bus primitive object
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ busName?: string; line?: Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;; color?: string \| null; lineWidth?: number \| null; lineType?: [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null }
 
 </td><td>
 
-{ busName?: string; line?: Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;; color?: string \| null; lineWidth?: number \| null; lineType?: [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md) \| undefined&gt;
 
-总线图元对象
+Bus primitive object

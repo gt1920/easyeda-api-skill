@@ -1,16 +1,16 @@
 # PCB\_Document class
 
-PCB &amp; 封装 / 文档操作类
+PCB &amp; footprint / document operation class
 
 ## Signature
 
 ```typescript
-declare class PCB_Document 
+class PCB_Document
 ```
 
 ## Remarks
 
-对设计文档总体进行的操作
+Operations performed on the design document as a whole
 
 ## Methods
 
@@ -18,296 +18,233 @@ declare class PCB_Document
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [autoRouting(props)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 自动布线
-
+**_(BETA)_** Auto routing
 
 </td></tr>
 <tr><td>
 
 [clearRouting(type)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 清除布线
-
+**_(BETA)_** Clear routing
 
 </td></tr>
 <tr><td>
 
 [convertCanvasOriginToDataOrigin(x, y)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-输入画布坐标返回该坐标对应的数据坐标
-
+Input a canvas coordinate and return the data coordinate corresponding to that coordinate
 
 </td></tr>
 <tr><td>
 
 [convertDataOriginToCanvasOrigin(x, y)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-输入数据坐标返回该坐标对应的画布坐标
-
+Input a data coordinate and return the canvas coordinate corresponding to that coordinate
 
 </td></tr>
 <tr><td>
 
 [getCalculatingRatlineStatus()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取当前飞线计算功能状态
-
+Get the current ratline calculation function status
 
 </td></tr>
 <tr><td>
 
 [getCanvasOrigin()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取画布原点相对于数据原点的偏移坐标
-
+Get the offset coordinate of the canvas origin relative to the data origin
 
 </td></tr>
 <tr><td>
 
 [getCurrentFilterConfiguration()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前画布过滤器配置
-
+**_(BETA)_** Get Current canvas filter configuration
 
 </td></tr>
 <tr><td>
 
 [getPrimitiveAtPoint(x, y)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取坐标点的图元
-
+**_(BETA)_** Get The primitive at the coordinate point
 
 </td></tr>
 <tr><td>
 
 [getPrimitivesInRegion(left, right, top, bottom, leftToRight)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取区域内所有图元
-
+**_(BETA)_** Get All primitives in the region
 
 </td></tr>
 <tr><td>
 
 [importAutoLayoutJsonFile(autoLayoutFile)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 导入自动布局文件（JSON）
-
+**_(BETA)_** Import auto layout file (JSON)
 
 </td></tr>
 <tr><td>
 
 [importAutoRouteJsonFile(autoRouteFile)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 导入自动布线文件（JSON）
-
+**_(BETA)_** Import auto routing file (JSON)
 
 </td></tr>
 <tr><td>
 
 [importAutoRouteSesFile(autoRouteFile)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 导入自动布线文件（SES）
-
+**_(BETA)_** Import auto routing file (SES)
 
 </td></tr>
 <tr><td>
 
 [importChanges(uuid)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-从原理图导入变更
-
+Import changes from the schematic
 
 </td></tr>
 <tr><td>
 
 [navigateToCoordinates(x, y)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-定位到画布坐标
-
+Locate to canvas coordinate
 
 </td></tr>
 <tr><td>
 
 [navigateToRegion(left, right, top, bottom)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 定位到画布区域
-
+**_(BETA)_** Locate to canvas region
 
 </td></tr>
 <tr><td>
 
 [save()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-保存文档
-
+Save Document
 
 </td></tr>
 <tr><td>
 
 [setCanvasOrigin(offsetX, offsetY)](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-设置画布原点相对于数据原点的偏移坐标
-
+Set the offset coordinate of the canvas origin relative to the data origin
 
 </td></tr>
 <tr><td>
 
 [startCalculatingRatline()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-启动飞线计算功能
-
+Start the ratline calculation function
 
 </td></tr>
 <tr><td>
 
 [stopCalculatingRatline()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-停止飞线计算功能
-
+Stop the ratline calculation function
 
 </td></tr>
 <tr><td>
 
 [zoomToBoardOutline()](./PCB_Document.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 缩放到板框（适应板框）
-
+**_(BETA)_** Zoom to the board outline (fit the board outline)
 
 </td></tr>
 </tbody></table>
@@ -322,12 +259,12 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-自动布线
+Auto routing
 
 ## Signature
 
 ```typescript
-autoRouting(props?: IPCB_AutoRoutingProps): Promise<IPCB_AutoRoutingResult>;
+function autoRouting(props?: IPCB_AutoRoutingProps): Promise<IPCB_AutoRoutingResult>;
 ```
 
 ## Parameters
@@ -336,50 +273,41 @@ autoRouting(props?: IPCB_AutoRoutingProps): Promise<IPCB_AutoRoutingResult>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 props
 
-
 </td><td>
 
 [IPCB\_AutoRoutingProps](../interfaces/IPCB_AutoRoutingProps.md)
 
-
 </td><td>
 
-_(Optional)_ 自动布线参数
-
+_(Optional)_ Auto routing parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_AutoRoutingResult](../interfaces/IPCB_AutoRoutingResult.md)<!-- -->&gt;
 
-自动布线结果
+Auto routing result
 
 ## Remarks
 
-如不传入任何参数，将对所有未布线的网络进行自动布线
+If no parameters are passed in, auto routing will be performed for all unrouted nets
 
 ## Example
-
 
 ```javascript
 // 对所有未布线的网络进行自动布线
@@ -401,12 +329,12 @@ const result = await eda.pcb_Document.autoRouting({
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-清除布线
+Clear routing
 
 ## Signature
 
 ```typescript
-clearRouting(type?: 'all' | 'net' | 'connection'): Promise<boolean>;
+function clearRouting(type?: 'all' | 'net' | 'connection'): Promise<boolean>;
 ```
 
 ## Parameters
@@ -415,37 +343,29 @@ clearRouting(type?: 'all' | 'net' | 'connection'): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 type
 
-
 </td><td>
 
 'all' \| 'net' \| 'connection'
 
-
 </td><td>
 
-_(Optional)_ 清除类型，如若需要指定清除类型，请提前选择指定图元
-
+_(Optional)_ Clear type. If you need to specify a clear type, select the specified primitive in advance
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
@@ -455,15 +375,12 @@ Promise&lt;boolean&gt;
 
 # PCB\_Document.convertCanvasOriginToDataOrigin() method
 
-输入画布坐标返回该坐标对应的数据坐标
+Input a canvas coordinate and return the data coordinate corresponding to that coordinate
 
 ## Signature
 
 ```typescript
-convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{
-        x: number;
-        y: number;
-    }>;
+function convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{ x: number; y: number }>;
 ```
 
 ## Parameters
@@ -472,73 +389,59 @@ convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;{ x: number; y: number; }&gt;
+Promise&lt;{ x: number; y: number }&gt;
 
-数据原点坐标
+Data origin coordinate
 
 ## Remarks
 
-嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点
+The coordinates displayed on the EasyEDA front end are all relative to the canvas origin; the EasyEDA API uses the data origin; when creating a PCB, the default canvas origin equals the data origin
 
 ### convertdataorigintocanvasorigin
 
 # PCB\_Document.convertDataOriginToCanvasOrigin() method
 
-输入数据坐标返回该坐标对应的画布坐标
+Input a data coordinate and return the canvas coordinate corresponding to that coordinate
 
 ## Signature
 
 ```typescript
-convertDataOriginToCanvasOrigin(x: number, y: number): Promise<{
-        x: number;
-        y: number;
-    }>;
+function convertDataOriginToCanvasOrigin(x: number, y: number): Promise<{ x: number; y: number }>;
 ```
 
 ## Parameters
@@ -547,114 +450,98 @@ convertDataOriginToCanvasOrigin(x: number, y: number): Promise<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-数据原点 X
-
+Data origin X
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-数据原点 Y
-
+Data origin Y
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;{ x: number; y: number; }&gt;
+Promise&lt;{ x: number; y: number }&gt;
 
-画布原点坐标
+Canvas origin coordinate
 
 ## Remarks
 
-嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点
+The coordinates displayed on the EasyEDA front end are all relative to the canvas origin; the EasyEDA API uses the data origin; when creating a PCB, the default canvas origin equals the data origin
 
 ### getcalculatingratlinestatus
 
 # PCB\_Document.getCalculatingRatlineStatus() method
 
-获取当前飞线计算功能状态
+Get the current ratline calculation function status
 
 ## Signature
 
 ```typescript
-getCalculatingRatlineStatus(): Promise<EPCB_DocumentRatlineCalculatingActiveStatus>;
+function getCalculatingRatlineStatus(): Promise<EPCB_DocumentRatlineCalculatingActiveStatus>;
 ```
-
 
 ## Returns
 
 Promise&lt;[EPCB\_DocumentRatlineCalculatingActiveStatus](../enums/EPCB_DocumentRatlineCalculatingActiveStatus.md)<!-- -->&gt;
 
-功能状态
+Function state
 
 ### getcanvasorigin
 
 # PCB\_Document.getCanvasOrigin() method
 
-获取画布原点相对于数据原点的偏移坐标
+Get the offset coordinate of the canvas origin relative to the data origin
 
 ## Signature
 
 ```typescript
-getCanvasOrigin(): Promise<{
-        offsetX: number;
-        offsetY: number;
-    }>;
+function getCanvasOrigin(): Promise<{ offsetX: number; offsetY: number }>;
 ```
-
 
 ## Returns
 
-Promise&lt;{ offsetX: number; offsetY: number; }&gt;
+Promise&lt;{ offsetX: number; offsetY: number }&gt;
 
-画布原点相对于数据原点的偏移坐标
+The offset coordinate of the canvas origin relative to the data origin
 
 ## Remarks
 
-嘉立创 EDA 专业版前端显示的坐标均为画布原点；
+The coordinates displayed on the EasyEDA Pro front end are all relative to the canvas origin;
 
-嘉立创 EDA 专业版 API 使用的均为数据原点；
+The EasyEDA Pro API uses the data origin;
 
-如果返回的数据为 `{ canvasOriginOffsetX: 100, canvasOriginOffsetY: 200 }`<!-- -->， 则代表画布原点在数据原点的向右 100 单位且向上 200 单位的位置；
+If the returned data is `{ canvasOriginOffsetX: 100, canvasOriginOffsetY: 200 }`<!-- -->, it means the canvas origin is at a position 100 units to the right and 200 units up from the data origin;
 
-此处的单位为数据层面单位，在跨度上等同于画布层面的 mil
+The units here are data-level units, which are equivalent to mil on the canvas level in span
 
 ### getcurrentfilterconfiguration
 
@@ -662,22 +549,19 @@ Promise&lt;{ offsetX: number; offsetY: number; }&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前画布过滤器配置
+Get Current canvas filter configuration
 
 ## Signature
 
 ```typescript
-getCurrentFilterConfiguration(): Promise<{
-        [key: string]: any;
-    } | undefined>;
+function getCurrentFilterConfiguration(): Promise<{ [key: string]: any } | undefined>;
 ```
-
 
 ## Returns
 
-Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
+Promise&lt;{ \[key: string\]: any } \| undefined&gt;
 
-当前画布过滤器配置，`undefined` 为获取失败
+Current canvas filter configuration; `undefined` indicates that the retrieval failed
 
 ### getprimitiveatpoint
 
@@ -685,12 +569,12 @@ Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取坐标点的图元
+Get The primitive at the coordinate point
 
 ## Signature
 
 ```typescript
-getPrimitiveAtPoint(x: number, y: number): Promise<IPCB_Primitive | undefined>;
+function getPrimitiveAtPoint(x: number, y: number): Promise<IPCB_Primitive | undefined>;
 ```
 
 ## Parameters
@@ -699,63 +583,52 @@ getPrimitiveAtPoint(x: number, y: number): Promise<IPCB_Primitive | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标点 X
-
+Coordinate point X
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标点 Y
-
+Coordinate point Y
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md) \| undefined&gt;
 
-坐标点的图元，如若坐标点无法找到图元，将返回 `undefined`
+The primitive at the coordinate point. If no primitive can be found at the coordinate point, `undefined` will be returned
 
 ## Remarks
 
-本操作和前端鼠标点击操作类似，将会获取指定坐标点上的图元
+This operation is similar to clicking with the mouse on the front end; it will get the primitive at the specified coordinate point
 
 ### getprimitivesinregion
 
@@ -763,12 +636,18 @@ Promise&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取区域内所有图元
+Get All primitives in the region
 
 ## Signature
 
 ```typescript
-getPrimitivesInRegion(left: number, right: number, top: number, bottom: number, leftToRight?: boolean): Promise<Array<IPCB_Primitive>>;
+function getPrimitivesInRegion(
+	left: number,
+	right: number,
+	top: number,
+	bottom: number,
+	leftToRight?: boolean,
+): Promise<Array<IPCB_Primitive>>;
 ```
 
 ## Parameters
@@ -777,107 +656,87 @@ getPrimitivesInRegion(left: number, right: number, top: number, bottom: number, 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 left
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第一 X 坐标
-
+First X coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 right
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第二 X 坐标
-
+Second X coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 top
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第一 Y 坐标
-
+First Y coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 bottom
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第二 Y 坐标
-
+Second Y coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 leftToRight
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否仅获取完全框选的图元，`false` 则触碰即获取
-
+_(Optional)_ Whether to only get primitives that are fully enclosed by the box selection. If `false`<!-- -->, primitives touched by the selection are also obtained
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&gt;&gt;
 
-区域内所有图元
+All primitives in the region
 
 ### importautolayoutjsonfile
 
@@ -885,12 +744,12 @@ Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-导入自动布局文件（JSON）
+Import auto layout file (JSON)
 
 ## Signature
 
 ```typescript
-importAutoLayoutJsonFile(autoLayoutFile: File): Promise<boolean>;
+function importAutoLayoutJsonFile(autoLayoutFile: File): Promise<boolean>;
 ```
 
 ## Parameters
@@ -899,47 +758,39 @@ importAutoLayoutJsonFile(autoLayoutFile: File): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 autoLayoutFile
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-欲导入的 JSON 文件
-
+The JSON file to import
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-导入操作是否成功
+Whether the import operation is successful
 
 ## Remarks
 
-可以使用  读入文件
+You can use  to read in a file
 
 ### importautoroutejsonfile
 
@@ -947,12 +798,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-导入自动布线文件（JSON）
+Import auto routing file (JSON)
 
 ## Signature
 
 ```typescript
-importAutoRouteJsonFile(autoRouteFile: File): Promise<boolean>;
+function importAutoRouteJsonFile(autoRouteFile: File): Promise<boolean>;
 ```
 
 ## Parameters
@@ -961,47 +812,39 @@ importAutoRouteJsonFile(autoRouteFile: File): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 autoRouteFile
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-欲导入的 JSON 文件
-
+The JSON file to import
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-导入操作是否成功
+Whether the import operation is successful
 
 ## Remarks
 
-可以使用  读入文件
+You can use  to read in a file
 
 ### importautoroutesesfile
 
@@ -1009,12 +852,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-导入自动布线文件（SES）
+Import auto routing file (SES)
 
 ## Signature
 
 ```typescript
-importAutoRouteSesFile(autoRouteFile: File): Promise<boolean>;
+function importAutoRouteSesFile(autoRouteFile: File): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1023,58 +866,50 @@ importAutoRouteSesFile(autoRouteFile: File): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 autoRouteFile
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-欲导入的 SES 文件
-
+The SES file to import
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-导入操作是否成功
+Whether the import operation is successful
 
 ## Remarks
 
-可以使用  读入文件
+You can use  to read in a file
 
 ### importchanges
 
 # PCB\_Document.importChanges() method
 
-从原理图导入变更
+Import changes from the schematic
 
 ## Signature
 
 ```typescript
-importChanges(uuid?: string): Promise<boolean>;
+function importChanges(uuid?: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1083,54 +918,46 @@ importChanges(uuid?: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 uuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 原理图 UUID，默认为关联在同一个 Board 下的原理图
-
+_(Optional)_ Schematic UUID. By default, the schematic associated with the same Board is used
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-导入操作是否成功，导入失败或未传入原理图 UUID 的游离 PCB 将返回 `false`
+Whether the import operation was successful. If the import fails or the free PCB has no schematic UUID passed in, `false` is returned
 
 ### navigatetocoordinates
 
 # PCB\_Document.navigateToCoordinates() method
 
-定位到画布坐标
+Locate to canvas coordinate
 
 ## Signature
 
 ```typescript
-navigateToCoordinates(x: number, y: number): Promise<boolean>;
+function navigateToCoordinates(x: number, y: number): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1139,67 +966,56 @@ navigateToCoordinates(x: number, y: number): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-本接口在前端画布上定位到指定的数据层面坐标；
+This API positions on the front-end canvas to the specified data-level coordinate;
 
-如果希望在进行本操作时前端画布坐标能与传入数据一致， 建议调用 [PCB\_Document.setCanvasOrigin()](./PCB_Document.md) 方法并设置偏移量为零；
+If you want the front-end canvas coordinate to be consistent with the passed-in data during this operation, it is recommended to call the [PCB\_Document.setCanvasOrigin()](./PCB_Document.md) method and set the offset to zero;
 
-此处的单位为数据层面单位，在跨度上等同于画布层面的 mil
+The units here are data-level units, which are equivalent to mil on the canvas level in span
 
 ### navigatetoregion
 
@@ -1207,12 +1023,17 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-定位到画布区域
+Locate to canvas region
 
 ## Signature
 
 ```typescript
-navigateToRegion(left: number, right: number, top: number, bottom: number): Promise<boolean>;
+function navigateToRegion(
+	left: number,
+	right: number,
+	top: number,
+	bottom: number,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1221,131 +1042,113 @@ navigateToRegion(left: number, right: number, top: number, bottom: number): Prom
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 left
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第一 X 坐标
-
+First X coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 right
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第二 X 坐标
-
+Second X coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 top
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第一 Y 坐标
-
+First Y coordinate of the rectangle
 
 </td></tr>
 <tr><td>
 
 bottom
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-矩形框第二 Y 坐标
-
+Second Y coordinate of the rectangle
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-本接口在前端画布上定位到指定的区域，区域数据为相对于数据原点的偏移；
+This API positions on the front-end canvas to the specified region. The region data is an offset relative to the data origin;
 
-例如：传入数据为 `{left: 0, right: 60, top: 100, bottom: -20}` =<!-- -->&gt; `navigateToRegion(0, 60, 100, -20)`<!-- -->， 则画布将会定位到以 `[30, 40]` 为中心的，`x` 轴方向长度为 `60`<!-- -->，`y` 轴方向长度为 `120` 的矩形范围；
+For example: the passed-in data is `{left: 0, right: 60, top: 100, bottom: -20}` =<!-- -->&gt; `navigateToRegion(0, 60, 100, -20)`<!-- -->, then the canvas will be positioned to a rectangular range centered at `[30, 40]` with a length of `60` in the x-axis direction and `120` in the y-axis direction;
 
-本接口不进行缩放操作，但会生成指示定位中心及表示区域范围的矩形框；
+This API does not perform zooming, but it will generate a rectangle frame indicating the positioning center and the region range;
 
-此处的单位为数据层面单位，在跨度上等同于画布层面的 mil
+The units here are data-level units, which are equivalent to mil on the canvas level in span
 
 ### save
 
 # PCB\_Document.save() method
 
-保存文档
+Save Document
 
 ## Signature
 
 ```typescript
-save(): Promise<boolean>;
+function save(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-保存操作是否成功，保存失败、上传失败等错误均返回 `false`
+Whether the save operation was successful. Errors such as save failure and upload failure all return `false`
 
 ### setcanvasorigin
 
 # PCB\_Document.setCanvasOrigin() method
 
-设置画布原点相对于数据原点的偏移坐标
+Set the offset coordinate of the canvas origin relative to the data origin
 
 ## Signature
 
 ```typescript
-setCanvasOrigin(offsetX: number, offsetY: number): Promise<boolean>;
+function setCanvasOrigin(offsetX: number, offsetY: number): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1354,111 +1157,98 @@ setCanvasOrigin(offsetX: number, offsetY: number): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 offsetX
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-画布原点相对于数据原点的 X 坐标偏移
-
+X coordinate offset of the canvas origin relative to the data origin
 
 </td></tr>
 <tr><td>
 
 offsetY
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-画布原点相对于数据原点的 Y 坐标偏移
-
+Y coordinate offset of the canvas origin relative to the data origin
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-嘉立创 EDA 专业版前端显示的坐标均为画布原点；
+The coordinates displayed on the EasyEDA Pro front end are all relative to the canvas origin;
 
-嘉立创 EDA 专业版 API 使用的均为数据原点；
+The EasyEDA Pro API uses the data origin;
 
-如果希望在 API 操作时前端画布坐标能与数据一致， 建议调用本方法并设置偏移量为零， 即 `setCanvasOrigin(0, 0)`<!-- -->；
+If you want the front-end canvas coordinate to be consistent with the data during API operations, it is recommended to call this method and set the offset to zero, i.e. `setCanvasOrigin(0, 0)`<!-- -->;
 
-此处的单位为数据层面单位，在跨度上等同于画布层面的 mil
+The units here are data-level units, which are equivalent to mil on the canvas level in span
 
 ### startcalculatingratline
 
 # PCB\_Document.startCalculatingRatline() method
 
-启动飞线计算功能
+Start the ratline calculation function
 
 ## Signature
 
 ```typescript
-startCalculatingRatline(): Promise<boolean>;
+function startCalculatingRatline(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-在启动时将会触发一次飞线计算
+A ratline calculation will be triggered when starting
 
 ### stopcalculatingratline
 
 # PCB\_Document.stopCalculatingRatline() method
 
-停止飞线计算功能
+Stop the ratline calculation function
 
 ## Signature
 
 ```typescript
-stopCalculatingRatline(): Promise<boolean>;
+function stopCalculatingRatline(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### zoomtoboardoutline
 
@@ -1466,17 +1256,16 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-缩放到板框（适应板框）
+Zoom to the board outline (fit the board outline)
 
 ## Signature
 
 ```typescript
-zoomToBoardOutline(): Promise<boolean>;
+function zoomToBoardOutline(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful

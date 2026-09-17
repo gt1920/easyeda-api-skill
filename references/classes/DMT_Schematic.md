@@ -1,16 +1,16 @@
 # DMT\_Schematic class
 
-文档树 / 原理图管理类
+Document tree / Schematic management class
 
 ## Signature
 
 ```typescript
-declare class DMT_Schematic 
+class DMT_Schematic
 ```
 
 ## Remarks
 
-在当前打开的工程内进行原理图管理的相关操作
+Operations related to schematic management in the currently open project
 
 ## Methods
 
@@ -18,254 +18,200 @@ declare class DMT_Schematic
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [copySchematic(schematicUuid, boardName)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 复制原理图
-
+**_(BETA)_** Copy Schematic
 
 </td></tr>
 <tr><td>
 
 [copySchematicPage(schematicPageUuid, schematicUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 复制原理图图页
-
+**_(BETA)_** Copy Schematic sheet
 
 </td></tr>
 <tr><td>
 
 [createSchematic(boardName)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建原理图
-
+**_(BETA)_** Create Schematic
 
 </td></tr>
 <tr><td>
 
 [createSchematicPage(schematicUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建原理图图页
-
+**_(BETA)_** Create Schematic sheet
 
 </td></tr>
 <tr><td>
 
 [deleteSchematic(schematicUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除原理图
-
+**_(BETA)_** Delete Schematic
 
 </td></tr>
 <tr><td>
 
 [deleteSchematicPage(schematicPageUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除原理图图页
-
+**_(BETA)_** Delete Schematic sheet
 
 </td></tr>
 <tr><td>
 
 [getAllSchematicPagesInfo()](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取工程内所有原理图图页的详细属性
-
+**_(BETA)_** Get all in the project schematic sheet detailed properties of
 
 </td></tr>
 <tr><td>
 
 [getAllSchematicsInfo()](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取工程内所有原理图的详细属性
-
+**_(BETA)_** Get all in the project schematic detailed properties of
 
 </td></tr>
 <tr><td>
 
 [getCurrentSchematicAllSchematicPagesInfo()](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前原理图内所有原理图图页的详细属性
-
+**_(BETA)_** Get the detailed properties of all schematic sheets in the current schematic
 
 </td></tr>
 <tr><td>
 
 [getCurrentSchematicInfo()](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前原理图的详细属性
-
+**_(BETA)_** Get detailed properties of Current schematic
 
 </td></tr>
 <tr><td>
 
 [getCurrentSchematicPageInfo()](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取当前原理图图页的详细属性
-
+**_(BETA)_** Get detailed properties of Current schematic sheet
 
 </td></tr>
 <tr><td>
 
 [getSchematicInfo(schematicUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取原理图的详细属性
-
+**_(BETA)_** Get detailed properties of Schematic
 
 </td></tr>
 <tr><td>
 
 [getSchematicPageInfo(schematicPageUuid)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取原理图图页的详细属性
-
+**_(BETA)_** Get detailed properties of Schematic sheet
 
 </td></tr>
 <tr><td>
 
 [modifySchematicName(schematicUuid, schematicName)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改原理图名称
-
+**_(BETA)_** Modify Schematic name
 
 </td></tr>
 <tr><td>
 
 [modifySchematicPageName(schematicPageUuid, schematicPageName)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改原理图图页名称
-
+**_(BETA)_** Modify Schematic sheet name
 
 </td></tr>
 <tr><td>
 
 [modifySchematicPageTitleBlock(showTitleBlock, titleBlockData)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改原理图图页明细表
-
+**_(BETA)_** Modify the title block of a schematic sheet
 
 </td></tr>
 <tr><td>
 
 [reorderSchematicPages(schematicUuid, schematicPageItemsArray)](./DMT_Schematic.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 重新排序原理图图页
-
+**_(BETA)_** Reorder schematic sheets
 
 </td></tr>
 </tbody></table>
@@ -280,12 +226,12 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-复制原理图
+Copy Schematic
 
 ## Signature
 
 ```typescript
-copySchematic(schematicUuid: string, boardName?: string): Promise<string | undefined>;
+function copySchematic(schematicUuid: string, boardName?: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -294,63 +240,52 @@ copySchematic(schematicUuid: string, boardName?: string): Promise<string | undef
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-源原理图 UUID
-
+Source schematic UUID
 
 </td></tr>
 <tr><td>
 
 boardName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 新原理图所属板子名称，如若不指定则为游离原理图
-
+_(Optional)_ Name of the board the new schematic belongs to. If not specified, it is a free schematic
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-新原理图 UUID，如若为 `undefined` 则复制失败
+New schematic UUID. If it is `undefined`<!-- -->, the copy failed
 
 ## Remarks
 
-如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则复制原理图时将同步新建复用模块符号
+If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), copying the schematic will also create a new reuse block symbol
 
 ### copyschematicpage
 
@@ -358,12 +293,15 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-复制原理图图页
+Copy Schematic sheet
 
 ## Signature
 
 ```typescript
-copySchematicPage(schematicPageUuid: string, schematicUuid?: string): Promise<string | undefined>;
+function copySchematicPage(
+	schematicPageUuid: string,
+	schematicUuid?: string,
+): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -372,59 +310,48 @@ copySchematicPage(schematicPageUuid: string, schematicUuid?: string): Promise<st
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicPageUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-源原理图图页 UUID
-
+Source schematic sheet UUID
 
 </td></tr>
 <tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 目标原理图 UUID，如若不指定则为当前原理图
-
+_(Optional)_ Target schematic UUID. If not specified, it is the current schematic
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-新原理图图页 UUID，如若为 `undefined` 则复制失败
+New schematic sheet UUID. If it is `undefined`<!-- -->, the copy failed
 
 ### createschematic
 
@@ -432,12 +359,12 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建原理图
+Create Schematic
 
 ## Signature
 
 ```typescript
-createSchematic(boardName?: string): Promise<string | undefined>;
+function createSchematic(boardName?: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -446,43 +373,35 @@ createSchematic(boardName?: string): Promise<string | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 boardName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 所属板子名称，如若不指定则为游离原理图
-
+_(Optional)_ Name of the board it belongs to. If not specified, it is a free schematic
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-原理图 UUID，如若为 `undefined` 则创建失败
+Schematic UUID, if it is `undefined` creation fails
 
 ### createschematicpage
 
@@ -490,12 +409,12 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建原理图图页
+Create Schematic sheet
 
 ## Signature
 
 ```typescript
-createSchematicPage(schematicUuid: string): Promise<string | undefined>;
+function createSchematicPage(schematicUuid: string): Promise<string | undefined>;
 ```
 
 ## Parameters
@@ -504,43 +423,35 @@ createSchematicPage(schematicUuid: string): Promise<string | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-所属原理图 UUID
-
+UUID of the schematic it belongs to
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-原理图图页 UUID，如若为 `undefined` 则创建失败
+Schematic sheet UUID, if it is `undefined` creation fails
 
 ### deleteschematic
 
@@ -548,12 +459,12 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除原理图
+Delete Schematic
 
 ## Signature
 
 ```typescript
-deleteSchematic(schematicUuid: string): Promise<boolean>;
+function deleteSchematic(schematicUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -562,47 +473,39 @@ deleteSchematic(schematicUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图 UUID
-
+Schematic UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则删除原理图时将同步删除关联的 PCB 和复用模块符号，复用模块符号不可删除则跳过
+If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), deleting the schematic will also delete the associated PCB and reuse block symbol. If the reuse block symbol cannot be deleted, it will be skipped
 
 ### deleteschematicpage
 
@@ -610,12 +513,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除原理图图页
+Delete Schematic sheet
 
 ## Signature
 
 ```typescript
-deleteSchematicPage(schematicPageUuid: string): Promise<boolean>;
+function deleteSchematicPage(schematicPageUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -624,43 +527,35 @@ deleteSchematicPage(schematicPageUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicPageUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图图页 UUID
-
+Schematic sheet UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### getallschematicpagesinfo
 
@@ -668,20 +563,19 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取工程内所有原理图图页的详细属性
+Get all in the project schematic sheet detailed properties of
 
 ## Signature
 
 ```typescript
-getAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
+function getAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- -->&gt;&gt;
 
-所有原理图图页的详细属性的数组
+Array of detailed properties of all schematic sheets
 
 ### getallschematicsinfo
 
@@ -689,20 +583,19 @@ Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageIt
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取工程内所有原理图的详细属性
+Get all in the project schematic detailed properties of
 
 ## Signature
 
 ```typescript
-getAllSchematicsInfo(): Promise<Array<IDMT_SchematicItem>>;
+function getAllSchematicsInfo(): Promise<Array<IDMT_SchematicItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md)<!-- -->&gt;&gt;
 
-所有原理图的详细属性的数组
+Array of detailed properties of all schematics
 
 ### getcurrentschematicallschematicpagesinfo
 
@@ -710,20 +603,19 @@ Promise&lt;Array&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md)<!
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前原理图内所有原理图图页的详细属性
+Get the detailed properties of all schematic sheets in the current schematic
 
 ## Signature
 
 ```typescript
-getCurrentSchematicAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
+function getCurrentSchematicAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
 ```
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- -->&gt;&gt;
 
-所有原理图图页的详细属性的数组
+Array of detailed properties of all schematic sheets
 
 ### getcurrentschematicinfo
 
@@ -731,24 +623,23 @@ Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageIt
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前原理图的详细属性
+Get detailed properties of Current schematic
 
 ## Signature
 
 ```typescript
-getCurrentSchematicInfo(): Promise<IDMT_SchematicItem | undefined>;
+function getCurrentSchematicInfo(): Promise<IDMT_SchematicItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefined&gt;
 
-原理图的详细属性，如若为 `undefined` 则获取失败
+Schematic detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的原理图图页所关联的原理图的详细属性
+It will get the detailed properties of the schematic associated with the currently open schematic sheet that has the last input focus
 
 ### getcurrentschematicpageinfo
 
@@ -756,24 +647,23 @@ Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefin
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取当前原理图图页的详细属性
+Get detailed properties of Current schematic sheet
 
 ## Signature
 
 ```typescript
-getCurrentSchematicPageInfo(): Promise<IDMT_SchematicPageItem | undefined>;
+function getCurrentSchematicPageInfo(): Promise<IDMT_SchematicPageItem | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \| undefined&gt;
 
-原理图图页的详细属性，如若为 `undefined` 则获取失败
+Schematic sheet detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ## Remarks
 
-将会获取当前打开且拥有最后输入焦点的原理图图页的详细属性
+It will get the detailed properties of the currently open schematic sheet that has the last input focus
 
 ### getschematicinfo
 
@@ -781,12 +671,12 @@ Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \|
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取原理图的详细属性
+Get detailed properties of Schematic
 
 ## Signature
 
 ```typescript
-getSchematicInfo(schematicUuid: string): Promise<IDMT_SchematicItem | undefined>;
+function getSchematicInfo(schematicUuid: string): Promise<IDMT_SchematicItem | undefined>;
 ```
 
 ## Parameters
@@ -795,43 +685,35 @@ getSchematicInfo(schematicUuid: string): Promise<IDMT_SchematicItem | undefined>
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图 UUID
-
+Schematic UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefined&gt;
 
-原理图的详细属性，如若为 `undefined` 则获取失败
+Schematic detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ### getschematicpageinfo
 
@@ -839,12 +721,14 @@ Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefin
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取原理图图页的详细属性
+Get detailed properties of Schematic sheet
 
 ## Signature
 
 ```typescript
-getSchematicPageInfo(schematicPageUuid: string): Promise<IDMT_SchematicPageItem | undefined>;
+function getSchematicPageInfo(
+	schematicPageUuid: string,
+): Promise<IDMT_SchematicPageItem | undefined>;
 ```
 
 ## Parameters
@@ -853,43 +737,35 @@ getSchematicPageInfo(schematicPageUuid: string): Promise<IDMT_SchematicPageItem 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicPageUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图图页 UUID
-
+Schematic sheet UUID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \| undefined&gt;
 
-原理图图页的详细属性，如若为 `undefined` 则获取失败
+Schematic sheet detailed properties of; if it is `undefined`<!-- -->, the retrieval failed
 
 ### modifyschematicname
 
@@ -897,12 +773,12 @@ Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \|
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改原理图名称
+Modify Schematic name
 
 ## Signature
 
 ```typescript
-modifySchematicName(schematicUuid: string, schematicName: string): Promise<boolean>;
+function modifySchematicName(schematicUuid: string, schematicName: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -911,63 +787,52 @@ modifySchematicName(schematicUuid: string, schematicName: string): Promise<boole
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图 UUID
-
+Schematic UUID
 
 </td></tr>
 <tr><td>
 
 schematicName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图名称
-
+Schematic name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful
 
 ## Remarks
 
-如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联 PCB 名称
+If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), modifying the name will also modify the reuse block symbol name and the associated PCB name
 
 ### modifyschematicpagename
 
@@ -975,12 +840,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改原理图图页名称
+Modify Schematic sheet name
 
 ## Signature
 
 ```typescript
-modifySchematicPageName(schematicPageUuid: string, schematicPageName: string): Promise<boolean>;
+function modifySchematicPageName(
+	schematicPageUuid: string,
+	schematicPageName: string,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -989,59 +857,48 @@ modifySchematicPageName(schematicPageUuid: string, schematicPageName: string): P
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicPageUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图图页 UUID
-
+Schematic sheet UUID
 
 </td></tr>
 <tr><td>
 
 schematicPageName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-原理图图页名称
-
+Schematic sheet name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功
+Whether Modify Successful
 
 ### modifyschematicpagetitleblock
 
@@ -1049,18 +906,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改原理图图页明细表
+Modify the title block of a schematic sheet
 
 ## Signature
 
 ```typescript
-modifySchematicPageTitleBlock(showTitleBlock?: boolean, titleBlockData?: {
-        [key: string]: {
-            showTitle?: boolean;
-            showValue?: boolean;
-            value?: any;
-        };
-    }): Promise<boolean>;
+function modifySchematicPageTitleBlock(
+	showTitleBlock?: boolean,
+	titleBlockData?: { [key: string]: { showTitle?: boolean; showValue?: boolean; value?: any } },
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1069,63 +923,52 @@ modifySchematicPageTitleBlock(showTitleBlock?: boolean, titleBlockData?: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 showTitleBlock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否显示明细表，不定义将保持当前状态
-
+_(Optional)_ Whether to show the title block. If undefined, the current state will be kept
 
 </td></tr>
 <tr><td>
 
 titleBlockData
 
+</td><td>
+
+\{ \[key: string\]: \{ showTitle?: boolean; showValue?: boolean; value?: any \} \}
 
 </td><td>
 
-\{ \[key: string\]: \{ showTitle?: boolean; showValue?: boolean; value?: any; \}; \}
-
-
-</td><td>
-
-_(Optional)_ 需要修改的明细项及其修改的值
-
+_(Optional)_ The title block items to be modified and their modified values
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-修改操作是否成功，如若未传入 `showTitleBlock` 和 `titleBlockData` 将返回 `false`<!-- -->；请注意，如若存在无法识别的明细项但程序并未出错，将返回 `true` 的结果，因为无法识别的明细项被忽略
+Whether the modification was successful. If `showTitleBlock` and `titleBlockData` are not passed in, `false` will be returned. Note that if unrecognized title block items exist but the program does not report an error, `true` will be returned because the unrecognized items are ignored
 
 ## Remarks
 
-`titleBlockData` 仅需要传入任何需要修改的明细项作为 `key`<!-- -->，并传入其需要修改的值，任何无法识别的明细项将被忽略，任何未传入的项和值将保持默认状态
+`titleBlockData` only needs to pass in any title block items to be modified as `key`<!-- -->, along with the values to modify them to. Any unrecognized title block items will be ignored, and any unpassed items and values will remain in their default state
 
 ### reorderschematicpages
 
@@ -1133,12 +976,15 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-重新排序原理图图页
+Reorder schematic sheets
 
 ## Signature
 
 ```typescript
-reorderSchematicPages(schematicUuid: string, schematicPageItemsArray: Array<IDMT_SchematicPageItem>): Promise<boolean>;
+function reorderSchematicPages(
+	schematicUuid: string,
+	schematicPageItemsArray: Array<IDMT_SchematicPageItem>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1147,60 +993,49 @@ reorderSchematicPages(schematicUuid: string, schematicPageItemsArray: Array<IDMT
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 schematicUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-执行排序的图页所关联的原理图 UUID
-
+The UUID of the schematic associated with the sheets being sorted
 
 </td></tr>
 <tr><td>
 
 schematicPageItemsArray
 
-
 </td><td>
 
 Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- -->&gt;
 
-
 </td><td>
 
-所有原理图图页属性的数组
-
+Array of all schematic sheet properties
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-排序操作是否成功
+Sorting whether the operation is successful
 
 ## Remarks
 
-此处源原理图图页属性的数组需要通过 [DMT\_Schematic.getAllSchematicPagesInfo()](./DMT_Schematic.md) 或其它上游方法取得，完成数组排序后传入
+Here, the array of source schematic sheet properties needs to be obtained through [DMT\_Schematic.getAllSchematicPagesInfo()](./DMT_Schematic.md) or other upstream methods. After sorting the array, pass it in

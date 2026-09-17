@@ -1,11 +1,11 @@
 # PCB\_PrimitiveString class
 
-PCB &amp; 封装 / 文本图元类
+PCB &amp; footprint / text primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitiveString implements IPCB_PrimitiveAPI 
+class PCB_PrimitiveString implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class PCB_PrimitiveString implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(layer, x, y, text, fontFamily, fontSize, lineWidth, alignMode, rotation, reverse, expansion, mirror, primitiveLock)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建文本
-
+**_(BETA)_** Create Text
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除文本
-
+**_(BETA)_** Delete Text
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取文本
-
+**_(BETA)_** Get Text
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取文本
-
+**_(BETA)_** Get Text
 
 </td></tr>
 <tr><td>
 
 [getAll(layer, primitiveLock)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有文本
-
+**_(BETA)_** Get all Text
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(layer, primitiveLock)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有文本的图元 ID
-
+**_(BETA)_** Get all Text primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitiveString.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改文本
-
+**_(BETA)_** Modify Text
 
 </td></tr>
 </tbody></table>
@@ -137,12 +113,26 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建文本
+Create Text
 
 ## Signature
 
 ```typescript
-create(layer: TPCB_LayersOfImage, x: number, y: number, text: string, fontFamily: string, fontSize: number, lineWidth: number, alignMode: EPCB_PrimitiveStringAlignMode, rotation: number, reverse: boolean, expansion: number, mirror: boolean, primitiveLock: boolean): Promise<IPCB_PrimitiveString | undefined>;
+function create(
+	layer: TPCB_LayersOfImage,
+	x: number,
+	y: number,
+	text: string,
+	fontFamily: string,
+	fontSize: number,
+	lineWidth: number,
+	alignMode: EPCB_PrimitiveStringAlignMode,
+	rotation: number,
+	reverse: boolean,
+	expansion: number,
+	mirror: boolean,
+	primitiveLock: boolean,
+): Promise<IPCB_PrimitiveString | undefined>;
 ```
 
 ## Parameters
@@ -151,235 +141,191 @@ create(layer: TPCB_LayersOfImage, x: number, y: number, text: string, fontFamily
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 x
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 X
-
+X coordinate
 
 </td></tr>
 <tr><td>
 
 y
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-坐标 Y
-
+Y coordinate
 
 </td></tr>
 <tr><td>
 
 text
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文本内容
-
+Text content
 
 </td></tr>
 <tr><td>
 
 fontFamily
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-字体，需要预先导入嘉立创 EDA
-
+Font. It needs to be imported into EasyEDA in advance
 
 </td></tr>
 <tr><td>
 
 fontSize
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-字号
-
+Font size
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 <tr><td>
 
 alignMode
 
-
 </td><td>
 
 [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)
 
-
 </td><td>
 
-对齐模式
-
+Alignment mode
 
 </td></tr>
 <tr><td>
 
 rotation
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-旋转角度
-
+Rotation angle
 
 </td></tr>
 <tr><td>
 
 reverse
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否反相
-
+Whether it is inverted
 
 </td></tr>
 <tr><td>
 
 expansion
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-反相扩展
-
+Inverted expansion
 
 </td></tr>
 <tr><td>
 
 mirror
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否镜像
-
+Whether it is mirrored
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-是否锁定
-
+Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| undefined&gt;
 
-文本图元对象
+Text primitive object
 
 ### delete
 
@@ -387,12 +333,12 @@ Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除文本
+Delete Text
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitiveString | Array<string> | Array<IPCB_PrimitiveString>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitiveString | Array<string> | Array<IPCB_PrimitiveString>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -401,43 +347,35 @@ delete(primitiveIds: string | IPCB_PrimitiveString | Array<string> | Array<IPCB_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;
 
-
 </td><td>
 
-文本的图元 ID 或文本图元对象
-
+Text primitive ID or Text primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -445,12 +383,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取文本
+Get Text
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitiveString | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitiveString | undefined>;
 ```
 
 ## Parameters
@@ -459,43 +397,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitiveString | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文本的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Text primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| undefined&gt;
 
-文本图元对象，`undefined` 表示获取失败
+Text primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -503,12 +433,12 @@ Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取文本
+Get Text
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveString>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveString>>;
 ```
 
 ## Parameters
@@ -517,47 +447,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveString>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-文本的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Text primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;&gt;
 
-文本图元对象，空数组表示获取失败
+Text primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -565,12 +487,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有文本
+Get all Text
 
 ## Signature
 
 ```typescript
-getAll(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveString>>;
+function getAll(
+	layer?: TPCB_LayersOfImage,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitiveString>>;
 ```
 
 ## Parameters
@@ -579,59 +504,48 @@ getAll(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<IPCB_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&gt;&gt;
 
-文本图元对象数组
+Array of Text primitive objects
 
 ### getallprimitiveid
 
@@ -639,12 +553,15 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有文本的图元 ID
+Get all Text primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	layer?: TPCB_LayersOfImage,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -653,59 +570,48 @@ getAllPrimitiveId(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-文本的图元 ID 数组
+Array of Text primitive IDs
 
 ### modify
 
@@ -713,26 +619,29 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改文本
+Modify Text
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitiveString, property: {
-        layer?: TPCB_LayersOfImage;
-        x?: number;
-        y?: number;
-        text?: string;
-        fontFamily?: string;
-        fontSize?: number;
-        lineWidth?: number;
-        alignMode?: EPCB_PrimitiveStringAlignMode;
-        rotation?: number;
-        reverse?: boolean;
-        expansion?: number;
-        mirror?: boolean;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitiveString | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitiveString,
+	property: {
+		layer?: TPCB_LayersOfImage;
+		x?: number;
+		y?: number;
+		text?: string;
+		fontFamily?: string;
+		fontSize?: number;
+		lineWidth?: number;
+		alignMode?: EPCB_PrimitiveStringAlignMode;
+		rotation?: number;
+		reverse?: boolean;
+		expansion?: number;
+		mirror?: boolean;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitiveString | undefined>;
 ```
 
 ## Parameters
@@ -741,56 +650,45 @@ modify(primitiveId: string | IPCB_PrimitiveString, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveString](./IPCB_PrimitiveString.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ layer?: [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)<!-- -->; x?: number; y?: number; text?: string; fontFamily?: string; fontSize?: number; lineWidth?: number; alignMode?: [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)<!-- -->; rotation?: number; reverse?: boolean; expansion?: number; mirror?: boolean; primitiveLock?: boolean }
 
 </td><td>
 
-{ layer?: [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)<!-- -->; x?: number; y?: number; text?: string; fontFamily?: string; fontSize?: number; lineWidth?: number; alignMode?: [EPCB\_PrimitiveStringAlignMode](../enums/EPCB_PrimitiveStringAlignMode.md)<!-- -->; rotation?: number; reverse?: boolean; expansion?: number; mirror?: boolean; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveString](./IPCB_PrimitiveString.md) \| undefined&gt;
 
-文本图元对象
+Text primitive object

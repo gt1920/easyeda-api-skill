@@ -1,20 +1,19 @@
 # ISCH\_PrimitiveBus class
 
-总线图元
+Bus primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitiveBus implements ISCH_Primitive 
+class ISCH_PrimitiveBus implements ISCH_Primitive
 ```
 **Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
 ## Remarks
 
-尚未解决的问题：
+Unresolved issues:
 
-`ISCH_PrimitiveWire.net` 全局网络名属性因其涉及多图页刷新，当前获取的值可能为 \*\*错误\*\* 的。 当你尝试为一个导线、总线设置多个名称（放置多个网络标签）时，获取到的 `net` 属性可能并不是当前最新的， 需要等待画布事件异步刷新全局网络后，再行获取。
-
+The `ISCH_PrimitiveWire.net` global net name property involves multi-sheet refresh, so the currently obtained value may be \*\*incorrect\*\*. When you try to set multiple names for a wire or bus (by placing multiple net labels), the obtained `net` property may not be the latest. You need to wait for the canvas event to asynchronously refresh the global nets before reading it again.
 
 ## Methods
 
@@ -22,240 +21,189 @@ declare class ISCH_PrimitiveBus implements ISCH_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_BusName()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：总线名称
-
+Get the property state: bus name
 
 </td></tr>
 <tr><td>
 
 [getState\_Color()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：总线颜色
-
+Get the property state: bus color
 
 </td></tr>
 <tr><td>
 
 [getState\_Line()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：多段线坐标组
-
+Get the property state: polyline coordinate group
 
 </td></tr>
 <tr><td>
 
 [getState\_LineType()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线型
-
+Get the property state: line type
 
 </td></tr>
 <tr><td>
 
 [getState\_LineWidth()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：线宽
-
+Get the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [isAsync()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-查询图元是否为异步图元
-
+Query whether the primitive is an async primitive
 
 </td></tr>
 <tr><td>
 
 [setState\_BusName(busName)](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：总线名称
-
+**_(BETA)_** Set the property state: bus name
 
 </td></tr>
 <tr><td>
 
 [setState\_Color(color)](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：总线颜色
-
+**_(BETA)_** Set the property state: Bus color
 
 </td></tr>
 <tr><td>
 
 [setState\_Line(line)](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：多段线坐标组
-
+**_(BETA)_** Set the property state: polyline coordinate group
 
 </td></tr>
 <tr><td>
 
 [setState\_LineType(lineType)](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线型
-
+**_(BETA)_** Set the property state: line type
 
 </td></tr>
 <tr><td>
 
 [setState\_LineWidth(lineWidth)](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 设置属性状态：线宽
-
+**_(BETA)_** Set the property state: Line width
 
 </td></tr>
 <tr><td>
 
 [toAsync()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为异步图元
-
+Convert Primitive to Async primitive
 
 </td></tr>
 <tr><td>
 
 [toSync()](./ISCH_PrimitiveBus.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-将图元转换为同步图元
-
+Convert Primitive to Sync primitive
 
 </td></tr>
 </tbody></table>
@@ -270,172 +218,163 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitiveBus>;
+function done(): Promise<ISCH_PrimitiveBus>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)<!-- -->&gt;
 
-总线图元对象
+Bus primitive object
 
 ### getstate_busname
 
 # ISCH\_PrimitiveBus.getState\_BusName() method
 
-获取属性状态：总线名称
+Get the property state: bus name
 
 ## Signature
 
 ```typescript
-getState_BusName(): string;
+function getState_BusName(): string;
 ```
-
 
 ## Returns
 
 string
 
-总线名称
+Bus name
 
 ### getstate_color
 
 # ISCH\_PrimitiveBus.getState\_Color() method
 
-获取属性状态：总线颜色
+Get the property state: bus color
 
 ## Signature
 
 ```typescript
-getState_Color(): string | null;
+function getState_Color(): string | null;
 ```
-
 
 ## Returns
 
 string \| null
 
-总线颜色
+Bus color
 
 ### getstate_line
 
 # ISCH\_PrimitiveBus.getState\_Line() method
 
-获取属性状态：多段线坐标组
+Get the property state: polyline coordinate group
 
 ## Signature
 
 ```typescript
-getState_Line(): Array<number> | Array<Array<number>>;
+function getState_Line(): Array<number> | Array<Array<number>>;
 ```
-
 
 ## Returns
 
 Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
-多段线坐标组
+Polyline coordinate group
 
 ### getstate_linetype
 
 # ISCH\_PrimitiveBus.getState\_LineType() method
 
-获取属性状态：线型
+Get the property state: line type
 
 ## Signature
 
 ```typescript
-getState_LineType(): ESCH_PrimitiveLineType | null;
+function getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-线型
+Line type
 
 ### getstate_linewidth
 
 # ISCH\_PrimitiveBus.getState\_LineWidth() method
 
-获取属性状态：线宽
+Get the property state: Line width
 
 ## Signature
 
 ```typescript
-getState_LineWidth(): number | null;
+function getState_LineWidth(): number | null;
 ```
-
 
 ## Returns
 
 number \| null
 
-线宽
+Line width
 
 ### getstate_primitiveid
 
 # ISCH\_PrimitiveBus.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # ISCH\_PrimitiveBus.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): ESCH_PrimitiveType;
+function getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
-
 
 ## Returns
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### isasync
 
 # ISCH\_PrimitiveBus.isAsync() method
 
-查询图元是否为异步图元
+Query whether the primitive is an async primitive
 
 ## Signature
 
 ```typescript
-isAsync(): boolean;
+function isAsync(): boolean;
 ```
-
 
 ## Returns
 
 boolean
 
-是否为异步图元
+Whether Is async primitive
 
 ### setstate_busname
 
@@ -443,12 +382,12 @@ boolean
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：总线名称
+Set the property state: bus name
 
 ## Signature
 
 ```typescript
-setState_BusName(busName: string): ISCH_PrimitiveBus;
+function setState_BusName(busName: string): ISCH_PrimitiveBus;
 ```
 
 ## Parameters
@@ -457,43 +396,35 @@ setState_BusName(busName: string): ISCH_PrimitiveBus;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 busName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-总线名称
-
+Bus name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### setstate_color
 
@@ -501,12 +432,12 @@ string
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：总线颜色
+Set the property state: Bus color
 
 ## Signature
 
 ```typescript
-setState_Color(color: string | null): ISCH_PrimitiveBus;
+function setState_Color(color: string | null): ISCH_PrimitiveBus;
 ```
 
 ## Parameters
@@ -515,43 +446,35 @@ setState_Color(color: string | null): ISCH_PrimitiveBus;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 color
 
-
 </td><td>
 
 string \| null
 
-
 </td><td>
 
-总线颜色
-
+Bus color
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### setstate_line
 
@@ -559,12 +482,12 @@ string \| null
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：多段线坐标组
+Set the property state: polyline coordinate group
 
 ## Signature
 
 ```typescript
-setState_Line(line: Array<number> | Array<Array<number>>): ISCH_PrimitiveBus;
+function setState_Line(line: Array<number> | Array<Array<number>>): ISCH_PrimitiveBus;
 ```
 
 ## Parameters
@@ -573,43 +496,35 @@ setState_Line(line: Array<number> | Array<Array<number>>): ISCH_PrimitiveBus;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 line
 
-
 </td><td>
 
 Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
-
 </td><td>
 
-多段线坐标组
-
+Polyline coordinate group
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### setstate_linetype
 
@@ -617,12 +532,12 @@ Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线型
+Set the property state: line type
 
 ## Signature
 
 ```typescript
-setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveBus;
+function setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveBus;
 ```
 
 ## Parameters
@@ -631,43 +546,35 @@ setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveBus;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineType
 
-
 </td><td>
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
-
 </td><td>
 
-线型
-
+Line type
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### setstate_linewidth
 
@@ -675,12 +582,12 @@ lineType
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-设置属性状态：线宽
+Set the property state: Line width
 
 ## Signature
 
 ```typescript
-setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveBus;
+function setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveBus;
 ```
 
 ## Parameters
@@ -689,78 +596,68 @@ setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveBus;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number \| null
 
-
 </td><td>
 
-线宽
-
+Line width
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### toasync
 
 # ISCH\_PrimitiveBus.toAsync() method
 
-将图元转换为异步图元
+Convert Primitive to Async primitive
 
 ## Signature
 
 ```typescript
-toAsync(): ISCH_PrimitiveBus;
+function toAsync(): ISCH_PrimitiveBus;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object
 
 ### tosync
 
 # ISCH\_PrimitiveBus.toSync() method
 
-将图元转换为同步图元
+Convert Primitive to Sync primitive
 
 ## Signature
 
 ```typescript
-toSync(): ISCH_PrimitiveBus;
+function toSync(): ISCH_PrimitiveBus;
 ```
-
 
 ## Returns
 
 [ISCH\_PrimitiveBus](./ISCH_PrimitiveBus.md)
 
-总线图元对象
+Bus primitive object

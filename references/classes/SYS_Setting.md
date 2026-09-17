@@ -1,11 +1,11 @@
 # SYS\_Setting class
 
-系统 / 设置类
+System / settings class
 
 ## Signature
 
 ```typescript
-declare class SYS_Setting 
+class SYS_Setting
 ```
 
 ## Methods
@@ -14,30 +14,24 @@ declare class SYS_Setting
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [restoreDefault()](./SYS_Setting.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 全局恢复默认设置
-
+**_(BETA)_** Restore all default settings
 
 </td></tr>
 </tbody></table>
@@ -52,21 +46,20 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-全局恢复默认设置
+Restore all default settings
 
 ## Signature
 
 ```typescript
-restoreDefault(): Promise<boolean>;
+function restoreDefault(): Promise<boolean>;
 ```
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ## Remarks
 
-将所有 EDA 设置恢复到默认状态，本操作将会丢失所有设置项，在调用时请特别注意
+Restores all EDA settings to their default state. This operation will lose all settings. Please pay special attention when calling it

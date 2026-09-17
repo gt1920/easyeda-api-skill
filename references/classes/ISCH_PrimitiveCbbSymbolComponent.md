@@ -1,16 +1,15 @@
 # ISCH\_PrimitiveCbbSymbolComponent class
 
-复用模块符号图元
+Reuse block symbol primitive
 
 ## Signature
 
 ```typescript
-declare class ISCH_PrimitiveCbbSymbolComponent extends ISCH_PrimitiveComponent 
+class ISCH_PrimitiveCbbSymbolComponent extends ISCH_PrimitiveComponent
 ```
 **Extends:** [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,72 +17,57 @@ declare class ISCH_PrimitiveCbbSymbolComponent extends ISCH_PrimitiveComponent
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [done()](./ISCH_PrimitiveCbbSymbolComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将对图元的更改应用到画布
-
+**_(BETA)_** Apply the changes to the primitives to the canvas
 
 </td></tr>
 <tr><td>
 
 [getState\_Cbb()](./ISCH_PrimitiveCbbSymbolComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：关联复用模块
-
+Get the property state: associate reuse block
 
 </td></tr>
 <tr><td>
 
 [getState\_CbbSymbol()](./ISCH_PrimitiveCbbSymbolComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：关联复用模块符号
-
+Get the property state: associate reuse block symbol
 
 </td></tr>
 <tr><td>
 
 [reset()](./ISCH_PrimitiveCbbSymbolComponent.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 </tbody></table>
@@ -98,66 +82,60 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将对图元的更改应用到画布
+Apply the changes to the primitives to the canvas
 
 ## Signature
 
 ```typescript
-done(): Promise<ISCH_PrimitiveCbbSymbolComponent>;
+function done(): Promise<ISCH_PrimitiveCbbSymbolComponent>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCbbSymbolComponent](./ISCH_PrimitiveCbbSymbolComponent.md)<!-- -->&gt;
 
-复用模块符号图元对象
+Reuse block symbol primitive object
 
 ### getstate_cbb
 
 # ISCH\_PrimitiveCbbSymbolComponent.getState\_Cbb() method
 
-获取属性状态：关联复用模块
+Get the property state: associate reuse block
 
 ## Signature
 
 ```typescript
-getState_Cbb(): {
-        libraryUuid: string;
-        uuid: string;
-    };
+function getState_Cbb(): { libraryUuid: string; uuid: string };
 ```
-
 
 ## Returns
 
-\{ libraryUuid: string; uuid: string; \}
+\{ libraryUuid: string; uuid: string \}
 
-关联复用模块
+Associate reuse block
 
 ### getstate_cbbsymbol
 
 # ISCH\_PrimitiveCbbSymbolComponent.getState\_CbbSymbol() method
 
-获取属性状态：关联复用模块符号
+Get the property state: associate reuse block symbol
 
 ## Signature
 
 ```typescript
-getState_CbbSymbol(): {
-        libraryUuid: string;
-        cbbUuid: string;
-        uuid?: string;
-        name?: string;
-    };
+function getState_CbbSymbol(): {
+	libraryUuid: string;
+	cbbUuid: string;
+	uuid?: string;
+	name?: string;
+};
 ```
-
 
 ## Returns
 
-\{ libraryUuid: string; cbbUuid: string; uuid?: string; name?: string; \}
+\{ libraryUuid: string; cbbUuid: string; uuid?: string; name?: string \}
 
-关联复用模块符号
+Associate reuse block symbol
 
 ### reset
 
@@ -165,17 +143,16 @@ getState_CbbSymbol(): {
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<ISCH_PrimitiveCbbSymbolComponent>;
+function reset(): Promise<ISCH_PrimitiveCbbSymbolComponent>;
 ```
-
 
 ## Returns
 
 Promise&lt;[ISCH\_PrimitiveCbbSymbolComponent](./ISCH_PrimitiveCbbSymbolComponent.md)<!-- -->&gt;
 
-复用模块符号图元对象
+Reuse block symbol primitive object

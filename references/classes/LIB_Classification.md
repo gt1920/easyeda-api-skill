@@ -1,11 +1,11 @@
 # LIB\_Classification class
 
-综合库 / 库分类索引类
+Comprehensive library / library classification index class
 
 ## Signature
 
 ```typescript
-declare class LIB_Classification 
+class LIB_Classification
 ```
 
 ## Methods
@@ -14,128 +14,101 @@ declare class LIB_Classification
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [createPrimary(libraryUuid, libraryType, primaryClassificationName)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建一级分类
-
+**_(BETA)_** Create a primary classification
 
 </td></tr>
 <tr><td>
 
 [createSecondary(libraryUuid, libraryType, primaryClassificationUuid, secondaryClassificationName)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建二级分类
-
+**_(BETA)_** Create a secondary classification
 
 </td></tr>
 <tr><td>
 
 [deleteByIndex(classificationIndex)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除指定索引的分类
-
+**_(BETA)_** Delete the classification at the specified index
 
 </td></tr>
 <tr><td>
 
 [deleteByUuid(libraryUuid, classificationUuid)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除指定 UUID 的分类
-
+**_(BETA)_** Delete the classification with the specified UUID
 
 </td></tr>
 <tr><td>
 
 [getAllClassificationTree(libraryUuid, libraryType)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有分类信息组成的树
-
+**_(BETA)_** Get the tree composed of all classification information
 
 </td></tr>
 <tr><td>
 
 [getIndexByName(libraryUuid, libraryType, primaryClassificationName, secondaryClassificationName)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取指定名称的分类的分类索引
-
+**_(BETA)_** Get the classification index of the classification with the specified name
 
 </td></tr>
 <tr><td>
 
 [getNameByIndex(classificationIndex)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取指定索引的分类的名称
-
+**_(BETA)_** Get the name of the classification at the specified index
 
 </td></tr>
 <tr><td>
 
 [getNameByUuid(libraryUuid, libraryType, primaryClassificationUuid, secondaryClassificationUuid)](./LIB_Classification.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取指定 UUID 的分类的名称
-
+**_(BETA)_** Get the name of the classification with the specified UUID
 
 </td></tr>
 </tbody></table>
@@ -154,12 +127,16 @@ Description
 >
 > since EDA v3.2; dropped EDA v3.3
 
-创建一级分类
+Create a primary classification
 
 ## Signature
 
 ```typescript
-createPrimary(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassificationName: string): Promise<ILIB_ClassificationIndex | undefined>;
+function createPrimary(
+	libraryUuid: string,
+	libraryType: ELIB_LibraryType,
+	primaryClassificationName: string,
+): Promise<ILIB_ClassificationIndex | undefined>;
 ```
 
 ## Parameters
@@ -168,75 +145,61 @@ createPrimary(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassif
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 libraryType
 
-
 </td><td>
 
 [ELIB\_LibraryType](../enums/ELIB_LibraryType.md)
 
-
 </td><td>
 
-库类型
-
+Library type
 
 </td></tr>
 <tr><td>
 
 primaryClassificationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-一级分类名称
-
+Primary classification name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| undefined&gt;
 
-分类索引
+Classification index
 
 ### createsecondary
 
@@ -248,12 +211,17 @@ Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md
 >
 > since EDA v3.2; dropped EDA v3.3
 
-创建二级分类
+Create a secondary classification
 
 ## Signature
 
 ```typescript
-createSecondary(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassificationUuid: string, secondaryClassificationName: string): Promise<ILIB_ClassificationIndex | undefined>;
+function createSecondary(
+	libraryUuid: string,
+	libraryType: ELIB_LibraryType,
+	primaryClassificationUuid: string,
+	secondaryClassificationName: string,
+): Promise<ILIB_ClassificationIndex | undefined>;
 ```
 
 ## Parameters
@@ -262,91 +230,74 @@ createSecondary(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClass
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 libraryType
 
-
 </td><td>
 
 [ELIB\_LibraryType](../enums/ELIB_LibraryType.md)
 
-
 </td><td>
 
-库类型
-
+Library type
 
 </td></tr>
 <tr><td>
 
 primaryClassificationUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-一级分类 UUID
-
+Primary classification UUID
 
 </td></tr>
 <tr><td>
 
 secondaryClassificationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-二级分类名称
-
+Secondary classification name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| undefined&gt;
 
-分类索引
+Classification index
 
 ### deletebyindex
 
@@ -358,12 +309,12 @@ Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md
 >
 > since EDA v3.2; dropped EDA v3.3
 
-删除指定索引的分类
+Delete the classification at the specified index
 
 ## Signature
 
 ```typescript
-deleteByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<boolean>;
+function deleteByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<boolean>;
 ```
 
 ## Parameters
@@ -372,43 +323,35 @@ deleteByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 classificationIndex
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md)
 
-
 </td><td>
 
-分类索引
-
+Classification index
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### deletebyuuid
 
@@ -420,12 +363,12 @@ Promise&lt;boolean&gt;
 >
 > since EDA v3.2; dropped EDA v3.3
 
-删除指定 UUID 的分类
+Delete the classification with the specified UUID
 
 ## Signature
 
 ```typescript
-deleteByUuid(libraryUuid: string, classificationUuid: string): Promise<boolean>;
+function deleteByUuid(libraryUuid: string, classificationUuid: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -434,57 +377,46 @@ deleteByUuid(libraryUuid: string, classificationUuid: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 classificationUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-操作是否成功
+Whether the operation is successful
 
 ### getallclassificationtree
 
@@ -496,19 +428,21 @@ Promise&lt;boolean&gt;
 >
 > since EDA v3.2; dropped EDA v3.3
 
-获取所有分类信息组成的树
+Get the tree composed of all classification information
 
 ## Signature
 
 ```typescript
-getAllClassificationTree(libraryUuid: string, libraryType: ELIB_LibraryType): Promise<Array<{
-        name: string;
-        uuid: string;
-        children?: Array<{
-            name: string;
-            uuid: string;
-        }> | undefined;
-    }>>;
+function getAllClassificationTree(
+	libraryUuid: string,
+	libraryType: ELIB_LibraryType,
+): Promise<
+	Array<{
+		name: string;
+		uuid: string;
+		children?: Array<{ name: string; uuid: string }> | undefined;
+	}>
+>;
 ```
 
 ## Parameters
@@ -517,59 +451,48 @@ getAllClassificationTree(libraryUuid: string, libraryType: ELIB_LibraryType): Pr
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 libraryType
 
-
 </td><td>
 
 [ELIB\_LibraryType](../enums/ELIB_LibraryType.md)
 
-
 </td><td>
 
-库类型
-
+Library type
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;Array&lt;{ name: string; uuid: string; children?: Array&lt;{ name: string; uuid: string; }&gt; \| undefined; }&gt;&gt;
+Promise&lt;Array&lt;{ name: string; uuid: string; children?: Array&lt;{ name: string; uuid: string }&gt; \| undefined }&gt;&gt;
 
-分类信息组成的树结构数据
+Tree structure data composed of classification information
 
 ### getindexbyname
 
@@ -581,12 +504,17 @@ Promise&lt;Array&lt;{ name: string; uuid: string; children?: Array&lt;{ name: st
 >
 > since EDA v3.2; dropped EDA v3.3
 
-获取指定名称的分类的分类索引
+Get the classification index of the classification with the specified name
 
 ## Signature
 
 ```typescript
-getIndexByName(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassificationName: string, secondaryClassificationName?: string): Promise<ILIB_ClassificationIndex | undefined>;
+function getIndexByName(
+	libraryUuid: string,
+	libraryType: ELIB_LibraryType,
+	primaryClassificationName: string,
+	secondaryClassificationName?: string,
+): Promise<ILIB_ClassificationIndex | undefined>;
 ```
 
 ## Parameters
@@ -595,95 +523,78 @@ getIndexByName(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassi
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 libraryType
 
-
 </td><td>
 
 [ELIB\_LibraryType](../enums/ELIB_LibraryType.md)
 
-
 </td><td>
 
-库类型
-
+Library type
 
 </td></tr>
 <tr><td>
 
 primaryClassificationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-一级分类名称
-
+Primary classification name
 
 </td></tr>
 <tr><td>
 
 secondaryClassificationName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 二级分类名称
-
+_(Optional)_ Secondary classification name
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md) \| undefined&gt;
 
-分类索引
+Classification index
 
 ## Remarks
 
-分类索引内包含分类的 UUID，具体可查阅 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md)
+The classification index contains the UUID of the classification. For details, refer to [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md)
 
 ### getnamebyindex
 
@@ -695,15 +606,17 @@ Promise&lt;[ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md
 >
 > since EDA v3.2; dropped EDA v3.3
 
-获取指定索引的分类的名称
+Get the name of the classification at the specified index
 
 ## Signature
 
 ```typescript
-getNameByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<{
-        primaryClassificationName: string;
-        secondaryClassificationName?: string | undefined;
-    } | undefined>;
+function getNameByIndex(
+	classificationIndex: ILIB_ClassificationIndex,
+): Promise<
+	| { primaryClassificationName: string; secondaryClassificationName?: string | undefined }
+	| undefined
+>;
 ```
 
 ## Parameters
@@ -712,43 +625,35 @@ getNameByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 classificationIndex
 
-
 </td><td>
 
 [ILIB\_ClassificationIndex](../interfaces/ILIB_ClassificationIndex.md)
 
-
 </td><td>
 
-分类索引
-
+Classification index
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;{ primaryClassificationName: string; secondaryClassificationName?: string \| undefined; } \| undefined&gt;
+Promise&lt;{ primaryClassificationName: string; secondaryClassificationName?: string \| undefined } \| undefined&gt;
 
-两级分类的名称
+Name of the two-level classification
 
 ### getnamebyuuid
 
@@ -760,15 +665,20 @@ Promise&lt;{ primaryClassificationName: string; secondaryClassificationName?: st
 >
 > since EDA v3.2; dropped EDA v3.3
 
-获取指定 UUID 的分类的名称
+Get the name of the classification with the specified UUID
 
 ## Signature
 
 ```typescript
-getNameByUuid(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassificationUuid: string, secondaryClassificationUuid?: string): Promise<{
-        primaryClassificationName: string;
-        secondaryClassificationName?: string | undefined;
-    } | undefined>;
+function getNameByUuid(
+	libraryUuid: string,
+	libraryType: ELIB_LibraryType,
+	primaryClassificationUuid: string,
+	secondaryClassificationUuid?: string,
+): Promise<
+	| { primaryClassificationName: string; secondaryClassificationName?: string | undefined }
+	| undefined
+>;
 ```
 
 ## Parameters
@@ -777,88 +687,71 @@ getNameByUuid(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassif
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-库 UUID
-
+Library UUID
 
 </td></tr>
 <tr><td>
 
 libraryType
 
-
 </td><td>
 
 [ELIB\_LibraryType](../enums/ELIB_LibraryType.md)
 
-
 </td><td>
 
-库类型
-
+Library type
 
 </td></tr>
 <tr><td>
 
 primaryClassificationUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-一级分类 UUID
-
+Primary classification UUID
 
 </td></tr>
 <tr><td>
 
 secondaryClassificationUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 二级分类 UUID，如若不指定，则只获取一级分类的信息
-
+_(Optional)_ Secondary classification UUID. If not specified, only the primary classification information is obtained
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;{ primaryClassificationName: string; secondaryClassificationName?: string \| undefined; } \| undefined&gt;
+Promise&lt;{ primaryClassificationName: string; secondaryClassificationName?: string \| undefined } \| undefined&gt;
 
-两级分类的名称
+Name of the two-level classification

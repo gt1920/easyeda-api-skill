@@ -1,16 +1,15 @@
 # IPCB\_PrimitivePoured class
 
-覆铜填充图元
+Copper fill primitive
 
 ## Signature
 
 ```typescript
-declare class IPCB_PrimitivePoured implements IPCB_Primitive 
+class IPCB_PrimitivePoured implements IPCB_Primitive
 ```
 **Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
 ## Remarks
-
 
 ## Methods
 
@@ -18,128 +17,101 @@ declare class IPCB_PrimitivePoured implements IPCB_Primitive
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [addSolderMaskFill(pourFillId)](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 添加：阻焊区域
-
+**_(BETA)_** Add: solder mask region
 
 </td></tr>
 <tr><td>
 
 [convertToFill(pourFillId)](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 转换到：填充图元
-
+**_(BETA)_** Convert to: fill primitive
 
 </td></tr>
 <tr><td>
 
 [deletePourFills(pourFillIds)](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除覆铜填充区域
-
+**_(BETA)_** Delete Copper fill region
 
 </td></tr>
 <tr><td>
 
 [getState\_PourFills()](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：覆铜填充区域
-
+Get the property state: copper fill region
 
 </td></tr>
 <tr><td>
 
 [getState\_PourPrimitiveId()](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：覆铜边框图元 ID
-
+Get the property state: copper border primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveId()](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元 ID
-
+Get the property state: primitive ID
 
 </td></tr>
 <tr><td>
 
 [getState\_PrimitiveType()](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取属性状态：图元类型
-
+Get the property state: primitive type
 
 </td></tr>
 <tr><td>
 
 [reset()](./IPCB_PrimitivePoured.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 将异步图元重置为当前画布状态
-
+**_(BETA)_** Reset the async primitive to the current canvas state
 
 </td></tr>
 </tbody></table>
@@ -154,12 +126,14 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-添加：阻焊区域
+Add: solder mask region
 
 ## Signature
 
 ```typescript
-addSolderMaskFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_PrimitiveFill | undefined>;
+function addSolderMaskFill(
+	pourFillId: IPCB_PrimitivePouredPourFill['id'],
+): Promise<IPCB_PrimitiveFill | undefined>;
 ```
 
 ## Parameters
@@ -168,41 +142,33 @@ addSolderMaskFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourFillId
 
-
 </td><td>
 
 [IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->\['id'\]
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
-阻焊区域填充图元对象，无法转换或 ID 错误将返回 `undefined`
+The solder mask region fill primitive object. If conversion fails or the ID is incorrect, `undefined` is returned
 
 ### converttofill
 
@@ -210,12 +176,14 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-转换到：填充图元
+Convert to: fill primitive
 
 ## Signature
 
 ```typescript
-convertToFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_PrimitiveFill | undefined>;
+function convertToFill(
+	pourFillId: IPCB_PrimitivePouredPourFill['id'],
+): Promise<IPCB_PrimitiveFill | undefined>;
 ```
 
 ## Parameters
@@ -224,41 +192,33 @@ convertToFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_Prim
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourFillId
 
-
 </td><td>
 
 [IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->\['id'\]
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
-填充图元对象，无法转换或 ID 错误将返回 `undefined`
+The fill primitive object. If conversion fails or the ID is incorrect, `undefined` is returned
 
 ### deletepourfills
 
@@ -266,12 +226,14 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除覆铜填充区域
+Delete Copper fill region
 
 ## Signature
 
 ```typescript
-deletePourFills(pourFillIds: IPCB_PrimitivePouredPourFill['id'] | Array<IPCB_PrimitivePouredPourFill['id']>): Promise<boolean>;
+function deletePourFills(
+	pourFillIds: IPCB_PrimitivePouredPourFill['id'] | Array<IPCB_PrimitivePouredPourFill['id']>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -280,119 +242,107 @@ deletePourFills(pourFillIds: IPCB_PrimitivePouredPourFill['id'] | Array<IPCB_Pri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 pourFillIds
 
-
 </td><td>
 
 [IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->\['id'\] \| Array&lt;[IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->\['id'\]&gt;
 
-
 </td><td>
 
-覆铜填充区域 ID
-
+Copper fill region ID
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### getstate_pourfills
 
 # IPCB\_PrimitivePoured.getState\_PourFills() method
 
-获取属性状态：覆铜填充区域
+Get the property state: copper fill region
 
 ## Signature
 
 ```typescript
-getState_PourFills(): Array<IPCB_PrimitivePouredPourFill>;
+function getState_PourFills(): Array<IPCB_PrimitivePouredPourFill>;
 ```
-
 
 ## Returns
 
 Array&lt;[IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->&gt;
 
-覆铜填充区域
+Copper fill region
 
 ### getstate_pourprimitiveid
 
 # IPCB\_PrimitivePoured.getState\_PourPrimitiveId() method
 
-获取属性状态：覆铜边框图元 ID
+Get the property state: copper border primitive ID
 
 ## Signature
 
 ```typescript
-getState_PourPrimitiveId(): string;
+function getState_PourPrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-覆铜边框图元 ID
+Copper border primitive ID
 
 ### getstate_primitiveid
 
 # IPCB\_PrimitivePoured.getState\_PrimitiveId() method
 
-获取属性状态：图元 ID
+Get the property state: primitive ID
 
 ## Signature
 
 ```typescript
-getState_PrimitiveId(): string;
+function getState_PrimitiveId(): string;
 ```
-
 
 ## Returns
 
 string
 
-图元 ID
+Primitive ID
 
 ### getstate_primitivetype
 
 # IPCB\_PrimitivePoured.getState\_PrimitiveType() method
 
-获取属性状态：图元类型
+Get the property state: primitive type
 
 ## Signature
 
 ```typescript
-getState_PrimitiveType(): EPCB_PrimitiveType;
+function getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
-
 
 ## Returns
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
-图元类型
+Primitive type
 
 ### reset
 
@@ -400,17 +350,16 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-将异步图元重置为当前画布状态
+Reset the async primitive to the current canvas state
 
 ## Signature
 
 ```typescript
-reset(): Promise<IPCB_PrimitivePoured>;
+function reset(): Promise<IPCB_PrimitivePoured>;
 ```
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitivePoured](./IPCB_PrimitivePoured.md)<!-- -->&gt;
 
-覆铜填充图元对象
+Copper fill primitive object

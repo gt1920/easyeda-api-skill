@@ -5,7 +5,7 @@
 ## Signature
 
 ```typescript
-interface ISYS_LanguageKeyValuePairs 
+interface ISYS_LanguageKeyValuePairs
 ```
 
 ## Remarks

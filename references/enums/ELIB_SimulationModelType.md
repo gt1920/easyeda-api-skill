@@ -1,11 +1,11 @@
 # ELIB\_SimulationModelType enum
 
-仿真模型类型
+Simulation model type
 
 ## Signature
 
 ```typescript
-declare enum ELIB_SimulationModelType 
+enum ELIB_SimulationModelType
 ```
 
 ## Enumeration Members
@@ -14,48 +14,35 @@ declare enum ELIB_SimulationModelType
 
 Member
 
-
 </th><th>
 
 Value
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 NGSPICE
 
-
 </td><td>
 
-`"Ngspice"`
-
+`'Ngspice'`
 
 </td><td>
-
-Ngspice
-
 
 </td></tr>
 <tr><td>
 
 SIMULIDE
 
-
 </td><td>
 
-`"SimulIDE"`
-
+`'SimulIDE'`
 
 </td><td>
-
-SimulIDE
-
 
 </td></tr>
 </tbody></table>

@@ -1,11 +1,11 @@
 # PCB\_PrimitiveRegion class
 
-PCB &amp; 封装 / 禁止区域和约束区域图元类
+PCB &amp; footprint / forbidden region and constrained region primitive class
 
 ## Signature
 
 ```typescript
-declare class PCB_PrimitiveRegion implements IPCB_PrimitiveAPI 
+class PCB_PrimitiveRegion implements IPCB_PrimitiveAPI
 ```
 **Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
@@ -15,114 +15,90 @@ declare class PCB_PrimitiveRegion implements IPCB_PrimitiveAPI
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [create(layer, complexPolygon, ruleType, regionName, lineWidth, primitiveLock)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 创建区域
-
+**_(BETA)_** Create Region
 
 </td></tr>
 <tr><td>
 
 [delete(primitiveIds)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 删除区域
-
+**_(BETA)_** Delete Region
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取区域
-
+**_(BETA)_** Get Region
 
 </td></tr>
 <tr><td>
 
 [get(primitiveIds)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取区域
-
+**_(BETA)_** Get Region
 
 </td></tr>
 <tr><td>
 
 [getAll(layer, ruleType, primitiveLock)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有区域
-
+**_(BETA)_** Get all Region
 
 </td></tr>
 <tr><td>
 
 [getAllPrimitiveId(layer, ruleType, primitiveLock)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取所有区域的图元 ID
-
+**_(BETA)_** Get all Region primitive IDs
 
 </td></tr>
 <tr><td>
 
 [modify(primitiveId, property)](./PCB_PrimitiveRegion.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改区域
-
+**_(BETA)_** Modify Region
 
 </td></tr>
 </tbody></table>
@@ -137,12 +113,19 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-创建区域
+Create Region
 
 ## Signature
 
 ```typescript
-create(layer: TPCB_LayersOfRegion, complexPolygon: IPCB_Polygon, ruleType?: Array<EPCB_PrimitiveRegionRuleType>, regionName?: string, lineWidth?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveRegion | undefined>;
+function create(
+	layer: TPCB_LayersOfRegion,
+	complexPolygon: IPCB_Polygon,
+	ruleType?: Array<EPCB_PrimitiveRegionRuleType>,
+	regionName?: string,
+	lineWidth?: number,
+	primitiveLock?: boolean,
+): Promise<IPCB_PrimitiveRegion | undefined>;
 ```
 
 ## Parameters
@@ -151,123 +134,100 @@ create(layer: TPCB_LayersOfRegion, complexPolygon: IPCB_Polygon, ruleType?: Arra
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
-
 </td><td>
 
-层
-
+Layer
 
 </td></tr>
 <tr><td>
 
 complexPolygon
 
-
 </td><td>
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
-
 </td><td>
 
-复杂多边形对象
-
+Complex polygon object
 
 </td></tr>
 <tr><td>
 
 ruleType
 
-
 </td><td>
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 区域规则类型
-
+_(Optional)_ Region rule type
 
 </td></tr>
 <tr><td>
 
 regionName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 区域名称
-
+_(Optional)_ Region name
 
 </td></tr>
 <tr><td>
 
 lineWidth
 
-
 </td><td>
 
 number
 
-
 </td><td>
 
-_(Optional)_ 线宽
-
+_(Optional)_ Line width
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| undefined&gt;
 
-区域图元对象
+Region primitive object
 
 ### delete
 
@@ -275,12 +235,12 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-删除区域
+Delete Region
 
 ## Signature
 
 ```typescript
-delete(primitiveIds: string | IPCB_PrimitiveRegion | Array<string> | Array<IPCB_PrimitiveRegion>): Promise<boolean>;
+function delete(primitiveIds: string | IPCB_PrimitiveRegion | Array<string> | Array<IPCB_PrimitiveRegion>): Promise<boolean>;
 ```
 
 ## Parameters
@@ -289,43 +249,35 @@ delete(primitiveIds: string | IPCB_PrimitiveRegion | Array<string> | Array<IPCB_
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| Array&lt;string&gt; \| Array&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
-
 </td><td>
 
-区域的图元 ID 或区域图元对象
-
+Region primitive ID or Region primitive object
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-删除操作是否成功
+Delete Whether the operation is successful
 
 ### get
 
@@ -333,12 +285,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取区域
+Get Region
 
 ## Signature
 
 ```typescript
-get(primitiveIds: string): Promise<IPCB_PrimitiveRegion | undefined>;
+function get(primitiveIds: string): Promise<IPCB_PrimitiveRegion | undefined>;
 ```
 
 ## Parameters
@@ -347,43 +299,35 @@ get(primitiveIds: string): Promise<IPCB_PrimitiveRegion | undefined>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-区域的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Region primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| undefined&gt;
 
-区域图元对象，`undefined` 表示获取失败
+Region primitive object, `undefined` indicates that the retrieval failed
 
 ### get_1
 
@@ -391,12 +335,12 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取区域
+Get Region
 
 ## Signature
 
 ```typescript
-get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveRegion>>;
+function get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveRegion>>;
 ```
 
 ## Parameters
@@ -405,47 +349,39 @@ get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveRegion>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveIds
 
-
 </td><td>
 
 Array&lt;string&gt;
 
-
 </td><td>
 
-区域的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组
-
+Region primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;&gt;
 
-区域图元对象，空数组表示获取失败
+Region primitive object; an empty array indicates that the retrieval failed
 
 ## Remarks
 
-如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
+If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.
 
 ### getall
 
@@ -453,12 +389,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有区域
+Get all Region
 
 ## Signature
 
 ```typescript
-getAll(layer?: TPCB_LayersOfRegion, ruleType?: Array<EPCB_PrimitiveRegionRuleType>, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveRegion>>;
+function getAll(
+	layer?: TPCB_LayersOfRegion,
+	ruleType?: Array<EPCB_PrimitiveRegionRuleType>,
+	primitiveLock?: boolean,
+): Promise<Array<IPCB_PrimitiveRegion>>;
 ```
 
 ## Parameters
@@ -467,75 +407,61 @@ getAll(layer?: TPCB_LayersOfRegion, ruleType?: Array<EPCB_PrimitiveRegionRuleTyp
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 ruleType
 
-
 </td><td>
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 区域规则类型，只会匹配所有规则类型均一致的图元
-
+_(Optional)_ Region rule type. Only primitives whose rule types are all consistent will be matched
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;&gt;
 
-区域图元对象数组
+Array of Region primitive objects
 
 ### getallprimitiveid
 
@@ -543,12 +469,16 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&g
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取所有区域的图元 ID
+Get all Region primitive IDs
 
 ## Signature
 
 ```typescript
-getAllPrimitiveId(layer?: TPCB_LayersOfRegion, ruleType?: Array<EPCB_PrimitiveRegionRuleType>, primitiveLock?: boolean): Promise<Array<string>>;
+function getAllPrimitiveId(
+	layer?: TPCB_LayersOfRegion,
+	ruleType?: Array<EPCB_PrimitiveRegionRuleType>,
+	primitiveLock?: boolean,
+): Promise<Array<string>>;
 ```
 
 ## Parameters
@@ -557,75 +487,61 @@ getAllPrimitiveId(layer?: TPCB_LayersOfRegion, ruleType?: Array<EPCB_PrimitiveRe
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 layer
 
-
 </td><td>
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
-
 </td><td>
 
-_(Optional)_ 层
-
+_(Optional)_ Layer
 
 </td></tr>
 <tr><td>
 
 ruleType
 
-
 </td><td>
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
-
 </td><td>
 
-_(Optional)_ 区域规则类型，只会匹配所有规则类型均一致的图元
-
+_(Optional)_ Region rule type. Only primitives whose rule types are all consistent will be matched
 
 </td></tr>
 <tr><td>
 
 primitiveLock
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否锁定
-
+_(Optional)_ Whether it is locked
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;Array&lt;string&gt;&gt;
 
-区域的图元 ID 数组
+Array of Region primitive IDs
 
 ### modify
 
@@ -633,19 +549,22 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改区域
+Modify Region
 
 ## Signature
 
 ```typescript
-modify(primitiveId: string | IPCB_PrimitiveRegion, property: {
-        layer?: TPCB_LayersOfRegion;
-        complexPolygon?: IPCB_Polygon;
-        ruleType?: Array<EPCB_PrimitiveRegionRuleType>;
-        regionName?: string;
-        lineWidth?: number;
-        primitiveLock?: boolean;
-    }): Promise<IPCB_PrimitiveRegion | undefined>;
+function modify(
+	primitiveId: string | IPCB_PrimitiveRegion,
+	property: {
+		layer?: TPCB_LayersOfRegion;
+		complexPolygon?: IPCB_Polygon;
+		ruleType?: Array<EPCB_PrimitiveRegionRuleType>;
+		regionName?: string;
+		lineWidth?: number;
+		primitiveLock?: boolean;
+	},
+): Promise<IPCB_PrimitiveRegion | undefined>;
 ```
 
 ## Parameters
@@ -654,56 +573,45 @@ modify(primitiveId: string | IPCB_PrimitiveRegion, property: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 primitiveId
 
-
 </td><td>
 
 string \| [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
-
 </td><td>
 
-图元 ID
-
+Primitive ID
 
 </td></tr>
 <tr><td>
 
 property
 
+</td><td>
+
+{ layer?: [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)<!-- -->; complexPolygon?: [IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->; ruleType?: Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;; regionName?: string; lineWidth?: number; primitiveLock?: boolean }
 
 </td><td>
 
-{ layer?: [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)<!-- -->; complexPolygon?: [IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->; ruleType?: Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;; regionName?: string; lineWidth?: number; primitiveLock?: boolean; }
-
-
-</td><td>
-
-修改参数
-
+Modify Parameter
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \| undefined&gt;
 
-区域图元对象，`undefined` 表示修改失败
+Region primitive object, `undefined` indicates that the modification failed

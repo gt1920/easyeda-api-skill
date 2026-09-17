@@ -1,16 +1,16 @@
 # SYS\_ShortcutKey class
 
-系统 / 快捷键类
+System / shortcut key class
 
 ## Signature
 
 ```typescript
-declare class SYS_ShortcutKey 
+class SYS_ShortcutKey
 ```
 
 ## Remarks
 
-注册与管理系统快捷键
+Register and manage system shortcut keys
 
 ## Methods
 
@@ -18,58 +18,46 @@ declare class SYS_ShortcutKey
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [getShortcutKeys(includeSystem)](./SYS_ShortcutKey.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 查询快捷键列表
-
+**_(BETA)_** Query shortcut key list
 
 </td></tr>
 <tr><td>
 
 [registerShortcutKey(shortcutKey, title, callbackFn, documentType, scene)](./SYS_ShortcutKey.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 注册快捷键
-
+**_(BETA)_** Register shortcut key
 
 </td></tr>
 <tr><td>
 
 [unregisterShortcutKey(shortcutKey)](./SYS_ShortcutKey.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 反注册快捷键
-
+**_(BETA)_** Unregister a shortcut key
 
 </td></tr>
 </tbody></table>
@@ -84,17 +72,21 @@ Description
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-查询快捷键列表
+Query shortcut key list
 
 ## Signature
 
 ```typescript
-getShortcutKeys(includeSystem?: boolean): Promise<Array<{
-        shortcutKey: TSYS_ShortcutKeys;
-        title: string;
-        documentType: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>;
-        scene: Array<ESYS_ShortcutKeyEffectiveEditorScene>;
-    }>>;
+function getShortcutKeys(
+	includeSystem?: boolean,
+): Promise<
+	Array<{
+		shortcutKey: TSYS_ShortcutKeys;
+		title: string;
+		documentType: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>;
+		scene: Array<ESYS_ShortcutKeyEffectiveEditorScene>;
+	}>
+>;
 ```
 
 ## Parameters
@@ -103,43 +95,35 @@ getShortcutKeys(includeSystem?: boolean): Promise<Array<{
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 includeSystem
 
-
 </td><td>
 
 boolean
 
-
 </td><td>
 
-_(Optional)_ 是否包含系统快捷键
-
+_(Optional)_ Whether Contain system shortcut key
 
 </td></tr>
 </tbody></table>
 
-
-
 ## Returns
 
-Promise&lt;Array&lt;{ shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)<!-- -->; title: string; documentType: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorDocumentType](../enums/ESYS_ShortcutKeyEffectiveEditorDocumentType.md)<!-- -->&gt;; scene: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorScene](../enums/ESYS_ShortcutKeyEffectiveEditorScene.md)<!-- -->&gt;; }&gt;&gt;
+Promise&lt;Array&lt;{ shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)<!-- -->; title: string; documentType: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorDocumentType](../enums/ESYS_ShortcutKeyEffectiveEditorDocumentType.md)<!-- -->&gt;; scene: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorScene](../enums/ESYS_ShortcutKeyEffectiveEditorScene.md)<!-- -->&gt; }&gt;&gt;
 
-快捷键列表
+Shortcut key list
 
 ### registershortcutkey
 
@@ -147,12 +131,18 @@ Promise&lt;Array&lt;{ shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKe
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-注册快捷键
+Register shortcut key
 
 ## Signature
 
 ```typescript
-registerShortcutKey(shortcutKey: TSYS_ShortcutKeys, title: string, callbackFn: (shortcutKey: TSYS_ShortcutKeys) => void | Promise<void>, documentType?: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>, scene?: Array<ESYS_ShortcutKeyEffectiveEditorScene>): Promise<boolean>;
+function registerShortcutKey(
+	shortcutKey: TSYS_ShortcutKeys,
+	title: string,
+	callbackFn: (shortcutKey: TSYS_ShortcutKeys) => void | Promise<void>,
+	documentType?: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>,
+	scene?: Array<ESYS_ShortcutKeyEffectiveEditorScene>,
+): Promise<boolean>;
 ```
 
 ## Parameters
@@ -161,107 +151,87 @@ registerShortcutKey(shortcutKey: TSYS_ShortcutKeys, title: string, callbackFn: (
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 shortcutKey
 
-
 </td><td>
 
 [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)
 
-
 </td><td>
 
-快捷键，数组中包含多个元素则解析为组合快捷键，将按规则排序后存入缓存
-
+Shortcut key. If the array contains multiple elements, it is parsed as a combined shortcut key and sorted by rules before being stored in the cache
 
 </td></tr>
 <tr><td>
 
 title
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-快捷键标题，快捷键的友好名称
-
+Shortcut key title, the friendly name of the shortcut key
 
 </td></tr>
 <tr><td>
 
 callbackFn
 
-
 </td><td>
 
 (shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)<!-- -->) =&gt; void \| Promise&lt;void&gt;
 
-
 </td><td>
 
-回调函数
-
+Callback function
 
 </td></tr>
 <tr><td>
 
 documentType
 
-
 </td><td>
 
 Array&lt;[ESYS\_ShortcutKeyEffectiveEditorDocumentType](../enums/ESYS_ShortcutKeyEffectiveEditorDocumentType.md)<!-- -->&gt;
 
-
 </td><td>
 
 _(Optional)_
-
 
 </td></tr>
 <tr><td>
 
 scene
 
-
 </td><td>
 
 Array&lt;[ESYS\_ShortcutKeyEffectiveEditorScene](../enums/ESYS_ShortcutKeyEffectiveEditorScene.md)<!-- -->&gt;
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-注册操作是否成功
+Register whether the operation is successful
 
 ### unregistershortcutkey
 
@@ -269,12 +239,12 @@ Promise&lt;boolean&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-反注册快捷键
+Unregister a shortcut key
 
 ## Signature
 
 ```typescript
-unregisterShortcutKey(shortcutKey: TSYS_ShortcutKeys): Promise<boolean>;
+function unregisterShortcutKey(shortcutKey: TSYS_ShortcutKeys): Promise<boolean>;
 ```
 
 ## Parameters
@@ -283,40 +253,32 @@ unregisterShortcutKey(shortcutKey: TSYS_ShortcutKeys): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 shortcutKey
 
-
 </td><td>
 
 [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)
 
-
 </td><td>
 
-快捷键，不区分传入的排列顺序，将自动排序并查询匹配的快捷键
-
+Shortcut key. The order of the passed-in elements is not distinguished; it will be sorted automatically and the matching shortcut key will be queried
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-反注册操作是否成功
+Whether the unregistration operation was successful

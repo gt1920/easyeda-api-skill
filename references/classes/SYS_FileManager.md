@@ -1,11 +1,11 @@
 # SYS\_FileManager class
 
-系统 / 文件管理类
+System / file manager class
 
 ## Signature
 
 ```typescript
-declare class SYS_FileManager 
+class SYS_FileManager
 ```
 
 ## Methods
@@ -14,226 +14,189 @@ declare class SYS_FileManager
 
 Method
 
-
 </th><th>
 
 Modifiers
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [extractLibInfo(data)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-提取文件内的库配置信息
-
+Extract the library configuration information from the file
 
 </td></tr>
 <tr><td>
 
 [extractProjectInfo(data)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-提取文件内的工程配置信息
-
+Extract the project configuration information from the file
 
 </td></tr>
 <tr><td>
 
 [getCbbFileByCbbUuid(cbbUuid, libraryUuid, props)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用复用模块 UUID 获取复用模块文件
-
+**_(BETA)_** Use reuse block UUID get reuse block file
 
 </td></tr>
 <tr><td>
 
 [getDeviceFileByDeviceUuid(deviceUuid, libraryUuid, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-使用器件 UUID 获取器件文件
-
+Use device UUID get device file
 
 </td></tr>
 <tr><td>
 
 [getDocumentFile(fileName, password, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取文档文件
-
+Get Document file
 
 </td></tr>
 <tr><td>
 
 [getDocumentFootprintSources()](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取文档封装源码
-
+**_(BETA)_** Get the document footprint source code
 
 </td></tr>
 <tr><td>
 
 [getDocumentSource()](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 获取文档源码
-
+**_(BETA)_** Get Document source code
 
 </td></tr>
 <tr><td>
 
 [getFootprintFileByFootprintUuid(footprintUuid, libraryUuid, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用封装 UUID 获取封装文件
-
+**_(BETA)_** Use footprint UUID get footprint file
 
 </td></tr>
 <tr><td>
 
 [getPanelLibraryFileByPanelLibraryUuid(panelLibraryUuid, libraryUuid, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用面板库 UUID 获取面板库文件
-
+**_(BETA)_** Use panel library UUID get panel library file
 
 </td></tr>
 <tr><td>
 
 [getProjectFile(fileName, password, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-获取工程文件
-
+Get Project file
 
 </td></tr>
 <tr><td>
 
 [getProjectFileByProjectUuid(projectUuid, fileName, password, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
+**_(BETA)_** Use project UUID get project file
+
+</td></tr>
+<tr><td>
+
+[getSchematicFile(fileName, password, fileType)](./SYS_FileManager.md)
 
 </td><td>
 
-**_(BETA)_** 使用工程 UUID 获取工程文件
+</td><td>
 
+**_(BETA)_** 获取原理图文件
 
 </td></tr>
 <tr><td>
 
 [getSymbolFileBySymbolUuid(symbolUuid, libraryUuid, fileType)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用符号 UUID 获取符号文件
-
+**_(BETA)_** Use symbol UUID get symbol file
 
 </td></tr>
 <tr><td>
 
 [importProjectByProjectFile(projectFile, fileType, props, saveTo, librariesImportSetting)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用工程文件导入工程
-
+**_(BETA)_** Use project file import project
 
 </td></tr>
 <tr><td>
 
 [importProjectByProjectFile(projectFile, fileType, props, saveTo, librariesImportSetting)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 使用工程文件导入工程
-
+**_(BETA)_** Use project file import project
 
 </td></tr>
 <tr><td>
 
 [setDocumentSource(source)](./SYS_FileManager.md)
 
+</td><td>
 
 </td><td>
 
-
-</td><td>
-
-**_(BETA)_** 修改文档源码
-
+**_(BETA)_** Modify Document source code
 
 </td></tr>
 </tbody></table>
@@ -246,12 +209,12 @@ Description
 
 # SYS\_FileManager.extractLibInfo() method
 
-提取文件内的库配置信息
+Extract the library configuration information from the file
 
 ## Signature
 
 ```typescript
-extractLibInfo(data: File | Array<File>): Promise<any>;
+function extractLibInfo(data: File | Array<File>): Promise<any>;
 ```
 
 ## Parameters
@@ -260,54 +223,46 @@ extractLibInfo(data: File | Array<File>): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
-
 
 </th><th>
 
 Description
 
-
 </th></tr></thead>
 <tbody><tr><td>
 
 data
-
 
 </td><td>
 
 File \| Array&lt;File&gt;
 
-
 </td><td>
 
-库文件
-
+Library file
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-库配置信息
+Library configuration information
 
 ### extractprojectinfo
 
 # SYS\_FileManager.extractProjectInfo() method
 
-提取文件内的工程配置信息
+Extract the project configuration information from the file
 
 ## Signature
 
 ```typescript
-extractProjectInfo(data: File): Promise<any>;
+function extractProjectInfo(data: File): Promise<any>;
 ```
 
 ## Parameters
@@ -316,43 +271,35 @@ extractProjectInfo(data: File): Promise<any>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 data
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-工程文件
-
+Project file
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;any&gt;
 
-工程配置信息
+Project configuration information
 
 ### getcbbfilebycbbuuid
 
@@ -360,18 +307,22 @@ Promise&lt;any&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用复用模块 UUID 获取复用模块文件
+Use reuse block UUID get reuse block file
 
 ## Signature
 
 ```typescript
-getCbbFileByCbbUuid(cbbUuid: string, libraryUuid?: string, props?: {
-        fileName?: string;
-        password?: string;
-        fileType?: 'epro' | 'epro2';
-        templateSchematicUuid?: string;
-        templatePcbUuid?: string;
-    }): Promise<File | undefined>;
+function getCbbFileByCbbUuid(
+	cbbUuid: string,
+	libraryUuid?: string,
+	props?: {
+		fileName?: string;
+		password?: string;
+		fileType?: 'epro' | 'epro2';
+		templateSchematicUuid?: string;
+		templatePcbUuid?: string;
+	},
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -380,92 +331,82 @@ getCbbFileByCbbUuid(cbbUuid: string, libraryUuid?: string, props?: {
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 cbbUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-复用模块 UUID
-
+Reuse block UUID
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
-
+_(Optional)_ Library UUID. It can be obtained using the APIs in [LIB\_LibrariesList](./LIB_LibrariesList.md)<!-- -->. If not passed in, it is the system library
 
 </td></tr>
 <tr><td>
 
 props
 
-
 </td><td>
 
-{ fileName?: string; password?: string; fileType?: 'epro' \| 'epro2'; templateSchematicUuid?: string; templatePcbUuid?: string; }
-
+{ fileName?: string; password?: string; fileType?: 'epro' \| 'epro2'; templateSchematicUuid?: string; templatePcbUuid?: string }
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-复用模块文件数据，`undefined` 表示数据获取失败
+Reuse block file data, `undefined` indicates that the data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*团队模块 &gt; 下载模块\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Team Module &gt; Download Module\*\* permission. Calling it without permission will always `throw Error`
 
 ### getdevicefilebydeviceuuid
 
 # SYS\_FileManager.getDeviceFileByDeviceUuid() method
 
-使用器件 UUID 获取器件文件
+Use device UUID get device file
 
 ## Signature
 
 ```typescript
-getDeviceFileByDeviceUuid(deviceUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
+function getDeviceFileByDeviceUuid(
+	deviceUuid: string | Array<string>,
+	libraryUuid?: string,
+	fileType?: 'elibz' | 'elibz2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -474,92 +415,82 @@ getDeviceFileByDeviceUuid(deviceUuid: string | Array<string>, libraryUuid?: stri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 deviceUuid
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-器件 UUID 或器件 UUID 列表
-
+Device UUID or device UUID list
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
-
+_(Optional)_ Library UUID. It can be obtained using the APIs in [LIB\_LibrariesList](./LIB_LibrariesList.md)<!-- -->. If not passed in, it is the system library
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'elibz' \| 'elibz2'
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-器件文件数据，`undefined` 表示数据获取失败
+Device file data, `undefined` indicates that the data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*团队库 &gt; 下载库\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Team Library &gt; Download Library\*\* permission. Calling it without permission will always `throw Error`
 
 ### getdocumentfile
 
 # SYS\_FileManager.getDocumentFile() method
 
-获取文档文件
+Get Document file
 
 ## Signature
 
 ```typescript
-getDocumentFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
+function getDocumentFile(
+	fileName?: string,
+	password?: string,
+	fileType?: 'epro' | 'epro2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -568,81 +499,67 @@ getDocumentFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fileName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件名
-
+_(Optional)_ File name
 
 </td></tr>
 <tr><td>
 
 password
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 加密密码
-
+_(Optional)_ Encrypted password
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'epro' \| 'epro2'
 
-
 </td><td>
 
-_(Optional)_ 文件格式
-
+_(Optional)_ File format
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-文档文件数据，`undefined` 表示当前未打开文档或数据获取失败
+Document file data, `undefined` indicates that it is currently not open document or data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*工程设计图 &gt; 文件导出\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Engineering Design &gt; File Export\*\* permission. Calling it without permission will always `throw Error`
 
 ### getdocumentfootprintsources
 
@@ -650,23 +567,21 @@ Promise&lt;File \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取文档封装源码
+Get the document footprint source code
 
 ## Signature
 
 ```typescript
-getDocumentFootprintSources(): Promise<Array<{
-        footprintUuid: string;
-        documentSource: string;
-    }>>;
+function getDocumentFootprintSources(): Promise<
+	Array<{ footprintUuid: string; documentSource: string }>
+>;
 ```
-
 
 ## Returns
 
-Promise&lt;Array&lt;{ footprintUuid: string; documentSource: string; }&gt;&gt;
+Promise&lt;Array&lt;{ footprintUuid: string; documentSource: string }&gt;&gt;
 
-文档封装源码数据，数据获取失败将返回空数组
+Document footprint source code data. An empty array is returned if the data retrieval fails
 
 ### getdocumentsource
 
@@ -674,20 +589,19 @@ Promise&lt;Array&lt;{ footprintUuid: string; documentSource: string; }&gt;&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取文档源码
+Get Document source code
 
 ## Signature
 
 ```typescript
-getDocumentSource(): Promise<string | undefined>;
+function getDocumentSource(): Promise<string | undefined>;
 ```
-
 
 ## Returns
 
 Promise&lt;string \| undefined&gt;
 
-文档源码数据，`undefined` 表示当前未打开文档或数据获取失败
+Document source code data, `undefined` indicates that it is currently not open document or data retrieval failed
 
 ### getfootprintfilebyfootprintuuid
 
@@ -695,12 +609,16 @@ Promise&lt;string \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用封装 UUID 获取封装文件
+Use footprint UUID get footprint file
 
 ## Signature
 
 ```typescript
-getFootprintFileByFootprintUuid(footprintUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
+function getFootprintFileByFootprintUuid(
+	footprintUuid: string | Array<string>,
+	libraryUuid?: string,
+	fileType?: 'elibz' | 'elibz2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -709,81 +627,67 @@ getFootprintFileByFootprintUuid(footprintUuid: string | Array<string>, libraryUu
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 footprintUuid
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-封装 UUID 或封装 UUID 列表
-
+Footprint UUID or footprint UUID list
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
-
+_(Optional)_ Library UUID. It can be obtained using the APIs in [LIB\_LibrariesList](./LIB_LibrariesList.md)<!-- -->. If not passed in, it is the system library
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'elibz' \| 'elibz2'
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-封装文件数据，`undefined` 表示数据获取失败
+Footprint file data, `undefined` indicates that the data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*团队库 &gt; 下载库\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Team Library &gt; Download Library\*\* permission. Calling it without permission will always `throw Error`
 
 ### getpanellibraryfilebypanellibraryuuid
 
@@ -791,12 +695,16 @@ Promise&lt;File \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用面板库 UUID 获取面板库文件
+Use panel library UUID get panel library file
 
 ## Signature
 
 ```typescript
-getPanelLibraryFileByPanelLibraryUuid(panelLibraryUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
+function getPanelLibraryFileByPanelLibraryUuid(
+	panelLibraryUuid: string | Array<string>,
+	libraryUuid?: string,
+	fileType?: 'elibz' | 'elibz2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -805,92 +713,82 @@ getPanelLibraryFileByPanelLibraryUuid(panelLibraryUuid: string | Array<string>, 
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 panelLibraryUuid
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-面板库 UUID 或面板库 UUID 列表
-
+Panel library UUID or panel library UUID list
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
-
+_(Optional)_ Library UUID. It can be obtained using the APIs in [LIB\_LibrariesList](./LIB_LibrariesList.md)<!-- -->. If not passed in, it is the system library
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'elibz' \| 'elibz2'
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-面板库文件数据，`undefined` 表示数据获取失败
+Panel library file data, `undefined` indicates that the data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*团队库 &gt; 下载库\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Team Library &gt; Download Library\*\* permission. Calling it without permission will always `throw Error`
 
 ### getprojectfile
 
 # SYS\_FileManager.getProjectFile() method
 
-获取工程文件
+Get Project file
 
 ## Signature
 
 ```typescript
-getProjectFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
+function getProjectFile(
+	fileName?: string,
+	password?: string,
+	fileType?: 'epro' | 'epro2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -899,81 +797,67 @@ getProjectFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 fileName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件名
-
+_(Optional)_ File name
 
 </td></tr>
 <tr><td>
 
 password
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 加密密码
-
+_(Optional)_ Encrypted password
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'epro' \| 'epro2'
 
-
 </td><td>
 
-_(Optional)_ 文件格式
-
+_(Optional)_ File format
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-工程文件数据，`undefined` 表示当前未打开工程或数据获取失败
+Project file data, `undefined` indicates that it is currently not open project or data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*工程管理 &gt; 下载工程\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Project Management &gt; Download Project\*\* permission. Calling it without permission will always `throw Error`
 
 ### getprojectfilebyprojectuuid
 
@@ -981,12 +865,17 @@ Promise&lt;File \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用工程 UUID 获取工程文件
+Use project UUID get project file
 
 ## Signature
 
 ```typescript
-getProjectFileByProjectUuid(projectUuid: string, fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
+function getProjectFileByProjectUuid(
+	projectUuid: string,
+	fileName?: string,
+	password?: string,
+	fileType?: 'epro' | 'epro2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -995,97 +884,168 @@ getProjectFileByProjectUuid(projectUuid: string, fileName?: string, password?: s
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 projectUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-工程 UUID
-
+Project UUID
 
 </td></tr>
 <tr><td>
 
 fileName
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 文件名
-
+_(Optional)_ File name
 
 </td></tr>
 <tr><td>
 
 password
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 加密密码
-
+_(Optional)_ Encrypted password
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'epro' \| 'epro2'
 
-
 </td><td>
 
-_(Optional)_ 文件格式
-
+_(Optional)_ File format
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-工程文件数据，`undefined` 表示当前未打开工程或数据获取失败
+Project file data, `undefined` indicates that it is currently not open project or data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*工程管理 &gt; 下载工程\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Project Management &gt; Download Project\*\* permission. Calling it without permission will always `throw Error`
+
+### getschematicfile
+
+# SYS\_FileManager.getSchematicFile() method
+
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+获取原理图文件
+
+## Signature
+
+```typescript
+function getSchematicFile(
+	fileName?: string,
+	password?: string,
+	fileType?: 'epro' | 'epro2',
+): Promise<File | undefined>;
+```
+
+## Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+</th><th>
+
+Type
+
+</th><th>
+
+Description
+
+</th></tr></thead>
+<tbody><tr><td>
+
+fileName
+
+</td><td>
+
+string
+
+</td><td>
+
+_(Optional)_ 文件名
+
+</td></tr>
+<tr><td>
+
+password
+
+</td><td>
+
+string
+
+</td><td>
+
+_(Optional)_ 加密密码
+
+</td></tr>
+<tr><td>
+
+fileType
+
+</td><td>
+
+'epro' \| 'epro2'
+
+</td><td>
+
+_(Optional)_ 文件格式
+
+</td></tr>
+</tbody></table>
+
+## Returns
+
+Promise&lt;File \| undefined&gt;
+
+原理图文件数据，`undefined` 表示当前未打开原理图图页或数据获取失败
+
+## Remarks
+
+ADD since EDA v3.2.183 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+
+注意：本接口需要启用 \*\*工程设计图 &gt; 文件导出\*\* 权限，没有权限调用将始终 `throw Error`
+
+/ EDA v4.1.23
 
 ### getsymbolfilebysymboluuid
 
@@ -1093,12 +1053,16 @@ Promise&lt;File \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用符号 UUID 获取符号文件
+Use symbol UUID get symbol file
 
 ## Signature
 
 ```typescript
-getSymbolFileBySymbolUuid(symbolUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
+function getSymbolFileBySymbolUuid(
+	symbolUuid: string | Array<string>,
+	libraryUuid?: string,
+	fileType?: 'elibz' | 'elibz2',
+): Promise<File | undefined>;
 ```
 
 ## Parameters
@@ -1107,81 +1071,67 @@ getSymbolFileBySymbolUuid(symbolUuid: string | Array<string>, libraryUuid?: stri
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 symbolUuid
 
-
 </td><td>
 
 string \| Array&lt;string&gt;
 
-
 </td><td>
 
-符号 UUID 或符号 UUID 列表
-
+Symbol UUID or symbol UUID list
 
 </td></tr>
 <tr><td>
 
 libraryUuid
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
-
+_(Optional)_ Library UUID. It can be obtained using the APIs in [LIB\_LibrariesList](./LIB_LibrariesList.md)<!-- -->. If not passed in, it is the system library
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'elibz' \| 'elibz2'
-
 
 </td><td>
 
 _(Optional)_
 
-
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;File \| undefined&gt;
 
-符号文件数据，`undefined` 表示数据获取失败
+Symbol file data, `undefined` indicates that the data retrieval failed
 
 ## Remarks
 
-可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
+You can use [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) API export the file to the local file system
 
-注意：本接口需要启用 \*\*团队库 &gt; 下载库\*\* 权限，没有权限调用将始终 `throw Error`
+Note: This API requires the \*\*Team Library &gt; Download Library\*\* permission. Calling it without permission will always `throw Error`
 
 ### importprojectbyprojectfile
 
@@ -1189,36 +1139,52 @@ Promise&lt;File \| undefined&gt;
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用工程文件导入工程
+Use project file import project
 
 ## Signature
 
 ```typescript
-importProjectByProjectFile(projectFile: File, fileType?: 'JLCEDA' | 'JLCEDA Pro' | 'EasyEDA' | 'EasyEDA Pro' | 'Allegro' | 'OrCAD' | 'EAGLE' | 'KiCad' | 'PADS' | 'LTspice', props?: {
-        importOption?: ESYS_ImportProjectImportOption;
-        schematicObjectStyle?: ESYS_ImportProjectSchematicObjectStyle;
-        associateFootprint?: boolean;
-        associate3DModel?: boolean;
-        importFootprintNotesLayer?: boolean;
-    }, saveTo?: {
-        operation: 'New Project';
-        newProjectOwnerTeamUuid: IDMT_TeamItem['uuid'];
-        newProjectOwnerFolderUuid?: IDMT_FolderItem['uuid'];
-        newProjectName?: string;
-        newProjectFriendlyName?: string;
-        newProjectDescription?: string;
-        newProjectCollaborationMode?: EDMT_ProjectCollaborationMode;
-    } | {
-        operation: 'Existing Project';
-        existingProjectUuid: IDMT_BriefProjectItem['uuid'];
-    }, librariesImportSetting?: {
-        ownerTeamUuid: IDMT_TeamItem['uuid'];
-        deviceClassification?: Array<string>;
-        symbolClassification?: Array<string>;
-        footprintClassification?: Array<string>;
-        createDeviceForSingleSymbol?: boolean;
-        updateExistingLibrariesWithTheSameName?: boolean;
-    }): Promise<IDMT_BriefProjectItem | undefined>;
+function importProjectByProjectFile(
+	projectFile: File,
+	fileType?:
+		| 'JLCEDA'
+		| 'JLCEDA Pro'
+		| 'EasyEDA'
+		| 'EasyEDA Pro'
+		| 'Allegro'
+		| 'OrCAD'
+		| 'EAGLE'
+		| 'KiCad'
+		| 'PADS'
+		| 'LTspice',
+	props?: {
+		importOption?: ESYS_ImportProjectImportOption;
+		schematicObjectStyle?: ESYS_ImportProjectSchematicObjectStyle;
+		associateFootprint?: boolean;
+		associate3DModel?: boolean;
+		importFootprintNotesLayer?: boolean;
+	},
+	saveTo?:
+		| {
+			operation: 'New Project';
+			newProjectOwnerTeamUuid: IDMT_TeamItem['uuid'];
+			newProjectOwnerFolderUuid?: IDMT_FolderItem['uuid'];
+			newProjectName?: string;
+			newProjectFriendlyName?: string;
+			newProjectDescription?: string;
+			newProjectCollaborationMode?: EDMT_ProjectCollaborationMode;
+		}
+		| { operation: 'Existing Project'; existingProjectUuid: IDMT_BriefProjectItem['uuid'] }
+		| { operation: 'Offline Client Local Path'; folderPath: string },
+	librariesImportSetting?: {
+		ownerTeamUuid: IDMT_TeamItem['uuid'];
+		deviceClassification?: Array<string>;
+		symbolClassification?: Array<string>;
+		footprintClassification?: Array<string>;
+		createDeviceForSingleSymbol?: boolean;
+		updateExistingLibrariesWithTheSameName?: boolean;
+	},
+): Promise<IDMT_BriefProjectItem | undefined>;
 ```
 
 ## Parameters
@@ -1227,111 +1193,91 @@ importProjectByProjectFile(projectFile: File, fileType?: 'JLCEDA' | 'JLCEDA Pro'
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 projectFile
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-工程文件
-
+Project file
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'JLCEDA' \| 'JLCEDA Pro' \| 'EasyEDA' \| 'EasyEDA Pro' \| 'Allegro' \| 'OrCAD' \| 'EAGLE' \| 'KiCad' \| 'PADS' \| 'LTspice'
 
-
 </td><td>
 
-_(Optional)_ 文件类型
-
+_(Optional)_ File type
 
 </td></tr>
 <tr><td>
 
 props
 
+</td><td>
+
+{ importOption?: [ESYS\_ImportProjectImportOption](../enums/ESYS_ImportProjectImportOption.md)<!-- -->; schematicObjectStyle?: [ESYS\_ImportProjectSchematicObjectStyle](../enums/ESYS_ImportProjectSchematicObjectStyle.md)<!-- -->; associateFootprint?: boolean; associate3DModel?: boolean; importFootprintNotesLayer?: boolean }
 
 </td><td>
 
-{ importOption?: [ESYS\_ImportProjectImportOption](../enums/ESYS_ImportProjectImportOption.md)<!-- -->; schematicObjectStyle?: [ESYS\_ImportProjectSchematicObjectStyle](../enums/ESYS_ImportProjectSchematicObjectStyle.md)<!-- -->; associateFootprint?: boolean; associate3DModel?: boolean; importFootprintNotesLayer?: boolean; }
-
-
-</td><td>
-
-_(Optional)_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
-
+_(Optional)_ Import parameters. Refer to the configuration items in the \*\*Import\*\* window of the EDA front end
 
 </td></tr>
 <tr><td>
 
 saveTo
 
+</td><td>
+
+{ operation: 'New Project'; newProjectOwnerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; newProjectOwnerFolderUuid?: [IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md)<!-- -->\['uuid'\]; newProjectName?: string; newProjectFriendlyName?: string; newProjectDescription?: string; newProjectCollaborationMode?: [EDMT\_ProjectCollaborationMode](../enums/EDMT_ProjectCollaborationMode.md) } \| { operation: 'Existing Project'; existingProjectUuid: [IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md)<!-- -->\['uuid'\] } \| { operation: 'Offline Client Local Path'; folderPath: string }
 
 </td><td>
 
-{ operation: 'New Project'; newProjectOwnerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; newProjectOwnerFolderUuid?: [IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md)<!-- -->\['uuid'\]; newProjectName?: string; newProjectFriendlyName?: string; newProjectDescription?: string; newProjectCollaborationMode?: [EDMT\_ProjectCollaborationMode](../enums/EDMT_ProjectCollaborationMode.md)<!-- -->; } \| { operation: 'Existing Project'; existingProjectUuid: [IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md)<!-- -->\['uuid'\]; }
-
-
-</td><td>
-
-_(Optional)_ 保存到工程参数
-
+_(Optional)_ Save To project parameter
 
 </td></tr>
 <tr><td>
 
 librariesImportSetting
 
+</td><td>
+
+{ ownerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; deviceClassification?: Array&lt;string&gt;; symbolClassification?: Array&lt;string&gt;; footprintClassification?: Array&lt;string&gt;; createDeviceForSingleSymbol?: boolean; updateExistingLibrariesWithTheSameName?: boolean }
 
 </td><td>
 
-{ ownerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; deviceClassification?: Array&lt;string&gt;; symbolClassification?: Array&lt;string&gt;; footprintClassification?: Array&lt;string&gt;; createDeviceForSingleSymbol?: boolean; updateExistingLibrariesWithTheSameName?: boolean; }
-
-
-</td><td>
-
-_(Optional)_
-
+_(Optional)_ 库导入配置
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| undefined&gt;
 
-导入的工程的简略工程属性
+Brief project properties of the imported project
 
 ## Remarks
 
-暂不支持提取库的相关配置，如果需求提取库，将会按照默认配置提取
+Extracting library-related configurations is not supported yet. If the library needs to be extracted, it will be extracted according to the default configuration
 
 ### importprojectbyprojectfile_1
 
@@ -1339,38 +1285,44 @@ Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| u
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-使用工程文件导入工程
+Use project file import project
 
 ## Signature
 
 ```typescript
-importProjectByProjectFile(projectFile: File, fileType?: 'Altium Designer' | 'Protel', props?: {
-        importOption?: ESYS_ImportProjectImportOption;
-        viaSolderMaskExpansion?: ESYS_ImportProjectViaSolderMaskExpansion;
-        boardOutlineSource?: ESYS_ImportProjectBoardOutlineSource;
-        schematicObjectStyle?: ESYS_ImportProjectSchematicObjectStyle;
-        associateFootprint?: boolean;
-        associate3DModel?: boolean;
-        importFootprintNotesLayer?: boolean;
-    }, saveTo?: {
-        operation: 'New Project';
-        newProjectOwnerTeamUuid: IDMT_TeamItem['uuid'];
-        newProjectOwnerFolderUuid?: IDMT_FolderItem['uuid'];
-        newProjectName?: string;
-        newProjectFriendlyName?: string;
-        newProjectDescription?: string;
-        newProjectCollaborationMode?: EDMT_ProjectCollaborationMode;
-    } | {
-        operation: 'Existing Project';
-        existingProjectUuid: IDMT_BriefProjectItem['uuid'];
-    }, librariesImportSetting?: {
-        ownerTeamUuid: IDMT_TeamItem['uuid'];
-        deviceClassification?: Array<string>;
-        symbolClassification?: Array<string>;
-        footprintClassification?: Array<string>;
-        createDeviceForSingleSymbol?: boolean;
-        updateExistingLibrariesWithTheSameName?: boolean;
-    }): Promise<IDMT_BriefProjectItem | undefined>;
+function importProjectByProjectFile(
+	projectFile: File,
+	fileType?: 'Altium Designer' | 'Protel',
+	props?: {
+		importOption?: ESYS_ImportProjectImportOption;
+		viaSolderMaskExpansion?: ESYS_ImportProjectViaSolderMaskExpansion;
+		boardOutlineSource?: ESYS_ImportProjectBoardOutlineSource;
+		schematicObjectStyle?: ESYS_ImportProjectSchematicObjectStyle;
+		associateFootprint?: boolean;
+		associate3DModel?: boolean;
+		importFootprintNotesLayer?: boolean;
+	},
+	saveTo?:
+		| {
+			operation: 'New Project';
+			newProjectOwnerTeamUuid: IDMT_TeamItem['uuid'];
+			newProjectOwnerFolderUuid?: IDMT_FolderItem['uuid'];
+			newProjectName?: string;
+			newProjectFriendlyName?: string;
+			newProjectDescription?: string;
+			newProjectCollaborationMode?: EDMT_ProjectCollaborationMode;
+		}
+		| { operation: 'Existing Project'; existingProjectUuid: IDMT_BriefProjectItem['uuid'] }
+		| { operation: 'Offline Client Local Path'; folderPath: string },
+	librariesImportSetting?: {
+		ownerTeamUuid: IDMT_TeamItem['uuid'];
+		deviceClassification?: Array<string>;
+		symbolClassification?: Array<string>;
+		footprintClassification?: Array<string>;
+		createDeviceForSingleSymbol?: boolean;
+		updateExistingLibrariesWithTheSameName?: boolean;
+	},
+): Promise<IDMT_BriefProjectItem | undefined>;
 ```
 
 ## Parameters
@@ -1379,111 +1331,91 @@ importProjectByProjectFile(projectFile: File, fileType?: 'Altium Designer' | 'Pr
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 projectFile
 
-
 </td><td>
 
 File
 
-
 </td><td>
 
-工程文件
-
+Project file
 
 </td></tr>
 <tr><td>
 
 fileType
 
-
 </td><td>
 
 'Altium Designer' \| 'Protel'
 
-
 </td><td>
 
-_(Optional)_ 文件类型
-
+_(Optional)_ File type
 
 </td></tr>
 <tr><td>
 
 props
 
+</td><td>
+
+{ importOption?: [ESYS\_ImportProjectImportOption](../enums/ESYS_ImportProjectImportOption.md)<!-- -->; viaSolderMaskExpansion?: [ESYS\_ImportProjectViaSolderMaskExpansion](../enums/ESYS_ImportProjectViaSolderMaskExpansion.md)<!-- -->; boardOutlineSource?: [ESYS\_ImportProjectBoardOutlineSource](../enums/ESYS_ImportProjectBoardOutlineSource.md)<!-- -->; schematicObjectStyle?: [ESYS\_ImportProjectSchematicObjectStyle](../enums/ESYS_ImportProjectSchematicObjectStyle.md)<!-- -->; associateFootprint?: boolean; associate3DModel?: boolean; importFootprintNotesLayer?: boolean }
 
 </td><td>
 
-{ importOption?: [ESYS\_ImportProjectImportOption](../enums/ESYS_ImportProjectImportOption.md)<!-- -->; viaSolderMaskExpansion?: [ESYS\_ImportProjectViaSolderMaskExpansion](../enums/ESYS_ImportProjectViaSolderMaskExpansion.md)<!-- -->; boardOutlineSource?: [ESYS\_ImportProjectBoardOutlineSource](../enums/ESYS_ImportProjectBoardOutlineSource.md)<!-- -->; schematicObjectStyle?: [ESYS\_ImportProjectSchematicObjectStyle](../enums/ESYS_ImportProjectSchematicObjectStyle.md)<!-- -->; associateFootprint?: boolean; associate3DModel?: boolean; importFootprintNotesLayer?: boolean; }
-
-
-</td><td>
-
-_(Optional)_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
-
+_(Optional)_ Import parameters. Refer to the configuration items in the \*\*Import\*\* window of the EDA front end
 
 </td></tr>
 <tr><td>
 
 saveTo
 
+</td><td>
+
+{ operation: 'New Project'; newProjectOwnerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; newProjectOwnerFolderUuid?: [IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md)<!-- -->\['uuid'\]; newProjectName?: string; newProjectFriendlyName?: string; newProjectDescription?: string; newProjectCollaborationMode?: [EDMT\_ProjectCollaborationMode](../enums/EDMT_ProjectCollaborationMode.md) } \| { operation: 'Existing Project'; existingProjectUuid: [IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md)<!-- -->\['uuid'\] } \| { operation: 'Offline Client Local Path'; folderPath: string }
 
 </td><td>
 
-{ operation: 'New Project'; newProjectOwnerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; newProjectOwnerFolderUuid?: [IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md)<!-- -->\['uuid'\]; newProjectName?: string; newProjectFriendlyName?: string; newProjectDescription?: string; newProjectCollaborationMode?: [EDMT\_ProjectCollaborationMode](../enums/EDMT_ProjectCollaborationMode.md)<!-- -->; } \| { operation: 'Existing Project'; existingProjectUuid: [IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md)<!-- -->\['uuid'\]; }
-
-
-</td><td>
-
-_(Optional)_ 保存到工程参数
-
+_(Optional)_ Save To project parameter
 
 </td></tr>
 <tr><td>
 
 librariesImportSetting
 
+</td><td>
+
+{ ownerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; deviceClassification?: Array&lt;string&gt;; symbolClassification?: Array&lt;string&gt;; footprintClassification?: Array&lt;string&gt;; createDeviceForSingleSymbol?: boolean; updateExistingLibrariesWithTheSameName?: boolean }
 
 </td><td>
 
-{ ownerTeamUuid: [IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->\['uuid'\]; deviceClassification?: Array&lt;string&gt;; symbolClassification?: Array&lt;string&gt;; footprintClassification?: Array&lt;string&gt;; createDeviceForSingleSymbol?: boolean; updateExistingLibrariesWithTheSameName?: boolean; }
-
-
-</td><td>
-
-_(Optional)_
-
+_(Optional)_ 库导入配置
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| undefined&gt;
 
-导入的工程的简略工程属性
+Brief project properties of the imported project
 
 ## Remarks
 
-暂不支持提取库的相关配置，如果需求提取库，将会按照默认配置提取
+Extracting library-related configurations is not supported yet. If the library needs to be extracted, it will be extracted according to the default configuration
 
 ### setdocumentsource
 
@@ -1491,12 +1423,12 @@ Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| u
 
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-修改文档源码
+Modify Document source code
 
 ## Signature
 
 ```typescript
-setDocumentSource(source: string): Promise<boolean>;
+function setDocumentSource(source: string): Promise<boolean>;
 ```
 
 ## Parameters
@@ -1505,40 +1437,32 @@ setDocumentSource(source: string): Promise<boolean>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 source
 
-
 </td><td>
 
 string
 
-
 </td><td>
 
-文档源码
-
+Document source code
 
 </td></tr>
 </tbody></table>
-
-
 
 ## Returns
 
 Promise&lt;boolean&gt;
 
-是否修改成功，如果输入的文档源码格式错误，将返回 `false` 的结果
+Whether the modification was successful. If the input document source code format is incorrect, `false` is returned
