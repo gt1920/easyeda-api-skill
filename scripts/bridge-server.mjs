@@ -39,7 +39,9 @@ import { createConnection } from 'node:net';
 const PORT_START = 49620;
 const PORT_END = 49629;
 const SERVICE_ID = 'easyeda-bridge';
-const LISTEN_HOST = '127.0.0.1';
+// 监听地址:默认只听回环。设 BRIDGE_HOST 可放开(`::` = 双栈全接口,任何 IP 可连;`0.0.0.0` = 仅 IPv4)。
+// 注意:桥接没有任何鉴权,能连上就能在 EDA 里执行任意 JS。放开前想清楚网络边界。
+const LISTEN_HOST = process.env.BRIDGE_HOST || '127.0.0.1';
 
 function formatBannerLine(label, value) {
   return `║  ${`${label}:`.padEnd(12)} ${String(value).padEnd(44)}║`;
@@ -461,7 +463,7 @@ async function start() {
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
 ${formatBannerLine('Port', port)}
-${formatBannerLine('Listen Host', `${LISTEN_HOST} (localhost only)`)}
+${formatBannerLine('Listen Host', LISTEN_HOST === '127.0.0.1' ? `${LISTEN_HOST} (localhost only)` : `${LISTEN_HOST} (ANY IP)`)}
 ${formatBannerLine('Port Range', `${PORT_START}-${PORT_END}`)}
 ${formatBannerLine('Service ID', SERVICE_ID)}
 ║                                                              ║
